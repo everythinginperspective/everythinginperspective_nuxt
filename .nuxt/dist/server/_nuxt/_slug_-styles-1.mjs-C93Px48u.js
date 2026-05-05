@@ -1,0 +1,5 @@
+const _slug__vue_vue_type_style_index_0_scoped_b54f60ce_lang = ".border-accent[data-v-b54f60ce]{border-color:#1a1a1a}.text-muted[data-v-b54f60ce]{color:#666}.bg-light[data-v-b54f60ce]{background-color:#f5f5f5}.article-content[data-v-b54f60ce]{line-height:1.7}.article-content[data-v-b54f60ce] p{margin-bottom:1.5rem}.article-content[data-v-b54f60ce] h2{font-size:1.75rem;margin-bottom:1rem;margin-top:2.5rem}.article-content[data-v-b54f60ce] h3{font-size:1.25rem;margin-bottom:.75rem;margin-top:2rem}";
+export {
+  _slug__vue_vue_type_style_index_0_scoped_b54f60ce_lang as default
+};
+//# sourceMappingURL=_slug_-styles-1.mjs-C93Px48u.js.map

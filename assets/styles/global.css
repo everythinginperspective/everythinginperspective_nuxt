@@ -1,0 +1,55 @@
+/* Color palette */
+:root {
+  --color-primary: #000000;
+  --color-secondary: #FFFFFF;
+  --color-accent: #1a1a1a;
+  --color-light: #F5F5F5;
+  --color-muted: #666666;
+}
+
+/* Typography */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Garamond, serif;
+  font-weight: 400;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Spacing utility */
+.border-accent {
+  border-color: var(--color-accent);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
