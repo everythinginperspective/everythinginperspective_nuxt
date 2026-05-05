@@ -546,7 +546,7 @@ const _routes = [
     name: "article-slug",
     path: "/article/:slug()",
     meta: __nuxt_page_meta || {},
-    component: () => import('./_slug_-CEK75on0.mjs')
+    component: () => import('./_slug_-DEAfrqgq.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -1832,6 +1832,20 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       meta: [
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
         { name: "referrer", content: "no-referrer-when-downgrade" }
+      ],
+      script: [
+        {
+          type: "application/ld+json",
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Everything in Perspective",
+            url: "https://einp.surge.sh",
+            logo: "https://einp.surge.sh/logo.png",
+            description: "Essays on trends, context & nuance",
+            sameAs: []
+          })
+        }
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {

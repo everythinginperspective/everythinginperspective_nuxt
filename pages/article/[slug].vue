@@ -58,13 +58,56 @@ const formatDate = (date: string) => {
 // SEO
 watch(() => article.value, (newArticle) => {
   if (newArticle) {
+    const imageUrl = newArticle.image || '/og-default.png'
+    const publishedDate = newArticle.date ? new Date(newArticle.date).toISOString() : new Date().toISOString()
+    
     useSeoMeta({
       title: `${newArticle.title} | Everything in Perspective`,
       description: newArticle.description,
       ogTitle: newArticle.title,
       ogDescription: newArticle.description,
       ogType: 'article',
-      articlePublishedTime: newArticle.date
+      ogImage: imageUrl,
+      ogImageAlt: newArticle.imageAlt || newArticle.title,
+      twitterCard: 'summary_large_image',
+      twitterImage: imageUrl,
+      articlePublishedTime: publishedDate,
+      articleModifiedTime: publishedDate,
+      articleAuthor: newArticle.author || 'Everything in Perspective',
+      articleSection: newArticle.category || 'General'
+    })
+    
+    // Article schema
+    useHead({
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            headline: newArticle.title,
+            description: newArticle.description,
+            image: imageUrl,
+            author: {
+              '@type': 'Person',
+              name: newArticle.author || 'Everything in Perspective'
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Everything in Perspective',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://einp.surge.sh/logo.png',
+                width: 250,
+                height: 60
+              }
+            },
+            datePublished: publishedDate,
+            dateModified: publishedDate,
+            articleBody: newArticle.body || ''
+          })
+        }
+      ]
     })
   }
 }, { immediate: true })
