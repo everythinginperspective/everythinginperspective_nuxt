@@ -1,0 +1,139 @@
+{
+  "articles": {
+    "template": "pages/articles/[slug].vue",
+    "total_items": 11,
+    "fields": {
+      "title": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "Cricket's Global Obsession: Sport as Cultural Identity and Economic Power"
+      },
+      "author": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "Staff"
+      },
+      "date": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "2026-05-05"
+      },
+      "category": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "Culture"
+      },
+      "tags": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "[\"cricket\", \"sports\", \"india\", \"globalization\", \"culture\"]"
+      },
+      "description": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "Why 3 billion people follow cricket—not as sport, but as cultural identity. How cricket became the largest sport by audience, revenue, and geopolitical influence."
+      },
+      "keywords": {
+        "present_in": "11/11 files",
+        "types": [
+          "string"
+        ],
+        "example": "cricket, cricbuzz, india vs england, sports culture, cricket world cup"
+      }
+    }
+  },
+  "pages": {
+    "template": "pages/pages/[slug].vue",
+    "total_items": 6,
+    "fields": {
+      "title": {
+        "present_in": "6/6 files",
+        "types": [
+          "string"
+        ],
+        "example": "About Everything in Perspective"
+      },
+      "slug": {
+        "present_in": "6/6 files",
+        "types": [
+          "string"
+        ],
+        "example": "about"
+      },
+      "language": {
+        "present_in": "6/6 files",
+        "types": [
+          "string"
+        ],
+        "example": "en"
+      },
+      "description": {
+        "present_in": "1/6 files",
+        "types": [
+          "string"
+        ],
+        "example": "Learn about our mission to provide context and nuance on global trends"
+      }
+    }
+  },
+  "perspectives": {
+    "template": "pages/perspectives/[slug].vue",
+    "total_items": 1,
+    "fields": {
+      "title": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "ChatGPT in Perspective"
+      },
+      "author": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "Staff"
+      },
+      "date": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "2026-05-04"
+      },
+      "category": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "Technology"
+      },
+      "tags": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "[\"ai\", \"technology\", \"future\", \"labor\"]"
+      },
+      "description": {
+        "present_in": "1/1 files",
+        "types": [
+          "string"
+        ],
+        "example": "Understanding ChatGPT's impact beyond the hype—historical context, labor implications, and systemic changes."
+      }
+    }
+  }
+}
