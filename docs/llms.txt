@@ -1,4 +1,4 @@
-# https://einp.surge.sh
+# Everything in Perspective
 
 Canonical Origin: https://einp.surge.sh
 
@@ -24,4 +24,4 @@ Canonical Origin: https://einp.surge.sh
 
 ## Pages
 
-- [Everything in Perspective | %siteName](/): Essays on trends, context & nuance
+- [Everything in Perspective | Everything in Perspective](/): Essays on trends, context & nuance
