@@ -1,43 +1,42 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { hasInjectionContext, inject, getCurrentInstance as getCurrentInstance$1, defineComponent, shallowRef, h, resolveComponent, computed, unref, createElementBlock, provide, cloneVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, toRef, isReadonly, toValue, isRef, isShallow, isReactive, toRaw, Text } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { $fetch as $fetch$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { hasInjectionContext, inject, getCurrentInstance as getCurrentInstance$1, defineComponent, shallowRef, h, resolveComponent, computed, unref, createElementBlock, provide, cloneVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, toDisplayString as toDisplayString$1, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, toRef, isReadonly, toValue, isRef, isShallow, isReactive, toRaw, Text } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { $fetch as $fetch$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
 import { G as baseURL } from '../nitro/nitro.mjs';
-import { createHooks } from 'file:///workspace/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
-import { getContext, executeAsync } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
-import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///workspace/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
-import { createDefu, defu } from 'file:///workspace/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { klona } from 'file:///workspace/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
-import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
-import { titleCase, camelCase } from 'file:///workspace/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
-import { setupDevtoolsPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
-import { parse as parse$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
-import destr from 'file:///workspace/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
-import { isEqual } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/ohash/dist/index.mjs';
-import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
-import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
-import { stringify } from 'file:///workspace/everythinginperspective_nuxt/node_modules/devalue/index.js';
-import { hash } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
+import { getContext, executeAsync } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
+import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
+import { createDefu, defu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
+import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import { klona } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
+import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
+import { titleCase, camelCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
+import { setupDevtoolsPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
+import { parse as parse$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
+import destr from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
+import { isEqual } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/ohash/dist/index.mjs';
+import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
+import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
+import { stringify } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
+import { hash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 import { u as useHead$1, h as headSymbol, a as useSeoMeta$1 } from '../_/server.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
 import 'node:crypto';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
 
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch$1.create({
@@ -50,7 +49,6 @@ if (!("global" in globalThis)) {
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
 const asyncDataDefaults = { "value": null, "errorValue": null, "deep": true };
 const appId = "nuxt-app";
-const crawlLinks = true;
 function getNuxtAppCtx(id = appId) {
   return getContext(id, {
     asyncContext: false
@@ -497,11 +495,11 @@ const matcher = /* @__PURE__ */ (() => {
   };
 })();
 const _routeRulesMatcher = (path) => defu({}, ...matcher("", path).map((r) => r.data).reverse());
-const routeRulesMatcher = _routeRulesMatcher;
+const routeRulesMatcher$1 = _routeRulesMatcher;
 function getRouteRules(arg) {
   const path = typeof arg === "string" ? arg : arg.path;
   try {
-    return routeRulesMatcher(path);
+    return routeRulesMatcher$1(path);
   } catch (e) {
     console.error("[nuxt] Error matching route rules.", e);
     return {};
@@ -526,467 +524,467 @@ const __nuxt_page_meta$1 = {
   layout: "default"
 };
 const __nuxt_page_meta = null;
-const component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs = {};
+const component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw = {};
 const _routes = [
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___fr",
     path: "/fr",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___es",
     path: "/es",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___it",
     path: "/it",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___pt",
     path: "/pt",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___nl",
     path: "/nl",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___zh",
     path: "/zh",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___ja",
     path: "/ja",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-ECTd8lj1.mjs')
+    component: () => import('./index-1qACyh6-.mjs')
   },
   {
     name: "page-slug___en",
     path: "/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___fr",
     path: "/fr/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___de",
     path: "/de/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___es",
     path: "/es/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___it",
     path: "/it/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___pt",
     path: "/pt/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___nl",
     path: "/nl/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___zh",
     path: "/zh/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___ja",
     path: "/ja/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "page-slug___ar",
     path: "/ar/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-erfNhREE.mjs')
+    component: () => import('./_slug_-DY9uyJsp.mjs')
   },
   {
     name: "article-slug___en",
     path: "/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___fr",
     path: "/fr/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___de",
     path: "/de/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___es",
     path: "/es/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___it",
     path: "/it/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___pt",
     path: "/pt/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___nl",
     path: "/nl/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___zh",
     path: "/zh/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___ja",
     path: "/ja/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "article-slug___ar",
     path: "/ar/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-BemfUhj0.mjs')
+    component: () => import('./_slug_-D9uiRG7c.mjs')
   },
   {
     name: "magazine-plural___en",
     path: "/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___fr",
     path: "/fr/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___de",
     path: "/de/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___es",
     path: "/es/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___it",
     path: "/it/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___pt",
     path: "/pt/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___nl",
     path: "/nl/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___zh",
     path: "/zh/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___ja",
     path: "/ja/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "magazine-plural___ar",
     path: "/ar/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-higfjLCl.mjs')
+    component: () => import('./_plural_-D1Qg6cMG.mjs')
   },
   {
     name: "linked-data-plural___en",
     path: "/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___fr",
     path: "/fr/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___de",
     path: "/de/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___es",
     path: "/es/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___it",
     path: "/it/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___pt",
     path: "/pt/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___nl",
     path: "/nl/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___zh",
     path: "/zh/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___ja",
     path: "/ja/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-plural___ar",
     path: "/ar/linked-data/:plural()",
-    component: () => import('./_plural_-Dc5Qap03.mjs')
+    component: () => import('./_plural_-CjQFfFWU.mjs')
   },
   {
     name: "linked-data-slug___en",
     path: "/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___fr",
     path: "/fr/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___de",
     path: "/de/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___es",
     path: "/es/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___it",
     path: "/it/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___pt",
     path: "/pt/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___nl",
     path: "/nl/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___zh",
     path: "/zh/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___ja",
     path: "/ja/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "linked-data-slug___ar",
     path: "/ar/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-Bfbwe6-4.mjs')
+    component: () => import('./_...slug_-CH29RglL.mjs')
   },
   {
     name: "magazine-singular-slug___en",
     path: "/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___fr",
     path: "/fr/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___de",
     path: "/de/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___es",
     path: "/es/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___it",
     path: "/it/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___pt",
     path: "/pt/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___nl",
     path: "/nl/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___zh",
     path: "/zh/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___ja",
     path: "/ja/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: "magazine-singular-slug___ar",
     path: "/ar/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-7dDXANi9.mjs')
+    component: () => import('./_slug_-B9JNqcQa.mjs')
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/fr/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/de/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/es/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/it/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/pt/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/nl/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/zh/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ja/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ar/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -1766,7 +1764,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_0$1 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
+const __nuxt_component_0$2 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
 function applyTrailingSlashBehavior(to, trailingSlash) {
   const normalizeFn = trailingSlash === "append" ? withTrailingSlash : withoutTrailingSlash;
   const hasProtocolDifferentFromHttp = hasProtocol(to) && !to.startsWith("http");
@@ -7254,100 +7252,100 @@ const localeCodes = [
 const localeLoaders = {
   en: [
     {
-      key: "locale_en_46json_d133f3be",
+      key: "locale_en_46json_fa76968c",
       load: () => import(
         './en-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_en_46json_d133f3be" */
+        /* webpackChunkName: "locale_en_46json_fa76968c" */
       ),
       cache: true
     }
   ],
   fr: [
     {
-      key: "locale_fr_46json_bb3b9359",
+      key: "locale_fr_46json_637ba10e",
       load: () => import(
         './fr-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_fr_46json_bb3b9359" */
+        /* webpackChunkName: "locale_fr_46json_637ba10e" */
       ),
       cache: true
     }
   ],
   de: [
     {
-      key: "locale_de_46json_be4acf06",
+      key: "locale_de_46json_969e0107",
       load: () => import(
         './de-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_de_46json_be4acf06" */
+        /* webpackChunkName: "locale_de_46json_969e0107" */
       ),
       cache: true
     }
   ],
   es: [
     {
-      key: "locale_es_46json_eb57494a",
+      key: "locale_es_46json_6b345c52",
       load: () => import(
         './es-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_es_46json_eb57494a" */
+        /* webpackChunkName: "locale_es_46json_6b345c52" */
       ),
       cache: true
     }
   ],
   it: [
     {
-      key: "locale_it_46json_0eae8cf8",
+      key: "locale_it_46json_08e8db69",
       load: () => import(
         './it-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_it_46json_0eae8cf8" */
+        /* webpackChunkName: "locale_it_46json_08e8db69" */
       ),
       cache: true
     }
   ],
   pt: [
     {
-      key: "locale_pt_46json_24e19655",
+      key: "locale_pt_46json_37ff6206",
       load: () => import(
         './pt-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_pt_46json_24e19655" */
+        /* webpackChunkName: "locale_pt_46json_37ff6206" */
       ),
       cache: true
     }
   ],
   nl: [
     {
-      key: "locale_nl_46json_73e93dd7",
+      key: "locale_nl_46json_5ca8de1a",
       load: () => import(
         './nl-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_nl_46json_73e93dd7" */
+        /* webpackChunkName: "locale_nl_46json_5ca8de1a" */
       ),
       cache: true
     }
   ],
   zh: [
     {
-      key: "locale_zh_46json_ad5cb51a",
+      key: "locale_zh_46json_1932ad6c",
       load: () => import(
         './zh-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_zh_46json_ad5cb51a" */
+        /* webpackChunkName: "locale_zh_46json_1932ad6c" */
       ),
       cache: true
     }
   ],
   ja: [
     {
-      key: "locale_ja_46json_f4d0978b",
+      key: "locale_ja_46json_7bc62a85",
       load: () => import(
         './ja-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ja_46json_f4d0978b" */
+        /* webpackChunkName: "locale_ja_46json_7bc62a85" */
       ),
       cache: true
     }
   ],
   ar: [
     {
-      key: "locale_ar_46json_b9880180",
+      key: "locale_ar_46json_215c3443",
       load: () => import(
         './ar-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ar_46json_b9880180" */
+        /* webpackChunkName: "locale_ar_46json_215c3443" */
       ),
       cache: true
     }
@@ -8067,7 +8065,7 @@ const defaults_YlXDnzKDrNotL_BrBwgqlwKVZIfmVSvhRtsEp2y7vZ0 = /* @__PURE__ */ def
     maybeAddIdentitySchemaOrg();
   }
 });
-const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
+const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
 const MAX_PATH_LENGTH = 200;
 const RE_BASE64_PADDING = /=/g;
 const RE_BASE64_PLUS = /\+/g;
@@ -8589,31 +8587,31 @@ const robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk = /* @__PURE
     });
   }
 });
-const LazyProseA = defineAsyncComponent(() => import('./ProseA-DULxBey6.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-4hrZG1T1.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-BtFqpTah.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-a70fhrRf.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-CAW-6C4u.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-Bw_sWycP.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-CezF6al8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-BWdJIAFV.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BNE0bDRr.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CQMjA0I2.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-DAbnaAuu.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-CDfZdaWB.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-DmDIvYLO.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CzdVDZok.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import('./ProseP-T12JRFgx.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseA = defineAsyncComponent(() => import('./ProseA-8wMpuBgU.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-GgNwMjGQ.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-C8hcuAdm.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-C2SOsGIK.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-Cu-ez9Te.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-DZhvw_XS.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-D-mmi4W8.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-lBrdGZz5.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BKyElsXe.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CVkq5HP5.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-CeP93wD2.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-DQbEks70.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-BWQ_h1wt.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CKp-3Pxs.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import('./ProseP-DQ0PQPnq.mjs').then((r) => r["default"] || r.default || r));
 const LazyProsePre = defineAsyncComponent(() => import('./ProsePre-ByG-rB1z.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseScript = defineAsyncComponent(() => import('./ProseScript-B3ujpe25.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-BbDomjPH.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-9H2W8Co4.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-Dc6LtRu2.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-BDqt4ymG.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-VkLjChmU.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-DaG5WkTQ.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-yNfuEkuN.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-BVuW9ayI.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-4nlycFP5.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-Bi4OhcXu.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-CJTEHC4_.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-PkKRzrIr.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-CYYtzDQ8.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-BCZ7ZOtd.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-rRtFruPm.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-eIP-SeNK.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["ProseA", LazyProseA],
   ["ProseBlockquote", LazyProseBlockquote],
@@ -8896,6 +8894,7 @@ const i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ = /* @__PURE__ */ defineN
     }
   }
 });
+const routeRulesMatcher = _routeRulesMatcher;
 let routes;
 const prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk = /* @__PURE__ */ defineNuxtPlugin(async () => {
   let __temp, __restore;
@@ -8908,18 +8907,18 @@ const prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk = /* @__PURE_
 });
 const OPTIONAL_PARAM_RE = /^\/?:.*(?:\?|\(\.\*\)\*)$/;
 function shouldPrerender(path) {
-  return crawlLinks;
+  return !!routeRulesMatcher(path).prerender;
 }
 function processRoutes(routes2, currentPath = "/", routesToPrerender = /* @__PURE__ */ new Set()) {
   for (const route of routes2) {
-    if (OPTIONAL_PARAM_RE.test(route.path) && !route.children?.length && shouldPrerender()) {
+    if (OPTIONAL_PARAM_RE.test(route.path) && !route.children?.length && shouldPrerender(currentPath)) {
       routesToPrerender.add(currentPath);
     }
     if (route.path.includes(":")) {
       continue;
     }
     const fullPath = joinURL(currentPath, route.path);
-    {
+    if (shouldPrerender(fullPath)) {
       routesToPrerender.add(fullPath);
     }
     if (route.children) {
@@ -9248,7 +9247,7 @@ const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   }
 });
 const RouteProvider = defineRouteProvider();
-const __nuxt_component_0 = defineComponent({
+const __nuxt_component_0$1 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -9299,14 +9298,156 @@ function normalizeSlot(slot, data) {
   const slotContent = slot(data);
   return slotContent.length === 1 ? h(slotContent[0]) : h(Fragment, void 0, slotContent);
 }
+const useBreadcrumbs = () => {
+  const route = useRoute();
+  const breadcrumbs = computed(() => {
+    const crumbs = [
+      { label: "Home", to: "/" }
+    ];
+    const path = route.path;
+    const params = route.params;
+    if (path === "/") {
+      return crumbs;
+    }
+    if (path.startsWith("/page/")) {
+      const slug = params.slug;
+      crumbs.push({
+        label: route.meta.pageTitle || toTitleCase(slug),
+        to: `/page/${slug}`
+      });
+      return crumbs;
+    }
+    if (path.startsWith("/article/")) {
+      const slug = params.slug;
+      crumbs.push(
+        { label: "Articles", to: "/magazine/articles" },
+        { label: route.meta.pageTitle || toTitleCase(slug), to: `/article/${slug}` }
+      );
+      return crumbs;
+    }
+    if (path.match(/^\/magazine\/[^/]+$/) && !path.match(/^\/magazine\/[^/]+\/[^/]/)) {
+      const plural = params.plural;
+      crumbs.push({
+        label: toTitleCase(plural),
+        to: `/magazine/${plural}`
+      });
+      return crumbs;
+    }
+    if (path.match(/^\/magazine\/[^/]+\/[^/]/)) {
+      const singular = params.singular;
+      const slug = params.slug;
+      const plural = getPluralFromSingular(singular);
+      crumbs.push(
+        { label: toTitleCase(plural), to: `/magazine/${plural}` },
+        { label: route.meta.pageTitle || toTitleCase(slug), to: `/magazine/${singular}/${slug}` }
+      );
+      return crumbs;
+    }
+    if (path.match(/^\/linked-data\/[^/]+$/) && !path.match(/^\/linked-data\/[^/]+\//)) {
+      const plural = params.plural;
+      crumbs.push({
+        label: "Linked Data " + toTitleCase(plural),
+        to: `/linked-data/${plural}`
+      });
+      return crumbs;
+    }
+    if (path.startsWith("/linked-data/") && path.match(/^\/linked-data\/[^/]+\//)) {
+      const plural = params.plural;
+      const slug = params.slug;
+      const slugStr = Array.isArray(slug) ? slug.join("/") : slug;
+      crumbs.push(
+        { label: "Linked Data " + toTitleCase(plural), to: `/linked-data/${plural}` },
+        { label: route.meta.pageTitle || toTitleCase(slugStr), to: `/linked-data/${plural}/${slugStr}` }
+      );
+      return crumbs;
+    }
+    return crumbs;
+  });
+  return {
+    breadcrumbs
+  };
+};
+const toTitleCase = (str) => {
+  return str.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
+};
+const getPluralFromSingular = (singular) => {
+  const pluralMap = {
+    article: "articles",
+    perspective: "perspectives",
+    book: "books",
+    person: "people",
+    language: "languages"
+  };
+  return pluralMap[singular] || singular + "s";
+};
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+  __name: "Breadcrumbs",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const { breadcrumbs } = useBreadcrumbs();
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtLink = __nuxt_component_0$2;
+      if (unref(breadcrumbs).length > 1) {
+        _push(`<nav${ssrRenderAttrs(mergeProps({ class: "breadcrumbs-nav" }, _attrs))} data-v-ca664336><div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 text-sm" data-v-ca664336><ol class="flex flex-wrap gap-2 items-center" data-v-ca664336><!--[-->`);
+        ssrRenderList(unref(breadcrumbs), (crumb, index) => {
+          _push(`<li class="flex items-center gap-2" data-v-ca664336>`);
+          _push(ssrRenderComponent(_component_NuxtLink, {
+            to: crumb.to,
+            class: [
+              "hover:underline transition-colors",
+              index === unref(breadcrumbs).length - 1 ? "text-muted font-semibold cursor-default pointer-events-none" : "text-primary"
+            ]
+          }, {
+            default: withCtx((_, _push2, _parent2, _scopeId) => {
+              if (_push2) {
+                _push2(`${ssrInterpolate(crumb.label)}`);
+              } else {
+                return [
+                  createTextVNode(toDisplayString$1(crumb.label), 1)
+                ];
+              }
+            }),
+            _: 2
+          }, _parent));
+          if (index < unref(breadcrumbs).length - 1) {
+            _push(`<span class="text-muted" data-v-ca664336>/</span>`);
+          } else {
+            _push(`<!---->`);
+          }
+          _push(`</li>`);
+        });
+        _push(`<!--]--></ol></div></nav>`);
+      } else {
+        _push(`<!---->`);
+      }
+    };
+  }
+});
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _sfc_setup$5 = _sfc_main$5.setup;
+_sfc_main$5.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Breadcrumbs.vue");
+  return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
+};
+const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-ca664336"]]);
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Header",
   __ssrInlineRender: true,
   setup(__props) {
     const navOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-f1f7cf5b><div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-f1f7cf5b><div class="flex justify-between items-start" data-v-f1f7cf5b><div data-v-f1f7cf5b>`);
+      const _component_Breadcrumbs = __nuxt_component_0;
+      const _component_NuxtLink = __nuxt_component_0$2;
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-06c2b5b5>`);
+      _push(ssrRenderComponent(_component_Breadcrumbs, null, null, _parent));
+      _push(`<div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-06c2b5b5><div class="flex justify-between items-start" data-v-06c2b5b5><div data-v-06c2b5b5>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "text-2xl sm:text-4xl font-serif font-bold tracking-tight"
@@ -9322,7 +9463,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-f1f7cf5b>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main" data-v-f1f7cf5b>`);
+      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-06c2b5b5>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main" data-v-06c2b5b5>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "hover:underline"
@@ -9398,9 +9539,9 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-f1f7cf5b>☰</button></div></div>`);
+      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-06c2b5b5>☰</button></div></div>`);
       if (unref(navOpen)) {
-        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-f1f7cf5b><div class="space-y-4" data-v-f1f7cf5b>`);
+        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-06c2b5b5><div class="space-y-4" data-v-06c2b5b5>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/",
           class: "block"
@@ -9499,23 +9640,16 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
 const _sfc_setup$4 = _sfc_main$4.setup;
 _sfc_main$4.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-f1f7cf5b"]]);
+const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-06c2b5b5"]]);
 const _sfc_main$3 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_NuxtLink = __nuxt_component_0$1;
+  const _component_NuxtLink = __nuxt_component_0$2;
   _push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-accent text-secondary mt-16 sm:mt-24 py-8 sm:py-12 border-t border-primary" }, _attrs))} data-v-ddf4f40a><div class="max-w-6xl mx-auto px-4 sm:px-6" data-v-ddf4f40a><div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12" data-v-ddf4f40a><div data-v-ddf4f40a><h4 class="font-serif font-bold mb-4" data-v-ddf4f40a>Magazine</h4><ul class="text-xs sm:text-sm space-y-2" data-v-ddf4f40a><li data-v-ddf4f40a>`);
   _push(ssrRenderComponent(_component_NuxtLink, {
     to: "/",
@@ -9665,7 +9799,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtPage = __nuxt_component_0;
+      const _component_NuxtPage = __nuxt_component_0$1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-secondary text-primary" }, _attrs))}>`);
       _push(ssrRenderComponent(Header, null, null, _parent));
       _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
@@ -9694,8 +9828,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-jsqx6TIQ.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-jKWdqdXb.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-C5SG5QOD.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-CGQLxAe7.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -9787,5 +9921,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$2 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
 //# sourceMappingURL=server.mjs.map

@@ -166,6 +166,7 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useBotDetection: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/app/composables/useBotDetection').useBotDetection
   const useBreadcrumbItems: typeof import('../../node_modules/nuxt-seo-utils/dist/runtime/app/composables/useBreadcrumbItems').useBreadcrumbItems
+  const useBreadcrumbs: typeof import('../../composables/useBreadcrumbs').useBreadcrumbs
   const useBrowserLocale: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index').useBrowserLocale
   const useContentTypes: typeof import('../../composables/useContentTypes').useContentTypes
   const useCookie: typeof import('../../node_modules/nuxt/dist/app/composables/cookie').useCookie
@@ -449,6 +450,7 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useBotDetection: UnwrapRef<typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/app/composables/useBotDetection')['useBotDetection']>
     readonly useBreadcrumbItems: UnwrapRef<typeof import('../../node_modules/nuxt-seo-utils/dist/runtime/app/composables/useBreadcrumbItems')['useBreadcrumbItems']>
+    readonly useBreadcrumbs: UnwrapRef<typeof import('../../composables/useBreadcrumbs')['useBreadcrumbs']>
     readonly useBrowserLocale: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index')['useBrowserLocale']>
     readonly useContentTypes: UnwrapRef<typeof import('../../composables/useContentTypes')['useContentTypes']>
     readonly useCookie: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/cookie')['useCookie']>
