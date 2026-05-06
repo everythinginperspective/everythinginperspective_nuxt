@@ -54,24 +54,47 @@ definePageMeta({
 })
 
 const route = useRoute()
-const slug = (route.params.slug as string[]).join('/')
+const slugParts = (route.params.slug as string[])
+const slug = slugParts.join('/')
 
-// Fetch content by path (v3: queryCollection - infer collection from path)
-const ldCollection = (slug.split('/')[0] || 'articles') as any
+// Prerender workaround: construct the path from params
+const collection = slugParts[0] || 'articles'
+const itemSlug = slugParts.slice(1).join('/')
+
+// Fetch content - during prerender this will serialize the payload
 const { data: content } = await useAsyncData(
   `ld-${slug}`,
-  () => queryCollection(ldCollection).path(`/${slug}`).first()
+  async () => {
+    try {
+      const item = await queryCollection(collection).path(`/${itemSlug}`).first()
+      return item
+    } catch (e) {
+      // Fallback to full slug
+      try {
+        const item = await queryCollection(collection).path(`/${slug}`).first()
+        return item
+      } catch (e2) {
+        return null
+      }
+    }
+  }
 )
 
 // Fetch graph for connections
 const { data: graph } = await useAsyncData(
-  'graph-data',
-  () => $fetch('/graph.json').catch(() => null)
+  'ld-graph-data',
+  async () => {
+    try {
+      return await $fetch('/graph.json')
+    } catch (e) {
+      return null
+    }
+  }
 )
 
 const connections = computed(() => {
   if (!graph.value?.nodes || !content.value?.path) return null
-  const node = (graph.value.nodes as any[]).find(n => n.path === content.value!.path)
+  const node = (graph.value.nodes as any[]).find((n: any) => n.path === content.value!.path)
   return node?.connections || null
 })
 
