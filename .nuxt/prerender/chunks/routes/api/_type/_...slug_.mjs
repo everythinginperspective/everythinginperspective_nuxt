@@ -1,4 +1,4 @@
-import { defineEventHandler, getRouterParam, createError } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, getRouterParam, createError } from 'file:///workspace/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
 import { serverQueryContent } from '#content/server';
 
 const ____slug_ = defineEventHandler(async (event) => {

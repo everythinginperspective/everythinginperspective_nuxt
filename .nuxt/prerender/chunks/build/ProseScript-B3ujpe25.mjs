@@ -1,5 +1,5 @@
-import { unref, useSSRContext } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { ssrRenderAttrs } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { unref, useSSRContext } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { ssrRenderAttrs } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 
 const _sfc_main = {
   __name: "ProseScript",

@@ -1,43 +1,43 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { hasInjectionContext, inject, defineComponent, shallowRef, h, resolveComponent, getCurrentInstance as getCurrentInstance$1, computed, unref, createElementBlock, provide, cloneVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, toRef, isReadonly, toValue, isRef, isShallow, isReactive, toRaw, Text } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { $fetch as $fetch$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { hasInjectionContext, inject, getCurrentInstance as getCurrentInstance$1, defineComponent, shallowRef, h, resolveComponent, computed, unref, createElementBlock, provide, cloneVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, reactive, effectScope, toRef, isReadonly, toValue, isRef, isShallow, isReactive, toRaw, Text } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { $fetch as $fetch$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
 import { G as baseURL } from '../nitro/nitro.mjs';
-import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
-import { getContext, executeAsync } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
-import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
-import { createDefu, defu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { klona } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
-import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
-import { titleCase, camelCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
-import { setupDevtoolsPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
-import { parse as parse$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
-import destr from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
-import { isEqual } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/ohash/dist/index.mjs';
-import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
-import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
-import { stringify } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
-import { hash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { createHooks } from 'file:///workspace/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
+import { getContext, executeAsync } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
+import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///workspace/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
+import { createDefu, defu } from 'file:///workspace/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
+import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import { klona } from 'file:///workspace/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
+import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
+import { titleCase, camelCase } from 'file:///workspace/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
+import { setupDevtoolsPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
+import { parse as parse$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
+import destr from 'file:///workspace/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
+import { isEqual } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/ohash/dist/index.mjs';
+import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
+import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
+import { stringify } from 'file:///workspace/everythinginperspective_nuxt/node_modules/devalue/index.js';
+import { hash } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 import { u as useHead$1, h as headSymbol, a as useSeoMeta$1 } from '../_/server.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
 import 'node:crypto';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
 
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch$1.create({
@@ -424,7 +424,17 @@ const matcher = /* @__PURE__ */ (() => {
     if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
     if (p === "/") {
       r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/content/sql_dump.txt") {
+    } else if (p === "/__nuxt_content/articles/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/perspectives/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/pages/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/books/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/people/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/languages/sql_dump.txt") {
       r.unshift({ data: $0 });
     } else if (p === "/sitemap.xml") {
       r.unshift({ data: $1 });
@@ -516,467 +526,467 @@ const __nuxt_page_meta$1 = {
   layout: "default"
 };
 const __nuxt_page_meta = null;
-const component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw = {};
+const component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs = {};
 const _routes = [
   {
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___fr",
     path: "/fr",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___es",
     path: "/es",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___it",
     path: "/it",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___pt",
     path: "/pt",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___nl",
     path: "/nl",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___zh",
     path: "/zh",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___ja",
     path: "/ja",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-Dnb-2d9A.mjs')
+    component: () => import('./index-ECTd8lj1.mjs')
   },
   {
     name: "page-slug___en",
     path: "/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___fr",
     path: "/fr/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___de",
     path: "/de/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___es",
     path: "/es/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___it",
     path: "/it/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___pt",
     path: "/pt/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___nl",
     path: "/nl/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___zh",
     path: "/zh/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___ja",
     path: "/ja/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "page-slug___ar",
     path: "/ar/page/:slug()",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CqZzV2Es.mjs')
+    component: () => import('./_slug_-erfNhREE.mjs')
   },
   {
     name: "article-slug___en",
     path: "/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___fr",
     path: "/fr/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___de",
     path: "/de/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___es",
     path: "/es/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___it",
     path: "/it/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___pt",
     path: "/pt/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___nl",
     path: "/nl/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___zh",
     path: "/zh/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___ja",
     path: "/ja/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "article-slug___ar",
     path: "/ar/article/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-DT2ojlTq.mjs')
+    component: () => import('./_slug_-BemfUhj0.mjs')
   },
   {
     name: "magazine-plural___en",
     path: "/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___fr",
     path: "/fr/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___de",
     path: "/de/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___es",
     path: "/es/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___it",
     path: "/it/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___pt",
     path: "/pt/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___nl",
     path: "/nl/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___zh",
     path: "/zh/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___ja",
     path: "/ja/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "magazine-plural___ar",
     path: "/ar/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-DPAxV64z.mjs')
+    component: () => import('./_plural_-higfjLCl.mjs')
   },
   {
     name: "linked-data-plural___en",
     path: "/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___fr",
     path: "/fr/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___de",
     path: "/de/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___es",
     path: "/es/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___it",
     path: "/it/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___pt",
     path: "/pt/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___nl",
     path: "/nl/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___zh",
     path: "/zh/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___ja",
     path: "/ja/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-plural___ar",
     path: "/ar/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
+    component: () => import('./_plural_-Dc5Qap03.mjs')
   },
   {
     name: "linked-data-slug___en",
     path: "/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___fr",
     path: "/fr/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___de",
     path: "/de/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___es",
     path: "/es/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___it",
     path: "/it/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___pt",
     path: "/pt/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___nl",
     path: "/nl/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___zh",
     path: "/zh/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___ja",
     path: "/ja/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "linked-data-slug___ar",
     path: "/ar/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BqXGpBMt.mjs')
+    component: () => import('./_...slug_-Bfbwe6-4.mjs')
   },
   {
     name: "magazine-singular-slug___en",
     path: "/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___fr",
     path: "/fr/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___de",
     path: "/de/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___es",
     path: "/es/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___it",
     path: "/it/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___pt",
     path: "/pt/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___nl",
     path: "/nl/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___zh",
     path: "/zh/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___ja",
     path: "/ja/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: "magazine-singular-slug___ar",
     path: "/ar/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BYlAEiqW.mjs')
+    component: () => import('./_slug_-7dDXANi9.mjs')
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/fr/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/de/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/es/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/it/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/pt/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/nl/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/zh/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ja/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ar/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -7244,100 +7254,100 @@ const localeCodes = [
 const localeLoaders = {
   en: [
     {
-      key: "locale_en_46json_fa76968c",
+      key: "locale_en_46json_d133f3be",
       load: () => import(
         './en-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_en_46json_fa76968c" */
+        /* webpackChunkName: "locale_en_46json_d133f3be" */
       ),
       cache: true
     }
   ],
   fr: [
     {
-      key: "locale_fr_46json_637ba10e",
+      key: "locale_fr_46json_bb3b9359",
       load: () => import(
         './fr-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_fr_46json_637ba10e" */
+        /* webpackChunkName: "locale_fr_46json_bb3b9359" */
       ),
       cache: true
     }
   ],
   de: [
     {
-      key: "locale_de_46json_969e0107",
+      key: "locale_de_46json_be4acf06",
       load: () => import(
         './de-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_de_46json_969e0107" */
+        /* webpackChunkName: "locale_de_46json_be4acf06" */
       ),
       cache: true
     }
   ],
   es: [
     {
-      key: "locale_es_46json_6b345c52",
+      key: "locale_es_46json_eb57494a",
       load: () => import(
         './es-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_es_46json_6b345c52" */
+        /* webpackChunkName: "locale_es_46json_eb57494a" */
       ),
       cache: true
     }
   ],
   it: [
     {
-      key: "locale_it_46json_08e8db69",
+      key: "locale_it_46json_0eae8cf8",
       load: () => import(
         './it-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_it_46json_08e8db69" */
+        /* webpackChunkName: "locale_it_46json_0eae8cf8" */
       ),
       cache: true
     }
   ],
   pt: [
     {
-      key: "locale_pt_46json_37ff6206",
+      key: "locale_pt_46json_24e19655",
       load: () => import(
         './pt-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_pt_46json_37ff6206" */
+        /* webpackChunkName: "locale_pt_46json_24e19655" */
       ),
       cache: true
     }
   ],
   nl: [
     {
-      key: "locale_nl_46json_5ca8de1a",
+      key: "locale_nl_46json_73e93dd7",
       load: () => import(
         './nl-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_nl_46json_5ca8de1a" */
+        /* webpackChunkName: "locale_nl_46json_73e93dd7" */
       ),
       cache: true
     }
   ],
   zh: [
     {
-      key: "locale_zh_46json_1932ad6c",
+      key: "locale_zh_46json_ad5cb51a",
       load: () => import(
         './zh-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_zh_46json_1932ad6c" */
+        /* webpackChunkName: "locale_zh_46json_ad5cb51a" */
       ),
       cache: true
     }
   ],
   ja: [
     {
-      key: "locale_ja_46json_7bc62a85",
+      key: "locale_ja_46json_f4d0978b",
       load: () => import(
         './ja-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ja_46json_7bc62a85" */
+        /* webpackChunkName: "locale_ja_46json_f4d0978b" */
       ),
       cache: true
     }
   ],
   ar: [
     {
-      key: "locale_ar_46json_215c3443",
+      key: "locale_ar_46json_b9880180",
       load: () => import(
         './ar-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ar_46json_215c3443" */
+        /* webpackChunkName: "locale_ar_46json_b9880180" */
       ),
       cache: true
     }
@@ -8057,7 +8067,7 @@ const defaults_YlXDnzKDrNotL_BrBwgqlwKVZIfmVSvhRtsEp2y7vZ0 = /* @__PURE__ */ def
     maybeAddIdentitySchemaOrg();
   }
 });
-const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
+const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
 const MAX_PATH_LENGTH = 200;
 const RE_BASE64_PADDING = /=/g;
 const RE_BASE64_PLUS = /\+/g;
@@ -8579,31 +8589,31 @@ const robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk = /* @__PURE
     });
   }
 });
-const LazyProseA = defineAsyncComponent(() => import('./ProseA-8wMpuBgU.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-GgNwMjGQ.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-C8hcuAdm.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-C2SOsGIK.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-Cu-ez9Te.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-DZhvw_XS.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-D-mmi4W8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-lBrdGZz5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BKyElsXe.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CVkq5HP5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-CeP93wD2.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-DQbEks70.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-BWQ_h1wt.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CKp-3Pxs.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import('./ProseP-DQ0PQPnq.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseA = defineAsyncComponent(() => import('./ProseA-DULxBey6.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-4hrZG1T1.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-BtFqpTah.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-a70fhrRf.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-CAW-6C4u.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-Bw_sWycP.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-CezF6al8.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-BWdJIAFV.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BNE0bDRr.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CQMjA0I2.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-DAbnaAuu.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-CDfZdaWB.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-DmDIvYLO.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CzdVDZok.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import('./ProseP-T12JRFgx.mjs').then((r) => r["default"] || r.default || r));
 const LazyProsePre = defineAsyncComponent(() => import('./ProsePre-ByG-rB1z.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseScript = defineAsyncComponent(() => import('./ProseScript-B3ujpe25.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-4nlycFP5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-Bi4OhcXu.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-CJTEHC4_.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-PkKRzrIr.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-CYYtzDQ8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-BCZ7ZOtd.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-rRtFruPm.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-eIP-SeNK.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-BbDomjPH.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-9H2W8Co4.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-Dc6LtRu2.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-BDqt4ymG.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-VkLjChmU.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-DaG5WkTQ.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-yNfuEkuN.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-BVuW9ayI.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["ProseA", LazyProseA],
   ["ProseBlockquote", LazyProseBlockquote],
@@ -9684,8 +9694,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-C5SG5QOD.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-CGQLxAe7.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-jsqx6TIQ.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-jKWdqdXb.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -9777,5 +9787,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
 //# sourceMappingURL=server.mjs.map

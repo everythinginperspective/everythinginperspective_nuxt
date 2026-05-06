@@ -1,14 +1,65 @@
 import type { PageCollectionItemBase, DataCollectionItemBase } from '@nuxt/content'
 
 declare module '@nuxt/content' {
-   interface ContentCollectionItem extends PageCollectionItemBase {}
+   interface ArticlesCollectionItem extends PageCollectionItemBase {
+    author?: string
+    date?: string
+    category?: string
+    tags?: string[]
+    keywords?: string
+    image?: string
+    imageAlt?: string
+    authorBio?: string
+  }
+  
+   interface PerspectivesCollectionItem extends PageCollectionItemBase {
+    author?: string
+    date?: string
+    category?: string
+    tags?: string[]
+    keywords?: string
+    image?: string
+    imageAlt?: string
+    authorBio?: string
+  }
+  
+   interface PagesCollectionItem extends PageCollectionItemBase {}
+  
+   interface BooksCollectionItem extends PageCollectionItemBase {
+    author?: string
+    date?: string
+    category?: string
+    tags?: string[]
+    keywords?: string
+    image?: string
+    imageAlt?: string
+    authorBio?: string
+  }
+  
+   interface PeopleCollectionItem extends PageCollectionItemBase {
+    name?: string
+    role?: string
+    image?: string
+  }
+  
+   interface LanguagesCollectionItem extends PageCollectionItemBase {}
   
 
   interface PageCollections {
-    content: ContentCollectionItem
+    articles: ArticlesCollectionItem
+    perspectives: PerspectivesCollectionItem
+    pages: PagesCollectionItem
+    books: BooksCollectionItem
+    people: PeopleCollectionItem
+    languages: LanguagesCollectionItem
   }
 
   interface Collections {
-    content: ContentCollectionItem
+    articles: ArticlesCollectionItem
+    perspectives: PerspectivesCollectionItem
+    pages: PagesCollectionItem
+    books: BooksCollectionItem
+    people: PeopleCollectionItem
+    languages: LanguagesCollectionItem
   }
 }

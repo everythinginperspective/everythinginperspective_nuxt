@@ -39,7 +39,22 @@ declare module "nitropack/types" {
     '/_og/r/**': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/nuxt-og-image/dist/runtime/server/routes/resolve').default>>>>
     }
-    '/__nuxt_content/content/sql_dump.txt': {
+    '/__nuxt_content/articles/sql_dump.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/__nuxt_content/perspectives/sql_dump.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/__nuxt_content/pages/sql_dump.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/__nuxt_content/books/sql_dump.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/__nuxt_content/people/sql_dump.txt': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/__nuxt_content/languages/sql_dump.txt': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
     }
     '/__nuxt_content/info/sql_dump.txt': {
@@ -48,7 +63,22 @@ declare module "nitropack/types" {
     '/_i18n/:hash/:locale/messages.json': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/server/routes/messages').default>>>>
     }
-    '/__nuxt_content/content/query': {
+    '/__nuxt_content/articles/query': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+    }
+    '/__nuxt_content/perspectives/query': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+    }
+    '/__nuxt_content/pages/query': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+    }
+    '/__nuxt_content/books/query': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+    }
+    '/__nuxt_content/people/query': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
+    }
+    '/__nuxt_content/languages/query': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>
     }
     '/__nuxt_content/info/query': {
