@@ -1,0 +1,27 @@
+# https://einp.surge.sh
+
+Canonical Origin: https://einp.surge.sh
+
+## LLM Resources
+
+- [Full Content](https://einp.surge.sh/llms-full.txt)
+  Complete page content in markdown format.
+- [robots.txt](/robots.txt)
+  Crawler rules and permissions.
+
+## Available Languages on Website
+
+- English (en) - 1 pages - / - Content included below
+- Français (fr) - 1 pages - /fr - Visit website for content
+- Deutsch (de) - 1 pages - /de - Visit website for content
+- Español (es) - 1 pages - /es - Visit website for content
+- Italiano (it) - 1 pages - /it - Visit website for content
+- Português (pt) - 1 pages - /pt - Visit website for content
+- Nederlands (nl) - 1 pages - /nl - Visit website for content
+- 中文 (zh) - 1 pages - /zh - Visit website for content
+- 日本語 (ja) - 1 pages - /ja - Visit website for content
+- العربية (ar) - 1 pages - /ar - Visit website for content
+
+## Pages
+
+- [Everything in Perspective | %siteName](/): Essays on trends, context & nuance
