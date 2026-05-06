@@ -1,5 +1,6 @@
 <template>
   <header class="border-b border-accent bg-secondary sticky top-0 z-50">
+    <Breadcrumbs />
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div class="flex justify-between items-start">
         <div>

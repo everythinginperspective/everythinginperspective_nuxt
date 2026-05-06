@@ -5,15 +5,18 @@
       <p class="text-muted text-lg">Browse all {{ contentType?.plural }}</p>
     </div>
 
-    <!-- Filter UI will go here once Pagefind is installed -->
+    <!-- Filter UI -->
+    <FilterUI :items="items || []" @filtered="filteredItems = $event" />
+
+    <!-- Results count -->
     <div class="mb-8">
-      <p class="text-sm text-muted">{{ (items || []).length }} {{ contentType?.plural }} found</p>
+      <p class="text-sm text-muted">{{ filteredItems.length }} of {{ (items || []).length }} {{ contentType?.plural }} found</p>
     </div>
 
     <!-- Content Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div
-        v-for="item in items"
+        v-for="item in filteredItems"
         :key="item.path"
         class="border border-accent p-6 hover:shadow-lg transition-shadow"
       >
@@ -28,8 +31,8 @@
       </div>
     </div>
 
-    <div v-if="!items || items.length === 0" class="text-center py-12 text-muted">
-      <p>No {{ contentType?.plural }} found.</p>
+    <div v-if="filteredItems.length === 0" class="text-center py-12 text-muted">
+      <p>No {{ contentType?.plural }} found with the selected filters.</p>
     </div>
   </main>
 </template>
@@ -55,6 +58,8 @@ const { data: items } = await useAsyncData(
   `${contentType.plural}-index`,
   () => queryCollection(contentType.folder as any).all()
 )
+
+const filteredItems = ref(items.value || [])
 
 const formatDate = (date: string) => {
   if (!date) return ''
