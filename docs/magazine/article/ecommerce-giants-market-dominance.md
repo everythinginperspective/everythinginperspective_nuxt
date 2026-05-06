@@ -1,7 +1,7 @@
 ---
 title: "E-Commerce Giants: How Amazon and Flipkart Reshaped Retail and Labor | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/ecommerce-giants-market-dominance"
-last_updated: "2026-05-06T22:50:02.279Z"
+last_updated: "2026-05-06T22:57:21.790Z"
 meta:
   description: "From disruption to dominance—how Amazon and Flipkart conquered retail markets, destroyed traditional merchants, and created a new underclass of gig workers."
   "og:description": "From disruption to dominance—how Amazon and Flipkart conquered retail markets, destroyed traditional merchants, and created a new underclass of gig workers."

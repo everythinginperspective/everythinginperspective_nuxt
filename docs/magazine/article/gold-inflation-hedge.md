@@ -1,7 +1,7 @@
 ---
 title: "Gold as Inflation Hedge: When Precious Metals Matter (And When They Don&#x27;t) | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/gold-inflation-hedge"
-last_updated: "2026-05-06T22:50:02.255Z"
+last_updated: "2026-05-06T22:57:21.987Z"
 meta:
   description: "Why gold remains valuable in uncertain economies—not as get-rich-quick, but as inflation protection. Historical data, current context, and when to actually buy."
   "og:description": "Why gold remains valuable in uncertain economies—not as get-rich-quick, but as inflation protection. Historical data, current context, and when to actually buy."

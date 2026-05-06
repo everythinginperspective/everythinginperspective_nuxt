@@ -1,7 +1,7 @@
 ---
 title: "Cricket&#x27;s Global Obsession: Sport as Cultural Identity and Economic Power | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/crickets-global-obsession"
-last_updated: "2026-05-06T22:50:02.320Z"
+last_updated: "2026-05-06T22:57:21.820Z"
 meta:
   description: "Why 3 billion people follow cricket—not as sport, but as cultural identity. How cricket became the largest sport by audience, revenue, and geopolitical influence."
   "og:description": "Why 3 billion people follow cricket—not as sport, but as cultural identity. How cricket became the largest sport by audience, revenue, and geopolitical influence."
