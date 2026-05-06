@@ -1,20 +1,40 @@
 export default defineNuxtConfig({
-  // Build hooks - DISABLED to avoid mdream native binding issues
-  // hooks: {
-  //   'prepare': async () => {
-  //     const { execSync } = await import('child_process')
-  //     console.log('\n📋 Building content types...')
-  //     execSync('node scripts/build-content-types.js', { stdio: 'inherit' })
-  //     console.log('\n🔗 Building relationship graph...')
-  //     execSync('node scripts/build-graph.js', { stdio: 'inherit' })
-  //   }
-  // },
   // Build output to .dist for Surge deployment
   nitro: {
     prerender: {
-      routes: ['/'],
       crawlLinks: true,
-      ignore: ['/api/**']
+      ignore: ['/api/**'],
+      routes: async () => {
+        const { readdirSync, statSync } = await import('fs')
+        const { join } = await import('path')
+        const contentDir = join(process.cwd(), 'content')
+        
+        const routes = ['/']
+        
+        // Get all content folders and files
+        const folders = readdirSync(contentDir)
+          .filter(item => {
+            const itemPath = join(contentDir, item)
+            return statSync(itemPath).isDirectory() && !item.startsWith('.')
+          })
+        
+        for (const folder of folders) {
+          const folderPath = join(contentDir, folder)
+          try {
+            const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
+            for (const file of files) {
+              const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
+              routes.push(`/linked-data/${folder}/${slug}`)
+              routes.push(`/magazine/${folder.replace(/s$/, '')}/${slug}`)
+            }
+          } catch (e) {
+            // skip if folder doesn't exist
+          }
+        }
+        
+        console.log(`\n✓ Generated ${routes.length} prerender routes`)
+        return routes
+      }
     },
     routeRules: {
       '/api/**': { cache: false, swr: false }
