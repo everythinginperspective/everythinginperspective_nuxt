@@ -1,7 +1,7 @@
 ---
 title: "About Everything in Perspective | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/page/about"
-last_updated: "2026-05-06T23:15:52.957Z"
+last_updated: "2026-05-06T23:18:00.469Z"
 meta:
   description: "Learn about our mission to provide context and nuance on global trends"
   "og:description": "Learn about our mission to provide context and nuance on global trends"

@@ -1,11 +1,55 @@
 ---
-title: "Everything in Perspective | Everything in Perspective"
+title: "Contact Us | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/linked-data/pages/contact-us"
-last_updated: "2026-05-06T23:15:52.631Z"
+last_updated: "2026-05-06T23:18:00.270Z"
 meta:
-  description: "Essays on trends, context & nuance"
-  "og:description": "Essays on trends, context & nuance"
-  "og:title": "Everything in Perspective | Everything in Perspective"
+  description: "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
+  "og:description": "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
+  "og:title": "Contact Us"
 ---
 
-Content not found
+# **Contact Us**
+
+## **Graph Connections**
+
+# Contact Us
+
+Have a question, topic suggestion, or want to contribute? We'd love to hear from you.
+
+## Email
+
+**General inquiries:** [hello@everythinginperspective.com](https://einp.surge.sh/mailto:hello@everythinginperspective.com)
+
+**Topic suggestions:** [ideas@everythinginperspective.com](https://einp.surge.sh/mailto:ideas@everythinginperspective.com)
+
+**Guest submissions:** [contribute@everythinginperspective.com](https://einp.surge.sh/mailto:contribute@everythinginperspective.com)
+
+## Response time
+
+We read every message. Typical response time is 2-3 business days. Given volume, we may not be able to reply to every inquiry, but we read and consider all feedback.
+
+## What we're looking for
+
+- **Topic ideas** — What trends deserve deeper analysis?
+- **Guest essays** — Experts in your field with strong arguments backed by evidence
+- **Feedback** — What worked? What missed? What should we cover next?
+- **Partnerships** — Academic institutions, research organizations, media outlets interested in collaboration
+
+## Privacy
+
+Your email address and inquiry will be kept confidential. We don't share contact information or use it for marketing purposes beyond confirming receipt of your message.
+
+## Social media
+
+Follow us and reach out on your platform of choice for quick questions:
+
+- Twitter: [@perspective](https://twitter.com)
+- LinkedIn: [Everything in Perspective](https://linkedin.com)
+
+## Stay updated
+
+Subscribe to our newsletter for weekly essays and curated context on what's trending. No spam, no data selling—just depth.
+
+---
+
+Thanks for engaging. We're building this publication for readers like you who value understanding over hot takes.

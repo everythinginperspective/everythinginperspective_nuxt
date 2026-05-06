@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/page/faq"
-last_updated: "2026-05-06T23:15:52.957Z"
+last_updated: "2026-05-06T23:18:00.624Z"
 meta:
   description: "Frequently Asked Questions"
   "og:description": "Frequently Asked Questions"

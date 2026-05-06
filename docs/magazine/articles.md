@@ -1,7 +1,7 @@
 ---
 title: "articles | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/articles"
-last_updated: "2026-05-06T23:15:53.008Z"
+last_updated: "2026-05-06T23:18:00.608Z"
 meta:
   description: "Browse all articles on Everything in Perspective"
   "og:description": "Browse all articles on Everything in Perspective"

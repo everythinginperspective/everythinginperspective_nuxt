@@ -1,11 +1,17 @@
 ---
-title: "Everything in Perspective | Everything in Perspective"
+title: "Cookie Policy | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/linked-data/pages/cookie-policy"
-last_updated: "2026-05-06T23:15:52.630Z"
+last_updated: "2026-05-06T23:18:00.413Z"
 meta:
-  description: "Essays on trends, context & nuance"
-  "og:description": "Essays on trends, context & nuance"
-  "og:title": "Everything in Perspective | Everything in Perspective"
+  description: "How we use cookies."
+  "og:description": "How we use cookies."
+  "og:title": "Cookie Policy"
 ---
 
-Content not found
+# **Cookie Policy**
+
+## **Graph Connections**
+
+# Cookie Policy
+
+How we use cookies.

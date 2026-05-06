@@ -1,11 +1,17 @@
 ---
-title: "Everything in Perspective | Everything in Perspective"
+title: "Terms &amp; Conditions | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/linked-data/pages/terms-conditions"
-last_updated: "2026-05-06T23:15:52.751Z"
+last_updated: "2026-05-06T23:18:00.254Z"
 meta:
-  description: "Essays on trends, context & nuance"
-  "og:description": "Essays on trends, context & nuance"
-  "og:title": "Everything in Perspective | Everything in Perspective"
+  description: "Our terms of service."
+  "og:description": "Our terms of service."
+  "og:title": "Terms & Conditions"
 ---
 
-Content not found
+# **Terms & Conditions**
+
+## **Graph Connections**
+
+# Terms & Conditions
+
+Our terms of service.

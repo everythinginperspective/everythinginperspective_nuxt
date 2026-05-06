@@ -1,7 +1,7 @@
 ---
 title: "Restaurant Culture Post-Pandemic: Community, Economics, and the Future of Dining | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/restaurant-culture-post-pandemic"
-last_updated: "2026-05-06T23:15:52.299Z"
+last_updated: "2026-05-06T23:17:59.902Z"
 meta:
   description: "How restaurants transformed during pandemic lockdowns and what the post-2024 landscape reveals about urban community, labor, and local economics."
   "og:description": "How restaurants transformed during pandemic lockdowns and what the post-2024 landscape reveals about urban community, labor, and local economics."
