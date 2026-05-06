@@ -65,7 +65,21 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-schema-org', 'nuxt-og-image'],
+  
+  // @nuxtjs/seo configuration
+  seo: {
+    redirectToCanonicalSiteUrl: true,
+    splash: false
+  },
+  
+  // nuxt-schema-org configuration  
+  schemaOrg: {
+    identity: 'Organization',
+    minifyOptions: {
+      keepFalseAttributes: false
+    }
+  },
   
   // i18n configuration
   i18n: {
