@@ -16,24 +16,30 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/chunk-reload.client.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/siteConfig.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/inferSeoMetaPlugin.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/titles.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/app/plugins/defaults.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/app/plugins/init.js")> &
+  InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/titlesWaitI18n.js")> &
+  InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/defaultsWaitI18n.js")> &
+  InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/app/plugins/i18n/defaults.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-og-image/dist/runtime/app/plugins/og-image-canonical-urls.server.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-og-image/dist/runtime/app/plugins/route-rule-og-image.server.js")> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/robots/dist/runtime/app/plugins/robot-meta.server.js")> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client.js")> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/switch-locale-path-ssr.js")> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/route-locale-detect.js")> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/preload.js")> &
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/i18n.js")> &
+  InjectionType<typeof import("../../node_modules/nuxt-site-config/dist/runtime/app/plugins/i18n.js")> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/prerender.server.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/minifyScripts.server.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/1.absoluteImageUrls.server.js")> &
   InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/0.routeRules.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt-seo-utils/dist/runtime/app/plugins/defaults.js")>
+  InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/ssg-detect.js")> &
+  InjectionType<typeof import("../../node_modules/nuxt-schema-org/dist/runtime/app/plugins/i18n/init.js")>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
 
   interface NuxtAppLiterals {
-    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'nuxt-site-config:init' | 'nuxt:revive-payload:server' | 'nuxt:chunk-reload' | 'nuxt-seo:fallback-titles' | 'nuxt-schema-org:defaults' | 'nuxt-schema-org:init' | 'nuxt:global-components' | 'nuxt:prefetch' | 'nuxt-seo:defaults'
+    pluginName: 'nuxt:revive-payload:client' | 'nuxt:head' | 'nuxt:router' | 'nuxt-site-config:init' | 'nuxt:revive-payload:server' | 'nuxt:chunk-reload' | 'nuxt-seo:fallback-titles' | 'nuxt-seo:defaults' | 'nuxt-schema-org:defaults' | 'nuxt:global-components' | 'nuxt:prefetch' | 'i18n:plugin:switch-locale-path-ssr' | 'i18n:plugin:route-locale-detect' | 'i18n:plugin:preload' | 'i18n:plugin' | 'nuxt-site-config:i18n' | 'i18n:plugin:ssg-detect' | 'nuxt-schema-org:init'
   }
 }
 

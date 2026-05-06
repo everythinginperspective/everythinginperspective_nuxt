@@ -2,5 +2,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://einp.surge.sh/sitemap.xml
+Sitemap: https://einp.surge.sh/sitemap_index.xml
 # END nuxt-robots

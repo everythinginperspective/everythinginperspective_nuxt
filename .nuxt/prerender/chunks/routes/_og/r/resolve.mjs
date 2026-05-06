@@ -1,6 +1,6 @@
 import { defineEventHandler, createError, getQuery, sendRedirect } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
 import { withQuery, withLeadingSlash, parseURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { u as useOgImageRuntimeConfig, i as isInternalRoute } from '../../../nitro/nitro.mjs';
+import { u as useOgImageRuntimeConfig, j as isInternalRoute } from '../../../nitro/nitro.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
@@ -20,9 +20,11 @@ import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/d
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 

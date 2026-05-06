@@ -1,5 +1,5 @@
 import { $fetch } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
-import { x as emojiCache } from '../nitro/nitro.mjs';
+import { F as emojiCache } from '../nitro/nitro.mjs';
 
 const MIN_TIMEOUT_MS = 100;
 function getFetchTimeout(runtimeConfig) {

@@ -77,7 +77,7 @@ watch(() => article.value, (newArticle) => {
       articleSection: newArticle.category || 'General'
     })
     
-    // Article schema
+    // Article schema + breadcrumbs
     useHead({
       script: [
         {
@@ -105,6 +105,33 @@ watch(() => article.value, (newArticle) => {
             datePublished: publishedDate,
             dateModified: publishedDate,
             articleBody: newArticle.body || ''
+          })
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://einp.surge.sh'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Articles',
+                item: 'https://einp.surge.sh/magazine/articles'
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: newArticle.title,
+                item: `https://einp.surge.sh/article/${slug}`
+              }
+            ]
           })
         }
       ]

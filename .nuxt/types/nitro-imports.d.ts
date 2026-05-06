@@ -28,6 +28,9 @@ declare global {
   const defineCachedEventHandler: typeof import('../../node_modules/nitropack/dist/runtime/internal/cache').defineCachedEventHandler
   const defineCachedFunction: typeof import('../../node_modules/nitropack/dist/runtime/internal/cache').defineCachedFunction
   const defineEventHandler: typeof import('../../node_modules/h3').defineEventHandler
+  const defineI18nConfig: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/shared').defineI18nConfig
+  const defineI18nLocale: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/shared').defineI18nLocale
+  const defineI18nLocaleDetector: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/server').defineI18nLocaleDetector
   const defineLazyEventHandler: typeof import('../../node_modules/h3').defineLazyEventHandler
   const defineNitroErrorHandler: typeof import('../../node_modules/nitropack/dist/runtime/internal/error/utils').defineNitroErrorHandler
   const defineNitroPlugin: typeof import('../../node_modules/nitropack/dist/runtime/internal/plugin').defineNitroPlugin
@@ -51,13 +54,20 @@ declare global {
   const getBotDetection: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection').getBotDetection
   const getBotInfo: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/getBotDetection').getBotInfo
   const getCookie: typeof import('../../node_modules/h3').getCookie
+  const getCookieLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').getCookieLocale
   const getHeader: typeof import('../../node_modules/h3').getHeader
+  const getHeaderLanguage: typeof import('../../node_modules/@intlify/utils/dist/h3').getHeaderLanguage
+  const getHeaderLanguages: typeof import('../../node_modules/@intlify/utils/dist/h3').getHeaderLanguages
+  const getHeaderLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').getHeaderLocale
+  const getHeaderLocales: typeof import('../../node_modules/@intlify/utils/dist/h3').getHeaderLocales
   const getHeaders: typeof import('../../node_modules/h3').getHeaders
   const getMethod: typeof import('../../node_modules/h3').getMethod
   const getNitroOrigin: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin').getNitroOrigin
+  const getPathLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').getPathLocale
   const getPathRobotConfig: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/getPathRobotConfig').getPathRobotConfig
   const getProxyRequestHeaders: typeof import('../../node_modules/h3').getProxyRequestHeaders
   const getQuery: typeof import('../../node_modules/h3').getQuery
+  const getQueryLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').getQueryLocale
   const getRequestFingerprint: typeof import('../../node_modules/h3').getRequestFingerprint
   const getRequestHeader: typeof import('../../node_modules/h3').getRequestHeader
   const getRequestHeaders: typeof import('../../node_modules/h3').getRequestHeaders
@@ -121,6 +131,7 @@ declare global {
   const sendWebResponse: typeof import('../../node_modules/h3').sendWebResponse
   const serveStatic: typeof import('../../node_modules/h3').serveStatic
   const setCookie: typeof import('../../node_modules/h3').setCookie
+  const setCookieLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').setCookieLocale
   const setHeader: typeof import('../../node_modules/h3').setHeader
   const setHeaders: typeof import('../../node_modules/h3').setHeaders
   const setResponseHeader: typeof import('../../node_modules/h3').setResponseHeader
@@ -133,6 +144,11 @@ declare global {
   const toPlainHandler: typeof import('../../node_modules/h3').toPlainHandler
   const toWebHandler: typeof import('../../node_modules/h3').toWebHandler
   const toWebRequest: typeof import('../../node_modules/h3').toWebRequest
+  const tryCookieLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').tryCookieLocale
+  const tryHeaderLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').tryHeaderLocale
+  const tryHeaderLocales: typeof import('../../node_modules/@intlify/utils/dist/h3').tryHeaderLocales
+  const tryPathLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').tryPathLocale
+  const tryQueryLocale: typeof import('../../node_modules/@intlify/utils/dist/h3').tryQueryLocale
   const unsealSession: typeof import('../../node_modules/h3').unsealSession
   const updateSession: typeof import('../../node_modules/h3').updateSession
   const updateSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/updateSiteConfig').updateSiteConfig
@@ -145,6 +161,7 @@ declare global {
   const useRuntimeConfigNuxtRobots: typeof import('../../node_modules/@nuxtjs/robots/dist/runtime/server/composables/useRuntimeConfigNuxtRobots').useRuntimeConfigNuxtRobots
   const useSession: typeof import('../../node_modules/h3').useSession
   const useStorage: typeof import('../../node_modules/nitropack/dist/runtime/internal/storage').useStorage
+  const useTranslation: typeof import('../../node_modules/@intlify/h3').useTranslation
   const withSiteTrailingSlash: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/utils').withSiteTrailingSlash
   const withSiteUrl: typeof import('../../node_modules/nuxt-site-config/dist/runtime/server/composables/utils').withSiteUrl
   const writeEarlyHints: typeof import('../../node_modules/h3').writeEarlyHints
@@ -177,6 +194,10 @@ export { defineSitemapEventHandler } from '/Volumes/B87P4/everythinginperspectiv
 export { asSitemapUrl } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
 export { parseMarkdown } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/mdc/dist/runtime/parser';
 export { stringifyMarkdown } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/mdc/dist/runtime/stringify';
+export { defineI18nLocale, defineI18nConfig } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/dist/runtime/composables/shared';
+export { defineI18nLocaleDetector } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/dist/runtime/composables/server';
+export { useTranslation } from '@intlify/h3';
+export { getCookieLocale, getHeaderLanguage, getHeaderLanguages, getHeaderLocale, getHeaderLocales, getPathLocale, getQueryLocale, setCookieLocale, tryCookieLocale, tryHeaderLocale, tryHeaderLocales, tryPathLocale, tryQueryLocale } from '@intlify/utils/h3';
 export { getNitroOrigin } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-site-config/dist/runtime/server/composables/getNitroOrigin';
 export { getSiteConfig } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteConfig';
 export { getSiteIndexable } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-site-config/dist/runtime/server/composables/getSiteIndexable';

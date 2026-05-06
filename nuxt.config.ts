@@ -34,7 +34,26 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', 'nuxt-ai-ready'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n'],
+  
+  // i18n configuration
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'fr', name: 'Français', file: 'fr.json' },
+      { code: 'de', name: 'Deutsch', file: 'de.json' },
+      { code: 'es', name: 'Español', file: 'es.json' },
+      { code: 'it', name: 'Italiano', file: 'it.json' },
+      { code: 'pt', name: 'Português', file: 'pt.json' },
+      { code: 'nl', name: 'Nederlands', file: 'nl.json' },
+      { code: 'zh', name: '中文', file: 'zh.json' },
+      { code: 'ja', name: '日本語', file: 'ja.json' },
+      { code: 'ar', name: 'العربية', file: 'ar.json' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    langDir: './locales/'
+  },
   
   // Sitemap config
   sitemap: {

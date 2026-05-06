@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { createConsola } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getRequestProtocol, getRequestHost, getQuery as getQuery$1, removeResponseHeader, setHeader, getHeader, getRouterParam, getResponseStatus, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withoutTrailingSlash, withLeadingSlash, withBase, withTrailingSlash, withoutLeadingSlash, decodePath, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getRequestProtocol, getRequestHost, getQuery as getQuery$1, getResponseStatus, getCookie, setCookie, sanitizeStatusCode, removeResponseHeader, setHeader, getHeader, appendHeader, getRouterParam, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withoutTrailingSlash, withLeadingSlash, withBase, withTrailingSlash, withoutLeadingSlash, joinRelativeURL, parsePath, decodePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
 import destr from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
 import { createFetch, Headers as Headers$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
@@ -19,9 +19,11 @@ import { toRouteMatcher, createRouter } from 'file:///Volumes/B87P4/everythingin
 import { toValue } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
 import { parse } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import { hash as hash$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import { createRouterMatcher } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve as resolve$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import { createFilter } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import { isAbsolute } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import localAdapter from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 
@@ -72,19 +74,19 @@ const _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt
   },
 );
 
-const storage = createStorage({});
+const storage$1 = createStorage({});
 
-storage.mount('/assets', assets$1);
+storage$1.mount('/assets', assets$1);
 
-storage.mount('internal:nuxt:prerender', _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache/nitro/prerender"}));
-storage.mount('data', fsDriver({"driver":"fsLite","base":"./.data/kv"}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache"}));
+storage$1.mount('internal:nuxt:prerender', _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache/nitro/prerender"}));
+storage$1.mount('data', fsDriver({"driver":"fsLite","base":"./.data/kv"}));
+storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt","watchOptions":{"ignored":[null]}}));
+storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt/server","watchOptions":{"ignored":[null]}}));
+storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt"}));
+storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache"}));
 
 function useStorage(base = "") {
-  return base ? prefixStorage(storage, base) : storage;
+  return base ? prefixStorage(storage$1, base) : storage$1;
 }
 
 const Hasher = /* @__PURE__ */ (() => {
@@ -654,7 +656,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "2d7605a5-95b1-4ca1-9acb-401f5cef776c",
+    "buildId": "3470d770-b632-43b5-a6d2-ab11edf7ef21",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -697,10 +699,86 @@ const _inlineRuntimeConfig = {
         "prerender": true
       },
       "/sitemap.xml": {
+        "redirect": {
+          "to": "/sitemap_index.xml",
+          "statusCode": 307
+        }
+      },
+      "/sitemap_index.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T11:42:29.610Z"
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/en.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/fr.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/de.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/es.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/it.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/pt.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/nl.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/zh.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/ja.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
+        }
+      },
+      "/__sitemap__/ar.xml": {
+        "headers": {
+          "Content-Type": "text/xml; charset=UTF-8",
+          "Cache-Control": "public, max-age=600, must-revalidate",
+          "X-Sitemap-Prerendered": "2026-05-06T11:57:46.232Z"
         }
       },
       "/_og/d/**": {
@@ -808,6 +886,121 @@ const _inlineRuntimeConfig = {
     "content": {
       "wsUrl": ""
     },
+    "i18n": {
+      "baseUrl": "",
+      "defaultLocale": "en",
+      "rootRedirect": "",
+      "redirectStatusCode": 302,
+      "skipSettingLocaleOnNavigate": false,
+      "locales": [
+        {
+          "code": "en",
+          "name": "English",
+          "language": ""
+        },
+        {
+          "code": "fr",
+          "name": "Français",
+          "language": ""
+        },
+        {
+          "code": "de",
+          "name": "Deutsch",
+          "language": ""
+        },
+        {
+          "code": "es",
+          "name": "Español",
+          "language": ""
+        },
+        {
+          "code": "it",
+          "name": "Italiano",
+          "language": ""
+        },
+        {
+          "code": "pt",
+          "name": "Português",
+          "language": ""
+        },
+        {
+          "code": "nl",
+          "name": "Nederlands",
+          "language": ""
+        },
+        {
+          "code": "zh",
+          "name": "中文",
+          "language": ""
+        },
+        {
+          "code": "ja",
+          "name": "日本語",
+          "language": ""
+        },
+        {
+          "code": "ar",
+          "name": "العربية",
+          "language": ""
+        }
+      ],
+      "detectBrowserLanguage": {
+        "alwaysRedirect": false,
+        "cookieCrossOrigin": false,
+        "cookieDomain": "",
+        "cookieKey": "i18n_redirected",
+        "cookieSecure": false,
+        "fallbackLocale": "",
+        "redirectOn": "root",
+        "useCookie": true
+      },
+      "experimental": {
+        "localeDetector": "",
+        "typedPages": true,
+        "typedOptionsAndMessages": false,
+        "alternateLinkCanonicalQueries": true,
+        "devCache": false,
+        "cacheLifetime": "",
+        "stripMessagesPayload": false,
+        "preload": false,
+        "strictSeo": false,
+        "nitroContextDetection": true,
+        "httpCacheDuration": 10,
+        "compactRoutes": false
+      },
+      "domainLocales": {
+        "en": {
+          "domain": ""
+        },
+        "fr": {
+          "domain": ""
+        },
+        "de": {
+          "domain": ""
+        },
+        "es": {
+          "domain": ""
+        },
+        "it": {
+          "domain": ""
+        },
+        "pt": {
+          "domain": ""
+        },
+        "nl": {
+          "domain": ""
+        },
+        "zh": {
+          "domain": ""
+        },
+        "ja": {
+          "domain": ""
+        },
+        "ar": {
+          "domain": ""
+        }
+      }
+    },
     "nuxt-robots": {
       "version": "6.0.8",
       "isNuxtContentV2": false,
@@ -830,7 +1023,7 @@ const _inlineRuntimeConfig = {
         }
       ],
       "sitemap": [
-        "/sitemap.xml"
+        "/sitemap_index.xml"
       ],
       "header": true,
       "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -887,6 +1080,10 @@ const _inlineRuntimeConfig = {
         "_priority": -3,
         "_context": "nuxt-site-config:config",
         "url": "https://einp.surge.sh"
+      },
+      {
+        "_context": "@nuxtjs/i18n",
+        "defaultLocale": "en"
       }
     ],
     "version": "4.0.8",
@@ -915,7 +1112,7 @@ const _inlineRuntimeConfig = {
       }
     ],
     "sitemap": [
-      "/sitemap.xml"
+      "/sitemap_index.xml"
     ],
     "header": true,
     "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -2946,42 +3143,6 @@ function autoEjectCommunityTemplate(component, runtimeConfig, options) {
   return;
 }
 
-function createFilter(options = {}) {
-  const include = options.include || [];
-  const exclude = options.exclude || [];
-  if (include.length === 0 && exclude.length === 0)
-    return () => true;
-  const excludeRegex = exclude.filter((r) => r instanceof RegExp);
-  const includeRegex = include.filter((r) => r instanceof RegExp);
-  const excludeStrings = exclude.filter((r) => typeof r === "string");
-  const includeStrings = include.filter((r) => typeof r === "string");
-  const excludeMatcher = excludeStrings.length > 0 ? toRouteMatcher(createRouter({
-    routes: Object.fromEntries(excludeStrings.map((r) => [r, true])),
-    strictTrailingSlash: false
-  })) : null;
-  const includeMatcher = includeStrings.length > 0 ? toRouteMatcher(createRouter({
-    routes: Object.fromEntries(includeStrings.map((r) => [r, true])),
-    strictTrailingSlash: false
-  })) : null;
-  const excludeExact = new Set(excludeStrings);
-  const includeExact = new Set(includeStrings);
-  return function(path) {
-    if (excludeRegex.some((r) => r.test(path)))
-      return false;
-    if (excludeExact.has(path))
-      return false;
-    if (excludeMatcher && excludeMatcher.matchAll(path).length > 0)
-      return false;
-    if (includeRegex.some((r) => r.test(path)))
-      return true;
-    if (includeExact.has(path))
-      return true;
-    if (includeMatcher && includeMatcher.matchAll(path).length > 0)
-      return true;
-    return include.length === 0;
-  };
-}
-
 function fetchIsland(e, component, props, timeout) {
   const hashId = hash$1([component, props]).replaceAll("_", "-");
   const signal = timeout ? AbortSignal.timeout(timeout) : void 0;
@@ -3473,148 +3634,685 @@ const _GCKn7thj1_r2tsnOceKU5iQGVL1FQOhOg29LGNrwLU = defineNitroPlugin(async (nit
   });
 });
 
-const plugins = [
-  _8GGUsxU7kT0YDbcYUbeIXrVyOHObVvSMT9jQN7lPa0E,
-_HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno,
-_s8AZRtyyuDCvawDQ_vE2rMbngJ92j3C1PGF89OP51dg,
-_GCKn7thj1_r2tsnOceKU5iQGVL1FQOhOg29LGNrwLU
+/*!
+  * shared v11.4.0
+  * (c) 2026 kazuya kawaguchi
+  * Released under the MIT License.
+  */
+const _create = Object.create;
+const create = (obj = null) => _create(obj);
+/* eslint-enable */
+/**
+ * Useful Utilities By Evan you
+ * Modified by kazuya kawaguchi
+ * MIT License
+ * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/index.ts
+ * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/codeframe.ts
+ */
+const isArray = Array.isArray;
+const isFunction = (val) => typeof val === 'function';
+const isString = (val) => typeof val === 'string';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const isObject = (val) => val !== null && typeof val === 'object';
+const objectToString = Object.prototype.toString;
+const toTypeString = (value) => objectToString.call(value);
+
+const isNotObjectOrIsArray = (val) => !isObject(val) || isArray(val);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function deepCopy(src, des) {
+    // src and des should both be objects, and none of them can be a array
+    if (isNotObjectOrIsArray(src) || isNotObjectOrIsArray(des)) {
+        throw new Error('Invalid value');
+    }
+    const stack = [{ src, des }];
+    while (stack.length) {
+        const { src, des } = stack.pop();
+        // using `Object.keys` which skips prototype properties
+        Object.keys(src).forEach(key => {
+            if (key === '__proto__') {
+                return;
+            }
+            // if src[key] is an object/array, set des[key]
+            // to empty object/array to prevent setting by reference
+            if (isObject(src[key]) && !isObject(des[key])) {
+                des[key] = Array.isArray(src[key]) ? [] : create();
+            }
+            if (isNotObjectOrIsArray(des[key]) || isNotObjectOrIsArray(src[key])) {
+                // replace with src[key] when:
+                // src[key] or des[key] is not an object, or
+                // src[key] or des[key] is an array
+                des[key] = src[key];
+            }
+            else {
+                // src[key] and des[key] are both objects, merge them
+                stack.push({ src: src[key], des: des[key] });
+            }
+        });
+    }
+}
+
+const __nuxtMock = { runWithContext: async (fn) => await fn() };
+const merger$1 = createDefu((obj, key, value) => {
+  if (key === "messages" || key === "datetimeFormats" || key === "numberFormats") {
+    obj[key] ??= create(null);
+    deepCopy(value, obj[key]);
+    return true;
+  }
+});
+async function loadVueI18nOptions(vueI18nConfigs) {
+  const nuxtApp = __nuxtMock;
+  let vueI18nOptions = { messages: create(null) };
+  for (const configFile of vueI18nConfigs) {
+    const resolver = await configFile().then((x) => isModule(x) ? x.default : x);
+    const resolved = isFunction(resolver) ? await nuxtApp.runWithContext(() => resolver()) : resolver;
+    vueI18nOptions = merger$1(create(null), resolved, vueI18nOptions);
+  }
+  vueI18nOptions.fallbackLocale ??= false;
+  return vueI18nOptions;
+}
+const isModule = (val) => toTypeString(val) === "[object Module]";
+async function getLocaleMessages(locale, loader) {
+  const nuxtApp = __nuxtMock;
+  try {
+    const getter = await nuxtApp.runWithContext(loader.load).then((x) => isModule(x) ? x.default : x);
+    return isFunction(getter) ? await nuxtApp.runWithContext(() => getter(locale)) : getter;
+  } catch (e) {
+    throw new Error(`Failed loading locale (${locale}): ` + e.message);
+  }
+}
+async function getLocaleMessagesMerged(locale, loaders = []) {
+  const nuxtApp = __nuxtMock;
+  const messages = await Promise.all(
+    loaders.map((loader) => nuxtApp.runWithContext(() => getLocaleMessages(locale, loader)))
+  );
+  const merged = {};
+  for (const message of messages) {
+    deepCopy(message, merged);
+  }
+  return merged;
+}
+
+var home$9 = "Home";
+var articles$9 = "Articles";
+var perspectives$9 = "Perspectives";
+var books$9 = "Books";
+var pages$9 = "Pages";
+var faq$9 = "FAQ";
+var contact$9 = "Contact";
+var privacy$9 = "Privacy";
+var terms$9 = "Terms";
+var cookies$9 = "Cookies";
+var language$9 = "Language";
+var search$9 = "Search";
+var browseAll$9 = "Browse all";
+var found$9 = "found";
+var by$9 = "By";
+var notFound$9 = "Not found";
+var readMore$9 = "Read More";
+const locale_en_46json_fa76968c = {
+	home: home$9,
+	articles: articles$9,
+	perspectives: perspectives$9,
+	books: books$9,
+	pages: pages$9,
+	faq: faq$9,
+	contact: contact$9,
+	privacy: privacy$9,
+	terms: terms$9,
+	cookies: cookies$9,
+	language: language$9,
+	search: search$9,
+	browseAll: browseAll$9,
+	found: found$9,
+	by: by$9,
+	notFound: notFound$9,
+	readMore: readMore$9
+};
+
+var home$8 = "Home";
+var articles$8 = "Articles";
+var perspectives$8 = "Perspectives";
+var books$8 = "Books";
+var pages$8 = "Pages";
+var faq$8 = "FAQ";
+var contact$8 = "Contact";
+var privacy$8 = "Privacy";
+var terms$8 = "Terms";
+var cookies$8 = "Cookies";
+var language$8 = "Language";
+var search$8 = "Search";
+var browseAll$8 = "Browse all";
+var found$8 = "found";
+var by$8 = "By";
+var notFound$8 = "Not found";
+var readMore$8 = "Read More";
+const locale_fr_46json_637ba10e = {
+	home: home$8,
+	articles: articles$8,
+	perspectives: perspectives$8,
+	books: books$8,
+	pages: pages$8,
+	faq: faq$8,
+	contact: contact$8,
+	privacy: privacy$8,
+	terms: terms$8,
+	cookies: cookies$8,
+	language: language$8,
+	search: search$8,
+	browseAll: browseAll$8,
+	found: found$8,
+	by: by$8,
+	notFound: notFound$8,
+	readMore: readMore$8
+};
+
+var home$7 = "Home";
+var articles$7 = "Articles";
+var perspectives$7 = "Perspectives";
+var books$7 = "Books";
+var pages$7 = "Pages";
+var faq$7 = "FAQ";
+var contact$7 = "Contact";
+var privacy$7 = "Privacy";
+var terms$7 = "Terms";
+var cookies$7 = "Cookies";
+var language$7 = "Language";
+var search$7 = "Search";
+var browseAll$7 = "Browse all";
+var found$7 = "found";
+var by$7 = "By";
+var notFound$7 = "Not found";
+var readMore$7 = "Read More";
+const locale_de_46json_969e0107 = {
+	home: home$7,
+	articles: articles$7,
+	perspectives: perspectives$7,
+	books: books$7,
+	pages: pages$7,
+	faq: faq$7,
+	contact: contact$7,
+	privacy: privacy$7,
+	terms: terms$7,
+	cookies: cookies$7,
+	language: language$7,
+	search: search$7,
+	browseAll: browseAll$7,
+	found: found$7,
+	by: by$7,
+	notFound: notFound$7,
+	readMore: readMore$7
+};
+
+var home$6 = "Home";
+var articles$6 = "Articles";
+var perspectives$6 = "Perspectives";
+var books$6 = "Books";
+var pages$6 = "Pages";
+var faq$6 = "FAQ";
+var contact$6 = "Contact";
+var privacy$6 = "Privacy";
+var terms$6 = "Terms";
+var cookies$6 = "Cookies";
+var language$6 = "Language";
+var search$6 = "Search";
+var browseAll$6 = "Browse all";
+var found$6 = "found";
+var by$6 = "By";
+var notFound$6 = "Not found";
+var readMore$6 = "Read More";
+const locale_es_46json_6b345c52 = {
+	home: home$6,
+	articles: articles$6,
+	perspectives: perspectives$6,
+	books: books$6,
+	pages: pages$6,
+	faq: faq$6,
+	contact: contact$6,
+	privacy: privacy$6,
+	terms: terms$6,
+	cookies: cookies$6,
+	language: language$6,
+	search: search$6,
+	browseAll: browseAll$6,
+	found: found$6,
+	by: by$6,
+	notFound: notFound$6,
+	readMore: readMore$6
+};
+
+var home$5 = "Home";
+var articles$5 = "Articles";
+var perspectives$5 = "Perspectives";
+var books$5 = "Books";
+var pages$5 = "Pages";
+var faq$5 = "FAQ";
+var contact$5 = "Contact";
+var privacy$5 = "Privacy";
+var terms$5 = "Terms";
+var cookies$5 = "Cookies";
+var language$5 = "Language";
+var search$5 = "Search";
+var browseAll$5 = "Browse all";
+var found$5 = "found";
+var by$5 = "By";
+var notFound$5 = "Not found";
+var readMore$5 = "Read More";
+const locale_it_46json_08e8db69 = {
+	home: home$5,
+	articles: articles$5,
+	perspectives: perspectives$5,
+	books: books$5,
+	pages: pages$5,
+	faq: faq$5,
+	contact: contact$5,
+	privacy: privacy$5,
+	terms: terms$5,
+	cookies: cookies$5,
+	language: language$5,
+	search: search$5,
+	browseAll: browseAll$5,
+	found: found$5,
+	by: by$5,
+	notFound: notFound$5,
+	readMore: readMore$5
+};
+
+var home$4 = "Home";
+var articles$4 = "Articles";
+var perspectives$4 = "Perspectives";
+var books$4 = "Books";
+var pages$4 = "Pages";
+var faq$4 = "FAQ";
+var contact$4 = "Contact";
+var privacy$4 = "Privacy";
+var terms$4 = "Terms";
+var cookies$4 = "Cookies";
+var language$4 = "Language";
+var search$4 = "Search";
+var browseAll$4 = "Browse all";
+var found$4 = "found";
+var by$4 = "By";
+var notFound$4 = "Not found";
+var readMore$4 = "Read More";
+const locale_pt_46json_37ff6206 = {
+	home: home$4,
+	articles: articles$4,
+	perspectives: perspectives$4,
+	books: books$4,
+	pages: pages$4,
+	faq: faq$4,
+	contact: contact$4,
+	privacy: privacy$4,
+	terms: terms$4,
+	cookies: cookies$4,
+	language: language$4,
+	search: search$4,
+	browseAll: browseAll$4,
+	found: found$4,
+	by: by$4,
+	notFound: notFound$4,
+	readMore: readMore$4
+};
+
+var home$3 = "Home";
+var articles$3 = "Articles";
+var perspectives$3 = "Perspectives";
+var books$3 = "Books";
+var pages$3 = "Pages";
+var faq$3 = "FAQ";
+var contact$3 = "Contact";
+var privacy$3 = "Privacy";
+var terms$3 = "Terms";
+var cookies$3 = "Cookies";
+var language$3 = "Language";
+var search$3 = "Search";
+var browseAll$3 = "Browse all";
+var found$3 = "found";
+var by$3 = "By";
+var notFound$3 = "Not found";
+var readMore$3 = "Read More";
+const locale_nl_46json_5ca8de1a = {
+	home: home$3,
+	articles: articles$3,
+	perspectives: perspectives$3,
+	books: books$3,
+	pages: pages$3,
+	faq: faq$3,
+	contact: contact$3,
+	privacy: privacy$3,
+	terms: terms$3,
+	cookies: cookies$3,
+	language: language$3,
+	search: search$3,
+	browseAll: browseAll$3,
+	found: found$3,
+	by: by$3,
+	notFound: notFound$3,
+	readMore: readMore$3
+};
+
+var home$2 = "Home";
+var articles$2 = "Articles";
+var perspectives$2 = "Perspectives";
+var books$2 = "Books";
+var pages$2 = "Pages";
+var faq$2 = "FAQ";
+var contact$2 = "Contact";
+var privacy$2 = "Privacy";
+var terms$2 = "Terms";
+var cookies$2 = "Cookies";
+var language$2 = "Language";
+var search$2 = "Search";
+var browseAll$2 = "Browse all";
+var found$2 = "found";
+var by$2 = "By";
+var notFound$2 = "Not found";
+var readMore$2 = "Read More";
+const locale_zh_46json_1932ad6c = {
+	home: home$2,
+	articles: articles$2,
+	perspectives: perspectives$2,
+	books: books$2,
+	pages: pages$2,
+	faq: faq$2,
+	contact: contact$2,
+	privacy: privacy$2,
+	terms: terms$2,
+	cookies: cookies$2,
+	language: language$2,
+	search: search$2,
+	browseAll: browseAll$2,
+	found: found$2,
+	by: by$2,
+	notFound: notFound$2,
+	readMore: readMore$2
+};
+
+var home$1 = "Home";
+var articles$1 = "Articles";
+var perspectives$1 = "Perspectives";
+var books$1 = "Books";
+var pages$1 = "Pages";
+var faq$1 = "FAQ";
+var contact$1 = "Contact";
+var privacy$1 = "Privacy";
+var terms$1 = "Terms";
+var cookies$1 = "Cookies";
+var language$1 = "Language";
+var search$1 = "Search";
+var browseAll$1 = "Browse all";
+var found$1 = "found";
+var by$1 = "By";
+var notFound$1 = "Not found";
+var readMore$1 = "Read More";
+const locale_ja_46json_7bc62a85 = {
+	home: home$1,
+	articles: articles$1,
+	perspectives: perspectives$1,
+	books: books$1,
+	pages: pages$1,
+	faq: faq$1,
+	contact: contact$1,
+	privacy: privacy$1,
+	terms: terms$1,
+	cookies: cookies$1,
+	language: language$1,
+	search: search$1,
+	browseAll: browseAll$1,
+	found: found$1,
+	by: by$1,
+	notFound: notFound$1,
+	readMore: readMore$1
+};
+
+var home = "Home";
+var articles = "Articles";
+var perspectives = "Perspectives";
+var books = "Books";
+var pages = "Pages";
+var faq = "FAQ";
+var contact = "Contact";
+var privacy = "Privacy";
+var terms = "Terms";
+var cookies = "Cookies";
+var language = "Language";
+var search = "Search";
+var browseAll = "Browse all";
+var found = "found";
+var by = "By";
+var notFound = "Not found";
+var readMore = "Read More";
+const locale_ar_46json_215c3443 = {
+	home: home,
+	articles: articles,
+	perspectives: perspectives,
+	books: books,
+	pages: pages,
+	faq: faq,
+	contact: contact,
+	privacy: privacy,
+	terms: terms,
+	cookies: cookies,
+	language: language,
+	search: search,
+	browseAll: browseAll,
+	found: found,
+	by: by,
+	notFound: notFound,
+	readMore: readMore
+};
+
+// @ts-nocheck
+const localeCodes =  [
+  "en",
+  "fr",
+  "de",
+  "es",
+  "it",
+  "pt",
+  "nl",
+  "zh",
+  "ja",
+  "ar"
+];
+const localeLoaders = {
+  en: [
+    {
+      key: "locale_en_46json_fa76968c",
+      load: () => Promise.resolve(locale_en_46json_fa76968c),
+      cache: true
+    }
+  ],
+  fr: [
+    {
+      key: "locale_fr_46json_637ba10e",
+      load: () => Promise.resolve(locale_fr_46json_637ba10e),
+      cache: true
+    }
+  ],
+  de: [
+    {
+      key: "locale_de_46json_969e0107",
+      load: () => Promise.resolve(locale_de_46json_969e0107),
+      cache: true
+    }
+  ],
+  es: [
+    {
+      key: "locale_es_46json_6b345c52",
+      load: () => Promise.resolve(locale_es_46json_6b345c52),
+      cache: true
+    }
+  ],
+  it: [
+    {
+      key: "locale_it_46json_08e8db69",
+      load: () => Promise.resolve(locale_it_46json_08e8db69),
+      cache: true
+    }
+  ],
+  pt: [
+    {
+      key: "locale_pt_46json_37ff6206",
+      load: () => Promise.resolve(locale_pt_46json_37ff6206),
+      cache: true
+    }
+  ],
+  nl: [
+    {
+      key: "locale_nl_46json_5ca8de1a",
+      load: () => Promise.resolve(locale_nl_46json_5ca8de1a),
+      cache: true
+    }
+  ],
+  zh: [
+    {
+      key: "locale_zh_46json_1932ad6c",
+      load: () => Promise.resolve(locale_zh_46json_1932ad6c),
+      cache: true
+    }
+  ],
+  ja: [
+    {
+      key: "locale_ja_46json_7bc62a85",
+      load: () => Promise.resolve(locale_ja_46json_7bc62a85),
+      cache: true
+    }
+  ],
+  ar: [
+    {
+      key: "locale_ar_46json_215c3443",
+      load: () => Promise.resolve(locale_ar_46json_215c3443),
+      cache: true
+    }
+  ]
+};
+const vueI18nConfigs = [];
+const normalizedLocales = [
+  {
+    code: "en",
+    name: "English",
+    language: undefined
+  },
+  {
+    code: "fr",
+    name: "Français",
+    language: undefined
+  },
+  {
+    code: "de",
+    name: "Deutsch",
+    language: undefined
+  },
+  {
+    code: "es",
+    name: "Español",
+    language: undefined
+  },
+  {
+    code: "it",
+    name: "Italiano",
+    language: undefined
+  },
+  {
+    code: "pt",
+    name: "Português",
+    language: undefined
+  },
+  {
+    code: "nl",
+    name: "Nederlands",
+    language: undefined
+  },
+  {
+    code: "zh",
+    name: "中文",
+    language: undefined
+  },
+  {
+    code: "ja",
+    name: "日本語",
+    language: undefined
+  },
+  {
+    code: "ar",
+    name: "العربية",
+    language: undefined
+  }
 ];
 
-const assets = {};
+const setupVueI18nOptions = async (defaultLocale) => {
+  const options = await loadVueI18nOptions(vueI18nConfigs);
+  options.locale = defaultLocale || options.locale || "en-US";
+  options.defaultLocale = defaultLocale;
+  options.fallbackLocale ??= false;
+  options.messages ??= {};
+  for (const locale of localeCodes) {
+    options.messages[locale] ??= {};
+  }
+  return options;
+};
 
-function readAsset (id) {
-  const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
-  return promises.readFile(resolve$1(serverDir, assets[id].path))
+function defineNitroPlugin(def) {
+  return def;
 }
 
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_og-static-fonts/":{"maxAge":31536000},"/_nuxt/":{"maxAge":31536000}};
-
-function isPublicAssetURL(id = '') {
-  if (assets[id]) {
-    return true
-  }
-  for (const base in publicAssetBases) {
-    if (id.startsWith(base)) { return true }
-  }
-  return false
-}
-
-function getAsset (id) {
-  return assets[id]
-}
-
-const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
-const EncodingMap = { gzip: ".gz", br: ".br" };
-const _kQxHaP = eventHandler((event) => {
-  if (event.method && !METHODS.has(event.method)) {
-    return;
-  }
-  let id = decodePath(
-    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
-  );
-  let asset;
-  const encodingHeader = String(
-    getRequestHeader(event, "accept-encoding") || ""
-  );
-  const encodings = [
-    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
-    ""
-  ];
-  for (const encoding of encodings) {
-    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
-      const _asset = getAsset(_id);
-      if (_asset) {
-        asset = _asset;
-        id = _id;
-        break;
+function defineRenderHandler(render) {
+  const runtimeConfig = useRuntimeConfig();
+  return eventHandler(async (event) => {
+    const nitroApp = useNitroApp();
+    const ctx = { event, render, response: void 0 };
+    await nitroApp.hooks.callHook("render:before", ctx);
+    if (!ctx.response) {
+      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
+        setResponseHeader(event, "Content-Type", "image/x-icon");
+        return send(
+          event,
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        );
+      }
+      ctx.response = await ctx.render(event);
+      if (!ctx.response) {
+        const _currentStatus = getResponseStatus(event);
+        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+        return send(
+          event,
+          "No response returned from render handler: " + event.path
+        );
       }
     }
-  }
-  if (!asset) {
-    if (isPublicAssetURL(id)) {
-      removeResponseHeader(event, "Cache-Control");
-      throw createError({ statusCode: 404 });
+    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
+    if (ctx.response.headers) {
+      setResponseHeaders(event, ctx.response.headers);
     }
-    return;
-  }
-  if (asset.encoding !== void 0) {
-    appendResponseHeader(event, "Vary", "Accept-Encoding");
-  }
-  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
-  if (ifNotMatch) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
-  const mtimeDate = new Date(asset.mtime);
-  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  if (asset.type && !getResponseHeader(event, "Content-Type")) {
-    setResponseHeader(event, "Content-Type", asset.type);
-  }
-  if (asset.etag && !getResponseHeader(event, "ETag")) {
-    setResponseHeader(event, "ETag", asset.etag);
-  }
-  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
-    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
-  }
-  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
-    setResponseHeader(event, "Content-Encoding", asset.encoding);
-  }
-  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
-    setResponseHeader(event, "Content-Length", asset.size);
-  }
-  return readAsset(id);
-});
-
-const _SxA8c9 = defineEventHandler(() => {});
-
-const PORT_SUFFIX_RE = /:\d+$/;
-const _APFHMZ = eventHandler(async (e) => {
-  if (e.context._initedSiteConfig)
-    return;
-  const runtimeConfig = useRuntimeConfig(e);
-  const config = runtimeConfig["nuxt-site-config"];
-  const nitroApp = useNitroApp();
-  const siteConfig = e.context.siteConfig || createSiteConfigStack({
-    debug: config.debug
-  });
-  const nitroOrigin = getNitroOrigin(e);
-  e.context.siteConfigNitroOrigin = nitroOrigin;
-  siteConfig.push({
-    _context: "runtimeEnv",
-    _priority: SiteConfigPriority.runtime,
-    ...runtimeConfig.site || {},
-    ...runtimeConfig.public.site || {},
-    ...envSiteConfig(globalThis._importMeta_.env || {})
-    // just in-case, shouldn't be needed
-  });
-  const buildStack = config.stack || [];
-  buildStack.forEach((c) => siteConfig.push(c));
-  if (e.context._nitro.routeRules.site) {
-    siteConfig.push({
-      _context: "route-rules",
-      ...e.context._nitro.routeRules.site
-    });
-  }
-  if (config.multiTenancy) {
-    const host = parseURL(nitroOrigin).host?.replace(PORT_SUFFIX_RE, "") || "";
-    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
-    if (tenant) {
-      siteConfig.push({
-        _context: `multi-tenancy:${host}`,
-        _priority: SiteConfigPriority.runtime,
-        ...tenant.config
-      });
+    if (ctx.response.statusCode || ctx.response.statusMessage) {
+      setResponseStatus(
+        event,
+        ctx.response.statusCode,
+        ctx.response.statusMessage
+      );
     }
-  }
-  const ctx = { siteConfig, event: e };
-  await nitroApp.hooks.callHook("site-config:init", ctx);
-  e.context.siteConfig = ctx.siteConfig;
-  e.context._initedSiteConfig = true;
-});
+    return ctx.response.body;
+  });
+}
+
+function baseURL() {
+	
+	return useRuntimeConfig().app.baseURL;
+}
+function buildAssetsDir() {
+	
+	return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+	
+	const app = useRuntimeConfig().app;
+	const publicBase = app.cdnURL || app.baseURL;
+	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
+}
 
 const checksums = {
   "content": "v3.5.0--69efc4vhCgpAaNW_cNciUJGCzQZuTeMK3Wt6rkmZ-WA"
@@ -3838,6 +4536,812 @@ const queryCollection = (event, collection) => {
   return collectionQueryBuilder(collection, (collection2, sql) => fetchQuery(event, collection2, sql));
 };
 
+function parseAcceptLanguage(value) {
+  return value.split(",").map((tag) => tag.split(";")[0]).filter(
+    (tag) => !(tag === "*" || tag === "")
+  );
+}
+function createPathIndexLanguageParser(index = 0) {
+  return (path) => {
+    const rawPath = typeof path === "string" ? path : path.pathname;
+    const normalizedPath = rawPath.split("?")[0];
+    const parts = normalizedPath.split("/");
+    if (parts[0] === "") {
+      parts.shift();
+    }
+    return parts.length > index ? parts[index] || "" : "";
+  };
+}
+
+function getSiteIndexable(e) {
+  const { env, indexable } = getSiteConfig(e);
+  if (typeof indexable !== "undefined")
+    return String(indexable) === "true";
+  return env === "production";
+}
+
+function withoutQuery$1(path) {
+  return String(path.split("?")[0]);
+}
+function createNitroRouteRuleMatcher$1(e) {
+  const { nitro, app } = useRuntimeConfig(e);
+  const _routeRulesMatcher = toRouteMatcher(
+    createRouter({
+      routes: Object.fromEntries(
+        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
+      )
+    })
+  );
+  return (path) => {
+    return defu$1({}, ..._routeRulesMatcher.matchAll(
+      withoutBase(withoutTrailingSlash(withoutQuery$1(path)), app.baseURL)
+    ).reverse());
+  };
+}
+
+function getSiteRobotConfig(e) {
+  const query = getQuery$1(e);
+  const hints = [];
+  const { groups, debug } = useRuntimeConfigNuxtRobots(e);
+  let indexable = getSiteIndexable(e);
+  const queryIndexableEnabled = String(query.mockProductionEnv) === "true" || query.mockProductionEnv === "";
+  if (debug || false) {
+    const { _context } = getSiteConfig(e, { debug: debug || false });
+    if (queryIndexableEnabled) {
+      indexable = true;
+      hints.push("You are mocking a production enviroment with ?mockProductionEnv query.");
+    } else if (!indexable && _context.indexable === "nuxt-robots:config") {
+      hints.push("You are blocking indexing with your Nuxt Robots config.");
+    } else if (!queryIndexableEnabled && !_context.indexable) {
+      hints.push(`Indexing is blocked in development. You can mock a production environment with ?mockProductionEnv query.`);
+    } else if (!indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
+    } else if (indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is enabled from ${_context.indexable}.`);
+    }
+  }
+  if (groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"))) {
+    indexable = false;
+    hints.push("You are blocking all user agents with a wildcard `Disallow /`.");
+  } else if (groups.some((g) => g.disallow.includes("/"))) {
+    hints.push("You are blocking specific user agents with `Disallow /`.");
+  }
+  return { indexable, hints };
+}
+
+function getPathRobotConfig(e, options) {
+  const runtimeConfig = useRuntimeConfig(e);
+  const { robotsDisabledValue, robotsEnabledValue, isNuxtContentV2 } = useRuntimeConfigNuxtRobots(e);
+  if (!options?.skipSiteIndexable) {
+    if (!getSiteRobotConfig(e).indexable) {
+      return {
+        rule: robotsDisabledValue,
+        indexable: false,
+        debug: {
+          source: "Site Config"
+        }
+      };
+    }
+  }
+  const path = options?.path || e.path;
+  let userAgent = options?.userAgent;
+  if (!userAgent) {
+    try {
+      userAgent = getRequestHeader(e, "User-Agent");
+    } catch {
+    }
+  }
+  const nitroApp = useNitroApp();
+  const groups = [
+    // run explicit user agent matching first
+    ...nitroApp._robots.ctx.groups.filter((g) => {
+      if (userAgent) {
+        return g.userAgent.some((ua) => ua.toLowerCase().includes(userAgent.toLowerCase()));
+      }
+      return false;
+    }),
+    // run wildcard matches second
+    ...nitroApp._robots.ctx.groups.filter((g) => g.userAgent.includes("*"))
+  ];
+  for (const group of groups) {
+    if (!options?.skipSiteIndexable && group._indexable === false) {
+      return {
+        indexable: false,
+        rule: robotsDisabledValue,
+        debug: {
+          source: "/robots.txt",
+          line: JSON.stringify(group)
+        }
+      };
+    }
+    const rules = options?.skipSiteIndexable ? (group._rules || []).filter((r) => r.pattern !== "/") : group._rules || [];
+    const robotsTxtRule = matchPathToRule(path, rules);
+    if (robotsTxtRule) {
+      if (!robotsTxtRule.allow) {
+        return {
+          indexable: false,
+          rule: robotsDisabledValue,
+          debug: {
+            source: "/robots.txt",
+            line: `Disallow: ${robotsTxtRule.pattern}`
+          }
+        };
+      }
+      break;
+    }
+  }
+  if (isNuxtContentV2 && nitroApp._robots?.nuxtContentUrls?.has(withoutTrailingSlash(path))) {
+    return {
+      indexable: false,
+      rule: robotsDisabledValue,
+      debug: {
+        source: "Nuxt Content"
+      }
+    };
+  }
+  const { pageMetaRobots } = useRuntimeConfigNuxtRobots(e);
+  const pageMetaRule = pageMetaRobots?.[withoutTrailingSlash(path)];
+  if (typeof pageMetaRule !== "undefined") {
+    const normalised = normaliseRobotsRouteRule({ robots: pageMetaRule });
+    if (normalised && (typeof normalised.allow !== "undefined" || typeof normalised.rule !== "undefined")) {
+      return {
+        indexable: normalised.allow ?? false,
+        rule: normalised.rule || (normalised.allow ? robotsEnabledValue : robotsDisabledValue),
+        debug: {
+          source: "Page Meta"
+        }
+      };
+    }
+  }
+  nitroApp._robotsRuleMatcher = nitroApp._robotsRuleMatcher || createNitroRouteRuleMatcher$1(e);
+  let robotRouteRules = nitroApp._robotsRuleMatcher(path);
+  let routeRulesPath = path;
+  const i18nConfig = runtimeConfig.public?.i18n;
+  if (i18nConfig?.locales && typeof robotRouteRules.robots === "undefined") {
+    const { locales } = i18nConfig;
+    const locale = locales.find((l) => routeRulesPath.startsWith(`/${l.code}`));
+    if (locale) {
+      routeRulesPath = routeRulesPath.replace(`/${locale.code}`, "");
+      robotRouteRules = nitroApp._robotsRuleMatcher(routeRulesPath);
+    }
+  }
+  const routeRules = normaliseRobotsRouteRule(robotRouteRules);
+  if (routeRules && (typeof routeRules.allow !== "undefined" || typeof routeRules.rule !== "undefined")) {
+    return {
+      indexable: routeRules.allow ?? false,
+      rule: routeRules.rule || (routeRules.allow ? robotsEnabledValue : robotsDisabledValue),
+      debug: {
+        source: "Route Rules"
+      }
+    };
+  }
+  return {
+    indexable: true,
+    rule: robotsEnabledValue
+  };
+}
+
+function useRuntimeI18n(nuxtApp, event) {
+  {
+    return useRuntimeConfig(event).public.i18n;
+  }
+}
+function useI18nDetection(nuxtApp) {
+  const detectBrowserLanguage = useRuntimeI18n().detectBrowserLanguage;
+  const detect = detectBrowserLanguage || {};
+  return {
+    ...detect,
+    enabled: !!detectBrowserLanguage,
+    cookieKey: detect.cookieKey || "i18n_redirected"
+  };
+}
+function resolveRootRedirect(config) {
+  if (!config) {
+    return void 0;
+  }
+  return {
+    path: "/" + (isString(config) ? config : config.path).replace(/^\//, ""),
+    code: !isString(config) && config.statusCode || 302
+  };
+}
+function toArray(value) {
+  return Array.isArray(value) ? value : [value];
+}
+
+function createLocaleConfigs(fallbackLocale) {
+  const localeConfigs = {};
+  for (const locale of localeCodes) {
+    const fallbacks = getFallbackLocaleCodes(fallbackLocale, [locale]);
+    const cacheable = isLocaleWithFallbacksCacheable(locale, fallbacks);
+    localeConfigs[locale] = { fallbacks, cacheable };
+  }
+  return localeConfigs;
+}
+function getFallbackLocaleCodes(fallback, locales) {
+  if (fallback === false) {
+    return [];
+  }
+  if (isArray(fallback)) {
+    return fallback;
+  }
+  let fallbackLocales = [];
+  if (isString(fallback)) {
+    if (locales.every((locale) => locale !== fallback)) {
+      fallbackLocales.push(fallback);
+    }
+    return fallbackLocales;
+  }
+  const targets = [...locales, "default"];
+  for (const locale of targets) {
+    if (locale in fallback == false) {
+      continue;
+    }
+    fallbackLocales = [...fallbackLocales, ...fallback[locale].filter(Boolean)];
+  }
+  return fallbackLocales;
+}
+function isLocaleCacheable(locale) {
+  return localeLoaders[locale] != null && localeLoaders[locale].every((loader) => loader.cache !== false);
+}
+function isLocaleWithFallbacksCacheable(locale, fallbackLocales) {
+  return isLocaleCacheable(locale) && fallbackLocales.every((fallbackLocale) => isLocaleCacheable(fallbackLocale));
+}
+function getDefaultLocaleForDomain(host) {
+  return normalizedLocales.find((l) => !!l.defaultForDomains?.includes(host))?.code;
+}
+const isSupportedLocale = (locale) => localeCodes.includes(locale || "");
+
+function useI18nContext(event) {
+  if (event.context.nuxtI18n == null) {
+    throw new Error("Nuxt I18n server context has not been set up yet.");
+  }
+  return event.context.nuxtI18n;
+}
+function tryUseI18nContext(event) {
+  return event.context.nuxtI18n;
+}
+const getHost = (event) => getRequestURL(event, { xForwardedHost: true }).host;
+async function initializeI18nContext(event) {
+  const runtimeI18n = useRuntimeI18n(void 0, event);
+  const defaultLocale = runtimeI18n.defaultLocale || "";
+  const options = await setupVueI18nOptions(getDefaultLocaleForDomain(getHost(event)) || defaultLocale);
+  const localeConfigs = createLocaleConfigs(options.fallbackLocale);
+  const ctx = createI18nContext();
+  ctx.vueI18nOptions = options;
+  ctx.localeConfigs = localeConfigs;
+  event.context.nuxtI18n = ctx;
+  return ctx;
+}
+function createI18nContext() {
+  return {
+    messages: {},
+    slp: {},
+    localeConfigs: {},
+    trackMap: {},
+    vueI18nOptions: void 0,
+    trackKey(key, locale) {
+      this.trackMap[locale] ??= /* @__PURE__ */ new Set();
+      this.trackMap[locale].add(key);
+    }
+  };
+}
+
+function matchBrowserLocale(locales, browserLocales) {
+  const matchedLocales = [];
+  for (const [index, browserCode] of browserLocales.entries()) {
+    const matchedLocale = locales.find((l) => l.language?.toLowerCase() === browserCode.toLowerCase());
+    if (matchedLocale) {
+      matchedLocales.push({ code: matchedLocale.code, score: 1 - index / browserLocales.length });
+      break;
+    }
+  }
+  for (const [index, browserCode] of browserLocales.entries()) {
+    const languageCode = browserCode.split("-")[0].toLowerCase();
+    const matchedLocale = locales.find((l) => l.language?.split("-")[0].toLowerCase() === languageCode);
+    if (matchedLocale) {
+      matchedLocales.push({ code: matchedLocale.code, score: 0.999 - index / browserLocales.length });
+      break;
+    }
+  }
+  return matchedLocales;
+}
+function compareBrowserLocale(a, b) {
+  if (a.score === b.score) {
+    return b.code.length - a.code.length;
+  }
+  return b.score - a.score;
+}
+function findBrowserLocale(locales, browserLocales) {
+  const matchedLocales = matchBrowserLocale(
+    locales.map((l) => ({ code: l.code, language: l.language || l.code })),
+    browserLocales
+  );
+  return matchedLocales.sort(compareBrowserLocale).at(0)?.code ?? "";
+}
+
+const appHead = {"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Essays on trends, context & nuance"},{"name":"theme-color","content":"#000000"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"property":"og:type","content":"website"}],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1","title":"Everything in Perspective","htmlAttrs":{}};
+
+const appRootTag = "div";
+
+const appRootAttrs = {"id":"__nuxt"};
+
+const appTeleportTag = "div";
+
+const appTeleportAttrs = {"id":"teleports"};
+
+const appId = "nuxt-app";
+
+const separator = "___";
+const pathLanguageParser = createPathIndexLanguageParser(0);
+const getLocaleFromRoutePath = (path) => pathLanguageParser(path);
+const getLocaleFromRouteName = (name) => name.split(separator).at(1) ?? "";
+function normalizeInput(input) {
+  return typeof input !== "object" ? String(input) : String(input?.name || input?.path || "");
+}
+function getLocaleFromRoute(route) {
+  const input = normalizeInput(route);
+  if (input[0] === "/") {
+    return getLocaleFromRoutePath(input);
+  }
+  const fromName = getLocaleFromRouteName(input);
+  if (fromName) {
+    return fromName;
+  }
+  if (typeof route === "object" && route?.path) {
+    return getLocaleFromRoutePath(String(route.path));
+  }
+  return "";
+}
+
+function matchDomainLocale(locales, host, pathLocale) {
+  const normalizeDomain = (domain = "") => domain.replace(/https?:\/\//, "");
+  const matches = locales.filter(
+    (locale) => normalizeDomain(locale.domain) === host || toArray(locale.domains).includes(host)
+  );
+  if (matches.length <= 1) {
+    return matches[0]?.code;
+  }
+  return (
+    // match by current path locale
+    matches.find((l) => l.code === pathLocale)?.code || matches.find((l) => l.defaultForDomains?.includes(host) ?? l.domainDefault)?.code
+  );
+}
+
+const getCookieLocale = (event, cookieName) => (getCookie(event, cookieName)) || void 0;
+const getRouteLocale = (event, route) => getLocaleFromRoute(route);
+const getHeaderLocale = (event) => findBrowserLocale(normalizedLocales, parseAcceptLanguage(getRequestHeader(event, "accept-language") || ""));
+const getHostLocale = (event, path, domainLocales) => {
+  const host = getRequestURL(event, { xForwardedHost: true }).host;
+  const locales = normalizedLocales.map((l) => ({
+    ...l,
+    domain: domainLocales[l.code]?.domain ?? l.domain
+  }));
+  return matchDomainLocale(locales, host, getLocaleFromRoutePath(path));
+};
+const useDetectors = (event, config, nuxtApp) => {
+  if (!event) {
+    throw new Error("H3Event is required for server-side locale detection");
+  }
+  const runtimeI18n = useRuntimeI18n();
+  return {
+    cookie: () => getCookieLocale(event, config.cookieKey),
+    header: () => getHeaderLocale(event) ,
+    navigator: () => void 0,
+    host: (path) => getHostLocale(event, path, runtimeI18n.domainLocales),
+    route: (path) => getRouteLocale(event, path)
+  };
+};
+
+// Generated by @nuxtjs/i18n
+const pathToI18nConfig = {
+  "/": {
+    "en": "/",
+    "fr": "/",
+    "de": "/",
+    "es": "/",
+    "it": "/",
+    "pt": "/",
+    "nl": "/",
+    "zh": "/",
+    "ja": "/",
+    "ar": "/"
+  },
+  "/page/:slug()": {
+    "en": "/page/:slug()",
+    "fr": "/page/:slug()",
+    "de": "/page/:slug()",
+    "es": "/page/:slug()",
+    "it": "/page/:slug()",
+    "pt": "/page/:slug()",
+    "nl": "/page/:slug()",
+    "zh": "/page/:slug()",
+    "ja": "/page/:slug()",
+    "ar": "/page/:slug()"
+  },
+  "/article/:slug()": {
+    "en": "/article/:slug()",
+    "fr": "/article/:slug()",
+    "de": "/article/:slug()",
+    "es": "/article/:slug()",
+    "it": "/article/:slug()",
+    "pt": "/article/:slug()",
+    "nl": "/article/:slug()",
+    "zh": "/article/:slug()",
+    "ja": "/article/:slug()",
+    "ar": "/article/:slug()"
+  },
+  "/magazine/:plural()": {
+    "en": "/magazine/:plural()",
+    "fr": "/magazine/:plural()",
+    "de": "/magazine/:plural()",
+    "es": "/magazine/:plural()",
+    "it": "/magazine/:plural()",
+    "pt": "/magazine/:plural()",
+    "nl": "/magazine/:plural()",
+    "zh": "/magazine/:plural()",
+    "ja": "/magazine/:plural()",
+    "ar": "/magazine/:plural()"
+  },
+  "/linked-data/:plural()": {
+    "en": "/linked-data/:plural()",
+    "fr": "/linked-data/:plural()",
+    "de": "/linked-data/:plural()",
+    "es": "/linked-data/:plural()",
+    "it": "/linked-data/:plural()",
+    "pt": "/linked-data/:plural()",
+    "nl": "/linked-data/:plural()",
+    "zh": "/linked-data/:plural()",
+    "ja": "/linked-data/:plural()",
+    "ar": "/linked-data/:plural()"
+  },
+  "/linked-data/:slug(.*)*": {
+    "en": "/linked-data/:slug(.*)*",
+    "fr": "/linked-data/:slug(.*)*",
+    "de": "/linked-data/:slug(.*)*",
+    "es": "/linked-data/:slug(.*)*",
+    "it": "/linked-data/:slug(.*)*",
+    "pt": "/linked-data/:slug(.*)*",
+    "nl": "/linked-data/:slug(.*)*",
+    "zh": "/linked-data/:slug(.*)*",
+    "ja": "/linked-data/:slug(.*)*",
+    "ar": "/linked-data/:slug(.*)*"
+  },
+  "/magazine/:singular()/:slug()": {
+    "en": "/magazine/:singular()/:slug()",
+    "fr": "/magazine/:singular()/:slug()",
+    "de": "/magazine/:singular()/:slug()",
+    "es": "/magazine/:singular()/:slug()",
+    "it": "/magazine/:singular()/:slug()",
+    "pt": "/magazine/:singular()/:slug()",
+    "nl": "/magazine/:singular()/:slug()",
+    "zh": "/magazine/:singular()/:slug()",
+    "ja": "/magazine/:singular()/:slug()",
+    "ar": "/magazine/:singular()/:slug()"
+  }
+};
+const i18nPathToPath = {
+  "/": "/",
+  "/page/:slug()": "/page/:slug()",
+  "/article/:slug()": "/article/:slug()",
+  "/magazine/:plural()": "/magazine/:plural()",
+  "/linked-data/:plural()": "/linked-data/:plural()",
+  "/linked-data/:slug(.*)*": "/linked-data/:slug(.*)*",
+  "/magazine/:singular()/:slug()": "/magazine/:singular()/:slug()"
+};
+
+const formatTrailingSlash = withoutTrailingSlash;
+const matcher = createRouterMatcher([], {});
+for (const path of Object.keys(i18nPathToPath)) {
+  matcher.addRoute({ path, component: () => "", meta: {} });
+}
+const getI18nPathToI18nPath = (path, locale) => {
+  if (!path || !locale) {
+    return;
+  }
+  const plainPath = i18nPathToPath[path];
+  const i18nConfig = pathToI18nConfig[plainPath];
+  if (i18nConfig && i18nConfig[locale]) {
+    return i18nConfig[locale] === true ? plainPath : i18nConfig[locale];
+  }
+};
+function isExistingNuxtRoute(path) {
+  if (path === "") {
+    return;
+  }
+  if (path.endsWith("/__nuxt_error")) {
+    return;
+  }
+  const resolvedMatch = matcher.resolve({ path }, { path: "/", name: "", matched: [], params: {}, meta: {} });
+  return resolvedMatch.matched.length > 0 ? resolvedMatch : void 0;
+}
+function matchLocalized(path, locale, defaultLocale) {
+  if (path === "") {
+    return;
+  }
+  const parsed = parsePath(path);
+  const resolvedMatch = matcher.resolve(
+    { path: parsed.pathname || "/" },
+    { path: "/", name: "", matched: [], params: {}, meta: {} }
+  );
+  if (resolvedMatch.matched.length > 0) {
+    const alternate = getI18nPathToI18nPath(resolvedMatch.matched[0].path, locale);
+    const match = matcher.resolve(
+      { params: resolvedMatch.params },
+      { path: alternate || "/", name: "", matched: [], params: {}, meta: {} }
+    );
+    const isPrefixable = prefixable(locale, defaultLocale);
+    return formatTrailingSlash(withLeadingSlash(joinURL(isPrefixable ? locale : "", match.path)), true);
+  }
+}
+function prefixable(currentLocale, defaultLocale) {
+  return (currentLocale !== defaultLocale || "prefix_except_default" === "prefix");
+}
+
+function* detect(detectors, detection, path) {
+  if (detection.enabled) {
+    yield { locale: detectors.cookie(), source: "cookie" };
+    yield { locale: detectors.header(), source: "header" };
+  }
+  {
+    yield { locale: detectors.route(path), source: "route" };
+  }
+  yield { locale: detection.fallbackLocale, source: "fallback" };
+}
+function createRedirectResponse(event, dest, code) {
+  event.node.res.setHeader("location", dest);
+  event.node.res.statusCode = sanitizeStatusCode(code, event.node.res.statusCode);
+  return {
+    headers: event.node.res.getHeaders(),
+    statusCode: event.node.res.statusCode,
+    body: `<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=${dest.replace(/"/g, "%22")}"></head></html>`
+  };
+}
+const _qjkZHVvkmymy9QCCYpfcu7hNUaZNvd853TM_etMPsDE = defineNitroPlugin(async (nitro) => {
+  const runtimeI18n = useRuntimeI18n();
+  const rootRedirect = resolveRootRedirect(runtimeI18n.rootRedirect);
+  runtimeI18n.defaultLocale || "";
+  try {
+    const cacheStorage = useStorage("cache");
+    const cachedKeys = await cacheStorage.getKeys("nitro:handlers:i18n");
+    await Promise.all(cachedKeys.map((key) => cacheStorage.removeItem(key)));
+  } catch {
+  }
+  const detection = useI18nDetection();
+  const cookieOptions = {
+    path: "/",
+    domain: detection.cookieDomain || void 0,
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: "lax",
+    secure: detection.cookieSecure
+  };
+  const createBaseUrlGetter = () => {
+    isFunction(runtimeI18n.baseUrl) ? "" : runtimeI18n.baseUrl || "";
+    if (isFunction(runtimeI18n.baseUrl)) {
+      return () => "";
+    }
+    return (event, defaultLocale) => {
+      return "";
+    };
+  };
+  function resolveRedirectPath(event, path, pathLocale, defaultLocale, detector) {
+    let locale = "";
+    for (const detected of detect(detector, detection, event.path)) {
+      if (detected.locale && isSupportedLocale(detected.locale)) {
+        locale = detected.locale;
+        break;
+      }
+    }
+    locale ||= defaultLocale;
+    function getLocalizedMatch(locale2) {
+      const res = matchLocalized(path || "/", locale2, defaultLocale);
+      if (res && res !== event.path) {
+        return res;
+      }
+    }
+    let resolvedPath = void 0;
+    let redirectCode = 302;
+    const requestURL = getRequestURL(event);
+    if (rootRedirect && requestURL.pathname === "/") {
+      locale = detection.enabled && locale || defaultLocale;
+      resolvedPath = isSupportedLocale(detector.route(rootRedirect.path)) && rootRedirect.path || matchLocalized(rootRedirect.path, locale, defaultLocale);
+      redirectCode = rootRedirect.code;
+    } else if (runtimeI18n.redirectStatusCode) {
+      redirectCode = runtimeI18n.redirectStatusCode;
+    }
+    switch (detection.redirectOn) {
+      case "root":
+        if (requestURL.pathname !== "/") {
+          break;
+        }
+      // fallthrough (root has no prefix)
+      case "no prefix":
+        if (pathLocale) {
+          break;
+        }
+      // fallthrough to resolve
+      case "all":
+        resolvedPath ??= getLocalizedMatch(locale);
+        break;
+    }
+    if (requestURL.pathname === "/" && "prefix_except_default" === "prefix") ;
+    return { path: resolvedPath, code: redirectCode, locale };
+  }
+  const baseUrlGetter = createBaseUrlGetter();
+  nitro.hooks.hook("request", async (event) => {
+    await initializeI18nContext(event);
+  });
+  nitro.hooks.hook("render:before", async (context) => {
+    const { event } = context;
+    const ctx = !event.context.nuxtI18n ? await initializeI18nContext(event) : useI18nContext(event);
+    const url = getRequestURL(event);
+    const detector = useDetectors(event, detection);
+    const localeSegment = detector.route(event.path);
+    const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
+    const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
+    if (!url.pathname.includes("/_i18n") && !isExistingNuxtRoute(path)) {
+      return;
+    }
+    const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);
+    if (resolved.path && resolved.path !== url.pathname) {
+      ctx.detectLocale = resolved.locale;
+      detection.useCookie && setCookie(event, detection.cookieKey, resolved.locale, cookieOptions);
+      context.response = createRedirectResponse(
+        event,
+        joinURL(baseUrlGetter(event, ctx.vueI18nOptions.defaultLocale), resolved.path + url.search),
+        resolved.code
+      );
+      return;
+    }
+  });
+  nitro.hooks.hook("render:html", (htmlContext, { event }) => {
+    tryUseI18nContext(event);
+  });
+});
+
+const plugins = [
+  _8GGUsxU7kT0YDbcYUbeIXrVyOHObVvSMT9jQN7lPa0E,
+_HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno,
+_s8AZRtyyuDCvawDQ_vE2rMbngJ92j3C1PGF89OP51dg,
+_GCKn7thj1_r2tsnOceKU5iQGVL1FQOhOg29LGNrwLU,
+_qjkZHVvkmymy9QCCYpfcu7hNUaZNvd853TM_etMPsDE
+];
+
+const assets = {};
+
+function readAsset (id) {
+  const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
+  return promises.readFile(resolve$1(serverDir, assets[id].path))
+}
+
+const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_og-static-fonts/":{"maxAge":31536000},"/_nuxt/":{"maxAge":31536000}};
+
+function isPublicAssetURL(id = '') {
+  if (assets[id]) {
+    return true
+  }
+  for (const base in publicAssetBases) {
+    if (id.startsWith(base)) { return true }
+  }
+  return false
+}
+
+function getAsset (id) {
+  return assets[id]
+}
+
+const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
+const EncodingMap = { gzip: ".gz", br: ".br" };
+const _kQxHaP = eventHandler((event) => {
+  if (event.method && !METHODS.has(event.method)) {
+    return;
+  }
+  let id = decodePath(
+    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
+  );
+  let asset;
+  const encodingHeader = String(
+    getRequestHeader(event, "accept-encoding") || ""
+  );
+  const encodings = [
+    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
+    ""
+  ];
+  for (const encoding of encodings) {
+    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
+      const _asset = getAsset(_id);
+      if (_asset) {
+        asset = _asset;
+        id = _id;
+        break;
+      }
+    }
+  }
+  if (!asset) {
+    if (isPublicAssetURL(id)) {
+      removeResponseHeader(event, "Cache-Control");
+      throw createError({ statusCode: 404 });
+    }
+    return;
+  }
+  if (asset.encoding !== void 0) {
+    appendResponseHeader(event, "Vary", "Accept-Encoding");
+  }
+  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
+  if (ifNotMatch) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
+  const mtimeDate = new Date(asset.mtime);
+  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  if (asset.type && !getResponseHeader(event, "Content-Type")) {
+    setResponseHeader(event, "Content-Type", asset.type);
+  }
+  if (asset.etag && !getResponseHeader(event, "ETag")) {
+    setResponseHeader(event, "ETag", asset.etag);
+  }
+  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
+    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
+  }
+  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
+    setResponseHeader(event, "Content-Encoding", asset.encoding);
+  }
+  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
+    setResponseHeader(event, "Content-Length", asset.size);
+  }
+  return readAsset(id);
+});
+
+const _SxA8c9 = defineEventHandler(() => {});
+
+const PORT_SUFFIX_RE = /:\d+$/;
+const _APFHMZ = eventHandler(async (e) => {
+  if (e.context._initedSiteConfig)
+    return;
+  const runtimeConfig = useRuntimeConfig(e);
+  const config = runtimeConfig["nuxt-site-config"];
+  const nitroApp = useNitroApp();
+  const siteConfig = e.context.siteConfig || createSiteConfigStack({
+    debug: config.debug
+  });
+  const nitroOrigin = getNitroOrigin(e);
+  e.context.siteConfigNitroOrigin = nitroOrigin;
+  siteConfig.push({
+    _context: "runtimeEnv",
+    _priority: SiteConfigPriority.runtime,
+    ...runtimeConfig.site || {},
+    ...runtimeConfig.public.site || {},
+    ...envSiteConfig(globalThis._importMeta_.env || {})
+    // just in-case, shouldn't be needed
+  });
+  const buildStack = config.stack || [];
+  buildStack.forEach((c) => siteConfig.push(c));
+  if (e.context._nitro.routeRules.site) {
+    siteConfig.push({
+      _context: "route-rules",
+      ...e.context._nitro.routeRules.site
+    });
+  }
+  if (config.multiTenancy) {
+    const host = parseURL(nitroOrigin).host?.replace(PORT_SUFFIX_RE, "") || "";
+    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
+    if (tenant) {
+      siteConfig.push({
+        _context: `multi-tenancy:${host}`,
+        _priority: SiteConfigPriority.runtime,
+        ...tenant.config
+      });
+    }
+  }
+  const ctx = { siteConfig, event: e };
+  await nitroApp.hooks.callHook("site-config:init", ctx);
+  e.context.siteConfig = ctx.siteConfig;
+  e.context._initedSiteConfig = true;
+});
+
 const filters = new Map();
 
 const onUrlFns = new Map();
@@ -3875,14 +5379,7 @@ const _pQl8oA = defineEventHandler(async (e) => {
   }).filter(Boolean);
 });
 
-function getSiteIndexable(e) {
-  const { env, indexable } = getSiteConfig(e);
-  if (typeof indexable !== "undefined")
-    return String(indexable) === "true";
-  return env === "production";
-}
-
-const staticConfig = {"isI18nMapped":false,"sitemapName":"sitemap.xml","isMultiSitemap":false,"excludeAppSources":[],"cacheMaxAgeSeconds":600,"autoLastmod":false,"defaultSitemapsChunkSize":1000,"minify":false,"sortEntries":true,"discoverImages":true,"discoverVideos":true,"sitemapsPathPrefix":"/__sitemap__/","isNuxtContentDocumentDriven":false,"xsl":"/__sitemap__/style.xsl","xslTips":true,"xslColumns":[{"label":"URL","width":"50%"},{"label":"Images","width":"25%","select":"count(image:image)"},{"label":"Last Updated","width":"25%","select":"concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"}],"credits":true,"version":"8.0.15","sitemaps":{"sitemap.xml":{"sitemapName":"sitemap.xml","route":"sitemap.xml","defaults":{},"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true}}};
+const staticConfig = {"isI18nMapped":true,"sitemapName":"sitemap.xml","isMultiSitemap":true,"excludeAppSources":[],"cacheMaxAgeSeconds":600,"autoLastmod":false,"defaultSitemapsChunkSize":1000,"minify":false,"sortEntries":true,"discoverImages":true,"discoverVideos":true,"sitemapsPathPrefix":"/__sitemap__/","isNuxtContentDocumentDriven":false,"xsl":"/__sitemap__/style.xsl","xslTips":true,"xslColumns":[{"label":"URL","width":"50%"},{"label":"Images","width":"25%","select":"count(image:image)"},{"label":"Last Updated","width":"25%","select":"concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"}],"credits":true,"version":"8.0.15","sitemaps":{"index":{"sitemapName":"index","_route":"sitemap_index.xml","sitemaps":[],"include":[],"exclude":[]},"en":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"en","_route":"/__sitemap__/en.xml"},"fr":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"fr","_route":"/__sitemap__/fr.xml"},"de":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"de","_route":"/__sitemap__/de.xml"},"es":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"es","_route":"/__sitemap__/es.xml"},"it":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"it","_route":"/__sitemap__/it.xml"},"pt":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"pt","_route":"/__sitemap__/pt.xml"},"nl":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"nl","_route":"/__sitemap__/nl.xml"},"zh":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"zh","_route":"/__sitemap__/zh.xml"},"ja":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"ja","_route":"/__sitemap__/ja.xml"},"ar":{"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true,"sitemapName":"ar","_route":"/__sitemap__/ar.xml"}},"autoI18n":{"differentDomains":false,"defaultLocale":"en","locales":[{"code":"en","name":"English","file":"en.json","_hreflang":"en","_sitemap":"en"},{"code":"fr","name":"Français","file":"fr.json","_hreflang":"fr","_sitemap":"fr"},{"code":"de","name":"Deutsch","file":"de.json","_hreflang":"de","_sitemap":"de"},{"code":"es","name":"Español","file":"es.json","_hreflang":"es","_sitemap":"es"},{"code":"it","name":"Italiano","file":"it.json","_hreflang":"it","_sitemap":"it"},{"code":"pt","name":"Português","file":"pt.json","_hreflang":"pt","_sitemap":"pt"},{"code":"nl","name":"Nederlands","file":"nl.json","_hreflang":"nl","_sitemap":"nl"},{"code":"zh","name":"中文","file":"zh.json","_hreflang":"zh","_sitemap":"zh"},{"code":"ja","name":"日本語","file":"ja.json","_hreflang":"ja","_sitemap":"ja"},{"code":"ar","name":"العربية","file":"ar.json","_hreflang":"ar","_sitemap":"ar"}],"strategy":"prefix_except_default","pages":{}}};
 
 const logger = createConsola({
   defaults: {
@@ -5114,6 +6611,30 @@ function parseChunkInfo(sitemapName, sitemaps, defaultChunkSize) {
     chunkSize: defaultChunkSize
   };
 }
+function getSitemapConfig(sitemapName, sitemaps, defaultChunkSize = 1e3) {
+  const chunkInfo = parseChunkInfo(sitemapName, sitemaps, defaultChunkSize);
+  if (chunkInfo.isChunked) {
+    if (chunkInfo.baseSitemapName === "sitemap" && typeof sitemaps.chunks !== "undefined") {
+      return {
+        ...sitemaps.chunks,
+        sitemapName,
+        _isChunking: true,
+        _chunkSize: chunkInfo.chunkSize
+      };
+    }
+    const baseSitemap = sitemaps[chunkInfo.baseSitemapName];
+    if (baseSitemap) {
+      return {
+        ...baseSitemap,
+        sitemapName,
+        // Use the full name with chunk index
+        _isChunking: true,
+        _chunkSize: chunkInfo.chunkSize
+      };
+    }
+  }
+  return sitemaps[sitemapName];
+}
 function sliceUrlsForChunk(urls, sitemapName, sitemaps, defaultChunkSize = 1e3) {
   const chunkInfo = parseChunkInfo(sitemapName, sitemaps, defaultChunkSize);
   if (chunkInfo.isChunked && chunkInfo.chunkIndex !== void 0) {
@@ -5258,7 +6779,7 @@ function urlsToXml(urls, resolvers, { version, xsl, credits, minify }, errorInfo
   return xml;
 }
 
-const SERVER_CACHE_MAX_AGE$1 = staticConfig.cacheMaxAgeSeconds || 60 * 10;
+const SERVER_CACHE_MAX_AGE$2 = staticConfig.cacheMaxAgeSeconds || 60 * 10;
 function resolveSitemapEntries(sitemap, urls, runtimeConfig, resolvers, baseURL) {
   const {
     autoI18n,
@@ -5474,7 +6995,7 @@ defineCachedFunction(
     name: "sitemap:resolved-urls",
     group: "sitemap",
     base: "sitemap",
-    maxAge: SERVER_CACHE_MAX_AGE$1,
+    maxAge: SERVER_CACHE_MAX_AGE$2,
     getKey: (event, _effectiveSitemap, matchName, isChunked) => {
       const host = getHeader(event, "host") || getHeader(event, "x-forwarded-host") || "";
       const proto = getHeader(event, "x-forwarded-proto") || "https";
@@ -5515,165 +7036,140 @@ async function buildSitemapUrls(sitemap, resolvers, runtimeConfig, nitro) {
   return { urls, failedSources: resolved.failedSources };
 }
 
-function withoutQuery$1(path) {
-  return String(path.split("?")[0]);
-}
-function createNitroRouteRuleMatcher$1(e) {
-  const { nitro, app } = useRuntimeConfig(e);
-  const _routeRulesMatcher = toRouteMatcher(
-    createRouter({
-      routes: Object.fromEntries(
-        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
-      )
-    })
-  );
-  return (path) => {
-    return defu$1({}, ..._routeRulesMatcher.matchAll(
-      withoutBase(withoutTrailingSlash(withoutQuery$1(path)), app.baseURL)
-    ).reverse());
-  };
-}
-
-function getSiteRobotConfig(e) {
-  const query = getQuery$1(e);
-  const hints = [];
-  const { groups, debug } = useRuntimeConfigNuxtRobots(e);
-  let indexable = getSiteIndexable(e);
-  const queryIndexableEnabled = String(query.mockProductionEnv) === "true" || query.mockProductionEnv === "";
-  if (debug || false) {
-    const { _context } = getSiteConfig(e, { debug: debug || false });
-    if (queryIndexableEnabled) {
-      indexable = true;
-      hints.push("You are mocking a production enviroment with ?mockProductionEnv query.");
-    } else if (!indexable && _context.indexable === "nuxt-robots:config") {
-      hints.push("You are blocking indexing with your Nuxt Robots config.");
-    } else if (!queryIndexableEnabled && !_context.indexable) {
-      hints.push(`Indexing is blocked in development. You can mock a production environment with ?mockProductionEnv query.`);
-    } else if (!indexable && !queryIndexableEnabled) {
-      hints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
-    } else if (indexable && !queryIndexableEnabled) {
-      hints.push(`Indexing is enabled from ${_context.indexable}.`);
+const SERVER_CACHE_MAX_AGE$1 = staticConfig.cacheMaxAgeSeconds || 60 * 10;
+defineCachedFunction(
+  async (event, resolvers, runtimeConfig, nitro) => {
+    return buildSitemapIndexInternal(resolvers, runtimeConfig, nitro);
+  },
+  {
+    name: "sitemap:index",
+    group: "sitemap",
+    maxAge: SERVER_CACHE_MAX_AGE$1,
+    base: "sitemap",
+    // Use the sitemap storage
+    getKey: (event) => {
+      const host = getHeader(event, "host") || getHeader(event, "x-forwarded-host") || "";
+      const proto = getHeader(event, "x-forwarded-proto") || "https";
+      return `sitemap-index-${proto}-${host}`;
+    },
+    swr: true
+    // Enable stale-while-revalidate
+  }
+);
+async function buildSitemapIndexInternal(resolvers, runtimeConfig, nitro) {
+  const {
+    sitemaps,
+    autoLastmod,
+    defaultSitemapsChunkSize,
+    sitemapsPathPrefix
+  } = runtimeConfig;
+  if (!sitemaps)
+    throw new Error("Attempting to build a sitemap index without required `sitemaps` configuration.");
+  const nonChunkedNames = [];
+  const allFailedSources = [];
+  for (const sitemapName in sitemaps) {
+    if (sitemapName === "index" || sitemapName === "chunks")
+      continue;
+    const sitemapConfig = sitemaps[sitemapName];
+    if (sitemapConfig.chunks || sitemapConfig._isChunking) {
+      sitemapConfig._isChunking = true;
+      sitemapConfig._chunkSize = sitemapConfig.chunkSize || (typeof sitemapConfig.chunks === "number" ? sitemapConfig.chunks : defaultSitemapsChunkSize || 1e3);
+    } else {
+      nonChunkedNames.push(sitemapName);
     }
   }
-  if (groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"))) {
-    indexable = false;
-    hints.push("You are blocking all user agents with a wildcard `Disallow /`.");
-  } else if (groups.some((g) => g.disallow.includes("/"))) {
-    hints.push("You are blocking specific user agents with `Disallow /`.");
-  }
-  return { indexable, hints };
-}
-
-function getPathRobotConfig(e, options) {
-  const runtimeConfig = useRuntimeConfig(e);
-  const { robotsDisabledValue, robotsEnabledValue, isNuxtContentV2 } = useRuntimeConfigNuxtRobots(e);
-  if (!options?.skipSiteIndexable) {
-    if (!getSiteRobotConfig(e).indexable) {
-      return {
-        rule: robotsDisabledValue,
-        indexable: false,
-        debug: {
-          source: "Site Config"
-        }
+  const indexLastmod = autoLastmod ? normaliseDate(/* @__PURE__ */ new Date()) : void 0;
+  const entries = [];
+  if (typeof sitemaps.chunks !== "undefined") {
+    const sitemap = sitemaps.chunks;
+    const resolved = await getResolvedSitemapUrls(sitemap, "sitemap", true, resolvers, runtimeConfig, nitro);
+    allFailedSources.push(...resolved.failedSources);
+    const chunkCount = Math.ceil(resolved.urls.length / defaultSitemapsChunkSize);
+    for (let i = 0; i < chunkCount; i++) {
+      const entry = {
+        _sitemapName: String(i),
+        sitemap: resolvers.canonicalUrlResolver(joinURL(sitemapsPathPrefix || "", `/${i}.xml`))
       };
+      if (indexLastmod)
+        entry.lastmod = indexLastmod;
+      entries.push(entry);
     }
   }
-  const path = options?.path || e.path;
-  let userAgent = options?.userAgent;
-  if (!userAgent) {
-    try {
-      userAgent = getRequestHeader(e, "User-Agent");
-    } catch {
-    }
+  for (const name of nonChunkedNames) {
+    const entry = {
+      _sitemapName: name,
+      sitemap: resolvers.canonicalUrlResolver(joinURL(sitemapsPathPrefix || "", `/${name}.xml`))
+    };
+    if (indexLastmod)
+      entry.lastmod = indexLastmod;
+    entries.push(entry);
   }
-  const nitroApp = useNitroApp();
-  const groups = [
-    // run explicit user agent matching first
-    ...nitroApp._robots.ctx.groups.filter((g) => {
-      if (userAgent) {
-        return g.userAgent.some((ua) => ua.toLowerCase().includes(userAgent.toLowerCase()));
+  for (const sitemapName in sitemaps) {
+    const sitemapConfig = sitemaps[sitemapName];
+    if (sitemapName !== "index" && sitemapConfig._isChunking) {
+      const chunkSize = sitemapConfig._chunkSize || defaultSitemapsChunkSize || 1e3;
+      let chunkCount;
+      if (typeof sitemapConfig.chunkCount === "number" && sitemapConfig.chunkCount > 0) {
+        chunkCount = sitemapConfig.chunkCount;
+      } else {
+        const resolved = await getResolvedSitemapUrls(sitemapConfig, sitemapName, true, resolvers, runtimeConfig, nitro);
+        allFailedSources.push(...resolved.failedSources);
+        chunkCount = Math.ceil(resolved.urls.length / chunkSize);
       }
-      return false;
-    }),
-    // run wildcard matches second
-    ...nitroApp._robots.ctx.groups.filter((g) => g.userAgent.includes("*"))
-  ];
-  for (const group of groups) {
-    if (!options?.skipSiteIndexable && group._indexable === false) {
-      return {
-        indexable: false,
-        rule: robotsDisabledValue,
-        debug: {
-          source: "/robots.txt",
-          line: JSON.stringify(group)
-        }
-      };
-    }
-    const rules = options?.skipSiteIndexable ? (group._rules || []).filter((r) => r.pattern !== "/") : group._rules || [];
-    const robotsTxtRule = matchPathToRule(path, rules);
-    if (robotsTxtRule) {
-      if (!robotsTxtRule.allow) {
-        return {
-          indexable: false,
-          rule: robotsDisabledValue,
-          debug: {
-            source: "/robots.txt",
-            line: `Disallow: ${robotsTxtRule.pattern}`
-          }
+      sitemapConfig._chunkCount = chunkCount;
+      for (let i = 0; i < chunkCount; i++) {
+        const chunkName = `${sitemapName}-${i}`;
+        const entry = {
+          _sitemapName: chunkName,
+          sitemap: resolvers.canonicalUrlResolver(joinURL(sitemapsPathPrefix || "", `/${chunkName}.xml`))
         };
+        if (indexLastmod)
+          entry.lastmod = indexLastmod;
+        entries.push(entry);
       }
-      break;
     }
   }
-  if (isNuxtContentV2 && nitroApp._robots?.nuxtContentUrls?.has(withoutTrailingSlash(path))) {
-    return {
-      indexable: false,
-      rule: robotsDisabledValue,
-      debug: {
-        source: "Nuxt Content"
-      }
-    };
+  if (sitemaps.index) {
+    entries.push(...sitemaps.index.sitemaps.map((entry) => {
+      return typeof entry === "string" ? { sitemap: entry } : entry;
+    }));
   }
-  const { pageMetaRobots } = useRuntimeConfigNuxtRobots(e);
-  const pageMetaRule = pageMetaRobots?.[withoutTrailingSlash(path)];
-  if (typeof pageMetaRule !== "undefined") {
-    const normalised = normaliseRobotsRouteRule({ robots: pageMetaRule });
-    if (normalised && (typeof normalised.allow !== "undefined" || typeof normalised.rule !== "undefined")) {
-      return {
-        indexable: normalised.allow ?? false,
-        rule: normalised.rule || (normalised.allow ? robotsEnabledValue : robotsDisabledValue),
-        debug: {
-          source: "Page Meta"
-        }
-      };
+  return { entries, failedSources: allFailedSources };
+}
+function urlsToIndexXml(sitemaps, resolvers, { version, xsl, credits, minify }, errorInfo) {
+  const sitemapXml = sitemaps.map((e) => [
+    "    <sitemap>",
+    `        <loc>${escapeValueForXml(e.sitemap)}</loc>`,
+    // lastmod is optional
+    e.lastmod ? `        <lastmod>${escapeValueForXml(e.lastmod)}</lastmod>` : false,
+    "    </sitemap>"
+  ].filter(Boolean).join("\n")).join("\n");
+  const xmlParts = [
+    '<?xml version="1.0" encoding="UTF-8"?>'
+  ];
+  if (xsl) {
+    let relativeBaseUrl = resolvers.relativeBaseUrlResolver?.(xsl) ?? xsl;
+    if (errorInfo && errorInfo.messages.length > 0) {
+      relativeBaseUrl = withQuery(relativeBaseUrl, {
+        errors: "true",
+        error_messages: errorInfo.messages,
+        error_urls: errorInfo.urls
+      });
     }
+    xmlParts.push(`<?xml-stylesheet type="text/xsl" href="${escapeValueForXml(relativeBaseUrl)}"?>`);
   }
-  nitroApp._robotsRuleMatcher = nitroApp._robotsRuleMatcher || createNitroRouteRuleMatcher$1(e);
-  let robotRouteRules = nitroApp._robotsRuleMatcher(path);
-  let routeRulesPath = path;
-  const i18nConfig = runtimeConfig.public?.i18n;
-  if (i18nConfig?.locales && typeof robotRouteRules.robots === "undefined") {
-    const { locales } = i18nConfig;
-    const locale = locales.find((l) => routeRulesPath.startsWith(`/${l.code}`));
-    if (locale) {
-      routeRulesPath = routeRulesPath.replace(`/${locale.code}`, "");
-      robotRouteRules = nitroApp._robotsRuleMatcher(routeRulesPath);
-    }
+  xmlParts.push(
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    sitemapXml,
+    "</sitemapindex>"
+  );
+  if (credits) {
+    xmlParts.push(`<!-- XML Sitemap Index generated by @nuxtjs/sitemap v${version} at ${(/* @__PURE__ */ new Date()).toISOString()} -->`);
   }
-  const routeRules = normaliseRobotsRouteRule(robotRouteRules);
-  if (routeRules && (typeof routeRules.allow !== "undefined" || typeof routeRules.rule !== "undefined")) {
-    return {
-      indexable: routeRules.allow ?? false,
-      rule: routeRules.rule || (routeRules.allow ? robotsEnabledValue : robotsDisabledValue),
-      debug: {
-        source: "Route Rules"
-      }
-    };
-  }
-  return {
-    indexable: true,
-    rule: robotsEnabledValue
-  };
+  return minify ? xmlParts.join("").replace(/(?<!<[^>]*)\s(?![^<]*>)/g, "") : xmlParts.join("\n");
+}
+async function buildSitemapIndex(resolvers, runtimeConfig, nitro) {
+  return buildSitemapIndexInternal(resolvers, runtimeConfig, nitro);
 }
 
 function withoutQuery(path) {
@@ -5842,6 +7338,78 @@ async function sitemapXmlEventHandler(e) {
     return sendRedirect(e, withBase("/sitemap_index.xml", useRuntimeConfig().app.baseURL), 301);
   return createSitemap(e, Object.values(sitemaps)[0], runtimeConfig);
 }
+async function sitemapIndexXmlEventHandler(e) {
+  const runtimeConfig = useSitemapRuntimeConfig();
+  const nitro = useNitroApp();
+  const resolvers = useNitroUrlResolvers(e);
+  const { entries: sitemaps, failedSources } = await buildSitemapIndex(resolvers, runtimeConfig, nitro);
+  {
+    appendHeader(
+      e,
+      "x-nitro-prerender",
+      sitemaps.filter((entry) => !!entry._sitemapName).map((entry) => encodeURIComponent(joinURL(runtimeConfig.sitemapsPathPrefix || "", `/${entry._sitemapName}.xml`))).join(", ")
+    );
+  }
+  const indexResolvedCtx = { sitemaps, event: e };
+  await nitro.hooks.callHook("sitemap:index-resolved", indexResolvedCtx);
+  const errorInfo = failedSources.length > 0 ? { messages: failedSources.map((f) => f.error), urls: failedSources.map((f) => f.url) } : void 0;
+  const output = urlsToIndexXml(indexResolvedCtx.sitemaps, resolvers, runtimeConfig, errorInfo);
+  const ctx = { sitemap: output, sitemapName: "sitemap", event: e };
+  await nitro.hooks.callHook("sitemap:output", ctx);
+  setHeader(e, "Content-Type", "text/xml; charset=UTF-8");
+  if (runtimeConfig.cacheMaxAgeSeconds) {
+    setHeader(e, "Cache-Control", `public, max-age=${runtimeConfig.cacheMaxAgeSeconds}, s-maxage=${runtimeConfig.cacheMaxAgeSeconds}, stale-while-revalidate=3600`);
+    const now = /* @__PURE__ */ new Date();
+    setHeader(e, "X-Sitemap-Generated", now.toISOString());
+    setHeader(e, "X-Sitemap-Cache-Duration", `${runtimeConfig.cacheMaxAgeSeconds}s`);
+    const expiryTime = new Date(now.getTime() + runtimeConfig.cacheMaxAgeSeconds * 1e3);
+    setHeader(e, "X-Sitemap-Cache-Expires", expiryTime.toISOString());
+    const remainingSeconds = Math.floor((expiryTime.getTime() - now.getTime()) / 1e3);
+    setHeader(e, "X-Sitemap-Cache-Remaining", `${remainingSeconds}s`);
+  } else {
+    setHeader(e, "Cache-Control", `no-cache, no-store`);
+  }
+  return ctx.sitemap;
+}
+async function sitemapChildXmlEventHandler(e) {
+  if (!e.path.endsWith(".xml"))
+    return;
+  const runtimeConfig = useSitemapRuntimeConfig(e);
+  const { sitemaps } = runtimeConfig;
+  let sitemapName = getRouterParam(e, "sitemap");
+  if (!sitemapName) {
+    const path = e.path;
+    const match = path.match(/(?:\/__sitemap__\/)?(.+)\.xml$/);
+    if (match)
+      sitemapName = match[1];
+  }
+  if (!sitemapName)
+    throw createError({ statusCode: 400, message: "Invalid sitemap request" });
+  sitemapName = sitemapName.replace(/\.xml$/, "");
+  sitemapName = withLeadingSlash(sitemapName);
+  if (sitemapName.startsWith("/__sitemap__/"))
+    sitemapName = sitemapName.replace("/__sitemap__/", "/");
+  if (runtimeConfig.sitemapsPathPrefix) {
+    const prefix = withLeadingSlash(runtimeConfig.sitemapsPathPrefix);
+    if (sitemapName.startsWith(prefix))
+      sitemapName = sitemapName.replace(prefix, "/");
+  }
+  sitemapName = withoutLeadingSlash(withoutTrailingSlash(sitemapName));
+  const chunkInfo = parseChunkInfo(sitemapName, sitemaps, runtimeConfig.defaultSitemapsChunkSize);
+  const isAutoChunked = typeof sitemaps.chunks !== "undefined" && !Number.isNaN(Number(sitemapName));
+  const sitemapExists = sitemapName in sitemaps || chunkInfo.baseSitemapName in sitemaps || isAutoChunked;
+  if (!sitemapExists)
+    throw createError({ statusCode: 404, message: `Sitemap "${sitemapName}" not found.` });
+  if (chunkInfo.isChunked && chunkInfo.chunkIndex !== void 0) {
+    const baseSitemap = sitemaps[chunkInfo.baseSitemapName];
+    if (baseSitemap && !baseSitemap.chunks && !baseSitemap._isChunking)
+      throw createError({ statusCode: 404, message: `Sitemap "${chunkInfo.baseSitemapName}" does not support chunking.` });
+    if (baseSitemap?._chunkCount !== void 0 && chunkInfo.chunkIndex >= baseSitemap._chunkCount)
+      throw createError({ statusCode: 404, message: `Chunk ${chunkInfo.chunkIndex} does not exist for sitemap "${chunkInfo.baseSitemapName}".` });
+  }
+  const sitemapConfig = getSitemapConfig(sitemapName, sitemaps, runtimeConfig.defaultSitemapsChunkSize || void 0);
+  return createSitemap(e, sitemapConfig, runtimeConfig);
+}
 
 const _omnzNW = defineEventHandler(sitemapXmlEventHandler);
 
@@ -5925,6 +7493,123 @@ const _9nVQ4N = eventHandler(async (event) => {
   }
   return await import('../build/database.compressed.mjs').then((m) => m[collection]);
 });
+
+const storage = prefixStorage(useStorage(), "i18n");
+function cachedFunctionI18n(fn, opts) {
+  opts = { maxAge: 1, ...opts };
+  const pending = {};
+  async function get(key, resolver) {
+    const isPending = pending[key];
+    if (!isPending) {
+      pending[key] = Promise.resolve(resolver());
+    }
+    try {
+      return await pending[key];
+    } finally {
+      delete pending[key];
+    }
+  }
+  return async (...args) => {
+    const key = [opts.name, opts.getKey(...args)].join(":").replace(/:\/$/, ":index");
+    const maxAge = opts.maxAge ?? 1;
+    const isCacheable = !opts.shouldBypassCache(...args) && maxAge >= 0;
+    const cache = isCacheable && await storage.getItemRaw(key);
+    if (!cache || cache.ttl < Date.now()) {
+      pending[key] = Promise.resolve(fn(...args));
+      const value = await get(key, () => fn(...args));
+      if (isCacheable) {
+        await storage.setItemRaw(key, { ttl: Date.now() + maxAge * 1e3, value, mtime: Date.now() });
+      }
+      return value;
+    }
+    return cache.value;
+  };
+}
+
+const _getMessages = async (locale) => {
+  return { [locale]: await getLocaleMessagesMerged(locale, localeLoaders[locale]) };
+};
+const _getMessagesCached = cachedFunctionI18n(_getMessages, {
+  name: "messages",
+  maxAge: 60 * 60 * 24,
+  getKey: (locale) => locale,
+  shouldBypassCache: (locale) => !isLocaleCacheable(locale)
+});
+const getMessages = _getMessagesCached;
+const _getMergedMessages = async (locale, fallbackLocales) => {
+  const merged = {};
+  try {
+    if (fallbackLocales.length > 0) {
+      const messages = await Promise.all(fallbackLocales.map(getMessages));
+      for (const message2 of messages) {
+        deepCopy(message2, merged);
+      }
+    }
+    const message = await getMessages(locale);
+    deepCopy(message, merged);
+    return merged;
+  } catch (e) {
+    throw new Error("Failed to merge messages: " + e.message);
+  }
+};
+const getMergedMessages = cachedFunctionI18n(_getMergedMessages, {
+  name: "merged-single",
+  maxAge: 60 * 60 * 24,
+  getKey: (locale, fallbackLocales) => `${locale}-[${[...new Set(fallbackLocales)].sort().join("-")}]`,
+  shouldBypassCache: (locale, fallbackLocales) => !isLocaleWithFallbacksCacheable(locale, fallbackLocales)
+});
+const _getAllMergedMessages = async (locales) => {
+  const merged = {};
+  try {
+    const messages = await Promise.all(locales.map(getMessages));
+    for (const message of messages) {
+      deepCopy(message, merged);
+    }
+    return merged;
+  } catch (e) {
+    throw new Error("Failed to merge messages: " + e.message);
+  }
+};
+cachedFunctionI18n(_getAllMergedMessages, {
+  name: "merged-all",
+  maxAge: 60 * 60 * 24,
+  getKey: (locales) => locales.join("-"),
+  shouldBypassCache: (locales) => !locales.every((locale) => isLocaleCacheable(locale))
+});
+
+const _messagesHandler = defineEventHandler(async (event) => {
+  const locale = getRouterParam(event, "locale");
+  if (!locale) {
+    throw createError({ status: 400, message: "Locale not specified." });
+  }
+  const ctx = useI18nContext(event);
+  if (ctx.localeConfigs && locale in ctx.localeConfigs === false) {
+    throw createError({ status: 404, message: `Locale '${locale}' not found.` });
+  }
+  const messages = await getMergedMessages(locale, ctx.localeConfigs?.[locale]?.fallbacks ?? []);
+  deepCopy(messages, ctx.messages);
+  return ctx.messages;
+});
+const _cachedMessageLoader = defineCachedFunction(_messagesHandler, {
+  name: "i18n:messages-internal",
+  maxAge: 60 * 60 * 24,
+  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-"),
+  async shouldBypassCache(event) {
+    const locale = getRouterParam(event, "locale");
+    if (locale == null) {
+      return false;
+    }
+    const ctx = tryUseI18nContext(event) || await initializeI18nContext(event);
+    return !ctx.localeConfigs?.[locale]?.cacheable;
+  }
+});
+const _messagesHandlerCached = defineCachedEventHandler(_cachedMessageLoader, {
+  name: "i18n:messages",
+  maxAge: 10,
+  swr: false,
+  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-")
+});
+const _iQXyU7 = _messagesHandlerCached;
 
 async function decompressSQLDump(base64Str, compressionType = "gzip") {
   let binaryData;
@@ -6215,67 +7900,6 @@ function cleanupQuery(query, options = { removeString: false }) {
   return result;
 }
 
-function defineNitroPlugin(def) {
-  return def;
-}
-
-function defineRenderHandler(render) {
-  const runtimeConfig = useRuntimeConfig();
-  return eventHandler(async (event) => {
-    const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
-    await nitroApp.hooks.callHook("render:before", ctx);
-    if (!ctx.response) {
-      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
-        setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send(
-          event,
-          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        );
-      }
-      ctx.response = await ctx.render(event);
-      if (!ctx.response) {
-        const _currentStatus = getResponseStatus(event);
-        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send(
-          event,
-          "No response returned from render handler: " + event.path
-        );
-      }
-    }
-    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
-    if (ctx.response.headers) {
-      setResponseHeaders(event, ctx.response.headers);
-    }
-    if (ctx.response.statusCode || ctx.response.statusMessage) {
-      setResponseStatus(
-        event,
-        ctx.response.statusCode,
-        ctx.response.statusMessage
-      );
-    }
-    return ctx.response.body;
-  });
-}
-
-function baseURL() {
-	
-	return useRuntimeConfig().app.baseURL;
-}
-function buildAssetsDir() {
-	
-	return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-	
-	const app = useRuntimeConfig().app;
-	const publicBase = app.cdnURL || app.baseURL;
-	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
-}
-
 const _SnCLFE = eventHandler(async (event) => {
   const { sql } = await readBody(event);
   const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
@@ -6288,6 +7912,8 @@ const _SnCLFE = eventHandler(async (event) => {
 });
 
 const _lazy_wbQLj0 = () => import('../routes/api/_type/_...slug_.mjs');
+const _lazy_8DbdRX = () => import('../routes/sitemap_index.xml.mjs');
+const _lazy_mkrgRi = () => import('../routes/__sitemap__/_sitemap_.xml.mjs');
 const _lazy_hamhGY = () => import('../routes/_og/d/image.mjs');
 const _lazy_s_PDuW = () => import('../routes/_og/r/resolve.mjs');
 const _lazy_yplF63 = () => import('../_/renderer2.mjs');
@@ -6298,6 +7924,8 @@ const handlers = [
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '', handler: _APFHMZ, lazy: false, middleware: true, method: undefined },
   { route: '/__sitemap__/nuxt-content-urls.json', handler: _pQl8oA, lazy: false, middleware: false, method: undefined },
+  { route: '/sitemap_index.xml', handler: _lazy_8DbdRX, lazy: true, middleware: false, method: undefined },
+  { route: '/__sitemap__/**:sitemap', handler: _lazy_mkrgRi, lazy: true, middleware: false, method: undefined },
   { route: '/__sitemap__/style.xsl', handler: _to1iB6, lazy: false, middleware: false, method: undefined },
   { route: '/sitemap.xml', handler: _omnzNW, lazy: false, middleware: false, method: undefined },
   { route: '/robots.txt', handler: _7OYNAq, lazy: false, middleware: false, method: undefined },
@@ -6307,6 +7935,7 @@ const handlers = [
   { route: '/_og/r/**', handler: _lazy_s_PDuW, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_content/content/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/info/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
+  { route: '/_i18n/:hash/:locale/messages.json', handler: _iQXyU7, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/content/query', handler: _SnCLFE, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/info/query', handler: _SnCLFE, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_yplF63, lazy: true, middleware: false, method: undefined }
@@ -6458,5 +8087,5 @@ const localFetch = nitroApp.localFetch;
 const closePrerenderer = () => nitroApp.hooks.callHook("close");
 trapUnhandledNodeErrors();
 
-export { localFetch as A, htmlPayloadCache as a, useStorage as b, componentNames as c, logger$2 as d, extractSocialPreviewTags as e, fetchIsland as f, getSiteConfig as g, hashOgImageOptions as h, isInternalRoute as i, buildAssetsURL as j, useRuntimeConfig as k, logger$1 as l, defineRenderHandler as m, getRouteRules as n, useNitroApp as o, publicAssetsURL as p, getNitroOrigin as q, resolveContext as r, fontArrayCache as s, fontCache as t, useOgImageRuntimeConfig as u, toBase64Image as v, withTimeout as w, emojiCache as x, baseURL as y, closePrerenderer as z };
+export { getNitroOrigin as A, fontArrayCache as B, fontCache as C, toBase64Image as D, withTimeout as E, emojiCache as F, baseURL as G, closePrerenderer as H, localFetch as I, sitemapChildXmlEventHandler as a, htmlPayloadCache as b, componentNames as c, useStorage as d, extractSocialPreviewTags as e, fetchIsland as f, logger$2 as g, hashOgImageOptions as h, getSiteConfig as i, isInternalRoute as j, buildAssetsURL as k, logger$1 as l, appRootTag as m, appRootAttrs as n, useRuntimeConfig as o, publicAssetsURL as p, appId as q, resolveContext as r, sitemapIndexXmlEventHandler as s, defineRenderHandler as t, useOgImageRuntimeConfig as u, appTeleportTag as v, appTeleportAttrs as w, appHead as x, getRouteRules as y, useNitroApp as z };
 //# sourceMappingURL=nitro.mjs.map

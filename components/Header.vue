@@ -48,4 +48,21 @@ const toggleNav = () => {
 .text-muted {
   color: #666666;
 }
+.search-wrapper {
+  display: flex;
+  align-items: center;
+}
+.search-input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+.language-select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
 </style>

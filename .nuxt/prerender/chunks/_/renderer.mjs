@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
 import { withBase, withoutLeadingSlash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { q as getNitroOrigin, u as useOgImageRuntimeConfig, k as useRuntimeConfig, s as fontArrayCache, d as logger, t as fontCache, l as logger$1, v as toBase64Image, b as useStorage, f as fetchIsland, w as withTimeout } from '../nitro/nitro.mjs';
+import { A as getNitroOrigin, u as useOgImageRuntimeConfig, o as useRuntimeConfig, B as fontArrayCache, g as logger, C as fontCache, l as logger$1, D as toBase64Image, d as useStorage, f as fetchIsland, E as withTimeout } from '../nitro/nitro.mjs';
 import { $fetch as $fetch$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
 import { getRequestHost } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
 import { g as getFetchTimeout, r as resolvedFonts, a as applyEmojis } from './index.mjs';
@@ -25,9 +25,11 @@ import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/d
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 

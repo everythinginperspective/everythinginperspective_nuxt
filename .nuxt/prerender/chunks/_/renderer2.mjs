@@ -2,7 +2,7 @@ import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLin
 import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
 import { encodePath, joinURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
-import { j as buildAssetsURL, p as publicAssetsURL, k as useRuntimeConfig, b as useStorage, m as defineRenderHandler, n as getRouteRules, o as useNitroApp } from '../nitro/nitro.mjs';
+import { k as buildAssetsURL, p as publicAssetsURL, m as appRootTag, n as appRootAttrs, o as useRuntimeConfig, d as useStorage, q as appId, t as defineRenderHandler, v as appTeleportTag, w as appTeleportAttrs, x as appHead, y as getRouteRules, z as useNitroApp } from '../nitro/nitro.mjs';
 import { propsToString, renderSSRHead } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
 import { stringify, uneval } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import { c as createHead } from './server.mjs';
@@ -25,26 +25,16 @@ import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/di
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
 
 const NUXT_RUNTIME_PAYLOAD_EXTRACTION = false;
-
-const appHead = {"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"},{"name":"description","content":"Essays on trends, context & nuance"},{"name":"theme-color","content":"#000000"},{"name":"apple-mobile-web-app-capable","content":"yes"},{"property":"og:type","content":"website"}],"style":[],"script":[],"noscript":[],"charset":"utf-8","viewport":"width=device-width, initial-scale=1","title":"Everything in Perspective","htmlAttrs":{}};
-
-const appRootTag = "div";
-
-const appRootAttrs = {"id":"__nuxt"};
-
-const appTeleportTag = "div";
-
-const appTeleportAttrs = {"id":"teleports"};
-
-const appId = "nuxt-app";
 
 // @ts-expect-error private property consumed by vite-generated url helpers
 globalThis.__buildAssetsURL = buildAssetsURL;

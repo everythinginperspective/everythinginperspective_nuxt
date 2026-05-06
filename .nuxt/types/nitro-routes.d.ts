@@ -15,6 +15,12 @@ declare module "nitropack/types" {
     '/__sitemap__/nuxt-content-urls.json': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/__sitemap__/nuxt-content-urls-v3').default>>>>
     }
+    '/sitemap_index.xml': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap_index.xml').default>>>>
+    }
+    '/__sitemap__/**:sitemap': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap/[sitemap].xml').default>>>>
+    }
     '/__sitemap__/style.xsl': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/sitemap/dist/runtime/server/routes/sitemap.xsl').default>>>>
     }
@@ -38,6 +44,9 @@ declare module "nitropack/types" {
     }
     '/__nuxt_content/info/sql_dump.txt': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/presets/node/database-handler').default>>>>
+    }
+    '/_i18n/:hash/:locale/messages.json': {
+      'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/server/routes/messages').default>>>>
     }
     '/__nuxt_content/content/query': {
       'default': Simplify<Serialize<Awaited<ReturnType<typeof import('../../node_modules/@nuxt/content/dist/runtime/api/query.post').default>>>>

@@ -29,6 +29,7 @@ export { onBeforeRouteLeave, onBeforeRouteUpdate, useLink } from 'vue-router';
 export { withCtx, withDirectives, withKeys, withMemo, withModifiers, withScopeId, onActivated, onBeforeMount, onBeforeUnmount, onBeforeUpdate, onDeactivated, onErrorCaptured, onMounted, onRenderTracked, onRenderTriggered, onServerPrefetch, onUnmounted, onUpdated, computed, customRef, isProxy, isReactive, isReadonly, isRef, markRaw, proxyRefs, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRaw, toRef, toRefs, triggerRef, unref, watch, watchEffect, watchPostEffect, watchSyncEffect, onWatcherCleanup, isShallow, effect, effectScope, getCurrentScope, onScopeDispose, defineComponent, defineAsyncComponent, resolveComponent, getCurrentInstance, h, inject, hasInjectionContext, nextTick, provide, toValue, useModel, useAttrs, useCssModule, useSlots, useTransitionState, useId, useTemplateRef, useShadowRoot, useCssVars, Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue';
 export { requestIdleCallback, cancelIdleCallback } from '#app/compat/idle-callback';
 export { setInterval } from '#app/compat/interval';
+export { useRouteBaseName, useLocalePath, useLocaleRoute, useSwitchLocalePath, useLocaleHead, useBrowserLocale, useCookieLocale, useSetI18nParams, useI18nPreloadKeys, defineI18nRoute, defineI18nLocale, defineI18nConfig } from '../node_modules/@nuxtjs/i18n/dist/runtime/composables/index';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';
 export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration';
 export { useContentTypes, getContentTypeByFolder, getContentTypeBySingular, getContentTypeByPlural, ContentType } from '../composables/useContentTypes';
@@ -38,6 +39,7 @@ export { useNitroOrigin } from '../node_modules/nuxt-site-config/dist/runtime/ap
 export { useSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/app/composables/useSiteConfig';
 export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/nuxt-site-config/dist/runtime/app/composables/utils';
 export { queryCollection, queryCollectionSearchSections, queryCollectionNavigation, queryCollectionItemSurroundings } from '../node_modules/@nuxt/content/dist/runtime/client';
+export { useI18n } from 'vue-i18n';
 export { flatUnwrap as unwrapSlot } from '../node_modules/@nuxtjs/mdc/dist/runtime/utils/node';
 export { parseMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/parser';
 export { stringifyMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/stringify';
@@ -48,7 +50,6 @@ export { defineOgImageComponent } from '../node_modules/nuxt-og-image/dist/runti
 export { defineOgImageScreenshot } from '../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImageScreenshot';
 export { getOgImagePath } from '../node_modules/nuxt-og-image/dist/runtime/app/utils';
 export { useSchemaOrg } from '../node_modules/nuxt-schema-org/dist/runtime/app/composables/useSchemaOrg';
-export { useI18n } from '../node_modules/nuxt-seo-utils/dist/runtime/app/composables/polyfills';
 export { useBreadcrumbItems } from '../node_modules/nuxt-seo-utils/dist/runtime/app/composables/useBreadcrumbItems';
 export { useFallbackTitle } from '../node_modules/nuxt-seo-utils/dist/runtime/app/composables/useFallbackTitle';
 export { useShareLinks } from '../node_modules/nuxt-seo-utils/dist/runtime/app/composables/useShareLinks';

@@ -1,5 +1,5 @@
 import { createError, getQuery, handleCacheHeaders, setHeaders, setHeader, H3Error, defineEventHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { u as useOgImageRuntimeConfig, h as hashOgImageOptions, c as componentNames, a as htmlPayloadCache, l as logger, e as extractSocialPreviewTags, f as fetchIsland, b as useStorage, d as logger$1, r as resolveContext, g as getSiteConfig } from '../../../nitro/nitro.mjs';
+import { u as useOgImageRuntimeConfig, h as hashOgImageOptions, c as componentNames, b as htmlPayloadCache, l as logger, e as extractSocialPreviewTags, f as fetchIsland, d as useStorage, g as logger$1, r as resolveContext, i as getSiteConfig } from '../../../nitro/nitro.mjs';
 import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/pathe/dist/index.mjs';
 import { parse } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
@@ -25,8 +25,10 @@ import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/di
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:url';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
