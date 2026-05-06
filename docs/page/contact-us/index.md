@@ -1,7 +1,7 @@
 ---
 title: "Contact Us | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/page/contact-us"
-last_updated: "2026-05-06T23:13:48.861Z"
+last_updated: "2026-05-06T23:15:53.435Z"
 meta:
   description: "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
   "og:description": "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."

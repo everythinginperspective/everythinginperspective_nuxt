@@ -55,29 +55,15 @@ definePageMeta({
 
 const route = useRoute()
 const slugParts = (route.params.slug as string[])
-const slug = slugParts.join('/')
 
-// Prerender workaround: construct the path from params
-const collection = slugParts[0] || 'articles'
+// For /linked-data/articles/streaming-wars → folder=articles, slug=streaming-wars
+const folder = slugParts[0] || 'articles'
 const itemSlug = slugParts.slice(1).join('/')
 
-// Fetch content - during prerender this will serialize the payload
+// Fetch content using the same path pattern as magazine routes
 const { data: content } = await useAsyncData(
-  `ld-${slug}`,
-  async () => {
-    try {
-      const item = await queryCollection(collection).path(`/${itemSlug}`).first()
-      return item
-    } catch (e) {
-      // Fallback to full slug
-      try {
-        const item = await queryCollection(collection).path(`/${slug}`).first()
-        return item
-      } catch (e2) {
-        return null
-      }
-    }
-  }
+  `ld-${folder}-${itemSlug}`,
+  () => queryCollection(folder).path(`/${folder}/${itemSlug}`).first()
 )
 
 // Fetch graph for connections

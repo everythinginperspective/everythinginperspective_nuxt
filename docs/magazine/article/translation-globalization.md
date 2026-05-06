@@ -1,7 +1,7 @@
 ---
 title: "Translation and Globalization: How Breaking Language Barriers Reshapes Power | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/translation-globalization"
-last_updated: "2026-05-06T23:13:48.026Z"
+last_updated: "2026-05-06T23:15:52.520Z"
 meta:
   description: "From human translators to AI translation—how breaking language barriers reshapes economies, culture, and global power structures. What's gained, what's lost."
   "og:description": "From human translators to AI translation—how breaking language barriers reshapes economies, culture, and global power structures. What's gained, what's lost."
