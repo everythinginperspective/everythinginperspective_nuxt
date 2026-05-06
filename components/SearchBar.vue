@@ -1,49 +1,50 @@
 <template>
-  <div class=\"relative\">
-    <div class=\"flex items-center gap-2\">
+  <div class="relative">
+    <div class="flex items-center gap-2">
       <input
-        v-model=\"query\"
-        type=\"text\"
-        placeholder=\"Search articles...\"
-        class=\"search-input\"
-        @keydown.enter=\"handleSearch\"
-        @focus=\"showResults = true\"
-        @blur=\"setTimeout(() => showResults = false, 200)\"
+        v-model="query"
+        type="text"
+        placeholder="Search articles..."
+        class="search-input"
+        @keydown.enter="handleSearch"
+        @focus="showResults = true"
+        @blur="setTimeout(() => showResults = false, 200)"
       />
       <button
-        @click=\"handleSearch\"
-        class=\"search-button\"
-        aria-label=\"Search\"
+        @click="handleSearch"
+        class="search-button"
+        aria-label="Search"
       >
         🔍
       </button>
     </div>
 
     <!-- Search Results Dropdown -->
-    <div v-if=\"showResults && (query.length > 0 || results.length > 0)\" class=\"search-results\">
-      <div v-if=\"query.length === 0\" class=\"p-4 text-sm text-muted\">
+    <div v-if="showResults && (query.length > 0 || results.length > 0)" class="search-results">
+      <div v-if="query.length === 0" class="p-4 text-sm text-muted">
         Type to search...
       </div>
-      <div v-else-if=\"results.length === 0\" class=\"p-4 text-sm text-muted\">
-        No results found for \"{{ query }}\"
+      <div v-else-if="results.length === 0" class="p-4 text-sm text-muted">
+        No results found for "{{ query }}"
       </div>
-      <div v-else class=\"max-h-96 overflow-y-auto\">
+      <div v-else class="max-h-96 overflow-y-auto">
         <div
-          v-for=\"result in results.slice(0, 10)\"
-          :key=\"result.path\"
-          class=\"search-result-item\"
-          @click=\"navigateTo(result.path)\"
+          v-for="result in results.slice(0, 10)"
+          :key="result.path"
+          class="search-result-item"
+          @click="navigateTo(result.path)"
         >
-          <div class=\"font-bold text-sm\">{{ result.title }}</div>
-          <div class=\"text-xs text-muted line-clamp-2\">{{ result.excerpt }}</div>
+          <div class="font-bold text-sm">{{ result.title }}</div>
+          <div class="text-xs text-muted line-clamp-2">{{ result.excerpt }}</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang=\"ts\">
-import { ref, computed } from 'vue'
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 const query = ref('')
 const showResults = ref(false)

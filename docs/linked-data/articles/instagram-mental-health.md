@@ -1,7 +1,7 @@
 ---
 title: "Instagram and Mental Health: The Hidden Cost of Connection | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/linked-data/articles/instagram-mental-health"
-last_updated: "2026-05-06T23:17:59.755Z"
+last_updated: "2026-05-06T23:23:12.429Z"
 meta:
   description: "Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn't want you to know."
   "og:description": "Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn't want you to know."

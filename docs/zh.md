@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/zh"
-last_updated: "2026-05-06T23:18:00.955Z"
+last_updated: "2026-05-06T23:23:13.638Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"
@@ -26,10 +26,10 @@ ChatGPT hat 100 Millionen Nutzer in 60 Tagen gewonnen. Was das für Wissensarbei
 
 [**~~Read More → ~~**](https://einp.surge.sh/article/chatgpt-wissensarbeit-ki-revolution.de)
 
-### **WhatsApp e o Mundo: Como um Aplicativo Mudou a Comunicação Global**
+### **Sarkari Result: Why 100 Million Indians Race for Government Jobs**
 
-May 7, 2026 • Technology
+May 7, 2026 • Economics
 
-Como o WhatsApp conquistou 2,5 bilhões de usuários, transformou a comunicação no Brasil e no mundo, e enfrenta a crise de identidade da era Meta.
+Over 100M Indians search 'sarkari result' monthly. Behind that number lies a sociology of economic anxiety, colonial legacy, and shifting social mobility.
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/whatsapp-comunicacao-global.pt)
+[**~~Read More → ~~**](https://einp.surge.sh/article/sarkari-result-india-government-jobs.en)
