@@ -4,35 +4,39 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       ignore: ['/api/**'],
-      routes: async () => {
-        const { readdirSync, statSync } = await import('fs')
-        const { join } = await import('path')
+      routes: () => {
+        const { readdirSync, statSync } = require('fs')
+        const { join } = require('path')
         const contentDir = join(process.cwd(), 'content')
         
         const routes = ['/']
         
         // Get all content folders and files
-        const folders = readdirSync(contentDir)
-          .filter(item => {
-            const itemPath = join(contentDir, item)
-            return statSync(itemPath).isDirectory() && !item.startsWith('.')
-          })
-        
-        for (const folder of folders) {
-          const folderPath = join(contentDir, folder)
-          try {
-            const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
-            for (const file of files) {
-              const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
-              routes.push(`/linked-data/${folder}/${slug}`)
-              routes.push(`/magazine/${folder.replace(/s$/, '')}/${slug}`)
+        try {
+          const folders = readdirSync(contentDir)
+            .filter(item => {
+              const itemPath = join(contentDir, item)
+              return statSync(itemPath).isDirectory() && !item.startsWith('.')
+            })
+          
+          for (const folder of folders) {
+            const folderPath = join(contentDir, folder)
+            try {
+              const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
+              for (const file of files) {
+                const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
+                routes.push(`/linked-data/${folder}/${slug}`)
+                const singular = folder.replace(/s$/, '')
+                routes.push(`/magazine/${singular}/${slug}`)
+              }
+            } catch (e) {
+              // skip if folder doesn't exist
             }
-          } catch (e) {
-            // skip if folder doesn't exist
           }
+        } catch (e) {
+          console.warn('Could not read content directories')
         }
         
-        console.log(`\n✓ Generated ${routes.length} prerender routes`)
         return routes
       }
     },
