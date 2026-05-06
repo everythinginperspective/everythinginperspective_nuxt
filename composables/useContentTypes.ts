@@ -13,7 +13,22 @@ export const useContentTypes = async () => {
     return cachedContentTypes
   }
 
-  // Read from generated JSON file
+  // During SSR/prerender, read from filesystem
+  if (import.meta.server) {
+    try {
+      const { readFileSync } = await import('fs')
+      const { join } = await import('path')
+      const filePath = join(process.cwd(), 'public', 'content-types.json')
+      const content = readFileSync(filePath, 'utf-8')
+      cachedContentTypes = JSON.parse(content)
+      return cachedContentTypes
+    } catch (error) {
+      console.error('Failed to load content types from filesystem:', error)
+      return []
+    }
+  }
+  
+  // Client-side: fetch from public URL
   try {
     cachedContentTypes = await $fetch<ContentType[]>('/content-types.json')
     return cachedContentTypes

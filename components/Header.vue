@@ -10,9 +10,10 @@
         </div>
         <div class="hidden lg:flex gap-8 text-sm nav-main">
           <NuxtLink to="/" class="hover:underline">Home</NuxtLink>
+          <NuxtLink to="/magazine/articles" class="hover:underline">Articles</NuxtLink>
+          <NuxtLink to="/magazine/perspectives" class="hover:underline">Perspectives</NuxtLink>
           <NuxtLink to="/page/faq" class="hover:underline">FAQ</NuxtLink>
           <NuxtLink to="/page/contact-us" class="hover:underline">Contact</NuxtLink>
-          <NuxtLink to="/page/privacy-policy" class="hover:underline">Privacy</NuxtLink>
         </div>
         <button @click="toggleNav" class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation">☰</button>
       </div>

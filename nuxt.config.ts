@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   // Build hooks
   hooks: {
-    'build:before': async () => {
+    'prepare': async () => {
       const { execSync } = await import('child_process')
       console.log('\n📋 Building content types...')
       execSync('node scripts/build-content-types.js', { stdio: 'inherit' })

@@ -188,7 +188,7 @@
         "../node_modules/nuxt-seo-utils/dist/runtime/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/15f95740-1d68-41e0-88ed-2ac3a21e0ac2.json"
+        "./manifest/meta/395013a6-983b-4f90-846b-e53d68bc40f0.json"
       ],
       "#components": [
         "./components"

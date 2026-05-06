@@ -654,7 +654,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "15f95740-1d68-41e0-88ed-2ac3a21e0ac2",
+    "buildId": "395013a6-983b-4f90-846b-e53d68bc40f0",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -700,7 +700,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T10:48:13.651Z"
+          "X-Sitemap-Prerendered": "2026-05-06T11:06:53.480Z"
         }
       },
       "/_og/d/**": {

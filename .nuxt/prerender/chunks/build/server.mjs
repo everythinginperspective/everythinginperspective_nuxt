@@ -493,7 +493,7 @@ const _routes = [
     name: "index",
     path: "/",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./index-583YOfEs.mjs')
+    component: () => import('./index-DmpbClTR.mjs')
   },
   {
     name: "page-slug",
@@ -516,19 +516,19 @@ const _routes = [
     name: "magazine-type",
     path: "/magazine/:type()",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./index-Fn3KTQpM.mjs')
+    component: () => import('./index-kLqmwbZH.mjs')
   },
   {
     name: "magazine-type-slug",
     path: "/magazine/:type()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-BInJ1vkz.mjs')
+    component: () => import('./_slug_-DN-e4XTa.mjs')
   },
   {
     name: "linked-data-type",
     path: "/linked-data/:type()",
     meta: __nuxt_page_meta || {},
-    component: () => import('./index-Dr967J_d.mjs')
+    component: () => import('./index-DQ4Z5h1a.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -2764,7 +2764,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
     const navOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-befaf177><div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-befaf177><div class="flex justify-between items-start" data-v-befaf177><div data-v-befaf177>`);
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-5a5db79b><div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-5a5db79b><div class="flex justify-between items-start" data-v-5a5db79b><div data-v-5a5db79b>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "text-2xl sm:text-4xl font-serif font-bold tracking-tight"
@@ -2780,7 +2780,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-befaf177>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main" data-v-befaf177>`);
+      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-5a5db79b>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main" data-v-5a5db79b>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "hover:underline"
@@ -2791,6 +2791,36 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createTextVNode("Home")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/magazine/articles",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Articles`);
+          } else {
+            return [
+              createTextVNode("Articles")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/magazine/perspectives",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Perspectives`);
+          } else {
+            return [
+              createTextVNode("Perspectives")
             ];
           }
         }),
@@ -2826,24 +2856,9 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/privacy-policy",
-        class: "hover:underline"
-      }, {
-        default: withCtx((_, _push2, _parent2, _scopeId) => {
-          if (_push2) {
-            _push2(`Privacy`);
-          } else {
-            return [
-              createTextVNode("Privacy")
-            ];
-          }
-        }),
-        _: 1
-      }, _parent));
-      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-befaf177>☰</button></div></div>`);
+      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-5a5db79b>☰</button></div></div>`);
       if (unref(navOpen)) {
-        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-befaf177><div class="space-y-4" data-v-befaf177>`);
+        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-5a5db79b><div class="space-y-4" data-v-5a5db79b>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/",
           class: "block"
@@ -2955,7 +2970,7 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-befaf177"]]);
+const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-5a5db79b"]]);
 const _sfc_main$3 = {};
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
   const _component_NuxtLink = __nuxt_component_0$1;
