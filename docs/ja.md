@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/ja"
-last_updated: "2026-05-06T22:57:21.753Z"
+last_updated: "2026-05-06T23:13:48.818Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"

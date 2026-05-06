@@ -67,16 +67,26 @@ export const useBreadcrumbs = () => {
       return crumbs
     }
     
-    // /linked-data/[plural]/[...slug]
-    if (path.startsWith('/linked-data/') && path.match(/^\/linked-data\/[^/]+\//)) {
-      const plural = params.plural as string
+    // /linked-data/[...slug] catchall route
+    if (path.startsWith('/linked-data/')) {
       const slug = params.slug as string | string[]
-      const slugStr = Array.isArray(slug) ? slug.join('/') : slug
+      const slugArr = Array.isArray(slug) ? slug : [slug]
+      const slugStr = slugArr.join('/')
+      const plural = slugArr[0] // first part is the folder/plural name
       
-      crumbs.push(
-        { label: 'Linked Data ' + toTitleCase(plural), to: `/linked-data/${plural}` },
-        { label: route.meta.pageTitle || toTitleCase(slugStr), to: `/linked-data/${plural}/${slugStr}` }
-      )
+      if (slugArr.length > 1) {
+        // Item page: /linked-data/articles/streaming-wars
+        crumbs.push(
+          { label: 'Linked Data ' + toTitleCase(plural), to: `/linked-data/${plural}` },
+          { label: route.meta.pageTitle || toTitleCase(slugArr[slugArr.length - 1]), to: path }
+        )
+      } else {
+        // Collection page: /linked-data/articles
+        crumbs.push({
+          label: 'Linked Data ' + toTitleCase(plural),
+          to: path
+        })
+      }
       return crumbs
     }
     
@@ -88,7 +98,8 @@ export const useBreadcrumbs = () => {
   }
 }
 
-const toTitleCase = (str: string): string => {
+const toTitleCase = (str: string | undefined | null): string => {
+  if (!str) return ''
   return str
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
