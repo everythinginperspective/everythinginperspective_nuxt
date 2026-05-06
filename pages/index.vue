@@ -38,11 +38,61 @@ const formatDate = (date: string) => {
 
 // SEO
 useSeoMeta({
-  title: 'Everything in Perspective',
-  description: 'Essays on trends, context & nuance',
+  title: 'Everything in Perspective | Essays on trends, context & nuance',
+  description: 'Explore essays on global trends, economic forces, technology, and human behavior. Everything in Perspective delivers nuanced analysis and contextual thinking.',
   ogTitle: 'Everything in Perspective',
   ogDescription: 'Essays on trends, context & nuance',
-  ogType: 'website'
+  ogType: 'website',
+  twitterCard: 'summary_large_image'
+})
+
+// Enhanced schema.org for home page
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': 'https://einp.surge.sh/#website',
+        name: 'Everything in Perspective',
+        url: 'https://einp.surge.sh',
+        description: 'Essays on trends, context & nuance',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://einp.surge.sh/?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        },
+        sameAs: [],
+        inLanguage: 'en-US'
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': 'https://einp.surge.sh/#collection',
+        name: 'Everything in Perspective Essays',
+        description: 'A curated collection of essays exploring global trends with nuance and context',
+        url: 'https://einp.surge.sh',
+        isPartOf: {
+          '@id': 'https://einp.surge.sh/#website'
+        },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: (articles.value || []).slice(0, 10).map((article, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            name: article.title,
+            description: article.description,
+            url: `https://einp.surge.sh/article/${article.path?.split('/').pop()}`,
+            image: article.image || '/og-default.png'
+          }))
+        }
+      })
+    }
+  ]
 })
 </script>
 

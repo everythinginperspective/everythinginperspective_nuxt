@@ -74,32 +74,86 @@ watch(() => content.value, (newContent) => {
                        singular === 'book' ? 'Book' :
                        singular === 'person' ? 'Person' : 'WebPage'
     
+    const schemaObject: Record<string, any> = {
+      '@context': 'https://schema.org',
+      '@type': schemaType,
+      '@id': `https://einp.surge.sh/magazine/${singular}/${slug}#${schemaType.toLowerCase()}`,
+      headline: newContent.title,
+      name: newContent.title,
+      description: newContent.description,
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+        name: newContent.imageAlt || newContent.title
+      },
+      author: newContent.author ? {
+        '@type': 'Person',
+        name: newContent.author,
+        url: 'https://einp.surge.sh'
+      } : undefined,
+      creator: newContent.author ? {
+        '@type': 'Person',
+        name: newContent.author
+      } : undefined,
+      publisher: {
+        '@type': 'Organization',
+        name: 'Everything in Perspective',
+        url: 'https://einp.surge.sh',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://einp.surge.sh/logo.png',
+          width: 250,
+          height: 60
+        }
+      },
+      datePublished: publishedDate,
+      dateModified: publishedDate,
+      dateCreated: publishedDate,
+      url: `https://einp.surge.sh/magazine/${singular}/${slug}`,
+      inLanguage: 'en-US',
+      isAccessibleForFree: true,
+      keywords: newContent.keywords ? newContent.keywords.join(', ') : newContent.tags?.join(', ') || newContent.category || singular
+    }
+    
+    // Add article-specific fields
+    if (singular === 'article' || singular === 'perspective') {
+      schemaObject.articleBody = newContent.body?.replace(/<[^>]*>/g, '') || ''
+      schemaObject.articleSection = newContent.category || 'General'
+    }
+    
     useHead({
       script: [
         {
           type: 'application/ld+json',
+          innerHTML: JSON.stringify(schemaObject)
+        },
+        {
+          type: 'application/ld+json',
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': schemaType,
-            headline: newContent.title,
-            description: newContent.description,
-            image: imageUrl,
-            author: newContent.author ? {
-              '@type': 'Person',
-              name: newContent.author
-            } : undefined,
-            publisher: {
-              '@type': 'Organization',
-              name: 'Everything in Perspective',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://einp.surge.sh/logo.png',
-                width: 250,
-                height: 60
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://einp.surge.sh'
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: contentType.plural,
+                item: `https://einp.surge.sh/magazine/${contentType.plural}`
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: newContent.title,
+                item: `https://einp.surge.sh/magazine/${singular}/${slug}`
               }
-            },
-            datePublished: publishedDate,
-            dateModified: publishedDate
+            ]
           })
         }
       ]

@@ -85,26 +85,52 @@ watch(() => article.value, (newArticle) => {
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'NewsArticle',
+            '@id': `https://einp.surge.sh/article/${slug}#article`,
             headline: newArticle.title,
+            name: newArticle.title,
             description: newArticle.description,
-            image: imageUrl,
+            abstract: newArticle.description,
+            image: {
+              '@type': 'ImageObject',
+              url: imageUrl,
+              width: 1200,
+              height: 630,
+              name: newArticle.imageAlt || newArticle.title
+            },
             author: {
+              '@type': 'Person',
+              name: newArticle.author || 'Everything in Perspective',
+              url: 'https://einp.surge.sh'
+            },
+            creator: {
               '@type': 'Person',
               name: newArticle.author || 'Everything in Perspective'
             },
             publisher: {
               '@type': 'Organization',
               name: 'Everything in Perspective',
+              url: 'https://einp.surge.sh',
               logo: {
                 '@type': 'ImageObject',
                 url: 'https://einp.surge.sh/logo.png',
                 width: 250,
                 height: 60
-              }
+              },
+              sameAs: []
             },
             datePublished: publishedDate,
             dateModified: publishedDate,
-            articleBody: newArticle.body || ''
+            dateCreated: publishedDate,
+            articleBody: newArticle.body?.replace(/<[^>]*>/g, '') || '',
+            articleSection: newArticle.category || 'General',
+            keywords: newArticle.keywords ? newArticle.keywords.join(', ') : newArticle.tags?.join(', ') || newArticle.category || 'perspective',
+            inLanguage: 'en-US',
+            isAccessibleForFree: true,
+            url: `https://einp.surge.sh/article/${slug}`,
+            mainEntity: {
+              '@type': 'NewsArticle',
+              '@id': `https://einp.surge.sh/article/${slug}#article`
+            }
           })
         },
         {
