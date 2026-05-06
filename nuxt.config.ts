@@ -1,4 +1,12 @@
 export default defineNuxtConfig({
+  // Build hooks
+  hooks: {
+    'build:before': async () => {
+      console.log('\n🔗 Building relationship graph...')
+      const { execSync } = await import('child_process')
+      execSync('node scripts/build-graph.js', { stdio: 'inherit' })
+    }
+  },
   // Build output to .dist for Surge deployment
   nitro: {
     prerender: {
@@ -24,10 +32,7 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/sitemap'
-  ],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo'],
   
   // Sitemap config
   sitemap: {
