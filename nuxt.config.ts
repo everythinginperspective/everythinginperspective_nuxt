@@ -1,44 +1,44 @@
+// Generate prerender routes from content
+const { readdirSync, statSync } = require('fs')
+const { join } = require('path')
+const contentDir = join(process.cwd(), 'content')
+
+const preloadRoutes = () => {
+  const routes = ['/']
+  try {
+    const folders = readdirSync(contentDir)
+      .filter(item => {
+        const itemPath = join(contentDir, item)
+        return statSync(itemPath).isDirectory() && !item.startsWith('.')
+      })
+    
+    for (const folder of folders) {
+      const folderPath = join(contentDir, folder)
+      try {
+        const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
+        for (const file of files) {
+          const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
+          routes.push(`/linked-data/${folder}/${slug}`)
+          const singular = folder.replace(/s$/, '')
+          routes.push(`/magazine/${singular}/${slug}`)
+        }
+      } catch (e) {
+        // skip
+      }
+    }
+  } catch (e) {
+    console.warn('Could not read content directories')
+  }
+  return routes
+}
+
 export default defineNuxtConfig({
   // Build output to .dist for Surge deployment
   nitro: {
     prerender: {
       crawlLinks: true,
       ignore: ['/api/**'],
-      routes: () => {
-        const { readdirSync, statSync } = require('fs')
-        const { join } = require('path')
-        const contentDir = join(process.cwd(), 'content')
-        
-        const routes = ['/']
-        
-        // Get all content folders and files
-        try {
-          const folders = readdirSync(contentDir)
-            .filter(item => {
-              const itemPath = join(contentDir, item)
-              return statSync(itemPath).isDirectory() && !item.startsWith('.')
-            })
-          
-          for (const folder of folders) {
-            const folderPath = join(contentDir, folder)
-            try {
-              const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
-              for (const file of files) {
-                const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
-                routes.push(`/linked-data/${folder}/${slug}`)
-                const singular = folder.replace(/s$/, '')
-                routes.push(`/magazine/${singular}/${slug}`)
-              }
-            } catch (e) {
-              // skip if folder doesn't exist
-            }
-          }
-        } catch (e) {
-          console.warn('Could not read content directories')
-        }
-        
-        return routes
-      }
+      routes: preloadRoutes()
     },
     routeRules: {
       '/api/**': { cache: false, swr: false }
