@@ -1,1 +1,0 @@
-let e=null;const r=async()=>{if(e)return e;try{return e=await $fetch("/content-types.json"),e}catch(t){return console.error("Failed to load content types:",t),[]}},a=async t=>(await r()).find(n=>n.singular===t),o=async t=>(await r()).find(n=>n.plural===t);export{o as a,a as g};

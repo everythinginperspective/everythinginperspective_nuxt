@@ -28,12 +28,17 @@
         </div>
       </div>
       <div class="border-t border-primary pt-6 sm:pt-8">
-        <!-- Hilltopads Banner Ad (injected via app.vue useHead) -->
+        <!-- Hilltopads Banner Ad -->
+        <div class="py-4 mb-4" v-html="hilltopadsScript"></div>
         <p class="text-xs text-center text-secondary">&copy; 2026 Everything in Perspective. All rights reserved.</p>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+const hilltopadsScript = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>'
+</script>
 
 <style scoped>
 .bg-accent {

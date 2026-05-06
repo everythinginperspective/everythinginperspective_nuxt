@@ -1,6 +1,7 @@
 <template>
   <header class="border-b border-accent bg-secondary sticky top-0 z-50">
-    <!-- Hilltopads Banner Ad (injected via app.vue useHead) -->
+    <!-- Hilltopads Banner Ad -->
+    <div class="bg-secondary py-2" v-html="hilltopadsScript"></div>
     <Breadcrumbs />
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div class="flex justify-between items-start">
@@ -41,6 +42,8 @@ const navOpen = ref(false)
 const toggleNav = () => {
   navOpen.value = !navOpen.value
 }
+
+const hilltopadsScript = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>'
 </script>
 
 <style scoped>
