@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/page/privacy-policy"
-last_updated: "2026-05-06T22:46:56.091Z"
+last_updated: "2026-05-06T22:48:36.377Z"
 meta:
   description: "Last updated: May 5, 2026"
   "og:description": "Last updated: May 5, 2026"

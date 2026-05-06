@@ -1,7 +1,7 @@
 ---
 title: "Why Satta King Traps Millions: The Economics of Desperation | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/satta-king-economic-desperation"
-last_updated: "2026-05-06T22:46:56.120Z"
+last_updated: "2026-05-06T22:48:36.620Z"
 meta:
   description: "Understanding satta king's hold on millions—not as vice, but as rational choice under economic pressure. The systemic failures that make illegal gambling the only escape."
   "og:description": "Understanding satta king's hold on millions—not as vice, but as rational choice under economic pressure. The systemic failures that make illegal gambling the only escape."
