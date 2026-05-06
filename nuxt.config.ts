@@ -1,20 +1,19 @@
 export default defineNuxtConfig({
-  // Build hooks
-  hooks: {
-    'prepare': async () => {
-      const { execSync } = await import('child_process')
-      console.log('\n📋 Building content types...')
-      execSync('node scripts/build-content-types.js', { stdio: 'inherit' })
-      console.log('\n🔗 Building relationship graph...')
-      execSync('node scripts/build-graph.js', { stdio: 'inherit' })
-    }
-  },
+  // Build hooks - DISABLED to avoid mdream native binding issues
+  // hooks: {
+  //   'prepare': async () => {
+  //     const { execSync } = await import('child_process')
+  //     console.log('\n📋 Building content types...')
+  //     execSync('node scripts/build-content-types.js', { stdio: 'inherit' })
+  //     console.log('\n🔗 Building relationship graph...')
+  //     execSync('node scripts/build-graph.js', { stdio: 'inherit' })
+  //   }
+  // },
   // Build output to .dist for Surge deployment
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml'],
-      crawlLinks: true,
-      interval: 100,
+      routes: ['/'],
+      crawlLinks: false,
       ignore: ['/api/**']
     },
     routeRules: {
