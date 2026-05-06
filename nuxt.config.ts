@@ -63,7 +63,13 @@ export default defineNuxtConfig({
   // @nuxt/content v3 configuration
   content: {
     markdown: {
-      anchorLinks: false
+      anchorLinks: false,
+      // Disable mdc to avoid mdream native binding issues during prerender
+      // mdc: {
+      //   highlight: {
+      //     theme: 'github-light'
+      //   }
+      // }
     },
   },
 
