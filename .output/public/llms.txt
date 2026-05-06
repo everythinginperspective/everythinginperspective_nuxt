@@ -1,0 +1,53 @@
+# https://einp.surge.sh
+
+Canonical Origin: https://einp.surge.sh
+
+## LLM Resources
+
+- [Full Content](https://einp.surge.sh/llms-full.txt)
+  Complete page content in markdown format.
+- [robots.txt](/robots.txt)
+  Crawler rules and permissions.
+
+## Available Languages on Website
+
+- English (en) - 24 pages - / - Content included below
+- Français (fr) - 1 pages - /fr - Visit website for content
+- Deutsch (de) - 1 pages - /de - Visit website for content
+- Español (es) - 1 pages - /es - Visit website for content
+- Italiano (it) - 1 pages - /it - Visit website for content
+- Português (pt) - 1 pages - /pt - Visit website for content
+- Nederlands (nl) - 1 pages - /nl - Visit website for content
+- 中文 (zh) - 1 pages - /zh - Visit website for content
+- 日本語 (ja) - 1 pages - /ja - Visit website for content
+- العربية (ar) - 1 pages - /ar - Visit website for content
+
+## Pages
+
+- [Everything in Perspective | %siteName](/): Essays on trends, context & nuance
+
+- [Gemini and the AI Landscape: Beyond ChatGPT&#x27;s First-Mover Advantage | Everything in Perspective | %siteName](/article/gemini-ai-competition): ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing...
+- [Google Maps: How Location Data Reshapes Urban Planning, Privacy, and Power | Everything in Perspective | %siteName](/article/google-maps-privacy-urban): Google Maps promised directions. It delivered unprecedented surveillance of human movement. What location data reveals—and who has access to it.
+- [Instagram and Mental Health: The Hidden Cost of Connection | Everything in Perspective | %siteName](/article/instagram-mental-health): Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn...
+
+- [articles | Everything in Perspective | %siteName](/magazine/articles): Browse all articles on Everything in Perspective
+- [perspectives | Everything in Perspective | %siteName](/magazine/perspectives): Browse all perspectives on Everything in Perspective
+
+- [Cricket&#x27;s Global Obsession: Sport as Cultural Identity and Economic Power | Everything in Perspective | %siteName](/magazine/article/crickets-global-obsession): Why 3 billion people follow cricket—not as sport, but as cultural identity. How cricket became the largest sport by audience, revenue, and geopolitical influenc...
+- [E-Commerce Giants: How Amazon and Flipkart Reshaped Retail and Labor | Everything in Perspective | %siteName](/magazine/article/ecommerce-giants-market-dominance): From disruption to dominance—how Amazon and Flipkart conquered retail markets, destroyed traditional merchants, and created a new underclass of gig workers.
+- [Gemini and the AI Landscape: Beyond ChatGPT&#x27;s First-Mover Advantage | Everything in Perspective | %siteName](/magazine/article/gemini-ai-competition): ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing...
+- [Gold as Inflation Hedge: When Precious Metals Matter (And When They Don&#x27;t) | Everything in Perspective | %siteName](/magazine/article/gold-inflation-hedge): Why gold remains valuable in uncertain economies—not as get-rich-quick, but as inflation protection. Historical data, current context, and when to actually buy.
+- [Google Maps: How Location Data Reshapes Urban Planning, Privacy, and Power | Everything in Perspective | %siteName](/magazine/article/google-maps-privacy-urban): Google Maps promised directions. It delivered unprecedented surveillance of human movement. What location data reveals—and who has access to it.
+- [Instagram and Mental Health: The Hidden Cost of Connection | Everything in Perspective | %siteName](/magazine/article/instagram-mental-health): Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn...
+- [Restaurant Culture Post-Pandemic: Community, Economics, and the Future of Dining | Everything in Perspective | %siteName](/magazine/article/restaurant-culture-post-pandemic): How restaurants transformed during pandemic lockdowns and what the post-2024 landscape reveals about urban community, labor, and local economics.
+- [Why Satta King Traps Millions: The Economics of Desperation | Everything in Perspective | %siteName](/magazine/article/satta-king-economic-desperation): Understanding satta king's hold on millions—not as vice, but as rational choice under economic pressure. The systemic failures that make illegal gambling the on...
+- [Streaming Wars: How Entertainment Distribution Reshapes Culture and Labor | Everything in Perspective | %siteName](/magazine/article/streaming-wars-entertainment): From Netflix disruption to streaming saturation—how on-demand video changed entertainment economics, collapsed piracy, and created an unsustainable content arms...
+- [Translation and Globalization: How Breaking Language Barriers Reshapes Power | Everything in Perspective | %siteName](/magazine/article/translation-globalization): From human translators to AI translation—how breaking language barriers reshapes economies, culture, and global power structures. What's gained, what's lost.
+- [The Weather Crisis: Climate Data You Need to Know (And Why You Don&#x27;t) | Everything in Perspective | %siteName](/magazine/article/weather-climate-data-literacy): Climate change isn't a future threat—it's reshaping weather today. The data everyone ignores and why climate literacy matters more than carbon reduction rhetori...
+- [About Everything in Perspective | Everything in Perspective | %siteName](/page/about): Learn about our mission to provide context and nuance on global trends
+- [Cookie Policy | Everything in Perspective | %siteName](/page/cookie-policy): How we use cookies.
+- [Frequently Asked Questions | Everything in Perspective | %siteName](/page/faq): Frequently Asked Questions
+- [Privacy Policy | Everything in Perspective | %siteName](/page/privacy-policy): Last updated: May 5, 2026
+- [Terms &amp; Conditions | Everything in Perspective | %siteName](/page/terms-conditions): Our terms of service.
+- [Contact Us | Everything in Perspective | %siteName](/page/contact-us): Have a question, topic suggestion, or want to contribute? We'd love to hear from you.
+- [Contact Us | Everything in Perspective | %siteName](/page/contact-us/index): Have a question, topic suggestion, or want to contribute? We'd love to hear from you.
