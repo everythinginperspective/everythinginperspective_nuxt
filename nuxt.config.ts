@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready'],
   
   // i18n configuration
   i18n: {
