@@ -60,19 +60,11 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  // @nuxt/content configuration
+  // @nuxt/content v3 configuration
   content: {
-    sources: {
-      content: {
-        driver: 'fs',
-        base: './content'
-      }
-    },
     markdown: {
       anchorLinks: false
     },
-    // Enable all file types: markdown, JSON, YAML, CSV, etc.
-    ignores: []
   },
 
   // CSS & styling

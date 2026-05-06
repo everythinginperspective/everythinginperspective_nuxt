@@ -20,10 +20,10 @@ definePageMeta({
 const route = useRoute()
 const slug = route.params.slug as string
 
-// Fetch page by slug
+// Fetch page by slug (v3: queryCollection)
 const { data: page } = await useAsyncData(
   `page-${slug}`,
-  () => queryContent(`/pages/${slug}`).findOne()
+  () => queryCollection('pages').path(`/pages/${slug}`).first()
 )
 
 // SEO + breadcrumbs

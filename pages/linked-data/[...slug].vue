@@ -56,10 +56,11 @@ definePageMeta({
 const route = useRoute()
 const slug = (route.params.slug as string[]).join('/')
 
-// Fetch content by path
+// Fetch content by path (v3: queryCollection - infer collection from path)
+const ldCollection = (slug.split('/')[0] || 'articles') as any
 const { data: content } = await useAsyncData(
   `ld-${slug}`,
-  () => queryContent(`/${slug}`).findOne()
+  () => queryCollection(ldCollection).path(`/${slug}`).first()
 )
 
 // Fetch graph for connections
@@ -69,8 +70,8 @@ const { data: graph } = await useAsyncData(
 )
 
 const connections = computed(() => {
-  if (!graph.value?.nodes || !content.value?._path) return null
-  const node = (graph.value.nodes as any[]).find(n => n.path === content.value._path)
+  if (!graph.value?.nodes || !content.value?.path) return null
+  const node = (graph.value.nodes as any[]).find(n => n.path === content.value!.path)
   return node?.connections || null
 })
 

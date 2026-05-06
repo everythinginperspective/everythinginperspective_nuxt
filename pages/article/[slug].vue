@@ -40,10 +40,10 @@ definePageMeta({
 const route = useRoute()
 const slug = route.params.slug as string
 
-// Fetch article by slug
+// Fetch article by slug (v3: queryCollection)
 const { data: article } = await useAsyncData(
   `article-${slug}`,
-  () => queryContent(`/articles/${slug}`).findOne()
+  () => queryCollection('articles').path(`/articles/${slug}`).first()
 )
 
 const formatDate = (date: string) => {

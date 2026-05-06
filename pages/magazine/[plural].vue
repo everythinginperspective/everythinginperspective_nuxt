@@ -14,10 +14,10 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div
         v-for="item in items"
-        :key="item._path"
+        :key="item.path"
         class="border border-accent p-6 hover:shadow-lg transition-shadow"
       >
-        <NuxtLink :to="`/magazine/${contentType?.singular}/${item.slug || item._path?.split('/').pop()}`">
+        <NuxtLink :to="`/magazine/${contentType?.singular}/${item.slug || item.path?.split('/').pop()}`">
           <h2 class="font-serif text-2xl font-bold mb-2">{{ item.title }}</h2>
           <p v-if="item.description" class="text-muted text-sm mb-4">{{ item.description }}</p>
           <div class="text-xs text-muted">
@@ -50,10 +50,10 @@ if (!contentType) {
   throw createError({ statusCode: 404, message: 'Content type not found' })
 }
 
-// Fetch all items of this type
+// Fetch all items of this type (v3: queryCollection)
 const { data: items } = await useAsyncData(
   `${contentType.plural}-index`,
-  () => queryContent(`/${contentType.folder}`).find()
+  () => queryCollection(contentType.folder as any).all()
 )
 
 const formatDate = (date: string) => {

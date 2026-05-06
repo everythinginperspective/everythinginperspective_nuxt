@@ -4,11 +4,11 @@
     <section class="mb-16">
       <h2 class="font-serif text-3xl font-bold mb-8">Latest Essays</h2>
       <div class="space-y-8">
-        <article v-for="article in (articles || []).slice(0, 3)" :key="article._id" class="mb-12 pb-12 border-b border-accent">
+        <article v-for="article in (articles || []).slice(0, 3)" :key="article.id" class="mb-12 pb-12 border-b border-accent">
           <h3 class="font-serif text-2xl font-bold mb-2">{{ article.title }}</h3>
           <p class="text-muted text-sm mb-4">{{ formatDate(article.date) }} • {{ article.category || 'General' }}</p>
           <p class="text-body mb-4">{{ article.description }}</p>
-          <NuxtLink :to="`/article/${article._path?.split('/').pop()}`" class="text-primary font-sans font-bold hover:underline">
+          <NuxtLink :to="`/article/${article.path?.split('/').pop()}`" class="text-primary font-sans font-bold hover:underline">
             Read More →
           </NuxtLink>
         </article>
@@ -22,9 +22,9 @@ definePageMeta({
   layout: 'default'
 })
 
-// Fetch articles from @nuxt/content
-const { data: articles } = await useAsyncData('articles', () => 
-  queryContent('/articles').sort({ date: -1 }).find()
+// Fetch articles from @nuxt/content (v3: queryCollection)
+const { data: articles } = await useAsyncData('articles', () =>
+  queryCollection('articles').order('date', 'DESC').all()
 )
 
 const formatDate = (date: string) => {

@@ -32,10 +32,10 @@ if (!contentType) {
   throw createError({ statusCode: 404, message: 'Content type not found' })
 }
 
-// Fetch content
+// Fetch content (v3: queryCollection)
 const { data: content } = await useAsyncData(
   `${singular}-${slug}`,
-  () => queryContent(`/${contentType.folder}/${slug}`).findOne()
+  () => queryCollection(contentType.folder as any).path(`/${contentType.folder}/${slug}`).first()
 )
 
 // Map type to template component
