@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/"
-last_updated: "2026-05-06T21:33:54.249Z"
+last_updated: "2026-05-06T22:17:59.975Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"
@@ -10,26 +10,26 @@ meta:
 
 ## **Latest Essays**
 
-### **Gemini and the AI Landscape: Beyond ChatGPT's First-Mover Advantage**
+### **亚马逊的全球帝国：征服世界、失守中国与下一场数字战争**
 
-May 6, 2026 • Technology
+May 7, 2026 • Technology
 
-ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing differently.
+亚马逊每月超过1.51亿次搜索。它如何从一家书店变成全球商业基础设施？为什么它征服了全世界，却在中国一败涂地？
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/gemini-ai-competition)
+[**~~Read More → ~~**](https://einp.surge.sh/article/amazon-global-dominance.zh)
 
-### **Google Maps: How Location Data Reshapes Urban Planning, Privacy, and Power**
+### **ChatGPT und die Wissensarbeit: Wie KI 100 Millionen Nutzer und die europäische Wirtschaft verändert**
 
-May 6, 2026 • Technology
+May 7, 2026 • Technology
 
-Google Maps promised directions. It delivered unprecedented surveillance of human movement. What location data reveals—and who has access to it.
+ChatGPT hat 100 Millionen Nutzer in 60 Tagen gewonnen. Was das für Wissensarbeiter, die deutsche Wirtschaft und Europas KI-Regulierung bedeutet.
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/google-maps-privacy-urban)
+[**~~Read More → ~~**](https://einp.surge.sh/article/chatgpt-wissensarbeit-ki-revolution.de)
 
-### **Instagram and Mental Health: The Hidden Cost of Connection**
+### **WhatsApp e o Mundo: Como um Aplicativo Mudou a Comunicação Global**
 
-May 6, 2026 • Psychology
+May 7, 2026 • Technology
 
-Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn't want you to know.
+Como o WhatsApp conquistou 2,5 bilhões de usuários, transformou a comunicação no Brasil e no mundo, e enfrenta a crise de identidade da era Meta.
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/instagram-mental-health)
+[**~~Read More → ~~**](https://einp.surge.sh/article/whatsapp-comunicacao-global.pt)
