@@ -53,8 +53,20 @@
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
       ],
+      "@nuxtjs/mdc": [
+        "../node_modules/@nuxtjs/mdc"
+      ],
       "nuxt-site-config": [
         "../node_modules/nuxt-site-config"
+      ],
+      "@nuxtjs/robots": [
+        "../node_modules/@nuxtjs/robots"
+      ],
+      "nuxt-link-checker": [
+        "../node_modules/nuxt-link-checker"
+      ],
+      "nuxtseo-shared": [
+        "../node_modules/nuxtseo-shared"
       ],
       "defu": [
         "../node_modules/defu"
@@ -82,6 +94,12 @@
       ],
       "nitropack": [
         "../node_modules/nitropack"
+      ],
+      "#content/components": [
+        "./content/components"
+      ],
+      "#content/manifest": [
+        "./content/manifest"
       ],
       "#shared": [
         "../shared"
@@ -116,15 +134,6 @@
       "#internal/nuxt/paths": [
         "../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
       ],
-      "#mdc-configs": [
-        "./mdc-configs"
-      ],
-      "#mdc-highlighter": [
-        "./mdc-highlighter"
-      ],
-      "#mdc-imports": [
-        "./mdc-imports"
-      ],
       "#sitemap": [
         "../node_modules/@nuxtjs/sitemap/dist/runtime"
       ],
@@ -140,14 +149,89 @@
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables/v3"
       ],
+      "#mdc-configs": [
+        "./mdc-configs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports"
+      ],
+      "#robots": [
+        "../node_modules/@nuxtjs/robots/dist/runtime"
+      ],
+      "#robots/*": [
+        "../node_modules/@nuxtjs/robots/dist/runtime/*"
+      ],
+      "#og-image": [
+        "../node_modules/nuxt-og-image/dist/shared/runtime"
+      ],
+      "#og-image-cache": [
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/cache/lru"
+      ],
+      "#og-image/emoji-transform": [
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/core/transforms/emojis/fetch"
+      ],
+      "#schema-org": [
+        "../node_modules/nuxt-schema-org/dist/runtime"
+      ],
+      "#schema-org/*": [
+        "../node_modules/nuxt-schema-org/dist/runtime/*"
+      ],
+      "#seo-utils": [
+        "../node_modules/nuxt-seo-utils/dist/runtime"
+      ],
+      "#seo-utils/*": [
+        "../node_modules/nuxt-seo-utils/dist/runtime/*"
+      ],
+      "#internal/nuxt-simple-robots": [
+        "../node_modules/@nuxtjs/robots/dist/runtime/server/composables"
+      ],
+      "#internal/nuxt-simple-robots/*": [
+        "../node_modules/@nuxtjs/robots/dist/runtime/server/composables/*"
+      ],
       "#internal/nuxt-robots": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime/server/robots-polyfill"
+        "../node_modules/@nuxtjs/robots/dist/runtime/server/composables"
       ],
       "#internal/nuxt-robots/*": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime/server/robots-polyfill/*"
+        "../node_modules/@nuxtjs/robots/dist/runtime/server/composables/*"
       ],
-      "#content/server": [
-        "../node_modules/@nuxt/content/dist/runtime/legacy/server"
+      "#content/dump": [
+        "./content/database.compressed"
+      ],
+      "#content/adapter": [
+        "./db0/connectors/better-sqlite3"
+      ],
+      "#content/local-adapter": [
+        "./db0/connectors/better-sqlite3"
+      ],
+      "#og-image/renderers/satori": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/renderers/browser": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/renderers/takumi": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/bindings/sharp": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/bindings/resvg": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/bindings/takumi": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/bindings/satori": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/bindings/browser": [
+        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
+      ],
+      "#og-image/yoga-wasm": [
+        "../node_modules/nuxt-og-image/dist/shared/satori/yoga.wasm?module"
       ]
     },
     "lib": [
@@ -159,6 +243,7 @@
     "allowArbitraryExtensions": true
   },
   "include": [
+    "./content/types.d.ts",
     "./types/nitro-nuxt.d.ts",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
@@ -172,11 +257,19 @@
   "exclude": [
     "../node_modules",
     "../node_modules/nuxt/node_modules",
-    "../node_modules/@nuxtjs/mdc/node_modules",
     "../node_modules/@nuxt/content/node_modules",
     "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/@nuxtjs/sitemap/node_modules",
+    "../node_modules/@nuxtjs/seo/node_modules",
+    "../node_modules/nuxt-ai-ready/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
+    "../node_modules/@nuxtjs/mdc/node_modules",
+    "../node_modules/@nuxtjs/robots/node_modules",
+    "../node_modules/nuxt-link-checker/node_modules",
+    "../node_modules/nuxt-og-image/node_modules",
+    "../node_modules/nuxt-schema-org/node_modules",
+    "../node_modules/nuxt-seo-utils/node_modules",
+    "../node_modules/nuxtseo-shared/node_modules",
     "../dist"
   ]
 }

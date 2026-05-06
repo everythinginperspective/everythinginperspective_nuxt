@@ -1,0 +1,6 @@
+# START nuxt-robots (indexable)
+User-agent: *
+Disallow: 
+
+Sitemap: https://einp.surge.sh/sitemap.xml
+# END nuxt-robots

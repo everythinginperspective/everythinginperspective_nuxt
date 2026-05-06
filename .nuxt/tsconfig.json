@@ -25,8 +25,20 @@
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
       ],
+      "@nuxtjs/mdc": [
+        "../node_modules/@nuxtjs/mdc"
+      ],
       "nuxt-site-config": [
         "../node_modules/nuxt-site-config"
+      ],
+      "@nuxtjs/robots": [
+        "../node_modules/@nuxtjs/robots"
+      ],
+      "nuxt-link-checker": [
+        "../node_modules/nuxt-link-checker"
+      ],
+      "nuxtseo-shared": [
+        "../node_modules/nuxtseo-shared"
       ],
       "defu": [
         "../node_modules/defu"
@@ -54,6 +66,12 @@
       ],
       "nitropack": [
         "../node_modules/nitropack"
+      ],
+      "#content/components": [
+        "./content/components.ts"
+      ],
+      "#content/manifest": [
+        "./content/manifest.ts"
       ],
       "~": [
         ".."
@@ -112,15 +130,6 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
-      "#mdc-configs": [
-        "./mdc-configs.mjs"
-      ],
-      "#mdc-highlighter": [
-        "./mdc-highlighter.mjs"
-      ],
-      "#mdc-imports": [
-        "./mdc-imports.mjs"
-      ],
       "#sitemap": [
         "../node_modules/@nuxtjs/sitemap/dist/runtime"
       ],
@@ -142,8 +151,44 @@
       "#imports": [
         "./imports"
       ],
+      "#mdc-configs": [
+        "./mdc-configs.mjs"
+      ],
+      "#mdc-highlighter": [
+        "./mdc-highlighter.mjs"
+      ],
+      "#mdc-imports": [
+        "./mdc-imports.mjs"
+      ],
+      "#robots": [
+        "../node_modules/@nuxtjs/robots/dist/runtime"
+      ],
+      "#robots/*": [
+        "../node_modules/@nuxtjs/robots/dist/runtime/*"
+      ],
+      "#og-image": [
+        "../node_modules/nuxt-og-image/dist/shared/runtime"
+      ],
+      "#og-image-cache": [
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/cache/lru"
+      ],
+      "#og-image/emoji-transform": [
+        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/core/transforms/emojis/fetch"
+      ],
+      "#schema-org": [
+        "../node_modules/nuxt-schema-org/dist/runtime"
+      ],
+      "#schema-org/*": [
+        "../node_modules/nuxt-schema-org/dist/runtime/*"
+      ],
+      "#seo-utils": [
+        "../node_modules/nuxt-seo-utils/dist/runtime"
+      ],
+      "#seo-utils/*": [
+        "../node_modules/nuxt-seo-utils/dist/runtime/*"
+      ],
       "#app-manifest": [
-        "./manifest/meta/91114776-2e02-4e1f-a878-f5fcaa4c9fdf.json"
+        "./manifest/meta/15f95740-1d68-41e0-88ed-2ac3a21e0ac2.json"
       ],
       "#components": [
         "./components"
@@ -192,7 +237,8 @@
     "../node_modules/dist/runtime",
     "../node_modules/nuxt-site-config/dist/runtime",
     "../node_modules/nuxt-site-config/dist/dist/runtime",
-    ".."
+    "..",
+    "./module/nuxt-og-image-components.d.ts"
   ],
   "exclude": [
     "../dist",

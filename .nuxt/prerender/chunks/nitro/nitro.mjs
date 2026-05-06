@@ -1,47 +1,29 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, getRequestProtocol, getRequestHost, getQuery as getQuery$1, getCookie, getResponseStatus, setHeader, getHeader, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withLeadingSlash, decodePath, withoutTrailingSlash, isRelative, joinRelativeURL, withBase, withTrailingSlash, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import destr, { destr as destr$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { createConsola } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getRequestProtocol, getRequestHost, getQuery as getQuery$1, removeResponseHeader, setHeader, getHeader, getRouterParam, getResponseStatus, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, hasProtocol, withHttps, withoutTrailingSlash, withLeadingSlash, withBase, withTrailingSlash, withoutLeadingSlash, decodePath, parsePath, stringifyQuery, parseQuery, encodePath, stringifyParsedURL, joinRelativeURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import destr from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
 import { createFetch, Headers as Headers$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
 import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, defineDriver, prefixStorage } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
+import { createStorage, defineDriver, prefixStorage, normalizeKey } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
 import crypto from 'node:crypto';
 import fsDriver from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
-import lruCache from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import lruCacheDriver from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
 import { digest } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
 import defu, { defuFn, defu as defu$1, createDefu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
+import { snakeCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
 import { getContext } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
 import { toValue } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { createConsola } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import { createFilter } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
+import { parse } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
+import { hash as hash$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve as resolve$1, extname } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
-import { hash as hash$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ohash/dist/index.mjs';
-import { unified } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unified/index.js';
-import { toString } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/mdast-util-to-string/index.js';
-import { postprocess, preprocess } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/micromark/index.js';
-import { stringifyPosition } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/micromark-util-character/index.js';
-import { push, splice } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/micromark-util-chunked/index.js';
-import { resolveAll } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/micromark-util-resolve-all/index.js';
-import { normalizeUri } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/micromark-util-sanitize-uri/index.js';
-import slugify from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/slugify/slugify.js';
-import remarkParse from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/remark-parse/index.js';
-import remark2rehype from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/remark-rehype/index.js';
-import remarkMDC, { parseFrontMatter } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/remark-mdc/dist/index.mjs';
-import remarkGFM from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/remark-gfm/index.js';
-import rehypeExternalLinks from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/rehype-external-links/index.js';
-import rehypeSortAttributeValues from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/rehype-raw/index.js';
-import { detab } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/detab/index.js';
-import { toString as toString$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hast-util-to-string/index.js';
-import Slugger from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/github-slugger/index.js';
+import { dirname, resolve as resolve$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import { isAbsolute } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
+import localAdapter from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 
 const serverAssets = [{"baseName":"server","dir":"/Volumes/B87P4/everythinginperspective_nuxt/server/assets"}];
 
@@ -70,7 +52,7 @@ const _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt
    */
   (opts) => {
     const fs = fsDriver({ base: opts.base });
-    const lru = lruCache({ max: 1000 });
+    const lru = lruCacheDriver({ max: 1000 });
 
     return {
       ...fs, // fall back to file system - only the bottom three methods are used in renderer
@@ -90,21 +72,19 @@ const _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt
   },
 );
 
-const storage$1 = createStorage({});
+const storage = createStorage({});
 
-storage$1.mount('/assets', assets$1);
+storage.mount('/assets', assets$1);
 
-storage$1.mount('internal:nuxt:prerender', _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache/nitro/prerender"}));
-storage$1.mount('data', fsDriver({"driver":"fsLite","base":"./.data/kv"}));
-storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt","watchOptions":{"ignored":[null]}}));
-storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt/server","watchOptions":{"ignored":[null]}}));
-storage$1.mount('content:source:content', unstorage_47drivers_47fs({"driver":"fs","base":"./content"}));
-storage$1.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/content-cache"}));
-storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt"}));
-storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache"}));
+storage.mount('internal:nuxt:prerender', _47Volumes_47B87P4_47everythinginperspective_nuxt_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache/nitro/prerender"}));
+storage.mount('data', fsDriver({"driver":"fsLite","base":"./.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Volumes/B87P4/everythinginperspective_nuxt/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Volumes/B87P4/everythinginperspective_nuxt/.nuxt/cache"}));
 
 function useStorage(base = "") {
-  return base ? prefixStorage(storage$1, base) : storage$1;
+  return base ? prefixStorage(storage, base) : storage;
 }
 
 const Hasher = /* @__PURE__ */ (() => {
@@ -674,7 +654,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "91114776-2e02-4e1f-a878-f5fcaa4c9fdf",
+    "buildId": "15f95740-1d68-41e0-88ed-2ac3a21e0ac2",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -699,16 +679,57 @@ const _inlineRuntimeConfig = {
       "/book/**": {
         "prerender": true
       },
+      "/magazine/**": {
+        "prerender": true
+      },
+      "/linked-data/**": {
+        "prerender": true
+      },
       "/api/**": {
         "cache": false,
         "swr": false
+      },
+      "/__nuxt_content/**": {
+        "robots": false,
+        "cache": false
+      },
+      "/__nuxt_content/content/sql_dump.txt": {
+        "prerender": true
       },
       "/sitemap.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-05T20:47:52.367Z"
+          "X-Sitemap-Prerendered": "2026-05-06T10:48:13.651Z"
         }
+      },
+      "/_og/d/**": {
+        "headers": {
+          "cache-control": "public, max-age=259200, s-maxage=259200, immutable"
+        }
+      },
+      "/_og/r/**": {
+        "headers": {
+          "cache-control": "public, max-age=259200, s-maxage=259200, immutable"
+        }
+      },
+      "/_og/s/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        }
+      },
+      "/_nuxt": {
+        "robots": "noindex",
+        "headers": {
+          "X-Robots-Tag": "noindex"
+        }
+      },
+      "/_nuxt/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable",
+          "X-Robots-Tag": "noindex"
+        },
+        "robots": "noindex"
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
@@ -720,7 +741,7 @@ const _inlineRuntimeConfig = {
           "cache-control": "public, max-age=1, immutable"
         }
       },
-      "/_nuxt/**": {
+      "/_og-static-fonts/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"
         }
@@ -731,183 +752,129 @@ const _inlineRuntimeConfig = {
     "mdc": {
       "components": {
         "prose": true,
-        "map": {
-          "p": "prose-p",
-          "a": "prose-a",
-          "blockquote": "prose-blockquote",
-          "code-inline": "prose-code-inline",
-          "code": "ProseCodeInline",
-          "em": "prose-em",
-          "h1": "prose-h1",
-          "h2": "prose-h2",
-          "h3": "prose-h3",
-          "h4": "prose-h4",
-          "h5": "prose-h5",
-          "h6": "prose-h6",
-          "hr": "prose-hr",
-          "img": "prose-img",
-          "ul": "prose-ul",
-          "ol": "prose-ol",
-          "li": "prose-li",
-          "strong": "prose-strong",
-          "table": "prose-table",
-          "thead": "prose-thead",
-          "tbody": "prose-tbody",
-          "td": "prose-td",
-          "th": "prose-th",
-          "tr": "prose-tr"
-        }
+        "map": {},
+        "customElements": []
       },
       "headings": {
         "anchorLinks": {
           "h1": false,
-          "h2": false,
-          "h3": false,
-          "h4": false,
+          "h2": true,
+          "h3": true,
+          "h4": true,
           "h5": false,
           "h6": false
         }
+      },
+      "highlight": {
+        "noApiRoute": true,
+        "highlighter": "shiki",
+        "theme": {
+          "default": "github-light",
+          "dark": "github-dark"
+        },
+        "shikiEngine": "oniguruma",
+        "langs": [
+          "js",
+          "jsx",
+          "json",
+          "ts",
+          "tsx",
+          "vue",
+          "css",
+          "html",
+          "bash",
+          "md",
+          "mdc",
+          "yaml"
+        ]
       }
+    },
+    "nuxt-seo-utils-version": "8.1.11",
+    "seo-utils": {
+      "canonicalQueryWhitelist": [
+        "page",
+        "sort",
+        "filter",
+        "search",
+        "q",
+        "category",
+        "tag"
+      ],
+      "canonicalLowercase": true,
+      "tagPriority": "low",
+      "separator": "",
+      "titleSeparator": ""
     },
     "content": {
-      "locales": [],
-      "defaultLocale": "",
-      "integrity": 1778014072232,
-      "experimental": {
-        "stripQueryParameters": false,
-        "advanceQuery": false,
-        "clientDB": false
-      },
-      "respectPathCase": false,
-      "api": {
-        "baseURL": "/api/_content"
-      },
-      "navigation": {
-        "fields": []
-      },
-      "tags": {
-        "p": "prose-p",
-        "a": "prose-a",
-        "blockquote": "prose-blockquote",
-        "code-inline": "prose-code-inline",
-        "code": "ProseCodeInline",
-        "em": "prose-em",
-        "h1": "prose-h1",
-        "h2": "prose-h2",
-        "h3": "prose-h3",
-        "h4": "prose-h4",
-        "h5": "prose-h5",
-        "h6": "prose-h6",
-        "hr": "prose-hr",
-        "img": "prose-img",
-        "ul": "prose-ul",
-        "ol": "prose-ol",
-        "li": "prose-li",
-        "strong": "prose-strong",
-        "table": "prose-table",
-        "thead": "prose-thead",
-        "tbody": "prose-tbody",
-        "td": "prose-td",
-        "th": "prose-th",
-        "tr": "prose-tr"
-      },
-      "highlight": false,
-      "wsUrl": "",
-      "documentDriven": false,
-      "host": "",
-      "trailingSlash": false,
-      "search": "",
-      "contentHead": true,
-      "anchorLinks": false
-    }
-  },
-  "content": {
-    "cacheVersion": 2,
-    "cacheIntegrity": "ZlfMO9qFzU",
-    "transformers": [],
-    "base": "",
-    "api": {
-      "baseURL": "/api/_content"
+      "wsUrl": ""
     },
-    "watch": {
-      "ws": {
-        "port": {
-          "port": 4000,
-          "portRange": [
-            4000,
-            4040
-          ]
-        },
-        "hostname": "localhost",
-        "showURL": false
-      }
+    "nuxt-robots": {
+      "version": "6.0.8",
+      "isNuxtContentV2": false,
+      "debug": false,
+      "credits": true,
+      "groups": [
+        {
+          "userAgent": [
+            "*"
+          ],
+          "disallow": [
+            ""
+          ],
+          "allow": [],
+          "contentUsage": [],
+          "contentSignal": [],
+          "_indexable": true,
+          "_rules": [],
+          "_normalized": true
+        }
+      ],
+      "sitemap": [
+        "/sitemap.xml"
+      ],
+      "header": true,
+      "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "robotsDisabledValue": "noindex, nofollow",
+      "cacheControl": "max-age=14400, must-revalidate",
+      "botDetection": true,
+      "pageMetaRobots": {}
     },
-    "sources": {
-      "content": {
-        "driver": "fs",
-        "base": "./content"
-      }
-    },
-    "ignores": [],
-    "locales": [],
-    "defaultLocale": "",
-    "highlight": false,
-    "markdown": {
-      "tags": {
-        "p": "prose-p",
-        "a": "prose-a",
-        "blockquote": "prose-blockquote",
-        "code-inline": "prose-code-inline",
-        "code": "ProseCodeInline",
-        "em": "prose-em",
-        "h1": "prose-h1",
-        "h2": "prose-h2",
-        "h3": "prose-h3",
-        "h4": "prose-h4",
-        "h5": "prose-h5",
-        "h6": "prose-h6",
-        "hr": "prose-hr",
-        "img": "prose-img",
-        "ul": "prose-ul",
-        "ol": "prose-ol",
-        "li": "prose-li",
-        "strong": "prose-strong",
-        "table": "prose-table",
-        "thead": "prose-thead",
-        "tbody": "prose-tbody",
-        "td": "prose-td",
-        "th": "prose-th",
-        "tr": "prose-tr"
+    "nuxt-og-image": {
+      "defaults": {
+        "emojis": "noto",
+        "extension": "png",
+        "width": 1200,
+        "height": 600,
+        "cacheMaxAgeSeconds": 259200
       },
-      "anchorLinks": {
-        "depth": 0,
-        "exclude": []
-      },
-      "remarkPlugins": {},
-      "rehypePlugins": {}
-    },
-    "yaml": {},
-    "csv": {
-      "delimeter": ",",
-      "json": true
-    },
-    "navigation": {
-      "fields": []
-    },
-    "contentHead": true,
-    "documentDriven": false,
-    "respectPathCase": false,
-    "experimental": {
-      "clientDB": false,
-      "cacheContents": true,
-      "stripQueryParameters": false,
-      "advanceQuery": false,
-      "search": ""
+      "hasServerRuntime": false
     }
   },
   "sitemap": {
     "cacheMaxAgeSeconds": 600,
     "debug": false
+  },
+  "nuxt-schema-org": {
+    "reactive": false,
+    "minify": true,
+    "scriptAttributes": {
+      "data-nuxt-schema-org": true
+    },
+    "identity": "",
+    "version": "6.0.4"
+  },
+  "content": {
+    "databaseVersion": "v3.5.0",
+    "version": "3.13.0",
+    "database": {
+      "type": "sqlite",
+      "filename": "./contents.sqlite"
+    },
+    "localDatabase": {
+      "type": "sqlite",
+      "filename": "/Volumes/B87P4/everythinginperspective_nuxt/.data/content/contents.sqlite"
+    },
+    "integrityCheck": true
   },
   "nuxt-site-config": {
     "stack": [
@@ -925,6 +892,72 @@ const _inlineRuntimeConfig = {
     "version": "4.0.8",
     "debug": false,
     "multiTenancy": []
+  },
+  "nuxt-robots": {
+    "version": "6.0.8",
+    "isNuxtContentV2": false,
+    "debug": false,
+    "credits": true,
+    "groups": [
+      {
+        "userAgent": [
+          "*"
+        ],
+        "disallow": [
+          ""
+        ],
+        "allow": [],
+        "contentUsage": [],
+        "contentSignal": [],
+        "_indexable": true,
+        "_rules": [],
+        "_normalized": true
+      }
+    ],
+    "sitemap": [
+      "/sitemap.xml"
+    ],
+    "header": true,
+    "robotsEnabledValue": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "robotsDisabledValue": "noindex, nofollow",
+    "cacheControl": "max-age=14400, must-revalidate",
+    "botDetection": true,
+    "pageMetaRobots": {}
+  },
+  "nuxt-og-image": {
+    "version": "6.5.0",
+    "satoriOptions": {},
+    "resvgOptions": {},
+    "sharpOptions": {},
+    "publicStoragePath": "root:public:",
+    "defaults": {
+      "emojis": "noto",
+      "extension": "png",
+      "width": 1200,
+      "height": 600,
+      "cacheMaxAgeSeconds": 259200
+    },
+    "debug": false,
+    "baseCacheKey": "/cache/nuxt-og-image/6.5.0",
+    "buildCacheDir": "",
+    "hasNuxtIcon": false,
+    "colorPreference": "light",
+    "isNuxtContentDocumentDriven": false,
+    "cssFramework": "tailwind",
+    "browser": "",
+    "security": {
+      "strict": false,
+      "maxDimension": 2048,
+      "maxDpr": 2,
+      "renderTimeout": 15000,
+      "imageFetchTimeout": 3000,
+      "maxQueryParamSize": "",
+      "restrictRuntimeImagesToOrigin": false,
+      "secret": ""
+    }
+  },
+  "ogImage": {
+    "secret": ""
   }
 };
 const envOptions = {
@@ -1252,6 +1285,188 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
+function minifyJS(code) {
+  let result = "";
+  let i = 0;
+  const len = code.length;
+  while (i < len) {
+    const ch = code[i];
+    if (ch === "'" || ch === '"' || ch === "`") {
+      const quote = ch;
+      result += ch;
+      i++;
+      while (i < len && code[i] !== quote) {
+        if (code[i] === "\\") {
+          result += code[i++];
+        }
+        result += code[i++];
+      }
+      if (i < len)
+        result += code[i++];
+    } else if (ch === "/" && code[i + 1] === "/") {
+      i += 2;
+      while (i < len && code[i] !== "\n")
+        i++;
+    } else if (ch === "/" && code[i + 1] === "*") {
+      i += 2;
+      while (i < len && !(code[i] === "*" && code[i + 1] === "/"))
+        i++;
+      i += 2;
+    } else if (ch === " " || ch === "	" || ch === "\n" || ch === "\r") {
+      let hasNewline = false;
+      while (i < len && (code[i] === " " || code[i] === "	" || code[i] === "\n" || code[i] === "\r")) {
+        if (code[i] === "\n")
+          hasNewline = true;
+        i++;
+      }
+      const prev = result.at(-1);
+      const next = code[i];
+      if (hasNewline && prev && next && prev !== "{" && prev !== "}" && prev !== ";" && next !== "}" && next !== ";")
+        result += "\n";
+      else if (prev && next && isIdentChar(prev) && isIdentChar(next))
+        result += " ";
+      else if (prev && next && (prev === "+" && next === "+" || prev === "-" && next === "-"))
+        result += " ";
+    } else {
+      result += ch;
+      i++;
+    }
+  }
+  return result.trim();
+}
+function minifyCSS(code) {
+  let result = "";
+  let i = 0;
+  let parenDepth = 0;
+  const len = code.length;
+  while (i < len) {
+    const ch = code[i];
+    if (ch === "'" || ch === '"') {
+      const quote = ch;
+      result += ch;
+      i++;
+      while (i < len && code[i] !== quote) {
+        if (code[i] === "\\")
+          result += code[i++];
+        result += code[i++];
+      }
+      if (i < len)
+        result += code[i++];
+    } else if (ch === "/" && code[i + 1] === "*") {
+      i += 2;
+      while (i < len && !(code[i] === "*" && code[i + 1] === "/"))
+        i++;
+      i += 2;
+    } else if (ch === "(") {
+      parenDepth++;
+      result += ch;
+      i++;
+    } else if (ch === ")") {
+      parenDepth = Math.max(0, parenDepth - 1);
+      result += ch;
+      i++;
+    } else if (ch === " " || ch === "	" || ch === "\n" || ch === "\r") {
+      while (i < len && (code[i] === " " || code[i] === "	" || code[i] === "\n" || code[i] === "\r"))
+        i++;
+      const prev = result.at(-1);
+      const next = code[i];
+      if (next === "!")
+        continue;
+      if (parenDepth > 0) {
+        if (prev && next && !isCSSCalcPunctuation(prev) && !isCSSCalcPunctuation(next))
+          result += " ";
+      } else if (prev && next && !isCSSPunctuation(prev) && !isCSSPunctuation(next)) {
+        result += " ";
+      }
+    } else if (ch === ";") {
+      let j = i + 1;
+      while (j < len && (code[j] === " " || code[j] === "	" || code[j] === "\n" || code[j] === "\r"))
+        j++;
+      if (code[j] === "}") {
+        i++;
+      } else {
+        result += ch;
+        i++;
+      }
+    } else if (ch === "0" && code[i + 1] === "." && (code[i + 2] ?? "") >= "0" && (code[i + 2] ?? "") <= "9") {
+      const prev = result.at(-1);
+      if (prev && prev >= "0" && prev <= "9") {
+        result += ch;
+        i++;
+      } else {
+        i++;
+      }
+    } else {
+      result += ch;
+      i++;
+    }
+  }
+  return result.trim();
+}
+function isIdentChar(ch) {
+  return ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z" || ch >= "0" && ch <= "9" || ch === "_" || ch === "$";
+}
+function isCSSBasePunctuation(ch) {
+  return ch === "{" || ch === "}" || ch === ";" || ch === ":" || ch === ",";
+}
+function isCSSPunctuation(ch) {
+  return isCSSBasePunctuation(ch) || ch === ">" || ch === "+" || ch === "~";
+}
+function isCSSCalcPunctuation(ch) {
+  return isCSSBasePunctuation(ch) || ch === "*" || ch === "/";
+}
+function minifyJSON(code) {
+  return JSON.stringify(JSON.parse(code));
+}
+
+const INLINE_SCRIPT_RE = /<script(?![^>]+\bsrc\b)([^>]*)>([\s\S]*?)<\/script\s*>/gi;
+const INLINE_STYLE_RE = /<style([^>]*)>([\s\S]*?)<\/style\s*>/gi;
+const TYPE_ATTR_RE = /\btype\s*=\s*["']([^"']*)["']/i;
+const JSON_TYPES = /* @__PURE__ */ new Set(["application/json", "application/ld+json"]);
+const SKIP_JS_TYPES = /* @__PURE__ */ new Set(["application/json", "application/ld+json", "speculationrules", "importmap"]);
+function minifyChunk(chunk) {
+  let out = chunk.replace(INLINE_SCRIPT_RE, (full, attrs, content) => {
+    if (!content)
+      return full;
+    const type = TYPE_ATTR_RE.exec(attrs)?.[1];
+    if (type && JSON_TYPES.has(type)) {
+      try {
+        const m = minifyJSON(content);
+        return m.length < content.length ? `<script${attrs}>${m}<\/script>` : full;
+      } catch {
+        return full;
+      }
+    }
+    if (type && SKIP_JS_TYPES.has(type))
+      return full;
+    try {
+      const m = minifyJS(content);
+      return m.length < content.length ? `<script${attrs}>${m}<\/script>` : full;
+    } catch {
+      return full;
+    }
+  });
+  out = out.replace(INLINE_STYLE_RE, (full, attrs, content) => {
+    if (!content)
+      return full;
+    try {
+      const m = minifyCSS(content);
+      return m.length < content.length ? `<style${attrs}>${m}</style>` : full;
+    } catch {
+      return full;
+    }
+  });
+  return out;
+}
+const _8GGUsxU7kT0YDbcYUbeIXrVyOHObVvSMT9jQN7lPa0E = defineNitroPlugin((nitroApp) => {
+  nitroApp.hooks.hook("render:html", (html) => {
+    for (const arr of [html.head, html.bodyPrepend, html.body, html.bodyAppend]) {
+      for (let i = 0; i < arr.length; i++)
+        arr[i] = minifyChunk(arr[i]);
+    }
+  });
+});
+
 const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$";
 const unsafeChars = /[<>\b\f\n\r\t\0\u2028\u2029]/g;
 const reserved = /^(?:do|if|in|for|int|let|new|try|var|byte|case|char|else|enum|goto|long|this|void|with|await|break|catch|class|const|final|float|short|super|throw|while|yield|delete|double|export|import|native|return|switch|throws|typeof|boolean|default|extends|finally|package|private|abstract|continue|debugger|function|volatile|interface|protected|transient|implements|instanceof|synchronized)$/;
@@ -1575,13 +1790,13 @@ function getSiteConfig(e, _options) {
   return e.context.siteConfig.get(options);
 }
 
-const PRERENDER_NO_SSR_ROUTES = /* @__PURE__ */ new Set(["/index.html", "/200.html", "/404.html"]);
+const PRERENDER_NO_SSR_ROUTES$1 = /* @__PURE__ */ new Set(["/index.html", "/200.html", "/404.html"]);
 const _HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno = defineNitroPlugin(async (nitroApp) => {
   nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
     const routeOptions = getRouteRules(event);
     const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
     const url = event.path;
-    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (PRERENDER_NO_SSR_ROUTES.has(url) );
+    const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (PRERENDER_NO_SSR_ROUTES$1.has(url) );
     if (noSSR) {
       const siteConfig = Object.fromEntries(
         Object.entries(getSiteConfig(event)).map(([k, v]) => [k, toValue(v)])
@@ -1591,2481 +1806,584 @@ const _HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno = defineNitroPlugin(async (nit
   });
 });
 
-const staticConfig = {"isI18nMapped":false,"sitemapName":"sitemap.xml","isMultiSitemap":false,"excludeAppSources":[],"cacheMaxAgeSeconds":600,"autoLastmod":false,"defaultSitemapsChunkSize":1000,"minify":false,"sortEntries":true,"discoverImages":true,"discoverVideos":true,"sitemapsPathPrefix":"/__sitemap__/","isNuxtContentDocumentDriven":false,"xsl":"/__sitemap__/style.xsl","xslTips":true,"xslColumns":[{"label":"URL","width":"50%"},{"label":"Images","width":"25%","select":"count(image:image)"},{"label":"Last Updated","width":"25%","select":"concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"}],"credits":true,"version":"8.0.15","sitemaps":{"sitemap.xml":{"sitemapName":"sitemap.xml","route":"sitemap.xml","defaults":{},"include":[],"exclude":["/_**","/_nuxt/**"],"includeAppSources":true}}};
-
-const logger = createConsola({
-  defaults: {
-    tag: "@nuxt/sitemap"
+const KNOWN_SEARCH_BOTS = [
+  {
+    pattern: "googlebot",
+    name: "googlebot",
+    secondaryPatterns: ["google.com/bot.html"]
+  },
+  {
+    pattern: "bingbot",
+    name: "bingbot",
+    secondaryPatterns: ["msnbot"]
+  },
+  {
+    pattern: "yandexbot",
+    name: "yandexbot"
+  },
+  {
+    pattern: "baiduspider",
+    name: "baiduspider",
+    secondaryPatterns: ["baidu.com"]
+  },
+  {
+    pattern: "duckduckbot",
+    name: "duckduckbot",
+    secondaryPatterns: ["duckduckgo.com"]
+  },
+  {
+    pattern: "slurp",
+    name: "yahoo"
+  },
+  {
+    pattern: "applebot",
+    name: "applebot",
+    secondaryPatterns: ["apple.com/go/applebot"]
   }
-});
-const merger = createDefu((obj, key, value) => {
+];
+const SOCIAL_BOTS = [
+  {
+    pattern: "twitterbot",
+    name: "twitter",
+    secondaryPatterns: ["twitter"]
+  },
+  {
+    pattern: "facebookexternalhit",
+    name: "facebook",
+    secondaryPatterns: ["facebook.com"]
+  },
+  {
+    pattern: "linkedinbot",
+    name: "linkedin",
+    secondaryPatterns: ["linkedin"]
+  },
+  {
+    pattern: "pinterestbot",
+    name: "pinterest",
+    secondaryPatterns: ["pinterest"]
+  },
+  {
+    pattern: "discordbot",
+    name: "discord",
+    secondaryPatterns: ["discordapp"]
+  }
+];
+const SEO_BOTS = [
+  {
+    pattern: "mj12bot",
+    name: "majestic12",
+    secondaryPatterns: ["majestic12.co.uk/bot"]
+  },
+  {
+    pattern: "ahrefsbot",
+    name: "ahrefs",
+    secondaryPatterns: ["ahrefs.com"]
+  },
+  {
+    pattern: "semrushbot",
+    name: "semrush",
+    secondaryPatterns: ["semrush.com/bot"]
+  },
+  {
+    pattern: "screaming frog",
+    name: "screaming-frog",
+    secondaryPatterns: ["screamingfrog.co.uk"]
+  },
+  {
+    pattern: "rogerbot",
+    name: "moz"
+  }
+];
+const AI_BOTS = [
+  {
+    pattern: "anthropic",
+    name: "anthropic"
+  },
+  {
+    pattern: "claude",
+    name: "claude"
+  },
+  {
+    pattern: "gptbot",
+    name: "gpt",
+    secondaryPatterns: ["openai.com"]
+  },
+  {
+    pattern: "google-extended",
+    name: "google-extended"
+  },
+  {
+    pattern: "applebot-extended",
+    name: "applebot-extended"
+  },
+  {
+    pattern: "bytespider",
+    name: "bytespider"
+  },
+  {
+    pattern: "diffbot",
+    name: "diffbot"
+  },
+  {
+    pattern: "googlebot-news",
+    name: "google-news"
+  },
+  {
+    pattern: "cohere",
+    name: "cohere",
+    secondaryPatterns: ["cohere.com"]
+  },
+  {
+    pattern: "ccbot",
+    name: "commoncrawl",
+    secondaryPatterns: ["commoncrawl.org"]
+  },
+  {
+    pattern: "perplexitybot",
+    name: "perplexity",
+    secondaryPatterns: ["perplexity.ai"]
+  }
+];
+const HTTP_TOOL_BOTS = [
+  {
+    pattern: "python-requests",
+    name: "requests",
+    secondaryPatterns: ["python"]
+  },
+  {
+    pattern: "wget",
+    name: "wget"
+  },
+  {
+    pattern: "curl",
+    name: "curl",
+    secondaryPatterns: ["curl"]
+  }
+];
+const SECURITY_SCANNING_BOTS = [
+  {
+    pattern: "zgrab",
+    name: "zgrab"
+  },
+  {
+    pattern: "masscan",
+    name: "masscan"
+  },
+  {
+    pattern: "nmap",
+    name: "nmap",
+    secondaryPatterns: ["insecure.org"]
+  },
+  {
+    pattern: "nikto",
+    name: "nikto"
+  },
+  {
+    pattern: "wpscan",
+    name: "wpscan"
+  }
+];
+const SCRAPING_BOTS = [
+  {
+    pattern: "scrapy",
+    name: "scrapy",
+    secondaryPatterns: ["scrapy.org"]
+  }
+];
+const AUTOMATION_BOTS = [
+  {
+    pattern: "phantomjs",
+    name: "phantomjs"
+  },
+  {
+    pattern: "headless",
+    name: "headless-browser"
+  },
+  {
+    pattern: "playwright",
+    name: "playwright"
+  },
+  {
+    pattern: "selenium",
+    name: "selenium",
+    secondaryPatterns: ["webdriver"]
+  },
+  {
+    pattern: "puppeteer",
+    name: "puppeteer",
+    secondaryPatterns: ["headless"]
+  }
+];
+const GENERIC_BOTS = [
+  {
+    pattern: "bot",
+    name: "generic-bot"
+  },
+  {
+    pattern: "spider",
+    name: "generic-spider"
+  },
+  {
+    pattern: "crawler",
+    name: "generic-crawler"
+  },
+  {
+    pattern: "scraper",
+    name: "generic-scraper"
+  }
+];
+const BOT_MAP = [
+  {
+    type: "search-engine",
+    bots: KNOWN_SEARCH_BOTS,
+    trusted: true
+  },
+  {
+    type: "social",
+    bots: SOCIAL_BOTS,
+    trusted: true
+  },
+  {
+    type: "seo",
+    bots: SEO_BOTS,
+    trusted: true
+  },
+  {
+    type: "ai",
+    bots: AI_BOTS,
+    trusted: true
+  },
+  {
+    type: "generic",
+    bots: GENERIC_BOTS,
+    trusted: false
+  },
+  {
+    type: "automation",
+    bots: AUTOMATION_BOTS,
+    trusted: false
+  },
+  {
+    type: "http-tool",
+    bots: HTTP_TOOL_BOTS,
+    trusted: false
+  },
+  {
+    type: "security-scanner",
+    bots: SECURITY_SCANNING_BOTS,
+    trusted: false
+  },
+  {
+    type: "scraping",
+    bots: SCRAPING_BOTS,
+    trusted: false
+  }
+];
+
+const ROBOT_DIRECTIVE_VALUES = {
+  // Standard directives
+  enabled: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  disabled: "noindex, nofollow",
+  index: "index",
+  noindex: "noindex",
+  follow: "follow",
+  nofollow: "nofollow",
+  none: "none",
+  all: "all",
+  // Non-standard directives (not part of official robots spec)
+  noai: "noai",
+  noimageai: "noimageai"
+};
+function formatMaxImagePreview(value) {
+  return `max-image-preview:${value}`;
+}
+function formatMaxSnippet(value) {
+  return `max-snippet:${value}`;
+}
+function formatMaxVideoPreview(value) {
+  return `max-video-preview:${value}`;
+}
+function matches(pattern, path) {
+  const pathLength = path.length;
+  const patternLength = pattern.length;
+  const matchingLengths = Array.from({ length: pathLength + 1 }).fill(0);
+  let numMatchingLengths = 1;
+  let p = 0;
+  while (p < patternLength) {
+    if (pattern[p] === "$" && p + 1 === patternLength) {
+      return matchingLengths[numMatchingLengths - 1] === pathLength;
+    }
+    if (pattern[p] === "*") {
+      numMatchingLengths = pathLength - matchingLengths[0] + 1;
+      for (let i = 1; i < numMatchingLengths; i++) {
+        matchingLengths[i] = matchingLengths[i - 1] + 1;
+      }
+    } else {
+      let numMatches = 0;
+      for (let i = 0; i < numMatchingLengths; i++) {
+        const matchLength = matchingLengths[i];
+        if (matchLength < pathLength && path[matchLength] === pattern[p]) {
+          matchingLengths[numMatches++] = matchLength + 1;
+        }
+      }
+      if (numMatches === 0) {
+        return false;
+      }
+      numMatchingLengths = numMatches;
+    }
+    p++;
+  }
+  return true;
+}
+function matchPathToRule(path, _rules) {
+  let matchedRule = null;
+  const rules = _rules.filter(Boolean);
+  const rulesLength = rules.length;
+  let i = 0;
+  while (i < rulesLength) {
+    const rule = rules[i];
+    if (!rule || !matches(rule.pattern, path)) {
+      i++;
+      continue;
+    }
+    if (!matchedRule || rule.pattern.length > matchedRule.pattern.length) {
+      matchedRule = rule;
+    } else if (rule.pattern.length === matchedRule.pattern.length && rule.allow && !matchedRule.allow) {
+      matchedRule = rule;
+    }
+    i++;
+  }
+  return matchedRule;
+}
+function asArray(v) {
+  return typeof v === "undefined" ? [] : Array.isArray(v) ? v : [v];
+}
+function contentUsageToString(prefs) {
+  return Object.entries(prefs).filter(([_, value]) => value !== void 0).map(([key, value]) => `${key}=${value}`).join(", ");
+}
+function normalizeContentPreferences(value) {
+  if (!value)
+    return [];
+  if (Array.isArray(value))
+    return value.filter((rule) => Boolean(rule));
+  if (typeof value === "object" && !Array.isArray(value)) {
+    const str = contentUsageToString(value);
+    return str ? [str] : [];
+  }
+  if (typeof value === "string")
+    return value ? [value] : [];
+  return [];
+}
+function normalizeGroup(group) {
+  if (group._normalized) {
+    const resolvedGroup = group;
+    const disallow2 = asArray(resolvedGroup.disallow);
+    resolvedGroup._indexable = !disallow2.includes("/");
+    resolvedGroup._rules = [
+      ...resolvedGroup.disallow.filter(Boolean).map((r) => ({ pattern: r, allow: false })),
+      ...resolvedGroup.allow.map((r) => ({ pattern: r, allow: true }))
+    ];
+    return resolvedGroup;
+  }
+  const disallow = asArray(group.disallow);
+  const allow = asArray(group.allow).filter((rule) => Boolean(rule));
+  const contentUsage = normalizeContentPreferences(group.contentUsage);
+  const contentSignal = normalizeContentPreferences(group.contentSignal);
+  return {
+    ...group,
+    userAgent: group.userAgent ? asArray(group.userAgent) : ["*"],
+    disallow,
+    allow,
+    contentUsage,
+    contentSignal,
+    _indexable: !disallow.includes("/"),
+    _rules: [
+      ...disallow.filter(Boolean).map((r) => ({ pattern: r, allow: false })),
+      ...allow.map((r) => ({ pattern: r, allow: true }))
+    ],
+    _normalized: true
+  };
+}
+function generateRobotsTxt({ groups, sitemaps }) {
+  const lines = [];
+  for (const group of groups) {
+    for (const comment of group.comment || [])
+      lines.push(`# ${comment}`);
+    for (const userAgent of group.userAgent || ["*"])
+      lines.push(`User-agent: ${userAgent}`);
+    for (const allow of group.allow || [])
+      lines.push(`Allow: ${allow}`);
+    for (const disallow of group.disallow || [])
+      lines.push(`Disallow: ${disallow}`);
+    for (const cleanParam of group.cleanParam || [])
+      lines.push(`Clean-param: ${cleanParam}`);
+    for (const contentUsage of group.contentUsage || [])
+      lines.push(`Content-Usage: ${contentUsage}`);
+    for (const contentSignal of group.contentSignal || [])
+      lines.push(`Content-Signal: ${contentSignal}`);
+    lines.push("");
+  }
+  for (const sitemap of sitemaps)
+    lines.push(`Sitemap: ${sitemap}`);
+  return lines.join("\n");
+}
+createDefu((obj, key, value) => {
   if (Array.isArray(obj[key]) && Array.isArray(value))
     obj[key] = Array.from(/* @__PURE__ */ new Set([...obj[key], ...value]));
   return obj[key];
 });
-function mergeOnKey(arr, key) {
-  const seen = /* @__PURE__ */ new Map();
-  let resultLength = 0;
-  const result = Array.from({ length: arr.length });
-  for (const item of arr) {
-    const k = item[key];
-    if (seen.has(k)) {
-      const existingIndex = seen.get(k);
-      result[existingIndex] = merger(item, result[existingIndex]);
-    } else {
-      seen.set(k, resultLength);
-      result[resultLength++] = item;
-    }
-  }
-  result.length = resultLength;
-  return result;
-}
-function splitForLocales(path, locales) {
-  const prefix = withLeadingSlash(path).split("/")[1];
-  if (prefix && locales.includes(prefix))
-    return [prefix, path.replace(`/${prefix}`, "")];
-  return [null, path];
-}
-const StringifiedRegExpPattern = /\/(.*?)\/([gimsuy]*)$/;
-function normalizeRuntimeFilters(input) {
-  return (input || []).map((rule) => {
-    if (rule instanceof RegExp || typeof rule === "string")
-      return rule;
-    const match = rule.regex.match(StringifiedRegExpPattern);
-    if (match)
-      return new RegExp(match[1], match[2]);
-    return false;
-  }).filter(Boolean);
-}
-function createPathFilter(options = {}, baseURL) {
-  const urlFilter = createFilter({
-    include: normalizeRuntimeFilters(options.include),
-    exclude: normalizeRuntimeFilters(options.exclude)
-  });
-  const hasBase = baseURL !== "/";
-  return (loc) => {
-    let path = loc;
-    try {
-      path = parseURL(loc).pathname;
-    } catch {
-      return false;
-    }
-    if (hasBase)
-      path = withoutBase(path, baseURL);
-    return urlFilter(path);
-  };
-}
-function findPageMapping(pathWithoutPrefix, pages) {
-  const stripped = pathWithoutPrefix[0] === "/" ? pathWithoutPrefix.slice(1) : pathWithoutPrefix;
-  const pageKey = stripped.endsWith("/index") ? stripped.slice(0, -6) || "index" : stripped || "index";
-  if (pages[pageKey])
-    return { mappings: pages[pageKey], paramSegments: [] };
-  const sortedKeys = Object.keys(pages).sort((a, b) => b.length - a.length);
-  for (const key of sortedKeys) {
-    if (pageKey.startsWith(`${key}/`)) {
-      const paramPath = pageKey.slice(key.length + 1);
-      return { mappings: pages[key], paramSegments: paramPath.split("/") };
-    }
-  }
-  return null;
-}
-function applyDynamicParams(customPath, paramSegments) {
-  if (!paramSegments.length)
-    return customPath;
-  let i = 0;
-  return customPath.replace(/\[[^\]]+\]/g, () => paramSegments[i++] || "");
-}
-
-function xmlEscape(str) {
-  return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
-}
-function useSitemapRuntimeConfig(e) {
-  const clone = JSON.parse(JSON.stringify(staticConfig));
-  for (const k in clone.sitemaps) {
-    const sitemap = clone.sitemaps[k];
-    sitemap.include = normalizeRuntimeFilters(sitemap.include);
-    sitemap.exclude = normalizeRuntimeFilters(sitemap.exclude);
-    clone.sitemaps[k] = sitemap;
-  }
-  Object.assign(clone, useRuntimeConfig(e).sitemap);
-  return Object.freeze(clone);
-}
-
-const _vtmKAwFVSYH_wxXSRM3JndA8UmBsQTbmiosX1dP5c = defineNitroPlugin((nitroApp) => {
-  const { discoverImages, isNuxtContentDocumentDriven } = useSitemapRuntimeConfig();
-  nitroApp.hooks.hook("content:file:afterParse", async (content) => {
-    const validExtensions = ["md", "mdx"];
-    if (content.sitemap === false || content._draft || !validExtensions.includes(content._extension || "") || content._partial || content.robots === false)
-      return;
-    let images = [];
-    if (discoverImages) {
-      const children = content.body?.children || [];
-      images = children.filter((c) => c.tag && c.props?.src && ["image", "img", "nuxtimg", "nuxt-img"].includes(c.tag.toLowerCase())).map((i) => ({ loc: i.props.src }));
-    }
-    const sitemapConfig = typeof content.sitemap === "object" ? content.sitemap : {};
-    const lastmod = content.modifiedAt || content.updatedAt;
-    const defaults = {};
-    if (isNuxtContentDocumentDriven && typeof content._path === "string")
-      defaults.loc = content._path;
-    if (typeof content.path === "string")
-      defaults.loc = content.path;
-    if (images?.length)
-      defaults.images = images;
-    if (typeof lastmod === "string" || lastmod instanceof Date)
-      defaults.lastmod = lastmod;
-    const definition = defu$1(sitemapConfig, defaults);
-    if (!definition.loc) {
-      if (typeof content.path === "string" && content.path.startsWith("/"))
-        definition.loc = content.path;
-      if (Object.keys(sitemapConfig).length > 0 && false)
-        ;
-    }
-    content.sitemap = definition;
-    if (!definition.loc)
-      delete content.sitemap;
-    return content;
-  });
-});
-
-const plugins = [
-  _HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno,
-_vtmKAwFVSYH_wxXSRM3JndA8UmBsQTbmiosX1dP5c
-];
-
-const assets = {};
-
-function readAsset (id) {
-  const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
-  return promises.readFile(resolve$1(serverDir, assets[id].path))
-}
-
-const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_nuxt/":{"maxAge":31536000}};
-
-function isPublicAssetURL(id = '') {
-  if (assets[id]) {
-    return true
-  }
-  for (const base in publicAssetBases) {
-    if (id.startsWith(base)) { return true }
-  }
-  return false
-}
-
-function getAsset (id) {
-  return assets[id]
-}
-
-const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
-const EncodingMap = { gzip: ".gz", br: ".br" };
-const _kQxHaP = eventHandler((event) => {
-  if (event.method && !METHODS.has(event.method)) {
-    return;
-  }
-  let id = decodePath(
-    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
-  );
-  let asset;
-  const encodingHeader = String(
-    getRequestHeader(event, "accept-encoding") || ""
-  );
-  const encodings = [
-    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
-    ""
-  ];
-  for (const encoding of encodings) {
-    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
-      const _asset = getAsset(_id);
-      if (_asset) {
-        asset = _asset;
-        id = _id;
-        break;
-      }
-    }
-  }
-  if (!asset) {
-    if (isPublicAssetURL(id)) {
-      removeResponseHeader(event, "Cache-Control");
-      throw createError({ statusCode: 404 });
-    }
-    return;
-  }
-  if (asset.encoding !== void 0) {
-    appendResponseHeader(event, "Vary", "Accept-Encoding");
-  }
-  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
-  if (ifNotMatch) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
-  const mtimeDate = new Date(asset.mtime);
-  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
-    setResponseStatus(event, 304, "Not Modified");
-    return "";
-  }
-  if (asset.type && !getResponseHeader(event, "Content-Type")) {
-    setResponseHeader(event, "Content-Type", asset.type);
-  }
-  if (asset.etag && !getResponseHeader(event, "ETag")) {
-    setResponseHeader(event, "ETag", asset.etag);
-  }
-  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
-    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
-  }
-  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
-    setResponseHeader(event, "Content-Encoding", asset.encoding);
-  }
-  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
-    setResponseHeader(event, "Content-Length", asset.size);
-  }
-  return readAsset(id);
-});
-
-const _SxA8c9 = defineEventHandler(() => {});
-
-const e=globalThis.process?.env||Object.create(null),t=globalThis.process||{env:e},n=t!==void 0&&t.env&&t.env.NODE_ENV||void 0,r=[[`claude`,[`CLAUDECODE`,`CLAUDE_CODE`]],[`replit`,[`REPL_ID`]],[`gemini`,[`GEMINI_CLI`]],[`codex`,[`CODEX_SANDBOX`,`CODEX_THREAD_ID`]],[`opencode`,[`OPENCODE`]],[`pi`,[i(`PATH`,/\.pi[\\/]agent/)]],[`auggie`,[`AUGMENT_AGENT`]],[`goose`,[`GOOSE_PROVIDER`]],[`devin`,[i(`EDITOR`,/devin/)]],[`cursor`,[`CURSOR_AGENT`]],[`kiro`,[i(`TERM_PROGRAM`,/kiro/)]]];function i(t,n){return ()=>{let r=e[t];return r?n.test(r):false}}function a(){let t=e.AI_AGENT;if(t)return {name:t.toLowerCase()};for(let[t,n]of r)for(let r of n)if(typeof r==`string`?e[r]:r())return {name:t};return {}}const o=a();o.name;!!o.name;const l=[[`APPVEYOR`],[`AWS_AMPLIFY`,`AWS_APP_ID`,{ci:true}],[`AZURE_PIPELINES`,`SYSTEM_TEAMFOUNDATIONCOLLECTIONURI`],[`AZURE_STATIC`,`INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN`],[`APPCIRCLE`,`AC_APPCIRCLE`],[`BAMBOO`,`bamboo_planKey`],[`BITBUCKET`,`BITBUCKET_COMMIT`],[`BITRISE`,`BITRISE_IO`],[`BUDDY`,`BUDDY_WORKSPACE_ID`],[`BUILDKITE`],[`CIRCLE`,`CIRCLECI`],[`CIRRUS`,`CIRRUS_CI`],[`CLOUDFLARE_PAGES`,`CF_PAGES`,{ci:true}],[`CLOUDFLARE_WORKERS`,`WORKERS_CI`,{ci:true}],[`GOOGLE_CLOUDRUN`,`K_SERVICE`],[`GOOGLE_CLOUDRUN_JOB`,`CLOUD_RUN_JOB`],[`CODEBUILD`,`CODEBUILD_BUILD_ARN`],[`CODEFRESH`,`CF_BUILD_ID`],[`DRONE`],[`DRONE`,`DRONE_BUILD_EVENT`],[`DSARI`],[`GITHUB_ACTIONS`],[`GITLAB`,`GITLAB_CI`],[`GITLAB`,`CI_MERGE_REQUEST_ID`],[`GOCD`,`GO_PIPELINE_LABEL`],[`LAYERCI`],[`JENKINS`,`JENKINS_URL`],[`HUDSON`,`HUDSON_URL`],[`MAGNUM`],[`NETLIFY`],[`NETLIFY`,`NETLIFY_LOCAL`,{ci:false}],[`NEVERCODE`],[`RENDER`],[`SAIL`,`SAILCI`],[`SEMAPHORE`],[`SCREWDRIVER`],[`SHIPPABLE`],[`SOLANO`,`TDDIUM`],[`STRIDER`],[`TEAMCITY`,`TEAMCITY_VERSION`],[`TRAVIS`],[`VERCEL`,`NOW_BUILDER`],[`VERCEL`,`VERCEL`,{ci:false}],[`VERCEL`,`VERCEL_ENV`,{ci:false}],[`APPCENTER`,`APPCENTER_BUILD_ID`],[`CODESANDBOX`,`CODESANDBOX_SSE`,{ci:false}],[`CODESANDBOX`,`CODESANDBOX_HOST`,{ci:false}],[`STACKBLITZ`],[`STORMKIT`],[`CLEAVR`],[`ZEABUR`],[`CODESPHERE`,`CODESPHERE_APP_ID`,{ci:true}],[`RAILWAY`,`RAILWAY_PROJECT_ID`],[`RAILWAY`,`RAILWAY_SERVICE_ID`],[`DENO-DEPLOY`,`DENO_DEPLOY`],[`DENO-DEPLOY`,`DENO_DEPLOYMENT_ID`],[`FIREBASE_APP_HOSTING`,`FIREBASE_APP_HOSTING`,{ci:true}],[`EDGEONE_PAGES`,`EO_PAGES_CI`,{ci:true}]];function u(){for(let t of l)if(e[t[1]||t[0]])return {name:t[0].toLowerCase(),...t[2]};return e.SHELL===`/bin/jsh`&&t.versions?.webcontainer?{name:`stackblitz`,ci:false}:{name:``,ci:false}}const d=u();d.name;const p=t.platform||``,m=!!e.CI||d.ci!==false,h=!!t.stdout?.isTTY;!!e.DEBUG;const v=n===`test`||!!e.TEST;n===`production`||e.MODE===`production`;const b=n===`dev`||n===`development`||e.MODE===`development`;!!e.MINIMAL||m||v||!h;const S=/^win/i.test(p);!e.NO_COLOR&&(!!e.FORCE_COLOR||(h||S)&&e.TERM!==`dumb`||m);const E=(t.versions?.node||``).replace(/^v/,``)||null;Number(E?.split(`.`)[0])||null;const O=!!t?.versions?.node,k=`Bun`in globalThis,A=`Deno`in globalThis,j=`fastly`in globalThis,M=`Netlify`in globalThis,N=`EdgeRuntime`in globalThis,P=globalThis.navigator?.userAgent===`Cloudflare-Workers`,F=[[M,`netlify`],[N,`edge-light`],[P,`workerd`],[j,`fastly`],[A,`deno`],[k,`bun`],[O,`node`]];function I(){let e=F.find(e=>e[0]);if(e)return {name:e[1]}}const L=I();L?.name||``;
-
-const PROTOCOL_RE = /^https?:\/\//;
-const TRAILING_SLASH_RE = /\/$/;
-function isLocalhostHost(host) {
-  if (!host || host.startsWith("localhost") || host.startsWith("127.") || host.startsWith("0.0.0.0"))
-    return true;
-  const hostname = host.startsWith("[") ? host.slice(0, host.indexOf("]") + 1) : host;
-  return hostname === "[::1]" || hostname === "::1" || hostname === "[::]" || hostname === "::";
-}
-function extractHostname(host) {
-  if (host.startsWith("[")) {
-    const close = host.indexOf("]");
-    return close !== -1 ? host.slice(0, close + 1) : host;
-  }
-  const colonCount = host.split(":").length - 1;
-  return colonCount === 1 ? host.slice(0, host.indexOf(":")) : host;
-}
-function splitHostPort(host) {
-  if (host.startsWith("[")) {
-    const close = host.indexOf("]");
-    const hostname = close !== -1 ? host.slice(0, close + 1) : host;
-    const port = close !== -1 && host[close + 1] === ":" ? host.slice(close + 2) : "";
-    const normalized = hostname === "[::1]" || hostname === "[::]" ? "localhost" : hostname;
-    return { host: normalized, port };
-  }
-  if (host === "0.0.0.0" || host.startsWith("0.0.0.0:")) {
-    const i = host.indexOf(":");
-    return { host: "localhost", port: i !== -1 ? host.slice(i + 1) : "" };
-  }
-  const colonCount = host.split(":").length - 1;
-  if (colonCount === 1) {
-    const i = host.indexOf(":");
-    return { host: host.slice(0, i), port: host.slice(i + 1) };
-  }
-  if (colonCount > 1) {
-    const normalized = host === "::1" || host === "::" ? "localhost" : `[${host}]`;
-    return { host: normalized, port: "" };
-  }
-  return { host, port: "" };
-}
-function getNitroOrigin$1(ctx = {}) {
-  const isDev = ctx.isDev ?? b;
-  const isPrerender = ctx.isPrerender ?? true;
-  let host = "";
-  let port = "";
-  let protocol = process.env.NITRO_SSL_CERT && process.env.NITRO_SSL_KEY ? "https" : "http";
-  if (isDev || isPrerender) {
-    const devEnv = process.env.__NUXT_DEV__ || process.env.NUXT_VITE_NODE_OPTIONS;
-    if (devEnv) {
-      const parsed = JSON.parse(devEnv);
-      const origin = parsed.proxy?.url || parsed.baseURL?.replace("/__nuxt_vite_node__", "");
-      host = origin.replace(PROTOCOL_RE, "").replace(TRAILING_SLASH_RE, "");
-      protocol = origin.startsWith("https") ? "https" : "http";
-    }
-  }
-  if (isDev && isLocalhostHost(host) && ctx.requestHost) {
-    const reqHost = extractHostname(ctx.requestHost);
-    if (reqHost && !isLocalhostHost(reqHost)) {
-      host = ctx.requestHost;
-      protocol = ctx.requestProtocol || protocol;
-    }
-  }
-  if (!host && ctx.requestHost) {
-    host = ctx.requestHost;
-    protocol = ctx.requestProtocol || protocol;
-  }
-  if (!host) {
-    host = process.env.NITRO_HOST || process.env.HOST || "";
-    if (isDev)
-      port = process.env.NITRO_PORT || process.env.PORT || "3000";
-  }
-  const split = splitHostPort(host);
-  host = split.host;
-  if (split.port)
-    port = split.port;
-  host = process.env.NUXT_SITE_HOST_OVERRIDE || host;
-  port = process.env.NUXT_SITE_PORT_OVERRIDE || port;
-  if (host.startsWith("http://") || host.startsWith("https://")) {
-    protocol = host.startsWith("https://") ? "https" : "http";
-    host = host.replace(PROTOCOL_RE, "");
-  } else if (!isDev && (!host || !isLocalhostHost(host))) {
-    protocol = "https";
-  }
-  return `${protocol}://${host}${port ? `:${port}` : ""}/`;
-}
-
-function getNitroOrigin(e) {
-  return getNitroOrigin$1({
-    isDev: false,
-    isPrerender: true,
-    requestHost: e ? getRequestHost(e, { xForwardedHost: true }) : void 0,
-    requestProtocol: e ? getRequestProtocol(e, { xForwardedProto: true }) : void 0
-  });
-}
-
-const PORT_SUFFIX_RE = /:\d+$/;
-const _APFHMZ = eventHandler(async (e) => {
-  if (e.context._initedSiteConfig)
-    return;
-  const runtimeConfig = useRuntimeConfig(e);
-  const config = runtimeConfig["nuxt-site-config"];
-  const nitroApp = useNitroApp();
-  const siteConfig = e.context.siteConfig || createSiteConfigStack({
-    debug: config.debug
-  });
-  const nitroOrigin = getNitroOrigin(e);
-  e.context.siteConfigNitroOrigin = nitroOrigin;
-  siteConfig.push({
-    _context: "runtimeEnv",
-    _priority: SiteConfigPriority.runtime,
-    ...runtimeConfig.site || {},
-    ...runtimeConfig.public.site || {},
-    ...envSiteConfig(globalThis._importMeta_.env || {})
-    // just in-case, shouldn't be needed
-  });
-  const buildStack = config.stack || [];
-  buildStack.forEach((c) => siteConfig.push(c));
-  if (e.context._nitro.routeRules.site) {
-    siteConfig.push({
-      _context: "route-rules",
-      ...e.context._nitro.routeRules.site
-    });
-  }
-  if (config.multiTenancy) {
-    const host = parseURL(nitroOrigin).host?.replace(PORT_SUFFIX_RE, "") || "";
-    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
-    if (tenant) {
-      siteConfig.push({
-        _context: `multi-tenancy:${host}`,
-        _priority: SiteConfigPriority.runtime,
-        ...tenant.config
-      });
-    }
-  }
-  const ctx = { siteConfig, event: e };
-  await nitroApp.hooks.callHook("site-config:init", ctx);
-  e.context.siteConfig = ctx.siteConfig;
-  e.context._initedSiteConfig = true;
-});
-
-const get = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj);
-const _pick = (obj, condition) => Object.keys(obj).filter(condition).reduce((newObj, key) => Object.assign(newObj, { [key]: obj[key] }), {});
-const omit = (keys) => (obj) => keys && keys.length ? _pick(obj, (key) => !keys.includes(key)) : obj;
-const apply = (fn) => (data) => Array.isArray(data) ? data.map((item) => fn(item)) : fn(data);
-const detectProperties = (keys) => {
-  const prefixes = [];
-  const properties = [];
-  for (const key of keys) {
-    if (["$", "_"].includes(key)) {
-      prefixes.push(key);
-    } else {
-      properties.push(key);
-    }
-  }
-  return { prefixes, properties };
-};
-const withoutKeys = (keys = []) => (obj) => {
-  if (keys.length === 0 || !obj) {
-    return obj;
-  }
-  const { prefixes, properties } = detectProperties(keys);
-  return _pick(obj, (key) => !properties.includes(key) && !prefixes.includes(key[0]));
-};
-const withKeys = (keys = []) => (obj) => {
-  if (keys.length === 0 || !obj) {
-    return obj;
-  }
-  const { prefixes, properties } = detectProperties(keys);
-  return _pick(obj, (key) => properties.includes(key) || prefixes.includes(key[0]));
-};
-const sortList = (data, params) => {
-  const comperable = new Intl.Collator(params.$locale, {
-    numeric: params.$numeric,
-    caseFirst: params.$caseFirst,
-    sensitivity: params.$sensitivity
-  });
-  const keys = Object.keys(params).filter((key) => !key.startsWith("$"));
-  for (const key of keys) {
-    data = data.sort((a, b) => {
-      const values = [get(a, key), get(b, key)].map((value) => {
-        if (value === null) {
-          return void 0;
-        }
-        if (value instanceof Date) {
-          return value.toISOString();
-        }
-        return value;
-      });
-      if (params[key] === -1) {
-        values.reverse();
-      }
-      return comperable.compare(values[0], values[1]);
-    });
-  }
-  return data;
-};
-const assertArray = (value, message = "Expected an array") => {
-  if (!Array.isArray(value)) {
-    throw new TypeError(message);
-  }
-};
-const ensureArray = (value) => {
-  return Array.isArray(value) ? value : [void 0, null].includes(value) ? [] : [value];
-};
-
-const arrayParams = ["sort", "where", "only", "without"];
-function createQuery(fetcher, opts = {}) {
-  const queryParams = {};
-  for (const key of Object.keys(opts.initialParams || {})) {
-    queryParams[key] = arrayParams.includes(key) ? ensureArray(opts.initialParams[key]) : opts.initialParams[key];
-  }
-  const $set = (key, fn = (v) => v) => {
-    return (...values) => {
-      queryParams[key] = fn(...values);
-      return query;
-    };
-  };
-  const resolveResult = (result) => {
-    if (opts.legacy) {
-      if (result?.surround) {
-        return result.surround;
-      }
-      if (!result) {
-        return result;
-      }
-      if (result?.dirConfig) {
-        result.result = {
-          _path: result.dirConfig?._path,
-          ...result.result,
-          _dir: result.dirConfig
-        };
-      }
-      return result?._path || Array.isArray(result) || !Object.prototype.hasOwnProperty.call(result, "result") ? result : result?.result;
-    }
-    return result;
-  };
-  const query = {
-    params: () => ({
-      ...queryParams,
-      ...queryParams.where ? { where: [...ensureArray(queryParams.where)] } : {},
-      ...queryParams.sort ? { sort: [...ensureArray(queryParams.sort)] } : {}
-    }),
-    only: $set("only", ensureArray),
-    without: $set("without", ensureArray),
-    where: $set("where", (q) => [...ensureArray(queryParams.where), ...ensureArray(q)]),
-    sort: $set("sort", (sort) => [...ensureArray(queryParams.sort), ...ensureArray(sort)]),
-    limit: $set("limit", (v) => parseInt(String(v), 10)),
-    skip: $set("skip", (v) => parseInt(String(v), 10)),
-    // find
-    find: () => fetcher(query).then(resolveResult),
-    findOne: () => fetcher($set("first")(true)).then(resolveResult),
-    count: () => fetcher($set("count")(true)).then(resolveResult),
-    // locale
-    locale: (_locale) => query.where({ _locale }),
-    withSurround: $set("surround", (surroundQuery, options) => ({ query: surroundQuery, ...options })),
-    withDirConfig: () => $set("dirConfig")(true)
-  };
-  if (opts.legacy) {
-    query.findSurround = (surroundQuery, options) => {
-      return query.withSurround(surroundQuery, options).find().then(resolveResult);
-    };
-    return query;
-  }
-  return query;
-}
-
-const defineTransformer = (transformer) => {
-  return transformer;
-};
-
-function createTokenizer(parser, initialize, from) {
-  let point = Object.assign(
-    {
-      line: 1,
-      column: 1,
-      offset: 0
-    },
-    {
-      _index: 0,
-      _bufferIndex: -1
-    }
-  );
-  const columnStart = {};
-  const resolveAllConstructs = [];
-  let chunks = [];
-  let stack = [];
-  const effects = {
-    consume,
-    enter,
-    exit,
-    attempt: constructFactory(onsuccessfulconstruct),
-    check: constructFactory(onsuccessfulcheck),
-    interrupt: constructFactory(onsuccessfulcheck, {
-      interrupt: true
-    })
-  };
-  const context = {
-    previous: null,
-    code: null,
-    containerState: {},
-    events: [],
-    parser,
-    sliceStream,
-    sliceSerialize,
-    now,
-    defineSkip,
-    write
-  };
-  let state = initialize.tokenize.call(context, effects);
-  if (initialize.resolveAll) {
-    resolveAllConstructs.push(initialize);
-  }
-  return context;
-  function write(slice) {
-    chunks = push(chunks, slice);
-    main();
-    if (chunks[chunks.length - 1] !== null) {
-      return [];
-    }
-    addResult(initialize, 0);
-    context.events = resolveAll(resolveAllConstructs, context.events, context);
-    return context.events;
-  }
-  function sliceSerialize(token, expandTabs) {
-    return serializeChunks(sliceStream(token), expandTabs);
-  }
-  function sliceStream(token) {
-    return sliceChunks(chunks, token);
-  }
-  function now() {
-    return Object.assign({}, point);
-  }
-  function defineSkip(value) {
-    columnStart[value.line] = value.column;
-    accountForPotentialSkip();
-  }
-  function main() {
-    let chunkIndex;
-    while (point._index < chunks.length) {
-      const chunk = chunks[point._index];
-      if (typeof chunk === "string") {
-        chunkIndex = point._index;
-        if (point._bufferIndex < 0) {
-          point._bufferIndex = 0;
-        }
-        while (point._index === chunkIndex && point._bufferIndex < chunk.length) {
-          go(chunk.charCodeAt(point._bufferIndex));
-        }
-      } else {
-        go(chunk);
-      }
-    }
-  }
-  function go(code) {
-    state = state(code);
-  }
-  function consume(code) {
-    if (markdownLineEnding(code)) {
-      point.line++;
-      point.column = 1;
-      point.offset += code === -3 ? 2 : 1;
-      accountForPotentialSkip();
-    } else if (code !== -1) {
-      point.column++;
-      point.offset++;
-    }
-    if (point._bufferIndex < 0) {
-      point._index++;
-    } else {
-      point._bufferIndex++;
-      if (point._bufferIndex === chunks[point._index].length) {
-        point._bufferIndex = -1;
-        point._index++;
-      }
-    }
-    context.previous = code;
-  }
-  function enter(type, fields) {
-    const token = fields || {};
-    token.type = type;
-    token.start = now();
-    context.events.push(["enter", token, context]);
-    stack.push(token);
-    return token;
-  }
-  function exit(type) {
-    const token = stack.pop();
-    token.end = now();
-    context.events.push(["exit", token, context]);
-    return token;
-  }
-  function onsuccessfulconstruct(construct, info) {
-    addResult(construct, info.from);
-  }
-  function onsuccessfulcheck(_, info) {
-    info.restore();
-  }
-  function constructFactory(onreturn, fields) {
-    return hook;
-    function hook(constructs, returnState, bogusState) {
-      let listOfConstructs;
-      let constructIndex;
-      let currentConstruct;
-      let info;
-      return Array.isArray(constructs) ? (
-        /* c8 ignore next 1 */
-        handleListOfConstructs(constructs)
-      ) : "tokenize" in constructs ? handleListOfConstructs([constructs]) : handleMapOfConstructs(constructs);
-      function handleMapOfConstructs(map) {
-        return start;
-        function start(code) {
-          const def = code !== null && map[code];
-          const all = code !== null && map.null;
-          const list = [
-            // To do: add more extension tests.
-            /* c8 ignore next 2 */
-            ...Array.isArray(def) ? def : def ? [def] : [],
-            ...Array.isArray(all) ? all : all ? [all] : []
-          ];
-          return handleListOfConstructs(list)(code);
-        }
-      }
-      function handleListOfConstructs(list) {
-        listOfConstructs = list;
-        constructIndex = 0;
-        if (list.length === 0) {
-          return bogusState;
-        }
-        return handleConstruct(list[constructIndex]);
-      }
-      function handleConstruct(construct) {
-        return start;
-        function start(code) {
-          info = store();
-          currentConstruct = construct;
-          if (!construct.partial) {
-            context.currentConstruct = construct;
-          }
-          if (construct.name && context.parser.constructs.disable.null.includes(construct.name)) {
-            return nok();
-          }
-          return construct.tokenize.call(
-            // If we do have fields, create an object w/ `context` as its
-            // prototype.
-            // This allows a “live binding”, which is needed for `interrupt`.
-            fields ? Object.assign(Object.create(context), fields) : context,
-            effects,
-            ok,
-            nok
-          )(code);
-        }
-      }
-      function ok(code) {
-        onreturn(currentConstruct, info);
-        return returnState;
-      }
-      function nok(code) {
-        info.restore();
-        if (++constructIndex < listOfConstructs.length) {
-          return handleConstruct(listOfConstructs[constructIndex]);
-        }
-        return bogusState;
-      }
-    }
-  }
-  function addResult(construct, from2) {
-    if (construct.resolveAll && !resolveAllConstructs.includes(construct)) {
-      resolveAllConstructs.push(construct);
-    }
-    if (construct.resolve) {
-      splice(
-        context.events,
-        from2,
-        context.events.length - from2,
-        construct.resolve(context.events.slice(from2), context)
-      );
-    }
-    if (construct.resolveTo) {
-      context.events = construct.resolveTo(context.events, context);
-    }
-  }
-  function store() {
-    const startPoint = now();
-    const startPrevious = context.previous;
-    const startCurrentConstruct = context.currentConstruct;
-    const startEventsIndex = context.events.length;
-    const startStack = Array.from(stack);
-    return {
-      restore,
-      from: startEventsIndex
-    };
-    function restore() {
-      point = startPoint;
-      context.previous = startPrevious;
-      context.currentConstruct = startCurrentConstruct;
-      context.events.length = startEventsIndex;
-      stack = startStack;
-      accountForPotentialSkip();
-    }
-  }
-  function accountForPotentialSkip() {
-    if (point.line in columnStart && point.column < 2) {
-      point.column = columnStart[point.line];
-      point.offset += columnStart[point.line] - 1;
-    }
-  }
-}
-function sliceChunks(chunks, token) {
-  const startIndex = token.start._index;
-  const startBufferIndex = token.start._bufferIndex;
-  const endIndex = token.end._index;
-  const endBufferIndex = token.end._bufferIndex;
-  let view;
-  if (startIndex === endIndex) {
-    view = [chunks[startIndex].slice(startBufferIndex, endBufferIndex)];
-  } else {
-    view = chunks.slice(startIndex, endIndex);
-    if (startBufferIndex > -1) {
-      view[0] = view[0].slice(startBufferIndex);
-    }
-    if (endBufferIndex > 0) {
-      view.push(chunks[endIndex].slice(0, endBufferIndex));
-    }
-  }
-  return view;
-}
-function serializeChunks(chunks, expandTabs) {
-  let index = -1;
-  const result = [];
-  let atTab;
-  while (++index < chunks.length) {
-    const chunk = chunks[index];
-    let value;
-    if (typeof chunk === "string") {
-      value = chunk;
-    } else
-      switch (chunk) {
-        case -5: {
-          value = "\r";
-          break;
-        }
-        case -4: {
-          value = "\n";
-          break;
-        }
-        case -3: {
-          value = "\r\n";
-          break;
-        }
-        case -2: {
-          value = expandTabs ? " " : "	";
-          break;
-        }
-        case -1: {
-          if (!expandTabs && atTab) continue;
-          value = " ";
-          break;
-        }
-        default: {
-          value = String.fromCharCode(chunk);
-        }
-      }
-    atTab = chunk === -2;
-    result.push(value);
-  }
-  return result.join("");
-}
-
-function initializeDocument(effects) {
-  const self = this;
-  const delimiter = (this.parser.delimiter || ",").charCodeAt(0);
-  return enterRow;
-  function enterRow(code) {
-    return effects.attempt(
-      { tokenize: attemptLastLine },
-      (code2) => {
-        effects.consume(code2);
-        return enterRow;
-      },
-      (code2) => {
-        effects.enter("row");
-        return enterColumn(code2);
-      }
-    )(code);
-  }
-  function enterColumn(code) {
-    effects.enter("column");
-    return content(code);
-  }
-  function content(code) {
-    if (code === null) {
-      effects.exit("column");
-      effects.exit("row");
-      effects.consume(code);
-      return content;
-    }
-    if (code === 34) {
-      return quotedData(code);
-    }
-    if (code === delimiter) {
-      if (self.previous === delimiter || markdownLineEnding(self.previous) || self.previous === null) {
-        effects.enter("data");
-        effects.exit("data");
-      }
-      effects.exit("column");
-      effects.enter("columnSeparator");
-      effects.consume(code);
-      effects.exit("columnSeparator");
-      effects.enter("column");
-      return content;
-    }
-    if (markdownLineEnding(code)) {
-      effects.exit("column");
-      effects.enter("newline");
-      effects.consume(code);
-      effects.exit("newline");
-      effects.exit("row");
-      return enterRow;
-    }
-    return data(code);
-  }
-  function data(code) {
-    effects.enter("data");
-    return dataChunk(code);
-  }
-  function dataChunk(code) {
-    if (code === null || markdownLineEnding(code) || code === delimiter) {
-      effects.exit("data");
-      return content(code);
-    }
-    if (code === 92) {
-      return escapeCharacter(code);
-    }
-    effects.consume(code);
-    return dataChunk;
-  }
-  function escapeCharacter(code) {
-    effects.consume(code);
-    return function(code2) {
-      effects.consume(code2);
-      return content;
-    };
-  }
-  function quotedData(code) {
-    effects.enter("quotedData");
-    effects.enter("quotedDataChunk");
-    effects.consume(code);
-    return quotedDataChunk;
-  }
-  function quotedDataChunk(code) {
-    if (code === 92) {
-      return escapeCharacter(code);
-    }
-    if (code === 34) {
-      return effects.attempt(
-        { tokenize: attemptDoubleQuote },
-        (code2) => {
-          effects.exit("quotedDataChunk");
-          effects.enter("quotedDataChunk");
-          return quotedDataChunk(code2);
-        },
-        (code2) => {
-          effects.consume(code2);
-          effects.exit("quotedDataChunk");
-          effects.exit("quotedData");
-          return content;
-        }
-      )(code);
-    }
-    effects.consume(code);
-    return quotedDataChunk;
-  }
-}
-function attemptDoubleQuote(effects, ok, nok) {
-  return startSequence;
-  function startSequence(code) {
-    if (code !== 34) {
-      return nok(code);
-    }
-    effects.enter("quoteFence");
-    effects.consume(code);
-    return sequence;
-  }
-  function sequence(code) {
-    if (code !== 34) {
-      return nok(code);
-    }
-    effects.consume(code);
-    effects.exit("quoteFence");
-    return (code2) => ok(code2);
-  }
-}
-function attemptLastLine(effects, ok, nok) {
-  return enterLine;
-  function enterLine(code) {
-    if (!markdownSpace(code) && code !== null) {
-      return nok(code);
-    }
-    effects.enter("emptyLine");
-    return continueLine(code);
-  }
-  function continueLine(code) {
-    if (markdownSpace(code)) {
-      effects.consume(code);
-      return continueLine;
-    }
-    if (code === null) {
-      effects.exit("emptyLine");
-      return ok(code);
-    }
-    return nok(code);
-  }
-}
-const parse = (options) => {
-  return createTokenizer(
-    { ...options },
-    { tokenize: initializeDocument });
-};
-
-const own = {}.hasOwnProperty;
-const initialPoint = {
-  line: 1,
-  column: 1,
-  offset: 0
-};
-const fromCSV = function(value, encoding, options) {
-  if (typeof encoding !== "string") {
-    options = encoding;
-    encoding = void 0;
-  }
-  return compiler()(
-    postprocess(
-      parse(options).write(preprocess()(value, encoding, true))
-    )
-  );
-};
-function compiler() {
-  const config = {
-    enter: {
-      column: opener(openColumn),
-      row: opener(openRow),
-      data: onenterdata,
-      quotedData: onenterdata
-    },
-    exit: {
-      row: closer(),
-      column: closer(),
-      data: onexitdata,
-      quotedData: onexitQuotedData
-    }
-  };
-  return compile;
-  function compile(events) {
-    const tree = {
-      type: "root",
-      children: []
-    };
-    const stack = [tree];
-    const tokenStack = [];
-    const context = {
-      stack,
-      tokenStack,
-      config,
-      enter,
-      exit,
-      resume
-    };
-    let index = -1;
-    while (++index < events.length) {
-      const handler = config[events[index][0]];
-      if (own.call(handler, events[index][1].type)) {
-        handler[events[index][1].type].call(
-          Object.assign(
-            {
-              sliceSerialize: events[index][2].sliceSerialize
-            },
-            context
-          ),
-          events[index][1]
-        );
-      }
-    }
-    if (tokenStack.length > 0) {
-      const tail = tokenStack[tokenStack.length - 1];
-      const handler = tail[1] || defaultOnError;
-      handler.call(context, void 0, tail[0]);
-    }
-    tree.position = {
-      start: point(
-        events.length > 0 ? events[0][1].start : initialPoint
-      ),
-      end: point(
-        events.length > 0 ? events[events.length - 2][1].end : initialPoint
-      )
-    };
-    return tree;
-  }
-  function point(d) {
-    return {
-      line: d.line,
-      column: d.column,
-      offset: d.offset
-    };
-  }
-  function opener(create, and) {
-    return open;
-    function open(token) {
-      enter.call(this, create(token), token);
-    }
-  }
-  function enter(node, token, errorHandler) {
-    const parent = this.stack[this.stack.length - 1];
-    parent.children.push(node);
-    this.stack.push(node);
-    this.tokenStack.push([token, errorHandler]);
-    node.position = {
-      start: point(token.start)
-    };
-    return node;
-  }
-  function closer(and) {
-    return close;
-    function close(token) {
-      exit.call(this, token);
-    }
-  }
-  function exit(token, onExitError) {
-    const node = this.stack.pop();
-    const open = this.tokenStack.pop();
-    if (!open) {
-      throw new Error(
-        "Cannot close `" + token.type + "` (" + stringifyPosition({
-          start: token.start,
-          end: token.end
-        }) + "): it\u2019s not open"
-      );
-    } else if (open[0].type !== token.type) {
-      if (onExitError) {
-        onExitError.call(this, token, open[0]);
-      } else {
-        const handler = open[1] || defaultOnError;
-        handler.call(this, token, open[0]);
-      }
-    }
-    node.position.end = point(token.end);
-    return node;
-  }
-  function resume() {
-    return toString(this.stack.pop());
-  }
-  function onenterdata(token) {
-    const parent = this.stack[this.stack.length - 1];
-    let tail = parent.children[parent.children.length - 1];
-    if (!tail || tail.type !== "text") {
-      tail = text();
-      tail.position = {
-        start: point(token.start)
-      };
-      parent.children.push(tail);
-    }
-    this.stack.push(tail);
-  }
-  function onexitdata(token) {
-    const tail = this.stack.pop();
-    tail.value += this.sliceSerialize(token).trim().replace(/""/g, '"');
-    tail.position.end = point(token.end);
-  }
-  function onexitQuotedData(token) {
-    const tail = this.stack.pop();
-    const value = this.sliceSerialize(token);
-    tail.value += this.sliceSerialize(token).trim().substring(1, value.length - 1).replace(/""/g, '"');
-    tail.position.end = point(token.end);
-  }
-  function text() {
-    return {
-      type: "text",
-      value: ""
-    };
-  }
-  function openColumn() {
-    return {
-      type: "column",
-      children: []
-    };
-  }
-  function openRow() {
-    return {
-      type: "row",
-      children: []
-    };
-  }
-}
-function defaultOnError(left, right) {
-  if (left) {
-    throw new Error(
-      "Cannot close `" + left.type + "` (" + stringifyPosition({
-        start: left.start,
-        end: left.end
-      }) + "): a different token (`" + right.type + "`, " + stringifyPosition({
-        start: right.start,
-        end: right.end
-      }) + ") is open"
-    );
-  } else {
-    throw new Error(
-      "Cannot close document, a token (`" + right.type + "`, " + stringifyPosition({
-        start: right.start,
-        end: right.end
-      }) + ") is still open"
-    );
-  }
-}
-
-function csvParse(options) {
-  const parser = (doc) => {
-    return fromCSV(doc, options);
-  };
-  Object.assign(this, { Parser: parser });
-  const toJsonObject = (tree) => {
-    const [header, ...rows] = tree.children;
-    const columns = header.children.map((col) => col.children[0].value);
-    const data = rows.map((row) => {
-      return row.children.reduce((acc, col, i) => {
-        acc[String(columns[i])] = col.children[0]?.value;
-        return acc;
-      }, {});
-    });
-    return data;
-  };
-  const toJsonArray = (tree) => {
-    const data = tree.children.map((row) => {
-      return row.children.map((col) => col.children[0]?.value);
-    });
-    return data;
-  };
-  const compiler = (doc) => {
-    if (options.json) {
-      return toJsonObject(doc);
-    }
-    return toJsonArray(doc);
-  };
-  Object.assign(this, { Compiler: compiler });
-}
-const csv = defineTransformer({
-  name: "csv",
-  extensions: [".csv"],
-  parse: async (_id, content, options = {}) => {
-    const stream = unified().use(csvParse, {
-      delimiter: ",",
-      json: true,
-      ...options
-    });
-    const { result } = await stream.process(content);
-    return {
-      _id,
-      _type: "csv",
-      body: result
-    };
-  }
-});
-
-function isTag(vnode, tag) {
-  if (vnode.type === tag) {
-    return true;
-  }
-  if (typeof vnode.type === "object" && vnode.type.tag === tag) {
-    return true;
-  }
-  if (vnode.tag === tag) {
-    return true;
-  }
-  return false;
-}
-function isText(vnode) {
-  return isTag(vnode, "text") || isTag(vnode, Symbol.for("v-txt"));
-}
-function nodeChildren(node) {
-  if (Array.isArray(node.children) || typeof node.children === "string") {
-    return node.children;
-  }
-  if (typeof node.children?.default === "function") {
-    return node.children.default();
-  }
-  return [];
-}
-function nodeTextContent(node) {
-  if (!node) {
-    return "";
-  }
-  if (Array.isArray(node)) {
-    return node.map(nodeTextContent).join("");
-  }
-  if (isText(node)) {
-    return node.children || node.value || "";
-  }
-  const children = nodeChildren(node);
-  if (Array.isArray(children)) {
-    return children.map(nodeTextContent).filter(Boolean).join("");
-  }
-  return "";
-}
-
-const useProcessorPlugins = async (processor, plugins = {}) => {
-  const toUse = Object.entries(plugins).filter((p) => p[1] !== false);
-  for (const plugin of toUse) {
-    const instance = plugin[1].instance || await import(
-      /* @vite-ignore */
-      plugin[0]
-    ).then((m) => m.default || m);
-    processor.use(instance, plugin[1].options);
-  }
-};
-
-function emphasis(state, node) {
-  const result = {
-    type: "element",
-    tagName: "em",
-    properties: node.attributes || {},
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function parseThematicBlock(lang) {
-  if (!lang?.trim()) {
-    return {
-      language: void 0,
-      highlights: void 0,
-      filename: void 0,
-      meta: void 0
-    };
-  }
-  const languageMatches = lang.replace(/[{|[](.+)/, "").match(/^[^ \t]+(?=[ \t]|$)/);
-  const highlightTokensMatches = lang.match(/\{([^}]*)\}/);
-  const filenameMatches = lang.match(/\[((\\\]|[^\]])*)\]/);
-  const meta = lang.replace(languageMatches?.[0] ?? "", "").replace(highlightTokensMatches?.[0] ?? "", "").replace(filenameMatches?.[0] ?? "", "").trim();
-  return {
-    language: languageMatches?.[0] || void 0,
-    highlights: parseHighlightedLines(highlightTokensMatches?.[1] || void 0),
-    // https://github.com/nuxt/content/pull/2169
-    filename: filenameMatches?.[1].replace(/\\\]/g, "]") || void 0,
-    meta
-  };
-}
-function parseHighlightedLines(lines) {
-  const lineArray = String(lines || "").split(",").filter(Boolean).flatMap((line) => {
-    const [start, end] = line.trim().split("-").map((a) => Number(a.trim()));
-    return Array.from({ length: (end || start) - start + 1 }).map((_, i) => start + i);
-  });
-  return lineArray.length ? lineArray : void 0;
-}
-const TAG_NAME_REGEXP = /^<\/?([\w-]+)(\s[^>]*?)?\/?>/;
-function getTagName(value) {
-  const result = String(value).match(TAG_NAME_REGEXP);
-  return result && result[1];
-}
-
-const code = (state, node) => {
-  const lang = (node.lang || "") + " " + (node.meta || "");
-  const { language, highlights, filename, meta } = parseThematicBlock(lang);
-  const value = node.value ? detab(node.value + "\n") : "";
-  let result = {
-    type: "element",
-    tagName: "code",
-    properties: { __ignoreMap: "" },
-    children: [{ type: "text", value }]
-  };
-  if (meta) {
-    result.data = {
-      meta
-    };
-  }
-  state.patch(node, result);
-  result = state.applyData(node, result);
-  const properties = {
-    language,
-    filename,
-    highlights,
-    meta,
-    code: value
-  };
-  if (language) {
-    properties.className = ["language-" + language];
-  }
-  result = { type: "element", tagName: "pre", properties, children: [result] };
-  state.patch(node, result);
-  return result;
-};
-
-function html(state, node) {
-  const tagName = getTagName(node.value);
-  if (tagName && /[A-Z]/.test(tagName)) {
-    node.value = node.value.replace(tagName, kebabCase(tagName));
-  }
-  if (state.dangerous || state.options?.allowDangerousHtml) {
-    const result = { type: "raw", value: node.value };
-    state.patch(node, result);
-    return state.applyData(node, result);
-  }
-  return void 0;
-}
-
-function link$1(state, node) {
-  const properties = {
-    ...node.attributes || {},
-    href: normalizeUri(node.url)
-  };
-  if (node.title !== null && node.title !== void 0) {
-    properties.title = node.title;
-  }
-  const result = {
-    type: "element",
-    tagName: "a",
-    properties,
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function list(state, node) {
-  const properties = {};
-  const results = state.all(node);
-  let index = -1;
-  if (typeof node.start === "number" && node.start !== 1) {
-    properties.start = node.start;
-  }
-  while (++index < results.length) {
-    const child = results[index];
-    if (child.type === "element" && child.tagName === "li" && child.properties && Array.isArray(child.properties.className) && child.properties.className.includes("task-list-item")) {
-      properties.className = ["contains-task-list"];
-      break;
-    }
-  }
-  if ((node.children || []).some((child) => typeof child.checked === "boolean")) {
-    properties.className = ["contains-task-list"];
-  }
-  const result = {
-    type: "element",
-    tagName: node.ordered ? "ol" : "ul",
-    properties,
-    children: state.wrap(results, true)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-const htmlTags = [
-  "a",
-  "abbr",
-  "address",
-  "area",
-  "article",
-  "aside",
-  "audio",
-  "b",
-  "base",
-  "bdi",
-  "bdo",
-  "blockquote",
-  "body",
-  "br",
-  "button",
-  "canvas",
-  "caption",
-  "cite",
-  "code",
-  "col",
-  "colgroup",
-  "data",
-  "datalist",
-  "dd",
-  "del",
-  "details",
-  "dfn",
-  "dialog",
-  "div",
-  "dl",
-  "dt",
-  "em",
-  "embed",
-  "fieldset",
-  "figcaption",
-  "figure",
-  "footer",
-  "form",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-  "head",
-  "header",
-  "hgroup",
-  "hr",
-  "html",
-  "i",
-  "iframe",
-  "img",
-  "input",
-  "ins",
-  "kbd",
-  "label",
-  "legend",
-  "li",
-  "link",
-  "main",
-  "map",
-  "mark",
-  "math",
-  "menu",
-  "menuitem",
-  "meta",
-  "meter",
-  "nav",
-  "noscript",
-  "object",
-  "ol",
-  "optgroup",
-  "option",
-  "output",
-  "p",
-  "param",
-  "picture",
-  "pre",
-  "progress",
-  "q",
-  "rb",
-  "rp",
-  "rt",
-  "rtc",
-  "ruby",
-  "s",
-  "samp",
-  "script",
-  "section",
-  "select",
-  "slot",
-  "small",
-  "source",
-  "span",
-  "strong",
-  "style",
-  "sub",
-  "summary",
-  "sup",
-  "svg",
-  "table",
-  "tbody",
-  "td",
-  "template",
-  "textarea",
-  "tfoot",
-  "th",
-  "thead",
-  "time",
-  "title",
-  "tr",
-  "track",
-  "u",
-  "ul",
-  "var",
-  "video",
-  "wbr"
-];
-
-function paragraph(state, node) {
-  if (node.children && node.children[0] && node.children[0].type === "html") {
-    const tagName = kebabCase(getTagName(node.children[0].value) || "div");
-    if (!htmlTags.includes(tagName)) {
-      return state.all(node);
-    }
-  }
-  const result = {
-    type: "element",
-    tagName: "p",
-    properties: {},
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function image(state, node) {
-  const properties = { ...node.attributes, src: normalizeUri(node.url) };
-  if (node.alt !== null && node.alt !== void 0) {
-    properties.alt = node.alt;
-  }
-  if (node.title !== null && node.title !== void 0) {
-    properties.title = node.title;
-  }
-  const result = { type: "element", tagName: "img", properties, children: [] };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function strong(state, node) {
-  const result = {
-    type: "element",
-    tagName: "strong",
-    properties: node.attributes || {},
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function inlineCode(state, node) {
-  const language = node.attributes?.language || node.attributes?.lang;
-  const text = { type: "text", value: node.value.replace(/\r?\n|\r/g, " ") };
-  state.patch(node, text);
-  const result = {
-    type: "element",
-    tagName: "code",
-    properties: node.attributes || {},
-    children: [text]
-  };
-  const classes = (result.properties.class || "").split(" ");
-  delete result.properties.class;
-  if (language) {
-    result.properties.language = language;
-    delete result.properties.lang;
-    classes.push("language-" + language);
-  }
-  result.properties.className = classes.join(" ");
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-
-function containerComponent(state, node) {
-  const result = {
-    type: "element",
-    tagName: node.name,
-    properties: {
-      ...node.attributes,
-      ...node.data?.hProperties
-    },
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  result.attributes = node.attributes;
-  result.fmAttributes = node.fmAttributes;
-  return result;
-}
-
-const handlers$1 = {
-  emphasis,
-  code,
-  link: link$1,
-  paragraph,
-  html,
-  list,
-  image,
-  strong,
-  inlineCode,
-  containerComponent
-};
-
-const defaults = {
-  remark: {
-    plugins: {
-      "remark-mdc": {
-        instance: remarkMDC
-      },
-      "remark-gfm": {
-        instance: remarkGFM
-      }
-    }
-  },
-  rehype: {
-    options: {
-      handlers: handlers$1,
-      allowDangerousHtml: true
-    },
-    plugins: {
-      "rehype-external-links": {
-        instance: rehypeExternalLinks
-      },
-      "rehype-sort-attribute-values": {
-        instance: rehypeSortAttributeValues
-      },
-      "rehype-sort-attributes": {
-        instance: rehypeSortAttributes
-      },
-      "rehype-raw": {
-        instance: rehypeRaw,
-        options: {
-          passThrough: ["element"]
-        }
-      }
-    }
-  },
-  highlight: false,
-  toc: {
-    searchDepth: 2,
-    depth: 2
-  }
-};
-
-function flattenNodeText(node) {
-  if (node.type === "comment") {
-    return "";
-  }
-  if (node.type === "text") {
-    return node.value || "";
-  } else {
-    return (node.children || []).reduce((text, child) => {
-      return text.concat(flattenNodeText(child));
-    }, "");
-  }
-}
-function flattenNode(node, maxDepth = 2, _depth = 0) {
-  if (!Array.isArray(node.children) || _depth === maxDepth) {
-    return [node];
-  }
-  return [
-    node,
-    ...node.children.reduce((acc, child) => acc.concat(flattenNode(child, maxDepth, _depth + 1)), [])
-  ];
-}
-
-const TOC_TAGS = ["h2", "h3", "h4", "h5", "h6"];
-const TOC_TAGS_DEPTH = TOC_TAGS.reduce((tags, tag) => {
-  tags[tag] = Number(tag.charAt(tag.length - 1));
-  return tags;
-}, {});
-const getHeaderDepth = (node) => TOC_TAGS_DEPTH[node.tag];
-const getTocTags = (depth) => {
-  if (depth < 1 || depth > 5) {
-    console.log(`\`toc.depth\` is set to ${depth}. It should be a number between 1 and 5. `);
-    depth = 1;
-  }
-  return TOC_TAGS.slice(0, depth);
-};
-function nestHeaders(headers) {
-  if (headers.length <= 1) {
-    return headers;
-  }
-  const toc = [];
-  let parent;
-  headers.forEach((header) => {
-    if (!parent || header.depth <= parent.depth) {
-      header.children = [];
-      parent = header;
-      toc.push(header);
-    } else {
-      parent.children.push(header);
-    }
-  });
-  toc.forEach((header) => {
-    if (header.children?.length) {
-      header.children = nestHeaders(header.children);
-    } else {
-      delete header.children;
-    }
-  });
-  return toc;
-}
-function generateFlatToc(body, options) {
-  const { searchDepth, depth, title = "" } = options;
-  const tags = getTocTags(depth);
-  const headers = flattenNode(body, searchDepth).filter((node) => tags.includes(node.tag || ""));
-  const links = headers.map((node) => ({
-    id: node.props?.id,
-    depth: getHeaderDepth(node),
-    text: flattenNodeText(node)
-  }));
-  return {
-    title,
-    searchDepth,
-    depth,
-    links
-  };
-}
-function generateToc(body, options) {
-  const toc = generateFlatToc(body, options);
-  toc.links = nestHeaders(toc.links);
-  return toc;
-}
-
-const unsafeLinkPrefix = [
-  "javascript:",
-  "data:text/html",
-  "vbscript:",
-  "data:text/javascript",
-  "data:text/vbscript",
-  "data:text/css",
-  "data:text/plain",
-  "data:text/xml"
-];
-const validateProp = (attribute, value) => {
-  if (attribute.startsWith("on")) {
-    return false;
-  }
-  if (attribute === "href" || attribute === "src") {
-    return !unsafeLinkPrefix.some((prefix) => value.toLowerCase().startsWith(prefix));
-  }
-  return true;
-};
-const validateProps = (type, props) => {
-  if (!props) {
-    return {};
-  }
-  props = Object.fromEntries(
-    Object.entries(props).filter(([name, value]) => {
-      const isValid = validateProp(name, value);
-      if (!isValid) {
-        console.warn(`[@nuxtjs/mdc] removing unsafe attribute: ${name}="${value}"`);
-      }
-      return isValid;
-    })
-  );
-  if (type === "pre") {
-    if (typeof props.highlights === "string") {
-      props.highlights = props.highlights.split(" ").map((i) => Number.parseInt(i));
-    }
-  }
-  return props;
-};
-
-function compileHast(options = {}) {
-  const slugs = new Slugger();
-  function compileToJSON(node, parent) {
-    if (node.type === "root") {
-      return {
-        type: "root",
-        children: node.children.map((child) => compileToJSON(child, node)).filter(Boolean)
-      };
-    }
-    if (node.type === "element") {
-      if (node.tagName === "p" && node.children.every((child) => child.type === "text" && /^\s*$/.test(child.value))) {
-        return null;
-      }
-      if (node.tagName === "li") {
-        let hasPreviousParagraph = false;
-        node.children = node.children?.flatMap((child) => {
-          if (child.type === "element" && child.tagName === "p") {
-            if (hasPreviousParagraph) {
-              child.children.unshift({
-                type: "element",
-                tagName: "br",
-                properties: {},
-                children: []
-              });
-            }
-            hasPreviousParagraph = true;
-            return child.children;
-          }
-          return child;
+function createPatternMap() {
+  const patternMap = /* @__PURE__ */ new Map();
+  for (const def of BOT_MAP) {
+    for (const bot of def.bots) {
+      const patterns = [bot.pattern, ...bot.secondaryPatterns || []];
+      for (const pattern of patterns) {
+        patternMap.set(pattern.toLowerCase(), {
+          botName: bot.name,
+          botCategory: def.type,
+          trusted: def.trusted
         });
       }
-      if (node.tagName?.match(/^h\d$/)) {
-        node.properties = node.properties || {};
-        node.properties.id = String(node.properties?.id || slugs.slug(toString$1(node))).replace(/-+/g, "-").replace(/^-|-$/g, "").replace(/^(\d)/, "_$1");
-      }
-      if (node.tagName === "component-slot") {
-        node.tagName = "template";
-      }
-      const children = (node.tagName === "template" && node.content?.children.length ? node.content.children : node.children).map((child) => compileToJSON(child, node)).filter(Boolean);
-      return {
-        type: "element",
-        tag: node.tagName,
-        props: validateProps(node.tagName, node.properties),
-        children
-      };
     }
-    if (node.type === "text") {
-      if (!/^\n+$/.test(node.value || "") || parent?.properties?.emptyLinePlaceholder) {
-        return {
-          type: "text",
-          value: node.value
-        };
-      }
-    }
-    if (options.keepComments && node.type === "comment") {
-      return {
-        type: "comment",
-        value: node.value
-      };
-    }
-    return null;
   }
-  this.Compiler = (tree) => {
-    const body = compileToJSON(tree);
-    let excerpt = void 0;
-    const excerptIndex = tree.children.findIndex((node) => node.type === "comment" && node.value?.trim() === "more");
-    if (excerptIndex !== -1) {
-      excerpt = compileToJSON({
-        type: "root",
-        children: tree.children.slice(0, excerptIndex)
-      });
-      if (excerpt.children.find((node) => node.type === "element" && node.tag === "pre")) {
-        const lastChild = body.children[body.children.length - 1];
-        if (lastChild.type === "element" && lastChild.tag === "style") {
-          excerpt.children.push(lastChild);
+  return patternMap;
+}
+function normaliseRobotsRouteRule(config) {
+  if (!config)
+    return void 0;
+  let allow;
+  if (typeof config.robots === "boolean")
+    allow = config.robots;
+  else if (typeof config.robots === "object" && "indexable" in config.robots && typeof config.robots.indexable !== "undefined")
+    allow = config.robots.indexable;
+  let rule;
+  if (typeof config.robots === "object" && config.robots !== null) {
+    if ("rule" in config.robots && typeof config.robots.rule !== "undefined") {
+      rule = config.robots.rule;
+    } else if (!("indexable" in config.robots)) {
+      const directives = [];
+      for (const [key, value] of Object.entries(config.robots)) {
+        if (value === false || value === null || value === void 0)
+          continue;
+        if (key in ROBOT_DIRECTIVE_VALUES && typeof value === "boolean" && value) {
+          directives.push(ROBOT_DIRECTIVE_VALUES[key]);
+        } else if (key === "max-image-preview" && typeof value === "string") {
+          directives.push(formatMaxImagePreview(value));
+        } else if (key === "max-snippet" && typeof value === "number") {
+          directives.push(formatMaxSnippet(value));
+        } else if (key === "max-video-preview" && typeof value === "number") {
+          directives.push(formatMaxVideoPreview(value));
         }
       }
-    }
-    body.children = (body.children || []).filter((child) => child.type !== "text");
-    return {
-      body,
-      excerpt
-    };
-  };
-}
-
-let moduleOptions;
-let generatedMdcConfigs;
-const createMarkdownParser = async (inlineOptions = {}) => {
-  if (!moduleOptions) {
-    moduleOptions = await import(
-      '../build/mdc-imports.mjs'
-      /* @vite-ignore */
-    ).catch(() => ({}));
-  }
-  if (!generatedMdcConfigs) {
-    generatedMdcConfigs = await import(
-      '../build/mdc-configs.mjs'
-      /* @vite-ignore */
-    ).then((r) => r.getMdcConfigs()).catch(() => []);
-  }
-  const mdcConfigs = [
-    ...generatedMdcConfigs || [],
-    ...inlineOptions.configs || []
-  ];
-  if (inlineOptions.highlight != null && inlineOptions.highlight != false && inlineOptions.highlight.highlighter !== void 0 && typeof inlineOptions.highlight.highlighter !== "function") {
-    inlineOptions = {
-      ...inlineOptions,
-      highlight: {
-        ...inlineOptions.highlight
+      if (directives.length > 0) {
+        rule = directives.join(", ");
       }
-    };
-    delete inlineOptions.highlight.highlighter;
+    }
+  } else if (typeof config.robots === "string") {
+    rule = config.robots;
   }
-  const options = defu$1(inlineOptions, {
-    remark: { plugins: moduleOptions?.remarkPlugins },
-    rehype: { plugins: moduleOptions?.rehypePlugins },
-    highlight: moduleOptions?.highlight
-  }, defaults);
-  if (options.rehype?.plugins?.highlight) {
-    options.rehype.plugins.highlight.options = {
-      ...options.rehype.plugins.highlight.options || {},
-      ...options.highlight || {}
-    };
-  }
-  let processor = unified();
-  for (const config of mdcConfigs) {
-    processor = await config.unified?.pre?.(processor) || processor;
-  }
-  processor.use(remarkParse);
-  for (const config of mdcConfigs) {
-    processor = await config.unified?.remark?.(processor) || processor;
-  }
-  await useProcessorPlugins(processor, options.remark?.plugins);
-  processor.use(remark2rehype, options.rehype?.options);
-  for (const config of mdcConfigs) {
-    processor = await config.unified?.rehype?.(processor) || processor;
-  }
-  await useProcessorPlugins(processor, options.rehype?.plugins);
-  processor.use(compileHast, options);
-  for (const config of mdcConfigs) {
-    processor = await config.unified?.post?.(processor) || processor;
-  }
-  return async function parse(md, { fileOptions } = {}) {
-    const { content, data: frontmatter } = await parseFrontMatter(md);
-    const processedFile = await processor.process({ ...fileOptions, value: content, data: frontmatter });
-    const result = processedFile.result;
-    const data = Object.assign(
-      contentHeading(result.body),
-      frontmatter,
-      processedFile?.data || {}
+  if (rule && typeof allow === "undefined") {
+    const disallowIndicators = ["none", "noindex", "noai", "noimageai"];
+    allow = !disallowIndicators.some(
+      (indicator) => rule === indicator || rule.split(",").some((part) => part.trim() === indicator)
     );
-    let toc;
-    if (data.toc !== false) {
-      const tocOption = defu$1(data.toc || {}, options.toc);
-      toc = generateToc(result.body, tocOption);
-    }
-    return {
-      data,
-      body: result.body,
-      excerpt: result.excerpt,
-      toc
-    };
-  };
-};
-const parseMarkdown = async (md, markdownParserOptions = {}, parseOptions = {}) => {
-  const parser = await createMarkdownParser(markdownParserOptions);
-  return parser(md, parseOptions);
-};
-function contentHeading(body) {
-  let title = "";
-  let description = "";
-  const children = body.children.filter((node) => node.type === "element" && node.tag !== "hr");
-  if (children.length && children[0].tag === "h1") {
-    const node = children.shift();
-    title = nodeTextContent(node);
   }
-  if (children.length && children[0].tag === "p") {
-    const node = children.shift();
-    description = nodeTextContent(node);
-  }
+  if (typeof allow === "undefined" && typeof rule === "undefined")
+    return;
   return {
-    title,
-    description
+    allow,
+    rule
   };
 }
 
-const SEMVER_REGEX = /^(\d+)(\.\d+)*(\.x)?$/;
-const describeId = (id) => {
-  const [_source, ...parts] = id.split(":");
-  const [, basename, _extension] = parts[parts.length - 1]?.match(/(.*)\.([^.]+)$/) || [];
-  if (basename) {
-    parts[parts.length - 1] = basename;
-  }
-  const _path = (parts || []).join("/");
-  return {
-    _source,
-    _path,
-    _extension,
-    _file: _extension ? `${_path}.${_extension}` : _path,
-    _basename: basename || ""
-  };
-};
-const pathMeta = defineTransformer({
-  name: "path-meta",
-  extensions: [".*"],
-  transform(content, options = {}) {
-    const { locales = [], defaultLocale = "en", respectPathCase = false } = options;
-    const { _source, _file, _path, _extension, _basename } = describeId(content._id);
-    const parts = _path.split("/");
-    const _locale = locales.includes(parts[0]) ? parts.shift() : defaultLocale;
-    const filePath = generatePath(parts.join("/"), { respectPathCase });
-    return {
-      _path: filePath,
-      _dir: filePath.split("/").slice(-2)[0],
-      _draft: content._draft || content.draft || isDraft(_path),
-      _partial: isPartial(_path),
-      _locale,
-      ...content,
-      // TODO: move title to Markdown parser
-      title: content.title || generateTitle(refineUrlPart(_basename)),
-      _source,
-      _file,
-      _stem: _path,
-      _extension
-    };
-  }
-});
-const isDraft = (path) => !!path.match(/\.draft(\/|\.|$)/);
-const isPartial = (path) => path.split(/[:/]/).some((part) => part.match(/^_.*/));
-const generatePath = (path, { forceLeadingSlash = true, respectPathCase = false } = {}) => {
-  path = path.split("/").map((part) => slugify(refineUrlPart(part), { lower: !respectPathCase })).join("/");
-  return forceLeadingSlash ? withLeadingSlash(withoutTrailingSlash(path)) : path;
-};
-const generateTitle = (path) => path.split(/[\s-]/g).map(pascalCase).join(" ");
-function refineUrlPart(name) {
-  name = name.split(/[/:]/).pop();
-  if (SEMVER_REGEX.test(name)) {
-    return name;
-  }
-  return name.replace(/(\d+\.)?(.*)/, "$2").replace(/^index(\.draft)?$/, "").replace(/\.draft$/, "");
+function useRuntimeConfigNuxtRobots(event) {
+  return useRuntimeConfig(event)["nuxt-robots"];
 }
 
-const markdown = defineTransformer({
-  name: "markdown",
-  extensions: [".md"],
-  parse: async (_id, content, options = {}) => {
-    const config = { ...options };
-    config.rehypePlugins = await importPlugins(config.rehypePlugins);
-    config.remarkPlugins = await importPlugins(config.remarkPlugins);
-    const highlightOptions = options.highlight ? {
-      ...options.highlight,
-      // Pass only when it's an function. String values are handled by `@nuxtjs/mdc`
-      highlighter: typeof options.highlight?.highlighter === "function" ? options.highlight.highlighter : void 0
-    } : void 0;
-    const parsed = await parseMarkdown(content, {
-      ...config,
-      highlight: highlightOptions,
-      remark: {
-        plugins: config.remarkPlugins
-      },
-      rehype: {
-        options: {
-          handlers: {
-            link
-          }
-        },
-        plugins: config.rehypePlugins
-      },
-      toc: config.toc
-    });
-    return {
-      ...parsed.data,
-      excerpt: parsed.excerpt,
-      body: {
-        ...parsed.body,
-        toc: parsed.toc
-      },
-      _type: "markdown",
-      _id
-    };
-  }
+const logger$3 = createConsola({
+  defaults: { tag: "@nuxtjs/robots" }
 });
-async function importPlugins(plugins = {}) {
-  const resolvedPlugins = {};
-  for (const [name, plugin] of Object.entries(plugins)) {
-    if (plugin) {
-      resolvedPlugins[name] = {
-        instance: plugin.instance || await import(
-          /* @vite-ignore */
-          name
-        ).then((m) => m.default || m),
-        options: plugin
-      };
-    } else {
-      resolvedPlugins[name] = false;
+
+async function resolveRobotsTxtContext(e, nitro = useNitroApp()) {
+  const { groups, sitemap: sitemaps } = useRuntimeConfigNuxtRobots(e);
+  const generateRobotsTxtCtx = {
+    event: e,
+    context: e ? "robots.txt" : "init",
+    errors: [],
+    warnings: [],
+    ...JSON.parse(JSON.stringify({ groups, sitemaps }))
+  };
+  await nitro.hooks.callHook("robots:config", generateRobotsTxtCtx);
+  generateRobotsTxtCtx.groups = generateRobotsTxtCtx.groups.map(normalizeGroup);
+  nitro._robots.ctx = generateRobotsTxtCtx;
+  return generateRobotsTxtCtx;
+}
+
+const PRERENDER_NO_SSR_ROUTES = /* @__PURE__ */ new Set(["/index.html", "/200.html", "/404.html"]);
+const _s8AZRtyyuDCvawDQ_vE2rMbngJ92j3C1PGF89OP51dg = defineNitroPlugin(async (nitroApp) => {
+  const { isNuxtContentV2, robotsDisabledValue, botDetection } = useRuntimeConfigNuxtRobots();
+  if (botDetection !== false) {
+    nitroApp._robotsPatternMap = createPatternMap();
+  }
+  nitroApp._robots = {};
+  await resolveRobotsTxtContext(void 0, nitroApp);
+  const nuxtContentUrls = /* @__PURE__ */ new Set();
+  if (isNuxtContentV2) {
+    let urls;
+    try {
+      urls = await (await nitroApp.localFetch("/__robots__/nuxt-content.json", {})).json();
+    } catch (e) {
+      logger$3.error("Failed to read robot rules from content files.", e);
+    }
+    if (urls && Array.isArray(urls) && urls.length) {
+      urls.forEach((url) => nuxtContentUrls.add(withoutTrailingSlash(url)));
     }
   }
-  return resolvedPlugins;
-}
-function link(state, node) {
-  const properties = {
-    ...node.attributes || {},
-    href: normalizeUri(normalizeLink(node.url))
-  };
-  if (node.title !== null && node.title !== void 0) {
-    properties.title = node.title;
+  if (nuxtContentUrls.size) {
+    nitroApp._robots.nuxtContentUrls = nuxtContentUrls;
   }
-  const result = {
-    type: "element",
-    tagName: "a",
-    properties,
-    children: state.all(node)
-  };
-  state.patch(node, result);
-  return state.applyData(node, result);
-}
-function normalizeLink(link2) {
-  const match = link2.match(/#.+$/);
-  const hash = match ? match[0] : "";
-  if (link2.replace(/#.+$/, "").endsWith(".md") && (isRelative(link2) || !/^https?/.test(link2) && !link2.startsWith("/"))) {
-    return generatePath(link2.replace(".md" + hash, ""), { forceLeadingSlash: false }) + hash;
-  } else {
-    return link2;
-  }
-}
-
-const yaml = defineTransformer({
-  name: "Yaml",
-  extensions: [".yml", ".yaml"],
-  parse: (_id, content) => {
-    const { data } = parseFrontMatter(`---
-${content}
----`);
-    let parsed = data;
-    if (Array.isArray(data)) {
-      console.warn(`YAML array is not supported in ${_id}, moving the array into the \`body\` key`);
-      parsed = { body: data };
-    }
-    return {
-      ...parsed,
-      _id,
-      _type: "yaml"
-    };
-  }
-});
-
-const json = defineTransformer({
-  name: "Json",
-  extensions: [".json", ".json5"],
-  parse: async (_id, content) => {
-    let parsed;
-    if (typeof content === "string") {
-      if (_id.endsWith("json5")) {
-        parsed = (await import('file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
-      } else if (_id.endsWith("json")) {
-        parsed = destr$1(content);
+  {
+    nitroApp.hooks.hook("render:html", async (ctx, { event }) => {
+      const routeOptions = getRouteRules(event);
+      const isIsland = process.env.NUXT_COMPONENT_ISLANDS && event.path.startsWith("/__nuxt_island");
+      const noSSR = event.context.nuxt?.noSSR || routeOptions.ssr === false && !isIsland || (PRERENDER_NO_SSR_ROUTES.has(event.path) );
+      if (noSSR) {
+        let rule = event.context.robots?.rule;
+        if (event.path === "/404.html")
+          rule = robotsDisabledValue;
+        if (rule)
+          ctx.head.push(`<meta name="robots" content="${rule}" />`);
       }
-    } else {
-      parsed = content;
-    }
-    if (Array.isArray(parsed)) {
-      console.warn(`JSON array is not supported in ${_id}, moving the array into the \`body\` key`);
-      parsed = {
-        body: parsed
-      };
-    }
-    return {
-      ...parsed,
-      _id,
-      _type: "json"
-    };
-  }
-});
-
-const TRANSFORMERS = [
-  csv,
-  markdown,
-  json,
-  yaml,
-  pathMeta
-];
-function getParser(ext, additionalTransformers = []) {
-  let parser = additionalTransformers.find((p) => ext.match(new RegExp(p.extensions.join("|"), "i")) && p.parse);
-  if (!parser) {
-    parser = TRANSFORMERS.find((p) => ext.match(new RegExp(p.extensions.join("|"), "i")) && p.parse);
-  }
-  return parser;
-}
-function getTransformers(ext, additionalTransformers = []) {
-  return [
-    ...additionalTransformers.filter((p) => ext.match(new RegExp(p.extensions.join("|"), "i")) && p.transform),
-    ...TRANSFORMERS.filter((p) => ext.match(new RegExp(p.extensions.join("|"), "i")) && p.transform)
-  ];
-}
-async function transformContent(id, content, options = {}) {
-  const { transformers = [] } = options;
-  const file = { _id: id, body: content };
-  const ext = extname(id);
-  const parser = getParser(ext, transformers);
-  if (!parser) {
-    console.warn(`${ext} files are not supported, "${id}" falling back to raw content`);
-    return file;
-  }
-  const parserOptions = options[camelCase(parser.name)] || {};
-  const parsed = await parser.parse(file._id, file.body, parserOptions);
-  const matchedTransformers = getTransformers(ext, transformers);
-  const result = await matchedTransformers.reduce(async (prev, cur) => {
-    const next = await prev || parsed;
-    const transformOptions = options[camelCase(cur.name)];
-    if (transformOptions === false) {
-      return next;
-    }
-    return cur.transform(next, transformOptions || {});
-  }, Promise.resolve(parsed));
-  return result;
-}
-
-function makeIgnored(ignores) {
-  const rxAll = ["/\\.", "/-", ...ignores.filter((p) => p)].map((p) => new RegExp(p));
-  return function isIgnored(key) {
-    const path = "/" + key.replace(/:/g, "/");
-    return rxAll.some((rx) => rx.test(path));
-  };
-}
-
-function createMatch(opts = {}) {
-  const operators = createOperators(match, opts.operators);
-  function match(item, conditions) {
-    if (typeof conditions !== "object" || conditions instanceof RegExp) {
-      return operators.$eq(item, conditions);
-    }
-    return Object.keys(conditions || {}).every((key) => {
-      const condition = conditions[key];
-      if (key.startsWith("$") && operators[key]) {
-        const fn = operators[key];
-        return typeof fn === "function" ? fn(item, condition) : false;
-      }
-      return match(get(item, key), condition);
     });
   }
-  return match;
-}
-function createOperators(match, operators = {}) {
-  return {
-    $match: (item, condition) => match(item, condition),
-    /**
-     * Match if item equals condition
-     **/
-    $eq: (item, condition) => condition instanceof RegExp ? condition.test(item) : item === condition,
-    /**
-     * Match if item not equals condition
-     **/
-    $ne: (item, condition) => condition instanceof RegExp ? !condition.test(item) : item !== condition,
-    /**
-     * Match is condition is false
-     **/
-    $not: (item, condition) => !match(item, condition),
-    /**
-     * Match only if all of nested conditions are true
-     **/
-    $and: (item, condition) => {
-      assertArray(condition, "$and requires an array as condition");
-      return condition.every((cond) => match(item, cond));
-    },
-    /**
-     * Match if any of nested conditions is true
-     **/
-    $or: (item, condition) => {
-      assertArray(condition, "$or requires an array as condition");
-      return condition.some((cond) => match(item, cond));
-    },
-    /**
-     * Match if item is in condition array
-     **/
-    $in: (item, condition) => ensureArray(condition).some(
-      (cond) => Array.isArray(item) ? match(item, { $contains: cond }) : match(item, cond)
-    ),
-    /**
-     * Match if item contains every condition or match every rule in condition array
-     **/
-    $contains: (item, condition) => {
-      item = Array.isArray(item) ? item : String(item);
-      return ensureArray(condition).every((i) => item.includes(i));
-    },
-    /**
-     * Ignore case contains
-     **/
-    $icontains: (item, condition) => {
-      if (typeof condition !== "string") {
-        throw new TypeError("$icontains requires a string, use $contains instead");
-      }
-      item = String(item).toLocaleLowerCase();
-      return ensureArray(condition).every((i) => item.includes(i.toLocaleLowerCase()));
-    },
-    /**
-     * Match if item contains at least one rule from condition array
-     */
-    $containsAny: (item, condition) => {
-      assertArray(condition, "$containsAny requires an array as condition");
-      item = Array.isArray(item) ? item : String(item);
-      return condition.some((i) => item.includes(i));
-    },
-    /**
-     * Check key existence
-     */
-    $exists: (item, condition) => condition ? typeof item !== "undefined" : typeof item === "undefined",
-    /**
-     * Match if type of item equals condition
-     */
-    $type: (item, condition) => typeof item === String(condition),
-    /**
-     * Provides regular expression capabilities for pattern matching strings.
-     */
-    $regex: (item, condition) => {
-      if (!(condition instanceof RegExp)) {
-        const matched = String(condition).match(/\/(.*)\/([dgimsuy]*)$/);
-        condition = matched?.[1] ? new RegExp(matched[1], matched[2] || "") : new RegExp(condition);
-      }
-      return condition.test(String(item || ""));
-    },
-    /**
-     * Check if item is less than condition
-     */
-    $lt: (item, condition) => {
-      return item < condition;
-    },
-    /**
-     * Check if item is less than or equal to condition
-     */
-    $lte: (item, condition) => {
-      return item <= condition;
-    },
-    /**
-     * Check if item is greater than condition
-     */
-    $gt: (item, condition) => {
-      return item > condition;
-    },
-    /**
-     * Check if item is greater than or equal to condition
-     */
-    $gte: (item, condition) => {
-      return item >= condition;
-    },
-    ...operators || {}
-  };
-}
+});
 
-function createPipelineFetcher(getContentsList) {
-  const match = createMatch();
-  const surround = (data, { query, before, after }) => {
-    const matchQuery = typeof query === "string" ? { _path: query } : query;
-    const index = data.findIndex((item) => match(item, matchQuery));
-    before = before ?? 1;
-    after = after ?? 1;
-    const slice = new Array(before + after).fill(null, 0);
-    return index === -1 ? slice : slice.map((_, i) => data[index - before + i + Number(i >= before)] || null);
-  };
-  const matchingPipelines = [
-    // Conditions
-    (state, params) => {
-      const filtered = state.result.filter((item) => ensureArray(params.where).every((matchQuery) => match(item, matchQuery)));
-      return {
-        ...state,
-        result: filtered,
-        total: filtered.length
-      };
-    },
-    // Sort data
-    (state, params) => ensureArray(params.sort).forEach((options) => sortList(state.result, options)),
-    function fetchSurround(state, params, db) {
-      if (params.surround) {
-        let _surround = surround(state.result?.length === 1 ? db : state.result, params.surround);
-        _surround = apply(withoutKeys(params.without))(_surround);
-        _surround = apply(withKeys(params.only))(_surround);
-        state.surround = _surround;
-      }
-      return state;
-    }
-  ];
-  const transformingPiples = [
-    // Skip first items
-    (state, params) => {
-      if (params.skip) {
-        return {
-          ...state,
-          result: state.result.slice(params.skip),
-          skip: params.skip
-        };
-      }
-    },
-    // Pick first items
-    (state, params) => {
-      if (params.limit) {
-        return {
-          ...state,
-          result: state.result.slice(0, params.limit),
-          limit: params.limit
-        };
-      }
-    },
-    function fetchDirConfig(state, params, db) {
-      if (params.dirConfig) {
-        const path = state.result[0]?._path || params.where?.find((w) => w._path)?._path;
-        if (typeof path === "string") {
-          const dirConfig = db.find((item) => item._path === joinURL(path, "_dir"));
-          if (dirConfig) {
-            state.dirConfig = { _path: dirConfig._path, ...withoutKeys(["_"])(dirConfig) };
-          }
-        }
-      }
-      return state;
-    },
-    // Remove unwanted fields
-    (state, params) => ({
-      ...state,
-      result: apply(withoutKeys(params.without))(state.result)
-    }),
-    // Select only wanted fields
-    (state, params) => ({
-      ...state,
-      result: apply(withKeys(params.only))(state.result)
-    })
-  ];
-  return async (query) => {
-    const db = await getContentsList();
-    const params = query.params();
-    const result1 = {
-      result: db,
-      limit: 0,
-      skip: 0,
-      total: db.length
-    };
-    const matchedData = matchingPipelines.reduce(($data, pipe) => pipe($data, params, db) || $data, result1);
-    if (params.count) {
-      return {
-        result: matchedData.result.length
-      };
-    }
-    const result = transformingPiples.reduce(($data, pipe) => pipe($data, params, db) || $data, matchedData);
-    if (params.first) {
-      return {
-        ...omit(["skip", "limit", "total"])(result),
-        result: result.result[0]
-      };
-    }
-    return result;
-  };
+const htmlPayloadCache = createStorage({
+  // short cache time so we don't need many entries at runtime
+  driver: lruCacheDriver({ max: 1e4  })
+});
+const prerenderOptionsCache = createStorage({
+  driver: lruCacheDriver({ max: 1e4 })
+}) ;
+const emojiCache = createStorage({
+  driver: lruCacheDriver({ max: 1e3 })
+});
+class BoundedMap {
+  constructor(max) {
+    this.max = max;
+  }
+  map = /* @__PURE__ */ new Map();
+  get(key) {
+    return this.map.get(key);
+  }
+  set(key, value) {
+    if (this.map.size >= this.max)
+      this.map.delete(this.map.keys().next().value);
+    this.map.set(key, value);
+  }
 }
-
-const isPreview = (event) => {
-  const previewToken = getQuery$1(event).previewToken || getCookie(event, "previewToken");
-  return !!previewToken;
-};
-const getPreview = (event) => {
-  const key = getQuery$1(event).previewToken || getCookie(event, "previewToken");
-  return { key };
-};
-
-function defineNitroPlugin(def) {
-  return def;
-}
-
-function defineRenderHandler(render) {
-  const runtimeConfig = useRuntimeConfig();
-  return eventHandler(async (event) => {
-    const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
-    await nitroApp.hooks.callHook("render:before", ctx);
-    if (!ctx.response) {
-      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
-        setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send(
-          event,
-          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        );
-      }
-      ctx.response = await ctx.render(event);
-      if (!ctx.response) {
-        const _currentStatus = getResponseStatus(event);
-        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send(
-          event,
-          "No response returned from render handler: " + event.path
-        );
-      }
-    }
-    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
-    if (ctx.response.headers) {
-      setResponseHeaders(event, ctx.response.headers);
-    }
-    if (ctx.response.statusCode || ctx.response.statusMessage) {
-      setResponseStatus(
-        event,
-        ctx.response.statusCode,
-        ctx.response.statusMessage
-      );
-    }
-    return ctx.response.body;
-  });
-}
-
-function baseURL() {
-	
-	return useRuntimeConfig().app.baseURL;
-}
-function buildAssetsDir() {
-	
-	return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-	
-	const app = useRuntimeConfig().app;
-	const publicBase = app.cdnURL || app.baseURL;
-	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
-}
+const fontCache = new BoundedMap(100);
+const fontArrayCache = new BoundedMap(20);
 
 const FILE_EXT_RE = /\.[0-9a-z]+$/i;
 function resolveSitePath(pathOrUrl, options) {
@@ -4211,6 +2529,102 @@ function fixSlashes(trailingSlash, pathOrUrl) {
   return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
 }
 
+const e=globalThis.process?.env||Object.create(null),t=globalThis.process||{env:e},n=t!==void 0&&t.env&&t.env.NODE_ENV||void 0,r=[[`claude`,[`CLAUDECODE`,`CLAUDE_CODE`]],[`replit`,[`REPL_ID`]],[`gemini`,[`GEMINI_CLI`]],[`codex`,[`CODEX_SANDBOX`,`CODEX_THREAD_ID`]],[`opencode`,[`OPENCODE`]],[`pi`,[i(`PATH`,/\.pi[\\/]agent/)]],[`auggie`,[`AUGMENT_AGENT`]],[`goose`,[`GOOSE_PROVIDER`]],[`devin`,[i(`EDITOR`,/devin/)]],[`cursor`,[`CURSOR_AGENT`]],[`kiro`,[i(`TERM_PROGRAM`,/kiro/)]]];function i(t,n){return ()=>{let r=e[t];return r?n.test(r):false}}function a(){let t=e.AI_AGENT;if(t)return {name:t.toLowerCase()};for(let[t,n]of r)for(let r of n)if(typeof r==`string`?e[r]:r())return {name:t};return {}}const o=a();o.name;!!o.name;const l=[[`APPVEYOR`],[`AWS_AMPLIFY`,`AWS_APP_ID`,{ci:true}],[`AZURE_PIPELINES`,`SYSTEM_TEAMFOUNDATIONCOLLECTIONURI`],[`AZURE_STATIC`,`INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN`],[`APPCIRCLE`,`AC_APPCIRCLE`],[`BAMBOO`,`bamboo_planKey`],[`BITBUCKET`,`BITBUCKET_COMMIT`],[`BITRISE`,`BITRISE_IO`],[`BUDDY`,`BUDDY_WORKSPACE_ID`],[`BUILDKITE`],[`CIRCLE`,`CIRCLECI`],[`CIRRUS`,`CIRRUS_CI`],[`CLOUDFLARE_PAGES`,`CF_PAGES`,{ci:true}],[`CLOUDFLARE_WORKERS`,`WORKERS_CI`,{ci:true}],[`GOOGLE_CLOUDRUN`,`K_SERVICE`],[`GOOGLE_CLOUDRUN_JOB`,`CLOUD_RUN_JOB`],[`CODEBUILD`,`CODEBUILD_BUILD_ARN`],[`CODEFRESH`,`CF_BUILD_ID`],[`DRONE`],[`DRONE`,`DRONE_BUILD_EVENT`],[`DSARI`],[`GITHUB_ACTIONS`],[`GITLAB`,`GITLAB_CI`],[`GITLAB`,`CI_MERGE_REQUEST_ID`],[`GOCD`,`GO_PIPELINE_LABEL`],[`LAYERCI`],[`JENKINS`,`JENKINS_URL`],[`HUDSON`,`HUDSON_URL`],[`MAGNUM`],[`NETLIFY`],[`NETLIFY`,`NETLIFY_LOCAL`,{ci:false}],[`NEVERCODE`],[`RENDER`],[`SAIL`,`SAILCI`],[`SEMAPHORE`],[`SCREWDRIVER`],[`SHIPPABLE`],[`SOLANO`,`TDDIUM`],[`STRIDER`],[`TEAMCITY`,`TEAMCITY_VERSION`],[`TRAVIS`],[`VERCEL`,`NOW_BUILDER`],[`VERCEL`,`VERCEL`,{ci:false}],[`VERCEL`,`VERCEL_ENV`,{ci:false}],[`APPCENTER`,`APPCENTER_BUILD_ID`],[`CODESANDBOX`,`CODESANDBOX_SSE`,{ci:false}],[`CODESANDBOX`,`CODESANDBOX_HOST`,{ci:false}],[`STACKBLITZ`],[`STORMKIT`],[`CLEAVR`],[`ZEABUR`],[`CODESPHERE`,`CODESPHERE_APP_ID`,{ci:true}],[`RAILWAY`,`RAILWAY_PROJECT_ID`],[`RAILWAY`,`RAILWAY_SERVICE_ID`],[`DENO-DEPLOY`,`DENO_DEPLOY`],[`DENO-DEPLOY`,`DENO_DEPLOYMENT_ID`],[`FIREBASE_APP_HOSTING`,`FIREBASE_APP_HOSTING`,{ci:true}],[`EDGEONE_PAGES`,`EO_PAGES_CI`,{ci:true}]];function u(){for(let t of l)if(e[t[1]||t[0]])return {name:t[0].toLowerCase(),...t[2]};return e.SHELL===`/bin/jsh`&&t.versions?.webcontainer?{name:`stackblitz`,ci:false}:{name:``,ci:false}}const d=u();d.name;const p=t.platform||``,m=!!e.CI||d.ci!==false,h=!!t.stdout?.isTTY;!!e.DEBUG;const v=n===`test`||!!e.TEST;n===`production`||e.MODE===`production`;const b=n===`dev`||n===`development`||e.MODE===`development`;!!e.MINIMAL||m||v||!h;const S=/^win/i.test(p);!e.NO_COLOR&&(!!e.FORCE_COLOR||(h||S)&&e.TERM!==`dumb`||m);const E=(t.versions?.node||``).replace(/^v/,``)||null;Number(E?.split(`.`)[0])||null;const O=!!t?.versions?.node,k=`Bun`in globalThis,A=`Deno`in globalThis,j=`fastly`in globalThis,M=`Netlify`in globalThis,N=`EdgeRuntime`in globalThis,P=globalThis.navigator?.userAgent===`Cloudflare-Workers`,F=[[M,`netlify`],[N,`edge-light`],[P,`workerd`],[j,`fastly`],[A,`deno`],[k,`bun`],[O,`node`]];function I(){let e=F.find(e=>e[0]);if(e)return {name:e[1]}}const L=I();L?.name||``;
+
+const PROTOCOL_RE = /^https?:\/\//;
+const TRAILING_SLASH_RE = /\/$/;
+function isLocalhostHost(host) {
+  if (!host || host.startsWith("localhost") || host.startsWith("127.") || host.startsWith("0.0.0.0"))
+    return true;
+  const hostname = host.startsWith("[") ? host.slice(0, host.indexOf("]") + 1) : host;
+  return hostname === "[::1]" || hostname === "::1" || hostname === "[::]" || hostname === "::";
+}
+function extractHostname(host) {
+  if (host.startsWith("[")) {
+    const close = host.indexOf("]");
+    return close !== -1 ? host.slice(0, close + 1) : host;
+  }
+  const colonCount = host.split(":").length - 1;
+  return colonCount === 1 ? host.slice(0, host.indexOf(":")) : host;
+}
+function splitHostPort(host) {
+  if (host.startsWith("[")) {
+    const close = host.indexOf("]");
+    const hostname = close !== -1 ? host.slice(0, close + 1) : host;
+    const port = close !== -1 && host[close + 1] === ":" ? host.slice(close + 2) : "";
+    const normalized = hostname === "[::1]" || hostname === "[::]" ? "localhost" : hostname;
+    return { host: normalized, port };
+  }
+  if (host === "0.0.0.0" || host.startsWith("0.0.0.0:")) {
+    const i = host.indexOf(":");
+    return { host: "localhost", port: i !== -1 ? host.slice(i + 1) : "" };
+  }
+  const colonCount = host.split(":").length - 1;
+  if (colonCount === 1) {
+    const i = host.indexOf(":");
+    return { host: host.slice(0, i), port: host.slice(i + 1) };
+  }
+  if (colonCount > 1) {
+    const normalized = host === "::1" || host === "::" ? "localhost" : `[${host}]`;
+    return { host: normalized, port: "" };
+  }
+  return { host, port: "" };
+}
+function getNitroOrigin$1(ctx = {}) {
+  const isDev = ctx.isDev ?? b;
+  const isPrerender = ctx.isPrerender ?? true;
+  let host = "";
+  let port = "";
+  let protocol = process.env.NITRO_SSL_CERT && process.env.NITRO_SSL_KEY ? "https" : "http";
+  if (isDev || isPrerender) {
+    const devEnv = process.env.__NUXT_DEV__ || process.env.NUXT_VITE_NODE_OPTIONS;
+    if (devEnv) {
+      const parsed = JSON.parse(devEnv);
+      const origin = parsed.proxy?.url || parsed.baseURL?.replace("/__nuxt_vite_node__", "");
+      host = origin.replace(PROTOCOL_RE, "").replace(TRAILING_SLASH_RE, "");
+      protocol = origin.startsWith("https") ? "https" : "http";
+    }
+  }
+  if (isDev && isLocalhostHost(host) && ctx.requestHost) {
+    const reqHost = extractHostname(ctx.requestHost);
+    if (reqHost && !isLocalhostHost(reqHost)) {
+      host = ctx.requestHost;
+      protocol = ctx.requestProtocol || protocol;
+    }
+  }
+  if (!host && ctx.requestHost) {
+    host = ctx.requestHost;
+    protocol = ctx.requestProtocol || protocol;
+  }
+  if (!host) {
+    host = process.env.NITRO_HOST || process.env.HOST || "";
+    if (isDev)
+      port = process.env.NITRO_PORT || process.env.PORT || "3000";
+  }
+  const split = splitHostPort(host);
+  host = split.host;
+  if (split.port)
+    port = split.port;
+  host = process.env.NUXT_SITE_HOST_OVERRIDE || host;
+  port = process.env.NUXT_SITE_PORT_OVERRIDE || port;
+  if (host.startsWith("http://") || host.startsWith("https://")) {
+    protocol = host.startsWith("https://") ? "https" : "http";
+    host = host.replace(PROTOCOL_RE, "");
+  } else if (!isDev && (!host || !isLocalhostHost(host))) {
+    protocol = "https";
+  }
+  return `${protocol}://${host}${port ? `:${port}` : ""}/`;
+}
+
+function getNitroOrigin(e) {
+  return getNitroOrigin$1({
+    isDev: false,
+    isPrerender: true,
+    requestHost: e ? getRequestHost(e, { xForwardedHost: true }) : void 0,
+    requestProtocol: e ? getRequestProtocol(e, { xForwardedProto: true }) : void 0
+  });
+}
+
 function createSitePathResolver(e, options = {}) {
   const siteConfig = getSiteConfig(e);
   const nitroOrigin = getNitroOrigin(e);
@@ -4224,286 +2638,1349 @@ function createSitePathResolver(e, options = {}) {
     });
   };
 }
-
-async function getContentIndex(event) {
-  const defaultLocale = useRuntimeConfig().content.defaultLocale;
-  let contentIndex = await cacheStorage().getItem("content-index.json");
-  if (!contentIndex) {
-    const data = await getContentsList(event);
-    contentIndex = data.reduce((acc, item) => {
-      acc[item._path] = acc[item._path] || [];
-      if (item._locale === defaultLocale) {
-        acc[item._path].unshift(item._id);
-      } else {
-        acc[item._path].push(item._id);
-      }
-      return acc;
-    }, {});
-    await cacheStorage().setItem("content-index.json", contentIndex);
-  }
-  return contentIndex;
-}
-async function getIndexedContentsList(event, query) {
-  const params = query.params();
-  const path = params?.where?.find((wh) => wh._path)?._path;
-  if (!isPreview(event) && !params.surround && !params.dirConfig && (typeof path === "string" || path instanceof RegExp)) {
-    const index = await getContentIndex(event);
-    const keys = Object.keys(index).filter((key) => path.test ? path.test(key) : key === String(path)).flatMap((key) => index[key]);
-    const keyChunks = [...chunksFromArray(keys, 10)];
-    const contents = [];
-    for await (const chunk of keyChunks) {
-      const result = await Promise.all(chunk.map((key) => getContent(event, key)));
-      contents.push(...result);
-    }
-    return contents;
-  }
-  return getContentsList(event);
-}
-
-const contentIndex = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  getContentIndex: getContentIndex,
-  getIndexedContentsList: getIndexedContentsList
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const transformers = [];
-
-let _sourceStorage;
-let _cacheStorage;
-let _cacheParsedStorage;
-const sourceStorage = () => {
-  if (!_sourceStorage) {
-    _sourceStorage = prefixStorage(useStorage(), "content:source");
-  }
-  return _sourceStorage;
-};
-const cacheStorage = () => {
-  if (!_cacheStorage) {
-    _cacheStorage = prefixStorage(useStorage(), "cache:content");
-  }
-  return _cacheStorage;
-};
-const cacheParsedStorage = () => {
-  if (!_cacheParsedStorage) {
-    _cacheParsedStorage = prefixStorage(useStorage(), "cache:content:parsed");
-  }
-  return _cacheParsedStorage;
-};
-const contentConfig = () => useRuntimeConfig().content;
-const invalidKeyCharacters = `'"?#/`.split("");
-const contentIgnorePredicate = (key) => {
-  const isIgnored = makeIgnored(contentConfig().ignores);
-  if (key.startsWith("preview:") || isIgnored(key)) {
-    return false;
-  }
-  if (invalidKeyCharacters.some((ik) => key.includes(ik))) {
-    console.warn(`Ignoring [${key}]. File name should not contain any of the following characters: ${invalidKeyCharacters.join(", ")}`);
-    return false;
-  }
-  return true;
-};
-const getContentsIds = async (event, prefix) => {
-  let keys = [];
-  const source = sourceStorage();
-  if (keys.length === 0) {
-    keys = await source.getKeys(prefix);
-  }
-  if (isPreview(event)) {
-    const { key } = getPreview(event);
-    const previewPrefix = `preview:${key}:${prefix || ""}`;
-    const previewKeys = await source.getKeys(previewPrefix);
-    if (previewKeys.length) {
-      const keysSet = new Set(keys);
-      await Promise.all(
-        previewKeys.map(async (key2) => {
-          const meta = await source.getMeta(key2);
-          if (meta?.__deleted) {
-            keysSet.delete(key2.substring(previewPrefix.length));
-          } else {
-            keysSet.add(key2.substring(previewPrefix.length));
-          }
-        })
-      );
-      keys = Array.from(keysSet);
-    }
-  }
-  return keys.filter(contentIgnorePredicate);
-};
-function* chunksFromArray(arr, n) {
-  for (let i = 0; i < arr.length; i += n) {
-    yield arr.slice(i, i + n);
-  }
-}
-let cachedContents = [];
-const getContentsList = /* @__PURE__ */ (() => {
-  let pendingContentsListPromise = null;
-  const _getContentsList = async (event, prefix) => {
-    const keys = await getContentsIds(event, prefix);
-    const keyChunks = [...chunksFromArray(keys, 10)];
-    const contents = [];
-    for (const chunk of keyChunks) {
-      const result = await Promise.all(chunk.map((key) => getContent(event, key)));
-      contents.push(...result);
-    }
-    return contents.filter((c) => c && c._path);
-  };
-  return (event, prefix) => {
-    if (event.context.__contentList) {
-      return event.context.__contentList;
-    }
-    if (cachedContents.length) {
-      return cachedContents;
-    }
-    if (!pendingContentsListPromise) {
-      pendingContentsListPromise = _getContentsList(event, prefix);
-      pendingContentsListPromise.then((result) => {
-        {
-          cachedContents = result;
-        }
-        event.context.__contentList = result;
-        pendingContentsListPromise = null;
-      });
-    }
-    return pendingContentsListPromise;
-  };
-})();
-const pendingPromises = {};
-const getContent = async (event, id) => {
-  const contentId = id;
-  if (!contentIgnorePredicate(id)) {
-    return { _id: contentId, body: null };
-  }
-  const source = sourceStorage();
-  const cache = cacheParsedStorage();
-  if (isPreview(event)) {
-    const { key } = getPreview(event);
-    const previewId = `preview:${key}:${id}`;
-    const draft = await source.getItem(previewId);
-    if (draft) {
-      id = previewId;
-    }
-  }
-  const cached = await cache.getItem(id);
-  const config = contentConfig();
-  const meta = await source.getMeta(id);
-  const mtime = meta.mtime;
-  const size = meta.size || 0;
-  const hash = hash$1({
-    // Last modified time
-    mtime,
-    // File size
-    size,
-    // Add Content version to the hash, to revalidate the cache on content update
-    version: config.cacheVersion,
-    integrity: config.cacheIntegrity
+function withSiteUrl(e, path, options = {}) {
+  const siteConfig = e.context.siteConfig?.get();
+  let siteUrl = e.context.siteConfigNitroOrigin;
+  if ((options.canonical !== false || true) && siteConfig.url)
+    siteUrl = siteConfig.url;
+  return resolveSitePath(path, {
+    absolute: true,
+    siteUrl,
+    trailingSlash: siteConfig.trailingSlash,
+    base: e.context.nitro.baseURL,
+    withBase: options.withBase
   });
-  if (cached?.hash === hash) {
-    return cached.parsed;
+}
+
+const RE_SOCIAL_META_TAG = /<meta[^>]+(property|name)="(twitter|og):([^"]+)"[^>]*>/g;
+const RE_SOCIAL_META_KEY = /(property|name)="(twitter|og):([^"]+)"/;
+const RE_META_CONTENT = /content="([^"]+)"/;
+const RE_OG_KEY_PARAM = /[,/]k_([^,./]+)/;
+function extractSocialPreviewTags(html) {
+  const data = [];
+  const rootData = {};
+  const socialMetaTags = html.match(RE_SOCIAL_META_TAG) || [];
+  let currentArrayIdx = -1;
+  socialMetaTags.forEach((tag) => {
+    const [, , type, key] = tag.match(RE_SOCIAL_META_KEY);
+    const value = tag.match(RE_META_CONTENT)?.[1];
+    if (!value) {
+      return;
+    }
+    if (key === "title" || key === "description") {
+      rootData[`${type}:${key}`] = value;
+      return;
+    }
+    if (type === "og" && key === "image") {
+      currentArrayIdx++;
+    }
+    if (!data[currentArrayIdx])
+      data[currentArrayIdx] = {};
+    if (!data[currentArrayIdx][type])
+      data[currentArrayIdx][type] = {};
+    data[currentArrayIdx][type][key] = value;
+  });
+  data.forEach((preview) => {
+    if (preview.og?.image && preview.og?.image.includes("/_og/")) {
+      const url = withoutQuery$2(preview.og.image);
+      const keyMatch = url.match(RE_OG_KEY_PARAM);
+      preview.key = keyMatch?.[1] || "og";
+    }
+  });
+  return [rootData, data];
+}
+function detectBase64MimeType(data) {
+  const signatures = {
+    "R0lGODdh": "image/gif",
+    "R0lGODlh": "image/gif",
+    "iVBORw0KGgo": "image/png",
+    "/9j/": "image/jpeg",
+    "UklGR": "image/webp",
+    "AAABAA": "image/x-icon",
+    "PHN2Zy": "image/svg+xml",
+    // <svg
+    "PD94bW": "image/svg+xml",
+    // <?xml
+    "PCEt": "image/svg+xml"
+    // <!--
+  };
+  for (const s in signatures) {
+    if (data.startsWith(s)) {
+      return signatures[s];
+    }
   }
-  if (!pendingPromises[id + hash]) {
-    pendingPromises[id + hash] = new Promise(async (resolve) => {
-      const body = await source.getItem(id);
-      if (body === null) {
-        return resolve({ _id: contentId, body: null });
+  return "image/svg+xml";
+}
+function toBase64Image(data) {
+  const base64 = typeof data === "string" ? data : Buffer.from(data).toString("base64");
+  const type = detectBase64MimeType(base64);
+  return `data:${type};base64,${base64}`;
+}
+function withoutQuery$2(path) {
+  return path.split("?")[0];
+}
+
+const RE_BASE64_URL_DASH = /-/g;
+const RE_BASE64_URL_TILDE = /~/g;
+const RE_DOUBLE_UNDERSCORE = /__/g;
+const RE_PLUS = /\+/g;
+const RE_SINGLE_UNDERSCORE = /(?<!_)_(?!_)/;
+const RE_OG_ROUTE_PREFIX = /\/_og\/[ds]\//;
+const RE_COMMA_PARAM_SEPARATOR = /,(?=\w+_)/;
+const PARAM_ALIASES = {
+  w: "width",
+  h: "height",
+  c: "component",
+  em: "emojis",
+  k: "key",
+  a: "alt",
+  u: "url",
+  cache: "cacheMaxAgeSeconds",
+  p: "_path",
+  // page path - needs alias since _path starts with underscore
+  q: "_query",
+  // query params - needs alias since _query starts with underscore
+  ch: "_componentHash"
+  // component template hash for cache busting prerendered URLs
+};
+Object.fromEntries(
+  Object.entries(PARAM_ALIASES).map(([alias, param]) => [param, alias])
+);
+const KNOWN_PARAMS = /* @__PURE__ */ new Set([
+  "width",
+  "height",
+  "component",
+  "renderer",
+  "emojis",
+  "key",
+  "alt",
+  "url",
+  "cacheMaxAgeSeconds",
+  "cacheKey",
+  "extension",
+  "satori",
+  "resvg",
+  "sharp",
+  "screenshot",
+  "takumi",
+  "fonts",
+  "_query",
+  "_hash",
+  "_componentHash",
+  "socialPreview",
+  "props",
+  "_path"
+]);
+const COMPLEX_PARAMS = /* @__PURE__ */ new Set(["satori", "resvg", "sharp", "screenshot", "takumi", "fonts", "_query", "_path"]);
+function b64Decode(str) {
+  const standard = str.replace(RE_BASE64_URL_DASH, "+").replace(RE_BASE64_URL_TILDE, "/");
+  const padded = standard + "=".repeat((4 - standard.length % 4) % 4);
+  if (typeof atob === "function") {
+    const binary = atob(padded);
+    const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+    return new TextDecoder().decode(bytes);
+  }
+  return Buffer.from(padded, "base64").toString("utf8");
+}
+function simpleHash(str) {
+  let hash2 = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash2 = (hash2 << 5) - hash2 + char;
+    hash2 = hash2 & hash2;
+  }
+  return Math.abs(hash2).toString(36);
+}
+function hashOgImageOptions(options, componentHash, version) {
+  const { _path, _hash, ...hashableOptions } = options;
+  const hashInput = componentHash || version ? [hashableOptions, componentHash || "", version || ""] : hashableOptions;
+  return simpleHash(JSON.stringify(hashInput));
+}
+const RE_NUMERIC = /^-?(?:0|[1-9]\d*)(?:\.\d+)?$/;
+function tryParseNumber(value) {
+  if (RE_NUMERIC.test(value)) {
+    const num = Number(value);
+    if (!Number.isNaN(num))
+      return num;
+  }
+  return value;
+}
+function decodeSimpleValue(raw) {
+  if (raw.startsWith("~~")) {
+    return decodeURIComponent(raw.slice(1).replace(RE_PLUS, "%20")).replace(RE_DOUBLE_UNDERSCORE, "_");
+  }
+  if (raw.startsWith("~")) {
+    try {
+      return b64Decode(raw.slice(1));
+    } catch {
+      return decodeURIComponent(raw.replace(RE_PLUS, "%20")).replace(RE_DOUBLE_UNDERSCORE, "_");
+    }
+  }
+  return decodeURIComponent(raw.replace(RE_PLUS, "%20")).replace(RE_DOUBLE_UNDERSCORE, "_");
+}
+function decodeOgImageParams(encoded) {
+  if (!encoded || encoded === "default")
+    return {};
+  const options = {};
+  const parts = encoded.split(RE_COMMA_PARAM_SEPARATOR);
+  for (const part of parts) {
+    const idx = part.search(RE_SINGLE_UNDERSCORE);
+    if (idx === -1)
+      continue;
+    const alias = part.slice(0, idx);
+    let value = part.slice(idx + 1);
+    const paramName = PARAM_ALIASES[alias] || alias;
+    if (COMPLEX_PARAMS.has(paramName)) {
+      try {
+        const json = b64Decode(value);
+        options[paramName] = JSON.parse(json);
+      } catch {
+        options[paramName] = value;
       }
-      const parsed = await parseContent(contentId, body);
-      await cache.setItem(id, { parsed, hash }).catch(() => {
+    } else if (paramName === "props") {
+      try {
+        const json = b64Decode(value);
+        options.props = { ...options.props, ...JSON.parse(json) };
+      } catch {
+      }
+    } else if (KNOWN_PARAMS.has(paramName)) {
+      value = decodeSimpleValue(value);
+      if (value === "true") {
+        options[paramName] = true;
+      } else if (value === "false") {
+        options[paramName] = false;
+      } else if (value !== "") {
+        options[paramName] = tryParseNumber(value);
+      }
+    } else {
+      value = decodeSimpleValue(value);
+      options.props = options.props || {};
+      if (value === "true") {
+        options.props[paramName] = true;
+      } else if (value === "false") {
+        options.props[paramName] = false;
+      } else if (value !== "") {
+        options.props[paramName] = tryParseNumber(value);
+      }
+    }
+  }
+  return options;
+}
+function extractEncodedSegment(path, extension) {
+  const match = path.match(RE_OG_ROUTE_PREFIX);
+  if (match?.index != null) {
+    return path.slice(match.index + match[0].length).replace(new RegExp(`\\.${extension}$`), "");
+  }
+  return path.split("/").pop().replace(new RegExp(`\\.${extension}$`), "");
+}
+
+const RE_KEBAB_CASE = /-([a-z])/g;
+function isInternalRoute(path) {
+  return path.startsWith("/_") || path.startsWith("@");
+}
+function filterIsOgImageOption(key) {
+  const keys = [
+    "url",
+    "extension",
+    "width",
+    "height",
+    "alt",
+    "props",
+    "renderer",
+    "component",
+    "emojis",
+    "_query",
+    "_hash",
+    "fonts",
+    "satori",
+    "resvg",
+    "sharp",
+    "screenshot",
+    "takumi",
+    "cacheMaxAgeSeconds",
+    "cacheKey",
+    "key"
+  ];
+  return keys.includes(key);
+}
+function separateProps(options, ignoreKeys = []) {
+  options = options || {};
+  const _props = defu$1(options.props, Object.fromEntries(
+    Object.entries({ ...options }).filter(([k]) => !filterIsOgImageOption(k) && !ignoreKeys.includes(k))
+  ));
+  const props = {};
+  Object.entries(_props).forEach(([key, val]) => {
+    props[key.replace(RE_KEBAB_CASE, (g) => String(g[1]).toUpperCase())] = val;
+  });
+  const result = Object.fromEntries(
+    Object.entries({ ...options }).filter(([k]) => filterIsOgImageOption(k) || ignoreKeys.includes(k))
+  );
+  if (Object.keys(props).length > 0)
+    result.props = props;
+  return result;
+}
+const DANGEROUS_ATTRS = /* @__PURE__ */ new Set(["autofocus", "contenteditable", "tabindex", "accesskey"]);
+function sanitizeProps(props) {
+  const clean = {};
+  for (const key of Object.keys(props)) {
+    if (key.startsWith("on") || DANGEROUS_ATTRS.has(key.toLowerCase()))
+      continue;
+    clean[key] = props[key];
+  }
+  return clean;
+}
+
+const logger$2 = createConsola({
+  defaults: {
+    tag: "@nuxtjs/og-image"
+  }
+});
+
+const logger$1 = createConsola({
+  defaults: {
+    tag: "Nuxt OG Image"
+  }
+});
+
+function autoEjectCommunityTemplate(component, runtimeConfig, options) {
+  return;
+}
+
+function createFilter(options = {}) {
+  const include = options.include || [];
+  const exclude = options.exclude || [];
+  if (include.length === 0 && exclude.length === 0)
+    return () => true;
+  const excludeRegex = exclude.filter((r) => r instanceof RegExp);
+  const includeRegex = include.filter((r) => r instanceof RegExp);
+  const excludeStrings = exclude.filter((r) => typeof r === "string");
+  const includeStrings = include.filter((r) => typeof r === "string");
+  const excludeMatcher = excludeStrings.length > 0 ? toRouteMatcher(createRouter({
+    routes: Object.fromEntries(excludeStrings.map((r) => [r, true])),
+    strictTrailingSlash: false
+  })) : null;
+  const includeMatcher = includeStrings.length > 0 ? toRouteMatcher(createRouter({
+    routes: Object.fromEntries(includeStrings.map((r) => [r, true])),
+    strictTrailingSlash: false
+  })) : null;
+  const excludeExact = new Set(excludeStrings);
+  const includeExact = new Set(includeStrings);
+  return function(path) {
+    if (excludeRegex.some((r) => r.test(path)))
+      return false;
+    if (excludeExact.has(path))
+      return false;
+    if (excludeMatcher && excludeMatcher.matchAll(path).length > 0)
+      return false;
+    if (includeRegex.some((r) => r.test(path)))
+      return true;
+    if (includeExact.has(path))
+      return true;
+    if (includeMatcher && includeMatcher.matchAll(path).length > 0)
+      return true;
+    return include.length === 0;
+  };
+}
+
+function fetchIsland(e, component, props, timeout) {
+  const hashId = hash$1([component, props]).replaceAll("_", "-");
+  const signal = timeout ? AbortSignal.timeout(timeout) : void 0;
+  return e.$fetch(`/__nuxt_island/${component}_${hashId}.json`, {
+    params: {
+      props: JSON.stringify(props)
+    },
+    timeout,
+    signal
+  });
+}
+function createNitroRouteRuleMatcher$2() {
+  const { nitro, app } = useRuntimeConfig();
+  const _routeRulesMatcher = toRouteMatcher(
+    createRouter({
+      routes: Object.fromEntries(
+        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
+      )
+    })
+  );
+  return (path) => {
+    return defu$1({}, ..._routeRulesMatcher.matchAll(
+      withoutBase(withoutTrailingSlash(path.split("?")[0]), app.baseURL)
+    ).reverse());
+  };
+}
+
+const componentNames = [{"hash":"","pascalName":"BlogPostTakumi","kebabName":"blog-post-takumi","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"takumi","propNames":[]},{"hash":"","pascalName":"BrutalistSatori","kebabName":"brutalist-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"DocsTakumi","kebabName":"docs-takumi","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"takumi","propNames":[]},{"hash":"","pascalName":"FrameSatori","kebabName":"frame-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"NuxtSatori","kebabName":"nuxt-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"NuxtSeoSatori","kebabName":"nuxt-seo-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"NuxtSeoTakumi","kebabName":"nuxt-seo-takumi","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"takumi","propNames":[]},{"hash":"","pascalName":"PergelSatori","kebabName":"pergel-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"ProductCardTakumi","kebabName":"product-card-takumi","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"takumi","propNames":[]},{"hash":"","pascalName":"SaaSSatori","kebabName":"saa-ssatori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"SimpleBlogSatori","kebabName":"simple-blog-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"UnJsSatori","kebabName":"un-js-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]},{"hash":"","pascalName":"WithEmojiSatori","kebabName":"with-emoji-satori","path":"/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community","category":"community","renderer":"satori","propNames":[]}];
+
+const RENDERER_SUFFIXES = ["satori", "browser", "takumi"];
+const RE_RENDERER_SUFFIX_DOT = /\.?(satori|browser|takumi)$/i;
+const RE_RENDERER_SUFFIX_PASCAL = /(Satori|Browser|Takumi)$/;
+const RE_OG_IMAGE_PREFIX = /^OgImage/;
+function parseInputName(name) {
+  for (const suffix of RENDERER_SUFFIXES) {
+    if (name.endsWith(`.${suffix}`))
+      return { baseName: name.slice(0, -(suffix.length + 1)), renderer: suffix };
+  }
+  for (const suffix of RENDERER_SUFFIXES) {
+    const pascal = suffix.charAt(0).toUpperCase() + suffix.slice(1);
+    if (name.endsWith(pascal))
+      return { baseName: name.slice(0, -pascal.length), renderer: suffix };
+  }
+  return { baseName: name, renderer: null };
+}
+function stripRenderer(name) {
+  return name.replace(RE_RENDERER_SUFFIX_DOT, "").replace(RE_RENDERER_SUFFIX_PASCAL, "");
+}
+const OGIMAGE_PREFIXES = [
+  { prefix: "OgImageCommunity", overlapWord: "Community" },
+  { prefix: "OgImageTemplate", overlapWord: "Template" },
+  { prefix: "OgImage", overlapWord: "Image" }
+];
+function getComponentBaseNames(component) {
+  const names = [];
+  const stripped = stripRenderer(component.pascalName);
+  for (const { prefix, overlapWord } of OGIMAGE_PREFIXES) {
+    if (!stripped.startsWith(prefix))
+      continue;
+    const withoutPrefix = stripped.slice(prefix.length);
+    if (withoutPrefix) {
+      names.push(withoutPrefix);
+      if (withoutPrefix !== overlapWord)
+        names.push(overlapWord + withoutPrefix);
+    } else {
+      names.push(overlapWord);
+    }
+    break;
+  }
+  if (names.length === 0)
+    names.push(stripped);
+  return names;
+}
+function resolveComponent(name) {
+  const exactMatch = componentNames.find((c) => c.pascalName === name);
+  if (exactMatch)
+    return { component: exactMatch, renderer: exactMatch.renderer };
+  const { baseName, renderer } = parseInputName(name);
+  const strippedBaseName = baseName.replace(RE_OG_IMAGE_PREFIX, "");
+  const matches = componentNames.filter((c) => {
+    const baseNames = getComponentBaseNames(c);
+    return baseNames.some(
+      (cBase) => cBase === baseName || cBase === strippedBaseName || cBase === `OgImage${baseName}` || cBase === `OgImage${strippedBaseName}`
+    );
+  });
+  const filtered = renderer ? matches.filter((c) => c.renderer === renderer) : matches;
+  if (filtered.length === 0) {
+    if (renderer && matches.length > 0) {
+      const available = matches.map((c) => `${getComponentBaseNames(c)[0]}.${c.renderer}`).join(", ");
+      throw createError({
+        statusCode: 500,
+        message: `[Nuxt OG Image] Component "${name}" not found. Available variants: ${available}`
       });
-      resolve(parsed);
-      delete pendingPromises[id + hash];
+    }
+    throw createError({
+      statusCode: 500,
+      message: `[Nuxt OG Image] Component "${name}" not found. Create a component in components/OgImage/ with a renderer suffix (e.g., ${baseName}.satori.vue)`
     });
   }
-  return pendingPromises[id + hash];
-};
-const parseContent = async (id, content, opts = {}) => {
-  const nitroApp = useNitroApp();
-  const config = contentConfig();
-  const options = defu(
-    opts,
-    {
-      markdown: {
-        ...config.markdown,
-        highlight: config.highlight
-      },
-      csv: config.csv,
-      yaml: config.yaml,
-      transformers: transformers,
-      pathMeta: {
-        defaultLocale: config.defaultLocale,
-        locales: config.locales,
-        respectPathCase: config.respectPathCase
-      }
-    }
-  );
-  const file = { _id: id, body: typeof content === "string" ? content.replace(/\r\n|\r/g, "\n") : content };
-  await nitroApp.hooks.callHook("content:file:beforeParse", file);
-  const result = await transformContent(id, file.body, options);
-  await nitroApp.hooks.callHook("content:file:afterParse", result);
-  return result;
-};
-const createServerQueryFetch = (event) => (query) => {
-  return createPipelineFetcher(() => getIndexedContentsList(event, query))(query);
-};
-function serverQueryContent$1(event, query, ...pathParts) {
-  const { advanceQuery } = useRuntimeConfig().public.content.experimental;
-  const config = contentConfig();
-  const queryBuilder = advanceQuery ? createQuery(createServerQueryFetch(event), { initialParams: typeof query !== "string" ? query || {} : {}, legacy: false }) : createQuery(createServerQueryFetch(event), { initialParams: typeof query !== "string" ? query || {} : {}, legacy: true });
-  let path;
-  if (typeof query === "string") {
-    path = withLeadingSlash(joinURL(query, ...pathParts));
+  const appComponents = filtered.filter((c) => c.category !== "community");
+  if (appComponents.length > 0) {
+    const resolved2 = appComponents[0];
+    return { component: resolved2, renderer: resolved2.renderer };
   }
-  const originalParamsFn = queryBuilder.params;
-  queryBuilder.params = () => {
-    const params = originalParamsFn();
-    if (path) {
-      params.where = params.where || [];
-      if (params.first && (params.where || []).length === 0) {
-        params.where.push({ _path: withoutTrailingSlash(path) });
-      } else {
-        params.where.push({ _path: new RegExp(`^${path.replace(/[-[\]{}()*+.,^$\s/]/g, "\\$&")}`) });
-      }
-    }
-    if (!params.sort?.length) {
-      params.sort = [{ _stem: 1, $numeric: true }];
-    }
+  const resolved = filtered[0];
+  return { component: resolved, renderer: resolved.renderer };
+}
+function normaliseOptions(_options) {
+  const options = { ..._options };
+  if (options.component === "PageScreenshot") {
+    return {
+      options,
+      renderer: options.renderer || "browser",
+      component: void 0
+    };
+  }
+  if (!componentNames?.length) {
+    throw createError({
+      statusCode: 500,
+      message: `[Nuxt OG Image] No OG Image components found. Create a component in components/OgImage/ with a renderer suffix (e.g., Default.satori.vue)`
+    });
+  }
+  let resolved;
+  let renderer;
+  if (options.component) {
+    const result = resolveComponent(options.component);
+    resolved = result.component;
+    renderer = result.renderer;
+  } else {
+    resolved = componentNames.find((c) => c.category !== "community") || componentNames[0];
+    renderer = resolved.renderer;
+  }
+  options.component = resolved.pascalName;
+  if (resolved.category === "community") {
     {
-      params.where = params.where || [];
-      if (!params.where.find((item) => typeof item._draft !== "undefined")) {
-        params.where.push({ _draft: { $ne: true } });
+      const appComponent = componentNames.find((c) => c.category !== "community");
+      if (appComponent) {
+        resolved = appComponent;
+        renderer = resolved.renderer;
+        options.component = resolved.pascalName;
+      } else {
+        throw createError({
+          statusCode: 500,
+          message: `Community template "${resolved.pascalName}" must be ejected before production use. Run: npx nuxt-og-image eject ${resolved.pascalName}
+  No app components found \u2014 create one in components/OgImage/`
+        });
       }
     }
-    if (config.locales.length) {
-      const queryLocale = params.where?.find((w) => w._locale)?._locale;
-      if (!queryLocale) {
-        params.where = params.where || [];
-        params.where.push({ _locale: config.defaultLocale });
-      }
-    }
-    return params;
+  }
+  return {
+    options,
+    renderer,
+    component: resolved
   };
-  return queryBuilder;
 }
 
-const storage = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  cacheParsedStorage: cacheParsedStorage,
-  cacheStorage: cacheStorage,
-  chunksFromArray: chunksFromArray,
-  createServerQueryFetch: createServerQueryFetch,
-  getContent: getContent,
-  getContentsIds: getContentsIds,
-  getContentsList: getContentsList,
-  parseContent: parseContent,
-  serverQueryContent: serverQueryContent$1,
-  sourceStorage: sourceStorage
-}, Symbol.toStringTag, { value: 'Module' }));
+const RE_TOKEN = /[^\w-]/g;
+function sanitizeName(name) {
+  return name.replace(RE_TOKEN, "_");
+}
+function createTimings() {
+  const totals = /* @__PURE__ */ new Map();
+  const spans = /* @__PURE__ */ new Map();
+  const record = (name, ms) => {
+    const key = sanitizeName(name);
+    const existing = totals.get(key);
+    if (existing) {
+      existing.dur += ms;
+      existing.count += 1;
+    } else {
+      totals.set(key, { dur: ms, count: 1 });
+    }
+  };
+  const start = (name) => {
+    const key = sanitizeName(name);
+    const t0 = performance.now();
+    const span = spans.get(key) ?? { open: 0, windowStart: 0, wall: 0 };
+    if (span.open === 0)
+      span.windowStart = t0;
+    span.open += 1;
+    spans.set(key, span);
+    let ended = false;
+    return () => {
+      if (ended)
+        return 0;
+      ended = true;
+      const t1 = performance.now();
+      const ms = t1 - t0;
+      span.open -= 1;
+      if (span.open === 0) {
+        span.wall += t1 - span.windowStart;
+        const existing = totals.get(key);
+        if (existing) {
+          existing.dur = span.wall;
+          existing.count += 1;
+        } else {
+          totals.set(key, { dur: span.wall, count: 1 });
+        }
+      } else {
+        const existing = totals.get(key);
+        if (existing)
+          existing.count += 1;
+        else
+          totals.set(key, { dur: 0, count: 1 });
+      }
+      return ms;
+    };
+  };
+  const measure = async (name, fn) => {
+    const end = start(name);
+    try {
+      return await fn();
+    } finally {
+      end();
+    }
+  };
+  const entries = () => Array.from(totals.entries()).map(([name, v]) => ({
+    name,
+    dur: Math.round(v.dur * 1e3) / 1e3,
+    count: v.count > 1 ? v.count : void 0
+  }));
+  const header = () => entries().map(({ name, dur, count }) => {
+    const desc = count ? `;desc="n=${count}"` : "";
+    return `${name}${desc};dur=${dur}`;
+  }).join(", ");
+  return { start, record, measure, entries, header };
+}
+const TIMING_CTX_KEY = "_ogImageTimings";
 
-const serverQueryContent = serverQueryContent$1;
+function withTimeout(promise, ms, label) {
+  let timer;
+  return Promise.race([
+    Promise.resolve(promise),
+    new Promise((_, reject) => {
+      timer = setTimeout(
+        () => reject(new Error(`${label} timed out after ${ms}ms`)),
+        ms
+      );
+    })
+  ]).finally(() => clearTimeout(timer));
+}
 
-const _vzFCBl = defineEventHandler(async (e) => {
-  const contentList = await serverQueryContent(e).find();
-  return contentList.map((c) => c.sitemap).filter(Boolean);
+function useOgImageRuntimeConfig(e) {
+  const c = useRuntimeConfig(e);
+  const moduleCfg = c["nuxt-og-image"] || {};
+  const cloudflareEnv = e?.context.cloudflare?.env || e?.context?._platform?.cloudflare?.env;
+  const overrideSecret = c.ogImage?.secret || cloudflareEnv?.NUXT_OG_IMAGE_SECRET;
+  const security = overrideSecret ? { ...moduleCfg.security || {}, secret: overrideSecret } : moduleCfg.security;
+  return {
+    defaults: {},
+    ...moduleCfg,
+    security,
+    app: {
+      baseURL: c.app.baseURL
+    }
+  };
+}
+
+const satoriRendererInstance = { instance: void 0 };
+const browserRendererInstance = { instance: void 0 };
+const takumiRendererInstance = { instance: void 0 };
+async function getSatoriRenderer() {
+  satoriRendererInstance.instance = satoriRendererInstance.instance || await import('../_/empty.mjs').then((m) => m.default);
+  return satoriRendererInstance.instance;
+}
+async function getBrowserRenderer() {
+  browserRendererInstance.instance = browserRendererInstance.instance || await import('../_/empty.mjs').then((m) => m.default);
+  return browserRendererInstance.instance;
+}
+async function getTakumiRenderer() {
+  takumiRendererInstance.instance = takumiRendererInstance.instance || await import('../_/renderer.mjs').then((m) => m.default);
+  return takumiRendererInstance.instance;
+}
+
+const RE_HASH_MODE = /^o_([a-z0-9]+)$/i;
+const RE_SIGNATURE_SUFFIX = /,s_([^,]+)$/;
+function resolvePathCacheKey(e, path, resolvedOptions) {
+  getSiteConfig(e, {
+    resolveRefs: true
+  });
+  const basePath = withoutTrailingSlash(withoutLeadingSlash(normalizeKey(path)));
+  const hashParts = [
+    basePath,
+    "" 
+  ];
+  if (resolvedOptions)
+    hashParts.push(hash$1(resolvedOptions));
+  return [
+    !basePath || basePath === "/" ? "index" : basePath,
+    hash$1(hashParts)
+  ].join(":");
+}
+async function resolveContext(e) {
+  const runtimeConfig = useOgImageRuntimeConfig(e);
+  const resolvePathWithBase = createSitePathResolver(e, {
+    absolute: false,
+    withBase: true
+  });
+  const path = resolvePathWithBase(parseURL(e.path).pathname);
+  let extension = path.split(".").pop();
+  if (!extension || !path.includes(".") || extension.includes("/") || !["png", "jpeg", "jpg", "webp", "svg", "html", "json"].includes(extension)) {
+    extension = "png";
+  }
+  const encodedSegment = extractEncodedSegment(path, extension);
+  const secret = runtimeConfig.security?.secret;
+  let paramsSegment = encodedSegment;
+  if (secret && RE_SIGNATURE_SUFFIX.test(encodedSegment)) {
+    paramsSegment = encodedSegment.replace(RE_SIGNATURE_SUFFIX, "");
+  }
+  const hashMatch = paramsSegment.match(RE_HASH_MODE);
+  let urlOptions = {};
+  if (hashMatch) {
+    const optionsHash = hashMatch[1];
+    if (prerenderOptionsCache) {
+      const cached = await prerenderOptionsCache.getItem(`hash:${optionsHash}`);
+      if (cached && typeof cached === "object") {
+        urlOptions = cached;
+      } else {
+        return createError({
+          statusCode: 404,
+          statusMessage: `[Nuxt OG Image] Options not found for hash: ${optionsHash}. This can happen if the page hasn't been prerendered yet.`
+        });
+      }
+    } else {
+      return createError({
+        statusCode: 400,
+        statusMessage: `[Nuxt OG Image] Hash-based URLs (o_${optionsHash}) are only supported during prerendering. Use encoded params or query params for runtime.`
+      });
+    }
+  } else {
+    urlOptions = decodeOgImageParams(paramsSegment);
+  }
+  runtimeConfig.security?.maxQueryParamSize;
+  let queryParams = {};
+  {
+    const query = getQuery$1(e);
+    for (const k in query) {
+      const v = String(query[k]);
+      if (!v)
+        continue;
+      if (v.startsWith("{")) {
+        try {
+          queryParams[k] = JSON.parse(v);
+        } catch {
+        }
+      } else {
+        queryParams[k] = v;
+      }
+    }
+    delete queryParams.html;
+    queryParams = separateProps(queryParams);
+  }
+  const basePath = withoutTrailingSlash(urlOptions._path || "/");
+  const componentHash = urlOptions._componentHash || "";
+  delete urlOptions._path;
+  delete urlOptions._hash;
+  delete urlOptions._componentHash;
+  if (runtimeConfig.security?.strict) {
+    delete urlOptions.html;
+  }
+  const basePathWithQuery = queryParams._query && typeof queryParams._query === "object" ? withQuery(basePath, queryParams._query) : basePath;
+  const isDebugJsonPayload = extension === "json" && (runtimeConfig.debug);
+  const routeRuleMatcher = createNitroRouteRuleMatcher$2();
+  const routeRules = routeRuleMatcher(basePath);
+  const ogImageRouteRules = separateProps(routeRules.ogImage);
+  const options = defu$1(queryParams, urlOptions, ogImageRouteRules, runtimeConfig.defaults);
+  const maxDim = runtimeConfig.security?.maxDimension || 2048;
+  if (options.width != null) {
+    const w = Number(options.width);
+    options.width = Number.isFinite(w) ? Math.min(Math.max(1, w), maxDim) : void 0;
+  }
+  if (options.height != null) {
+    const h = Number(options.height);
+    options.height = Number.isFinite(h) ? Math.min(Math.max(1, h), maxDim) : void 0;
+  }
+  if (options.props && typeof options.props === "object")
+    options.props = sanitizeProps(options.props);
+  if (!options) {
+    return createError({
+      statusCode: 404,
+      statusMessage: "[Nuxt OG Image] OG Image not found."
+    });
+  }
+  const normalised = normaliseOptions(options);
+  if (normalised.component && normalised.options.props && typeof normalised.options.props === "object") {
+    const builtinProps = /* @__PURE__ */ new Set(["colorMode", "timestamp"]);
+    const allowedProps = normalised.component.propNames || [];
+    const allowedSet = new Set(allowedProps);
+    const raw = normalised.options.props;
+    const filtered = {};
+    for (const key2 of Object.keys(raw)) {
+      if (allowedSet.has(key2) || builtinProps.has(key2))
+        filtered[key2] = raw[key2];
+    }
+    normalised.options.props = filtered;
+  }
+  if (normalised.component?.category === "community")
+    autoEjectCommunityTemplate(normalised.component, runtimeConfig, { requestPath: e.path });
+  const rendererType = normalised.renderer;
+  const baseCacheKey = normalised.options.cacheKey || (hashMatch ? `hash:${hashMatch[1]}` : resolvePathCacheKey(e, basePathWithQuery, normalised.options));
+  const key = componentHash ? `${baseCacheKey}:${componentHash}` : baseCacheKey;
+  let renderer;
+  switch (rendererType) {
+    case "satori":
+      renderer = await getSatoriRenderer();
+      break;
+    case "browser":
+      renderer = await getBrowserRenderer();
+      break;
+    case "takumi":
+      renderer = await getTakumiRenderer();
+      break;
+  }
+  if (!renderer || renderer.__mock__) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: `[Nuxt OG Image] Renderer "${rendererType}" is not available. Component "${normalised.component?.pascalName}" requires the ${rendererType} renderer but it's not bundled for this preset.`
+    });
+  }
+  const timings = e.context[TIMING_CTX_KEY] || createTimings();
+  e.context[TIMING_CTX_KEY] = timings;
+  const ctx = {
+    e,
+    key,
+    renderer,
+    isDevToolsContextRequest: isDebugJsonPayload,
+    runtimeConfig,
+    publicStoragePath: runtimeConfig.publicStoragePath,
+    extension,
+    basePath,
+    options: normalised.options,
+    timings,
+    // @ts-expect-error hookable v6
+    _nitro: useNitroApp()
+  };
+  const hookTimeout = runtimeConfig.security?.renderTimeout ?? 15e3;
+  await withTimeout(
+    ctx._nitro.hooks.callHook("nuxt-og-image:context", ctx),
+    hookTimeout,
+    "nuxt-og-image:context hook"
+  );
+  return ctx;
+}
+
+const PAYLOAD_REGEX = /<script.+id="nuxt-og-image-options"[^>]*>(.+?)<\/script>/;
+const RE_SCRIPT_OPTIONS = /<script id="nuxt-og-image-options" type="application\/json">[\s\S]*?<\/script>/;
+const RE_SCRIPT_OVERRIDES = /<script id="nuxt-og-image-overrides" type="application\/json">[\s\S]*?<\/script>/;
+function getPayloadFromHtml(html) {
+  const match = String(html).match(PAYLOAD_REGEX);
+  return match ? String(match[1]) : null;
+}
+const _GCKn7thj1_r2tsnOceKU5iQGVL1FQOhOg29LGNrwLU = defineNitroPlugin(async (nitro) => {
+  const routeRuleMatcher = createNitroRouteRuleMatcher$2();
+  nitro.hooks.hook("render:html", async (html, ctx) => {
+    const { head, bodyAppend } = html;
+    const path = parseURL(ctx.event.path).pathname;
+    if (isInternalRoute(path))
+      return;
+    const routeRules = routeRuleMatcher(path);
+    if (routeRules.ogImage === false)
+      return;
+    const _payload = getPayloadFromHtml([head.join("\n"), bodyAppend.join("\n")].join("\n"));
+    if (!_payload)
+      return;
+    const parsed = parse(_payload);
+    const payloads = parsed.map((opt) => [opt.key || "og", opt]);
+    const resolvePathWithBase = createSitePathResolver(ctx.event, {
+      absolute: false,
+      withBase: true
+    });
+    const key = resolvePathCacheKey(ctx.event, resolvePathWithBase(path));
+    await prerenderOptionsCache.setItem(key, payloads);
+    for (const [_ogKey, opt] of payloads) {
+      if (opt._hash) {
+        await prerenderOptionsCache.setItem(`hash:${opt._hash}`, opt);
+      }
+    }
+    const prerenderPaths = ctx.event.context._ogImagePrerenderPaths;
+    if (prerenderPaths) {
+      for (const prerenderPath of prerenderPaths.values()) {
+        appendResponseHeader(ctx.event, "x-nitro-prerender", prerenderPath);
+      }
+    }
+    const index = html.bodyAppend.findIndex((script) => script.includes('id="nuxt-og-image-options"'));
+    if (index !== -1) {
+      html.bodyAppend[index] = String(html.bodyAppend[index]).replace(RE_SCRIPT_OPTIONS, "");
+      html.bodyAppend[index] = html.bodyAppend[index].replace(RE_SCRIPT_OVERRIDES, "");
+    }
+  });
 });
+
+const plugins = [
+  _8GGUsxU7kT0YDbcYUbeIXrVyOHObVvSMT9jQN7lPa0E,
+_HZvGkPKgmMTpd2Mk3K1gmrmAzEThpRTSDuknAuiJno,
+_s8AZRtyyuDCvawDQ_vE2rMbngJ92j3C1PGF89OP51dg,
+_GCKn7thj1_r2tsnOceKU5iQGVL1FQOhOg29LGNrwLU
+];
+
+const assets = {};
+
+function readAsset (id) {
+  const serverDir = dirname(fileURLToPath(globalThis._importMeta_.url));
+  return promises.readFile(resolve$1(serverDir, assets[id].path))
+}
+
+const publicAssetBases = {"/_nuxt/builds/meta/":{"maxAge":31536000},"/_nuxt/builds/":{"maxAge":1},"/_og-static-fonts/":{"maxAge":31536000},"/_nuxt/":{"maxAge":31536000}};
+
+function isPublicAssetURL(id = '') {
+  if (assets[id]) {
+    return true
+  }
+  for (const base in publicAssetBases) {
+    if (id.startsWith(base)) { return true }
+  }
+  return false
+}
+
+function getAsset (id) {
+  return assets[id]
+}
+
+const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
+const EncodingMap = { gzip: ".gz", br: ".br" };
+const _kQxHaP = eventHandler((event) => {
+  if (event.method && !METHODS.has(event.method)) {
+    return;
+  }
+  let id = decodePath(
+    withLeadingSlash(withoutTrailingSlash(parseURL(event.path).pathname))
+  );
+  let asset;
+  const encodingHeader = String(
+    getRequestHeader(event, "accept-encoding") || ""
+  );
+  const encodings = [
+    ...encodingHeader.split(",").map((e) => EncodingMap[e.trim()]).filter(Boolean).sort(),
+    ""
+  ];
+  for (const encoding of encodings) {
+    for (const _id of [id + encoding, joinURL(id, "index.html" + encoding)]) {
+      const _asset = getAsset(_id);
+      if (_asset) {
+        asset = _asset;
+        id = _id;
+        break;
+      }
+    }
+  }
+  if (!asset) {
+    if (isPublicAssetURL(id)) {
+      removeResponseHeader(event, "Cache-Control");
+      throw createError({ statusCode: 404 });
+    }
+    return;
+  }
+  if (asset.encoding !== void 0) {
+    appendResponseHeader(event, "Vary", "Accept-Encoding");
+  }
+  const ifNotMatch = getRequestHeader(event, "if-none-match") === asset.etag;
+  if (ifNotMatch) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  const ifModifiedSinceH = getRequestHeader(event, "if-modified-since");
+  const mtimeDate = new Date(asset.mtime);
+  if (ifModifiedSinceH && asset.mtime && new Date(ifModifiedSinceH) >= mtimeDate) {
+    setResponseStatus(event, 304, "Not Modified");
+    return "";
+  }
+  if (asset.type && !getResponseHeader(event, "Content-Type")) {
+    setResponseHeader(event, "Content-Type", asset.type);
+  }
+  if (asset.etag && !getResponseHeader(event, "ETag")) {
+    setResponseHeader(event, "ETag", asset.etag);
+  }
+  if (asset.mtime && !getResponseHeader(event, "Last-Modified")) {
+    setResponseHeader(event, "Last-Modified", mtimeDate.toUTCString());
+  }
+  if (asset.encoding && !getResponseHeader(event, "Content-Encoding")) {
+    setResponseHeader(event, "Content-Encoding", asset.encoding);
+  }
+  if (asset.size > 0 && !getResponseHeader(event, "Content-Length")) {
+    setResponseHeader(event, "Content-Length", asset.size);
+  }
+  return readAsset(id);
+});
+
+const _SxA8c9 = defineEventHandler(() => {});
+
+const PORT_SUFFIX_RE = /:\d+$/;
+const _APFHMZ = eventHandler(async (e) => {
+  if (e.context._initedSiteConfig)
+    return;
+  const runtimeConfig = useRuntimeConfig(e);
+  const config = runtimeConfig["nuxt-site-config"];
+  const nitroApp = useNitroApp();
+  const siteConfig = e.context.siteConfig || createSiteConfigStack({
+    debug: config.debug
+  });
+  const nitroOrigin = getNitroOrigin(e);
+  e.context.siteConfigNitroOrigin = nitroOrigin;
+  siteConfig.push({
+    _context: "runtimeEnv",
+    _priority: SiteConfigPriority.runtime,
+    ...runtimeConfig.site || {},
+    ...runtimeConfig.public.site || {},
+    ...envSiteConfig(globalThis._importMeta_.env || {})
+    // just in-case, shouldn't be needed
+  });
+  const buildStack = config.stack || [];
+  buildStack.forEach((c) => siteConfig.push(c));
+  if (e.context._nitro.routeRules.site) {
+    siteConfig.push({
+      _context: "route-rules",
+      ...e.context._nitro.routeRules.site
+    });
+  }
+  if (config.multiTenancy) {
+    const host = parseURL(nitroOrigin).host?.replace(PORT_SUFFIX_RE, "") || "";
+    const tenant = config.multiTenancy?.find((t) => t.hosts.includes(host));
+    if (tenant) {
+      siteConfig.push({
+        _context: `multi-tenancy:${host}`,
+        _priority: SiteConfigPriority.runtime,
+        ...tenant.config
+      });
+    }
+  }
+  const ctx = { siteConfig, event: e };
+  await nitroApp.hooks.callHook("site-config:init", ctx);
+  e.context.siteConfig = ctx.siteConfig;
+  e.context._initedSiteConfig = true;
+});
+
+const checksums = {
+  "content": "v3.5.0--69efc4vhCgpAaNW_cNciUJGCzQZuTeMK3Wt6rkmZ-WA"
+};
+const checksumsStructure = {
+  "content": "bgIYhpjRuV8zbHJE_CfelwKpJ_Td6YuGJwixiek8lmI"
+};
+const tables = {
+  "content": "_content_content",
+  "info": "_content_info"
+};
+const contentManifest = {
+  "content": {
+    "type": "page",
+    "fields": {
+      "id": "string",
+      "title": "string",
+      "body": "json",
+      "description": "string",
+      "extension": "string",
+      "meta": "json",
+      "navigation": "json",
+      "path": "string",
+      "seo": "json",
+      "stem": "string"
+    }
+  },
+  "info": {
+    "type": "data",
+    "fields": {}
+  }
+};
+
+const buildGroup = (group, type) => {
+  const conditions = group._conditions;
+  return conditions.length > 0 ? `(${conditions.join(` ${type} `)})` : "";
+};
+const collectionQueryGroup = (collection) => {
+  const conditions = [];
+  const query = {
+    // @ts-expect-error -- internal
+    _conditions: conditions,
+    where(field, operator, value) {
+      let condition;
+      switch (operator.toUpperCase()) {
+        case "IN":
+        case "NOT IN":
+          if (Array.isArray(value)) {
+            const values = value.map((val) => singleQuote(val)).join(", ");
+            condition = `"${String(field)}" ${operator.toUpperCase()} (${values})`;
+          } else {
+            throw new TypeError(`Value for ${operator} must be an array`);
+          }
+          break;
+        case "BETWEEN":
+        case "NOT BETWEEN":
+          if (Array.isArray(value) && value.length === 2) {
+            condition = `"${String(field)}" ${operator.toUpperCase()} ${singleQuote(value[0])} AND ${singleQuote(value[1])}`;
+          } else {
+            throw new Error(`Value for ${operator} must be an array with two elements`);
+          }
+          break;
+        case "IS NULL":
+        case "IS NOT NULL":
+          condition = `"${String(field)}" ${operator.toUpperCase()}`;
+          break;
+        case "LIKE":
+        case "NOT LIKE":
+          condition = `"${String(field)}" ${operator.toUpperCase()} ${singleQuote(value)}`;
+          break;
+        default:
+          condition = `"${String(field)}" ${operator} ${singleQuote(typeof value === "boolean" ? Number(value) : value)}`;
+      }
+      conditions.push(`${condition}`);
+      return query;
+    },
+    andWhere(groupFactory) {
+      const group = groupFactory(collectionQueryGroup());
+      conditions.push(buildGroup(group, "AND"));
+      return query;
+    },
+    orWhere(groupFactory) {
+      const group = groupFactory(collectionQueryGroup());
+      conditions.push(buildGroup(group, "OR"));
+      return query;
+    }
+  };
+  return query;
+};
+const collectionQueryBuilder = (collection, fetch) => {
+  const params = {
+    conditions: [],
+    selectedFields: [],
+    offset: 0,
+    limit: 0,
+    orderBy: [],
+    // Count query
+    count: {
+      field: "",
+      distinct: false
+    }
+  };
+  const query = {
+    // @ts-expect-error -- internal
+    __params: params,
+    andWhere(groupFactory) {
+      const group = groupFactory(collectionQueryGroup());
+      params.conditions.push(buildGroup(group, "AND"));
+      return query;
+    },
+    orWhere(groupFactory) {
+      const group = groupFactory(collectionQueryGroup());
+      params.conditions.push(buildGroup(group, "OR"));
+      return query;
+    },
+    path(path) {
+      return query.where("path", "=", withoutTrailingSlash(path));
+    },
+    skip(skip) {
+      params.offset = skip;
+      return query;
+    },
+    where(field, operator, value) {
+      query.andWhere((group) => group.where(String(field), operator, value));
+      return query;
+    },
+    limit(limit) {
+      params.limit = limit;
+      return query;
+    },
+    select(...fields) {
+      if (fields.length) {
+        params.selectedFields.push(...fields);
+      }
+      return query;
+    },
+    order(field, direction) {
+      params.orderBy.push(`"${String(field)}" ${direction}`);
+      return query;
+    },
+    async all() {
+      return fetch(collection, buildQuery()).then((res) => res || []);
+    },
+    async first() {
+      return fetch(collection, buildQuery({ limit: 1 })).then((res) => res[0] || null);
+    },
+    async count(field = "*", distinct = false) {
+      return fetch(collection, buildQuery({
+        count: { field: String(field), distinct }
+      })).then((m) => m[0].count);
+    }
+  };
+  function buildQuery(opts = {}) {
+    let query2 = "SELECT ";
+    if (opts?.count) {
+      query2 += `COUNT(${opts.count.distinct ? "DISTINCT " : ""}${opts.count.field}) as count`;
+    } else {
+      const fields = Array.from(new Set(params.selectedFields));
+      query2 += fields.length > 0 ? fields.map((f) => `"${String(f)}"`).join(", ") : "*";
+    }
+    query2 += ` FROM ${tables[String(collection)]}`;
+    if (params.conditions.length > 0) {
+      query2 += ` WHERE ${params.conditions.join(" AND ")}`;
+    }
+    if (params.orderBy.length > 0) {
+      query2 += ` ORDER BY ${params.orderBy.join(", ")}`;
+    } else {
+      query2 += ` ORDER BY stem ASC`;
+    }
+    const limit = opts?.limit || params.limit;
+    if (limit > 0) {
+      if (params.offset > 0) {
+        query2 += ` LIMIT ${limit} OFFSET ${params.offset}`;
+      } else {
+        query2 += ` LIMIT ${limit}`;
+      }
+    }
+    return query2;
+  }
+  return query;
+};
+function singleQuote(value) {
+  return `'${String(value).replace(/'/g, "''")}'`;
+}
+
+async function fetchContent(event, collection, path, options) {
+  const headers = event ? getRequestHeaders(event) : {};
+  headers["accept-encoding"] = void 0;
+  const url = `/__nuxt_content/${collection}/${path}`;
+  const fetchOptions = {
+    ...options,
+    headers: {
+      ...headers,
+      ...options.headers
+    },
+    query: { v: checksums[String(collection)], t: void 0 }
+  };
+  return event ? await event.$fetch(url, fetchOptions) : await $fetch(url, fetchOptions);
+}
+async function fetchDatabase(event, collection) {
+  return fetchContent(event, collection, "sql_dump.txt", {
+    responseType: "text",
+    headers: {
+      "content-type": "text/plain"
+    }
+  });
+}
+async function fetchQuery(event, collection, sql) {
+  return fetchContent(event, collection, "query", {
+    headers: {
+      "content-type": "application/json"
+    },
+    method: "POST",
+    body: {
+      sql
+    }
+  });
+}
+
+const queryCollection = (event, collection) => {
+  return collectionQueryBuilder(collection, (collection2, sql) => fetchQuery(event, collection2, sql));
+};
+
+const filters = new Map();
+
+const onUrlFns = new Map();
+
+const _pQl8oA = defineEventHandler(async (e) => {
+  const collections = [];
+  for (const collection in contentManifest) {
+    if (contentManifest[collection].fields.sitemap)
+      collections.push(collection);
+  }
+  const contentList = [];
+  for (const collection of collections) {
+    const needsAllFields = filters?.has(collection) || onUrlFns?.has(collection);
+    const query = queryCollection(e, collection).where("path", "IS NOT NULL").where("sitemap", "IS NOT NULL");
+    if (!needsAllFields)
+      query.select("path", "sitemap");
+    contentList.push(
+      query.all().then((results2) => {
+        const filter = filters?.get(collection);
+        return { collection, entries: filter ? results2.filter(filter) : results2 };
+      })
+    );
+  }
+  const results = await Promise.all(contentList);
+  return results.flatMap(({ collection, entries }) => {
+    const onUrl = onUrlFns?.get(collection);
+    return entries.filter((c) => c.sitemap !== false && c.path && !c.path.endsWith(".navigation")).map((c) => {
+      const url = {
+        loc: c.path,
+        ...typeof c.sitemap === "object" ? c.sitemap : {}
+      };
+      onUrl?.(url, c, collection);
+      return url;
+    });
+  }).filter(Boolean);
+});
+
+function getSiteIndexable(e) {
+  const { env, indexable } = getSiteConfig(e);
+  if (typeof indexable !== "undefined")
+    return String(indexable) === "true";
+  return env === "production";
+}
+
+const staticConfig = {"isI18nMapped":false,"sitemapName":"sitemap.xml","isMultiSitemap":false,"excludeAppSources":[],"cacheMaxAgeSeconds":600,"autoLastmod":false,"defaultSitemapsChunkSize":1000,"minify":false,"sortEntries":true,"discoverImages":true,"discoverVideos":true,"sitemapsPathPrefix":"/__sitemap__/","isNuxtContentDocumentDriven":false,"xsl":"/__sitemap__/style.xsl","xslTips":true,"xslColumns":[{"label":"URL","width":"50%"},{"label":"Images","width":"25%","select":"count(image:image)"},{"label":"Last Updated","width":"25%","select":"concat(substring(sitemap:lastmod,0,11),concat(' ', substring(sitemap:lastmod,12,5)),concat(' ', substring(sitemap:lastmod,20,6)))"}],"credits":true,"version":"8.0.15","sitemaps":{"sitemap.xml":{"sitemapName":"sitemap.xml","route":"sitemap.xml","defaults":{},"include":[],"exclude":["/_**","/_nuxt/**","/__nuxt_content/**"],"includeAppSources":true}}};
+
+const logger = createConsola({
+  defaults: {
+    tag: "@nuxt/sitemap"
+  }
+});
+const merger = createDefu((obj, key, value) => {
+  if (Array.isArray(obj[key]) && Array.isArray(value))
+    obj[key] = Array.from(/* @__PURE__ */ new Set([...obj[key], ...value]));
+  return obj[key];
+});
+function mergeOnKey(arr, key) {
+  const seen = /* @__PURE__ */ new Map();
+  let resultLength = 0;
+  const result = Array.from({ length: arr.length });
+  for (const item of arr) {
+    const k = item[key];
+    if (seen.has(k)) {
+      const existingIndex = seen.get(k);
+      result[existingIndex] = merger(item, result[existingIndex]);
+    } else {
+      seen.set(k, resultLength);
+      result[resultLength++] = item;
+    }
+  }
+  result.length = resultLength;
+  return result;
+}
+function splitForLocales(path, locales) {
+  const prefix = withLeadingSlash(path).split("/")[1];
+  if (prefix && locales.includes(prefix))
+    return [prefix, path.replace(`/${prefix}`, "")];
+  return [null, path];
+}
+const StringifiedRegExpPattern = /\/(.*?)\/([gimsuy]*)$/;
+function normalizeRuntimeFilters(input) {
+  return (input || []).map((rule) => {
+    if (rule instanceof RegExp || typeof rule === "string")
+      return rule;
+    const match = rule.regex.match(StringifiedRegExpPattern);
+    if (match)
+      return new RegExp(match[1], match[2]);
+    return false;
+  }).filter(Boolean);
+}
+function createPathFilter(options = {}, baseURL) {
+  const urlFilter = createFilter({
+    include: normalizeRuntimeFilters(options.include),
+    exclude: normalizeRuntimeFilters(options.exclude)
+  });
+  const hasBase = baseURL !== "/";
+  return (loc) => {
+    let path = loc;
+    try {
+      path = parseURL(loc).pathname;
+    } catch {
+      return false;
+    }
+    if (hasBase)
+      path = withoutBase(path, baseURL);
+    return urlFilter(path);
+  };
+}
+function findPageMapping(pathWithoutPrefix, pages) {
+  const stripped = pathWithoutPrefix[0] === "/" ? pathWithoutPrefix.slice(1) : pathWithoutPrefix;
+  const pageKey = stripped.endsWith("/index") ? stripped.slice(0, -6) || "index" : stripped || "index";
+  if (pages[pageKey])
+    return { mappings: pages[pageKey], paramSegments: [] };
+  const sortedKeys = Object.keys(pages).sort((a, b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    if (pageKey.startsWith(`${key}/`)) {
+      const paramPath = pageKey.slice(key.length + 1);
+      return { mappings: pages[key], paramSegments: paramPath.split("/") };
+    }
+  }
+  return null;
+}
+function applyDynamicParams(customPath, paramSegments) {
+  if (!paramSegments.length)
+    return customPath;
+  let i = 0;
+  return customPath.replace(/\[[^\]]+\]/g, () => paramSegments[i++] || "");
+}
+
+function xmlEscape(str) {
+  return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+}
+function useSitemapRuntimeConfig(e) {
+  const clone = JSON.parse(JSON.stringify(staticConfig));
+  for (const k in clone.sitemaps) {
+    const sitemap = clone.sitemaps[k];
+    sitemap.include = normalizeRuntimeFilters(sitemap.include);
+    sitemap.exclude = normalizeRuntimeFilters(sitemap.exclude);
+    clone.sitemaps[k] = sitemap;
+  }
+  Object.assign(clone, useRuntimeConfig(e).sitemap);
+  return Object.freeze(clone);
+}
 
 const _to1iB6 = defineEventHandler(async (e) => {
   const fixPath = createSitePathResolver(e, { absolute: false, withBase: true });
@@ -6038,6 +5515,167 @@ async function buildSitemapUrls(sitemap, resolvers, runtimeConfig, nitro) {
   return { urls, failedSources: resolved.failedSources };
 }
 
+function withoutQuery$1(path) {
+  return String(path.split("?")[0]);
+}
+function createNitroRouteRuleMatcher$1(e) {
+  const { nitro, app } = useRuntimeConfig(e);
+  const _routeRulesMatcher = toRouteMatcher(
+    createRouter({
+      routes: Object.fromEntries(
+        Object.entries(nitro?.routeRules || {}).map(([path, rules]) => [withoutTrailingSlash(path), rules])
+      )
+    })
+  );
+  return (path) => {
+    return defu$1({}, ..._routeRulesMatcher.matchAll(
+      withoutBase(withoutTrailingSlash(withoutQuery$1(path)), app.baseURL)
+    ).reverse());
+  };
+}
+
+function getSiteRobotConfig(e) {
+  const query = getQuery$1(e);
+  const hints = [];
+  const { groups, debug } = useRuntimeConfigNuxtRobots(e);
+  let indexable = getSiteIndexable(e);
+  const queryIndexableEnabled = String(query.mockProductionEnv) === "true" || query.mockProductionEnv === "";
+  if (debug || false) {
+    const { _context } = getSiteConfig(e, { debug: debug || false });
+    if (queryIndexableEnabled) {
+      indexable = true;
+      hints.push("You are mocking a production enviroment with ?mockProductionEnv query.");
+    } else if (!indexable && _context.indexable === "nuxt-robots:config") {
+      hints.push("You are blocking indexing with your Nuxt Robots config.");
+    } else if (!queryIndexableEnabled && !_context.indexable) {
+      hints.push(`Indexing is blocked in development. You can mock a production environment with ?mockProductionEnv query.`);
+    } else if (!indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is blocked by site config set by ${_context.indexable}.`);
+    } else if (indexable && !queryIndexableEnabled) {
+      hints.push(`Indexing is enabled from ${_context.indexable}.`);
+    }
+  }
+  if (groups.some((g) => g.userAgent.includes("*") && g.disallow.includes("/"))) {
+    indexable = false;
+    hints.push("You are blocking all user agents with a wildcard `Disallow /`.");
+  } else if (groups.some((g) => g.disallow.includes("/"))) {
+    hints.push("You are blocking specific user agents with `Disallow /`.");
+  }
+  return { indexable, hints };
+}
+
+function getPathRobotConfig(e, options) {
+  const runtimeConfig = useRuntimeConfig(e);
+  const { robotsDisabledValue, robotsEnabledValue, isNuxtContentV2 } = useRuntimeConfigNuxtRobots(e);
+  if (!options?.skipSiteIndexable) {
+    if (!getSiteRobotConfig(e).indexable) {
+      return {
+        rule: robotsDisabledValue,
+        indexable: false,
+        debug: {
+          source: "Site Config"
+        }
+      };
+    }
+  }
+  const path = options?.path || e.path;
+  let userAgent = options?.userAgent;
+  if (!userAgent) {
+    try {
+      userAgent = getRequestHeader(e, "User-Agent");
+    } catch {
+    }
+  }
+  const nitroApp = useNitroApp();
+  const groups = [
+    // run explicit user agent matching first
+    ...nitroApp._robots.ctx.groups.filter((g) => {
+      if (userAgent) {
+        return g.userAgent.some((ua) => ua.toLowerCase().includes(userAgent.toLowerCase()));
+      }
+      return false;
+    }),
+    // run wildcard matches second
+    ...nitroApp._robots.ctx.groups.filter((g) => g.userAgent.includes("*"))
+  ];
+  for (const group of groups) {
+    if (!options?.skipSiteIndexable && group._indexable === false) {
+      return {
+        indexable: false,
+        rule: robotsDisabledValue,
+        debug: {
+          source: "/robots.txt",
+          line: JSON.stringify(group)
+        }
+      };
+    }
+    const rules = options?.skipSiteIndexable ? (group._rules || []).filter((r) => r.pattern !== "/") : group._rules || [];
+    const robotsTxtRule = matchPathToRule(path, rules);
+    if (robotsTxtRule) {
+      if (!robotsTxtRule.allow) {
+        return {
+          indexable: false,
+          rule: robotsDisabledValue,
+          debug: {
+            source: "/robots.txt",
+            line: `Disallow: ${robotsTxtRule.pattern}`
+          }
+        };
+      }
+      break;
+    }
+  }
+  if (isNuxtContentV2 && nitroApp._robots?.nuxtContentUrls?.has(withoutTrailingSlash(path))) {
+    return {
+      indexable: false,
+      rule: robotsDisabledValue,
+      debug: {
+        source: "Nuxt Content"
+      }
+    };
+  }
+  const { pageMetaRobots } = useRuntimeConfigNuxtRobots(e);
+  const pageMetaRule = pageMetaRobots?.[withoutTrailingSlash(path)];
+  if (typeof pageMetaRule !== "undefined") {
+    const normalised = normaliseRobotsRouteRule({ robots: pageMetaRule });
+    if (normalised && (typeof normalised.allow !== "undefined" || typeof normalised.rule !== "undefined")) {
+      return {
+        indexable: normalised.allow ?? false,
+        rule: normalised.rule || (normalised.allow ? robotsEnabledValue : robotsDisabledValue),
+        debug: {
+          source: "Page Meta"
+        }
+      };
+    }
+  }
+  nitroApp._robotsRuleMatcher = nitroApp._robotsRuleMatcher || createNitroRouteRuleMatcher$1(e);
+  let robotRouteRules = nitroApp._robotsRuleMatcher(path);
+  let routeRulesPath = path;
+  const i18nConfig = runtimeConfig.public?.i18n;
+  if (i18nConfig?.locales && typeof robotRouteRules.robots === "undefined") {
+    const { locales } = i18nConfig;
+    const locale = locales.find((l) => routeRulesPath.startsWith(`/${l.code}`));
+    if (locale) {
+      routeRulesPath = routeRulesPath.replace(`/${locale.code}`, "");
+      robotRouteRules = nitroApp._robotsRuleMatcher(routeRulesPath);
+    }
+  }
+  const routeRules = normaliseRobotsRouteRule(robotRouteRules);
+  if (routeRules && (typeof routeRules.allow !== "undefined" || typeof routeRules.rule !== "undefined")) {
+    return {
+      indexable: routeRules.allow ?? false,
+      rule: routeRules.rule || (routeRules.allow ? robotsEnabledValue : robotsDisabledValue),
+      debug: {
+        source: "Route Rules"
+      }
+    };
+  }
+  return {
+    indexable: true,
+    rule: robotsEnabledValue
+  };
+}
+
 function withoutQuery(path) {
   return path.split("?")[0];
 }
@@ -6103,6 +5741,8 @@ async function buildSitemapXml(event, definition, resolvers, runtimeConfig) {
   for (let i = 0; i < sitemapUrls.length; i++) {
     const u = sitemapUrls[i];
     const path = u._path?.pathname || u.loc;
+    if (!getPathRobotConfig(event, { path, skipSiteIndexable: true }).indexable)
+      continue;
     let routeRules = routeRuleMatcher(path);
     if (autoI18n?.locales && autoI18n?.strategy !== "no_prefix") {
       const match = splitForLocales(path, autoI18n.locales.map((l) => l.code));
@@ -6205,111 +5845,470 @@ async function sitemapXmlEventHandler(e) {
 
 const _omnzNW = defineEventHandler(sitemapXmlEventHandler);
 
-const _DL9dh1 = defineEventHandler(async (event) => {
-  const { getContentQuery } = await import('../_/query.mjs');
-  const { serverQueryContent } = await Promise.resolve().then(function () { return storage; });
-  const query = getContentQuery(event);
-  const { advanceQuery } = useRuntimeConfig().public.content.experimental;
-  if (query.first) {
-    let contentQuery = serverQueryContent(event, query);
-    if (!advanceQuery) {
-      contentQuery = contentQuery.withDirConfig();
-    }
-    const content = await contentQuery.findOne();
-    const _result = advanceQuery ? content?.result : content;
-    const missing = !_result && !content?.dirConfig?.navigation?.redirect && !content?._dir?.navigation?.redirect;
-    if (missing) {
-      throw createError({
-        statusMessage: "Document not found!",
-        statusCode: 404,
-        data: {
-          description: "Could not find document for the given query.",
-          query
+const _7OYNAq = defineEventHandler(async (e) => {
+  const nitroApp = useNitroApp();
+  const { indexable} = getSiteRobotConfig(e);
+  const { credits, isNuxtContentV2, cacheControl } = useRuntimeConfigNuxtRobots(e);
+  let robotsTxtCtx = {
+    sitemaps: [],
+    groups: [
+      {
+        allow: [],
+        comment: [],
+        userAgent: ["*"],
+        disallow: ["/"]
+      }
+    ]
+  };
+  if (indexable) {
+    robotsTxtCtx = await resolveRobotsTxtContext(e);
+    robotsTxtCtx.sitemaps = [...new Set(
+      asArray(robotsTxtCtx.sitemaps).map((s) => !s.startsWith("http") ? withSiteUrl(e, s, { withBase: true}) : s)
+    )];
+    if (isNuxtContentV2) {
+      const contentWithRobotRules = await e.$fetch("/__robots__/nuxt-content.json", {
+        headers: {
+          Accept: "application/json"
         }
       });
+      if (String(contentWithRobotRules).trim().startsWith("<!DOCTYPE")) {
+        logger$3.error("Invalid HTML returned from /__robots__/nuxt-content.json, skipping.");
+      } else {
+        for (const group of robotsTxtCtx.groups) {
+          if (group.userAgent.includes("*")) {
+            group.disallow.push(...contentWithRobotRules);
+            group.disallow = group.disallow.filter(Boolean);
+          }
+        }
+      }
     }
-    return content;
   }
-  if (query.count) {
-    return serverQueryContent(event, query).count();
+  let robotsTxt = generateRobotsTxt(robotsTxtCtx);
+  if (credits) {
+    robotsTxt = [
+      `# START nuxt-robots (${indexable ? "indexable" : "indexing disabled"})`,
+      robotsTxt,
+      "# END nuxt-robots"
+    ].filter(Boolean).join("\n");
   }
-  return serverQueryContent(event, query).find();
+  setHeader(e, "Content-Type", "text/plain; charset=utf-8");
+  setHeader(e, "Cache-Control", globalThis._importMeta_.test || !cacheControl ? "no-store" : cacheControl);
+  const hookCtx = { robotsTxt, e };
+  await nitroApp.hooks.callHook("robots:robots-txt", hookCtx);
+  return hookCtx.robotsTxt;
 });
 
-const _dBpXlN = defineEventHandler(async (event) => {
-  const { getContentIndex } = await Promise.resolve().then(function () { return contentIndex; });
-  const { cacheStorage, serverQueryContent } = await Promise.resolve().then(function () { return storage; });
-  const { content } = useRuntimeConfig();
-  const now = Date.now();
-  const contents = await serverQueryContent(event).find();
-  await getContentIndex(event);
-  const navigation = await $fetch(`${content.api.baseURL}/navigation`);
-  await cacheStorage().setItem("content-navigation.json", navigation);
+const _Yd0t8t = defineEventHandler(async (e) => {
+  if (e.path === "/robots.txt" || e.path.startsWith("/__") || e.path.startsWith("/api") || e.path.startsWith("/_nuxt"))
+    return;
+  const nuxtRobotsConfig = useRuntimeConfigNuxtRobots(e);
+  if (nuxtRobotsConfig) {
+    const { header } = nuxtRobotsConfig;
+    const robotConfig = getPathRobotConfig(e, { skipSiteIndexable: Boolean(getQuery$1(e)?.mockProductionEnv) });
+    if (header) {
+      setHeader(e, "X-Robots-Tag", robotConfig.rule);
+    }
+    e.context.robots = robotConfig;
+  }
+});
+
+const _9nVQ4N = eventHandler(async (event) => {
+  const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
+  setHeader(event, "Content-Type", "text/plain");
+  const data = await useStorage().getItem(`build:content:database.compressed.mjs`) || "";
+  if (data) {
+    const lineStart = `export const ${collection} = "`;
+    const content = String(data).split("\n").find((line) => line.startsWith(lineStart));
+    if (content) {
+      return content.substring(lineStart.length, content.length - 1);
+    }
+  }
+  return await import('../build/database.compressed.mjs').then((m) => m[collection]);
+});
+
+async function decompressSQLDump(base64Str, compressionType = "gzip") {
+  let binaryData;
+  if (typeof Buffer !== "undefined") {
+    const buffer = Buffer.from(base64Str, "base64");
+    binaryData = Uint8Array.from(buffer);
+  } else if (typeof atob !== "undefined") {
+    binaryData = Uint8Array.from(atob(base64Str), (c) => c.charCodeAt(0));
+  } else {
+    throw new TypeError("No base64 decoding method available");
+  }
+  const response = new Response(new Blob([binaryData]));
+  const decompressedStream = response.body?.pipeThrough(new DecompressionStream(compressionType));
+  const text = await new Response(decompressedStream).text();
+  return JSON.parse(text);
+}
+
+function refineContentFields(sql, doc) {
+  const fields = findCollectionFields(sql);
+  const item = { ...doc };
+  for (const key in item) {
+    if (fields[key] === "json" && item[key] && item[key] !== "undefined") {
+      item[key] = JSON.parse(item[key]);
+    }
+    if (fields[key] === "boolean" && item[key] !== "undefined") {
+      item[key] = Boolean(item[key]);
+    }
+  }
+  for (const key in item) {
+    if (item[key] === "NULL") {
+      item[key] = void 0;
+    }
+  }
+  return item;
+}
+function findCollectionFields(sql) {
+  const table = sql.match(/FROM\s+(\w+)/);
+  if (!table) {
+    return {};
+  }
+  const info = contentManifest[getCollectionName(table[1])];
+  return info?.fields || {};
+}
+function getCollectionName(table) {
+  return table.replace(/^_content_/, "");
+}
+
+let db;
+function loadDatabaseAdapter(config) {
+  const { database, localDatabase } = config;
+  if (!db) {
+    if (["nitro-prerender", "nitro-dev"].includes("nitro-prerender")) {
+      db = localAdapter(refineDatabaseConfig(localDatabase));
+    } else {
+      db = localAdapter(refineDatabaseConfig(database));
+    }
+  }
   return {
-    generatedAt: now,
-    generateTime: Date.now() - now,
-    contents: content.experimental.cacheContents ? contents : [],
-    navigation
+    all: async (sql, params = []) => {
+      return db.prepare(sql).all(...params).then((result) => (result || []).map((item) => refineContentFields(sql, item)));
+    },
+    first: async (sql, params = []) => {
+      return db.prepare(sql).get(...params).then((item) => item ? refineContentFields(sql, item) : item);
+    },
+    exec: async (sql, params = []) => {
+      return db.prepare(sql).run(...params);
+    }
   };
-});
-
-const _4wAc_p = defineEventHandler(async (event) => {
-  const { getContentQuery } = await import('../_/query.mjs');
-  const { cacheStorage, serverQueryContent } = await Promise.resolve().then(function () { return storage; });
-  const { createNav } = await import('../_/navigation.mjs');
-  const query = getContentQuery(event);
-  if (!isPreview(event) && Object.keys(query).length === 0) {
-    const cache = await cacheStorage().getItem("content-navigation.json");
-    if (cache) {
-      return cache;
+}
+const checkDatabaseIntegrity = /* @__PURE__ */ new Map();
+const integrityCheckPromise = /* @__PURE__ */ new Map();
+async function checkAndImportDatabaseIntegrity(event, collection, config) {
+  if (checkDatabaseIntegrity.get(collection) !== false) {
+    checkDatabaseIntegrity.set(collection, false);
+    if (!integrityCheckPromise.has(collection)) {
+      const _integrityCheck = _checkAndImportDatabaseIntegrity(event, collection, checksums[collection], checksumsStructure[collection], config).then((isValid) => {
+        checkDatabaseIntegrity.set(collection, !isValid);
+      }).catch((error) => {
+        console.error("Database integrity check failed", error);
+        checkDatabaseIntegrity.set(collection, true);
+        integrityCheckPromise.delete(collection);
+      });
+      integrityCheckPromise.set(collection, _integrityCheck);
     }
   }
-  const contents = await serverQueryContent(event, query).where({
-    /**
-     * Partial contents are not included in the navigation
-     * A partial content is a content that has `_` prefix in its path
-     */
-    _partial: false,
-    /**
-     * Exclude any pages which have opted out of navigation via frontmatter.
-     */
-    navigation: {
-      $ne: false
+  if (integrityCheckPromise.has(collection)) {
+    await integrityCheckPromise.get(collection);
+  }
+}
+async function _checkAndImportDatabaseIntegrity(event, collection, integrityVersion, structureIntegrityVersion, config) {
+  const db2 = loadDatabaseAdapter(config);
+  const before = await db2.first(`SELECT * FROM ${tables.info} WHERE id = ?`, [`checksum_${collection}`]).catch(() => null);
+  if (before?.version && !String(before.version)?.startsWith(`${config.databaseVersion}--`)) {
+    await db2.exec(`DROP TABLE IF EXISTS ${tables.info}`);
+    before.version = "";
+  }
+  const unchangedStructure = before?.structureVersion === structureIntegrityVersion;
+  if (before?.version) {
+    if (before.version === integrityVersion) {
+      if (before.ready) {
+        return true;
+      }
+      await waitUntilDatabaseIsReady(db2, collection);
+      return true;
     }
-  }).find();
-  const _locale = (query?.where || []).find((w) => w._locale)?._locale;
-  const dirConfigs = await serverQueryContent(event, _locale ? { where: [{ _locale }] } : void 0).where({ _path: /\/_dir$/i, _partial: true }).find();
-  const configs = (dirConfigs?.result || dirConfigs).reduce((configs2, conf) => {
-    if (conf.title?.toLowerCase() === "dir") {
-      conf.title = void 0;
+    await db2.exec(`DELETE FROM ${tables.info} WHERE id = ?`, [`checksum_${collection}`]);
+    if (!unchangedStructure) {
+      await db2.exec(`DROP TABLE IF EXISTS ${tables[collection]}`);
     }
-    const key = conf._path.split("/").slice(0, -1).join("/") || "/";
-    configs2[key] = {
-      ...conf,
-      // Extract meta from body. (non MD files)
-      ...conf.body
+  }
+  const dump = await loadDatabaseDump(event, collection).then(decompressSQLDump);
+  const dumpLinesHash = dump.map((row) => row.split(" -- ").pop());
+  let hashesInDb = /* @__PURE__ */ new Set();
+  if (unchangedStructure) {
+    const hashListFromTheDump = new Set(dumpLinesHash);
+    const hashesInDbRecords = await db2.all(`SELECT __hash__ FROM ${tables[collection]}`).catch(() => []);
+    hashesInDb = new Set(hashesInDbRecords.map((r) => r.__hash__));
+    const hashesToDelete = hashesInDb.difference(hashListFromTheDump);
+    if (hashesToDelete.size) {
+      await db2.exec(`DELETE FROM ${tables[collection]} WHERE __hash__ IN (${Array(hashesToDelete.size).fill("?").join(",")})`, Array.from(hashesToDelete));
+    }
+  }
+  await dump.reduce(async (prev, sql, index) => {
+    await prev;
+    const hash = dumpLinesHash[index];
+    const statement = sql.substring(0, sql.length - hash.length - 4);
+    if (unchangedStructure) {
+      if (hash === "structure") {
+        return Promise.resolve();
+      }
+      if (hashesInDb.has(hash)) {
+        return Promise.resolve();
+      }
+    }
+    await db2.exec(statement).catch((err) => {
+      const message = err.message || "Unknown error";
+      console.error(`Failed to execute SQL ${sql}: ${message}`);
+    });
+  }, Promise.resolve());
+  const after = await db2.first(`SELECT version FROM ${tables.info} WHERE id = ?`, [`checksum_${collection}`]).catch(() => ({ version: "" }));
+  return after?.version === integrityVersion;
+}
+const REQUEST_TIMEOUT = 90;
+async function waitUntilDatabaseIsReady(db2, collection) {
+  let iterationCount = 0;
+  let interval;
+  await new Promise((resolve, reject) => {
+    interval = setInterval(async () => {
+      const row = await db2.first(`SELECT ready FROM ${tables.info} WHERE id = ?`, [`checksum_${collection}`]).catch(() => ({ ready: true }));
+      if (row?.ready) {
+        clearInterval(interval);
+        resolve(0);
+      }
+      if (iterationCount++ > REQUEST_TIMEOUT) {
+        clearInterval(interval);
+        reject(new Error("Waiting for another database initialization timed out"));
+      }
+    }, 1e3);
+  }).catch((e) => {
+    throw e;
+  }).finally(() => {
+    if (interval) {
+      clearInterval(interval);
+    }
+  });
+}
+async function loadDatabaseDump(event, collection) {
+  return await fetchDatabase(event, collection).catch((e) => {
+    console.error("Failed to fetch compressed dump", e);
+    return "";
+  });
+}
+function refineDatabaseConfig(config) {
+  if (config.type === "d1") {
+    return { ...config, bindingName: config.bindingName || config.binding };
+  }
+  if (config.type === "sqlite") {
+    const _config = { ...config };
+    if (config.filename === ":memory:") {
+      return { name: ":memory:" };
+    }
+    if ("filename" in config) {
+      const filename = isAbsolute(config?.filename || "") || config?.filename === ":memory:" ? config?.filename : new URL(config.filename, globalThis._importMeta_.url).pathname;
+      _config.path = process.platform === "win32" && filename.startsWith("/") ? filename.slice(1) : filename;
+    }
+    return _config;
+  }
+  if (config.type === "pglite") {
+    return {
+      dataDir: config.dataDir,
+      // Pass through any other PGlite-specific options
+      ...config
     };
-    return configs2;
-  }, {});
-  return createNav(contents?.result || contents, configs);
+  }
+  return config;
+}
+
+const SQL_COMMANDS = /SELECT|INSERT|UPDATE|DELETE|DROP|ALTER|\$/i;
+const SQL_COUNT_REGEX = /^COUNT\((DISTINCT )?([a-z_]\w+|\*)\) as count$/i;
+const SQL_SELECT_REGEX = /^SELECT (.*) FROM (\w+)( WHERE .*)? ORDER BY (["\w,\s]+) (ASC|DESC)( LIMIT \d+)?( OFFSET \d+)?$/;
+function assertSafeQuery(sql, collection) {
+  if (!sql) {
+    throw new Error("Invalid query: Query cannot be empty");
+  }
+  const cleanedupQuery = cleanupQuery(sql);
+  if (cleanedupQuery !== sql) {
+    throw new Error("Invalid query: SQL comments are not allowed");
+  }
+  const match = sql.match(SQL_SELECT_REGEX);
+  if (!match) {
+    throw new Error("Invalid query: Query must be a valid SELECT statement with proper syntax");
+  }
+  const [_, select, from, where, orderBy, order, limit, offset] = match;
+  const columns = select?.trim().split(", ") || [];
+  if (columns.length === 1) {
+    if (columns[0] !== "*" && !columns[0]?.match(SQL_COUNT_REGEX) && !columns[0]?.match(/^"[a-z_]\w+"$/i)) {
+      throw new Error(`Invalid query: Column '${columns[0]}' has invalid format. Expected *, COUNT(), or a quoted column name`);
+    }
+  } else if (!columns.every((column) => column.match(/^"[a-z_]\w+"$/i))) {
+    throw new Error("Invalid query: Multiple columns must be properly quoted and alphanumeric");
+  }
+  if (from !== `_content_${collection}`) {
+    const collection2 = String(from || "").replace(/^_content_/, "");
+    throw new Error(`Invalid query: Collection '${collection2}' does not exist`);
+  }
+  if (where) {
+    if (!where.startsWith(" WHERE (") || !where.endsWith(")")) {
+      throw new Error("Invalid query: WHERE clause must be properly enclosed in parentheses");
+    }
+    const noString = cleanupQuery(where, { removeString: true });
+    if (noString.match(SQL_COMMANDS)) {
+      throw new Error("Invalid query: WHERE clause contains unsafe SQL commands");
+    }
+  }
+  const _order = (orderBy + " " + order).split(", ");
+  if (!_order.every((column) => column.match(/^("[a-zA-Z_]+"|[a-zA-Z_]+) (ASC|DESC)$/))) {
+    throw new Error("Invalid query: ORDER BY clause must contain valid column names followed by ASC or DESC");
+  }
+  if (limit !== void 0 && !limit.match(/^ LIMIT \d+$/)) {
+    throw new Error("Invalid query: LIMIT clause must be a positive number");
+  }
+  if (offset !== void 0 && !offset.match(/^ OFFSET \d+$/)) {
+    throw new Error("Invalid query: OFFSET clause must be a positive number");
+  }
+  return true;
+}
+function cleanupQuery(query, options = { removeString: false }) {
+  let inString = false;
+  let stringFence = "";
+  let result = "";
+  for (let i = 0; i < query.length; i++) {
+    const char = query[i];
+    const prevChar = query[i - 1];
+    const nextChar = query[i + 1];
+    if (char === "'" || char === '"') {
+      if (!options?.removeString) {
+        result += char;
+        continue;
+      }
+      if (inString) {
+        if (char !== stringFence || nextChar === stringFence || prevChar === stringFence) {
+          continue;
+        }
+        inString = false;
+        stringFence = "";
+        continue;
+      } else {
+        inString = true;
+        stringFence = char;
+        continue;
+      }
+    }
+    if (!inString) {
+      if (char === "-" && nextChar === "-") {
+        return result;
+      }
+      if (char === "/" && nextChar === "*") {
+        i += 2;
+        while (i < query.length && !(query[i] === "*" && query[i + 1] === "/")) {
+          i += 1;
+        }
+        i += 2;
+        continue;
+      }
+      result += char;
+    }
+  }
+  return result;
+}
+
+function defineNitroPlugin(def) {
+  return def;
+}
+
+function defineRenderHandler(render) {
+  const runtimeConfig = useRuntimeConfig();
+  return eventHandler(async (event) => {
+    const nitroApp = useNitroApp();
+    const ctx = { event, render, response: void 0 };
+    await nitroApp.hooks.callHook("render:before", ctx);
+    if (!ctx.response) {
+      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
+        setResponseHeader(event, "Content-Type", "image/x-icon");
+        return send(
+          event,
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        );
+      }
+      ctx.response = await ctx.render(event);
+      if (!ctx.response) {
+        const _currentStatus = getResponseStatus(event);
+        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+        return send(
+          event,
+          "No response returned from render handler: " + event.path
+        );
+      }
+    }
+    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
+    if (ctx.response.headers) {
+      setResponseHeaders(event, ctx.response.headers);
+    }
+    if (ctx.response.statusCode || ctx.response.statusMessage) {
+      setResponseStatus(
+        event,
+        ctx.response.statusCode,
+        ctx.response.statusMessage
+      );
+    }
+    return ctx.response.body;
+  });
+}
+
+function baseURL() {
+	
+	return useRuntimeConfig().app.baseURL;
+}
+function buildAssetsDir() {
+	
+	return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+	
+	const app = useRuntimeConfig().app;
+	const publicBase = app.cdnURL || app.baseURL;
+	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
+}
+
+const _SnCLFE = eventHandler(async (event) => {
+  const { sql } = await readBody(event);
+  const collection = getRouterParam(event, "collection") || event.path?.split("/")?.[2] || "";
+  assertSafeQuery(sql, collection);
+  const conf = useRuntimeConfig().content;
+  if (conf.integrityCheck) {
+    await checkAndImportDatabaseIntegrity(event, collection, conf);
+  }
+  return loadDatabaseAdapter(conf).all(sql);
 });
 
-const _lazy_yplF63 = () => import('../_/renderer.mjs');
+const _lazy_wbQLj0 = () => import('../routes/api/_type/_...slug_.mjs');
+const _lazy_hamhGY = () => import('../routes/_og/d/image.mjs');
+const _lazy_s_PDuW = () => import('../routes/_og/r/resolve.mjs');
+const _lazy_yplF63 = () => import('../_/renderer2.mjs');
 
 const handlers = [
   { route: '', handler: _kQxHaP, lazy: false, middleware: true, method: undefined },
+  { route: '/api/:type/**:slug', handler: _lazy_wbQLj0, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '', handler: _APFHMZ, lazy: false, middleware: true, method: undefined },
-  { route: '/__sitemap__/nuxt-content-urls.json', handler: _vzFCBl, lazy: false, middleware: false, method: undefined },
+  { route: '/__sitemap__/nuxt-content-urls.json', handler: _pQl8oA, lazy: false, middleware: false, method: undefined },
   { route: '/__sitemap__/style.xsl', handler: _to1iB6, lazy: false, middleware: false, method: undefined },
   { route: '/sitemap.xml', handler: _omnzNW, lazy: false, middleware: false, method: undefined },
-  { route: '/api/_content/query/:qid/**:params', handler: _DL9dh1, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _DL9dh1, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _DL9dh1, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.1778014072232.json', handler: _dBpXlN, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _4wAc_p, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _4wAc_p, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _4wAc_p, lazy: false, middleware: false, method: "get" },
+  { route: '/robots.txt', handler: _7OYNAq, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _Yd0t8t, lazy: false, middleware: true, method: undefined },
+  { route: '/_og/d/**', handler: _lazy_hamhGY, lazy: true, middleware: false, method: undefined },
+  { route: '/_og/s/**', handler: _lazy_hamhGY, lazy: true, middleware: false, method: undefined },
+  { route: '/_og/r/**', handler: _lazy_s_PDuW, lazy: true, middleware: false, method: undefined },
+  { route: '/__nuxt_content/content/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/content/query', handler: _SnCLFE, lazy: false, middleware: false, method: undefined },
+  { route: '/__nuxt_content/info/query', handler: _SnCLFE, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_yplF63, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -6459,5 +6458,5 @@ const localFetch = nitroApp.localFetch;
 const closePrerenderer = () => nitroApp.hooks.callHook("close");
 trapUnhandledNodeErrors();
 
-export { useStorage as a, buildAssetsURL as b, useNitroApp as c, defineRenderHandler as d, generateTitle as e, baseURL as f, getRouteRules as g, closePrerenderer as h, localFetch as l, publicAssetsURL as p, useRuntimeConfig as u };
+export { localFetch as A, htmlPayloadCache as a, useStorage as b, componentNames as c, logger$2 as d, extractSocialPreviewTags as e, fetchIsland as f, getSiteConfig as g, hashOgImageOptions as h, isInternalRoute as i, buildAssetsURL as j, useRuntimeConfig as k, logger$1 as l, defineRenderHandler as m, getRouteRules as n, useNitroApp as o, publicAssetsURL as p, getNitroOrigin as q, resolveContext as r, fontArrayCache as s, fontCache as t, useOgImageRuntimeConfig as u, toBase64Image as v, withTimeout as w, emojiCache as x, baseURL as y, closePrerenderer as z };
 //# sourceMappingURL=nitro.mjs.map

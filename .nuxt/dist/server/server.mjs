@@ -1,4 +1,4 @@
-import { hasInjectionContext, getCurrentInstance, shallowReactive, reactive, effectScope, getCurrentScope, inject, toRef, shallowRef, isReadonly, defineComponent, createElementBlock, provide, cloneVNode, h, isRef, resolveComponent, computed, unref, isShallow, isReactive, toRaw, defineAsyncComponent, ref, Suspense, Fragment, mergeProps, withCtx, createTextVNode, useSSRContext, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, createApp } from "vue";
+import { hasInjectionContext, getCurrentInstance, shallowReactive, reactive, effectScope, getCurrentScope, inject, toRef, shallowRef, isReadonly, defineComponent, createElementBlock, provide, cloneVNode, h, isRef, resolveComponent, computed, unref, isShallow, isReactive, toRaw, toValue, defineAsyncComponent, ref, Suspense, Fragment, mergeProps, withCtx, createTextVNode, useSSRContext, onErrorCaptured, onServerPrefetch, createVNode, resolveDynamicComponent, createApp } from "vue";
 import { $fetch as $fetch$1 } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs";
 import { baseURL } from "#internal/nuxt/paths";
 import { createHooks } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs";
@@ -6,10 +6,16 @@ import { getContext, executeAsync } from "/Volumes/B87P4/everythinginperspective
 import { sanitizeStatusCode, createError as createError$1, appendHeader } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs";
 import { START_LOCATION, createMemoryHistory, createRouter, RouterView } from "vue-router";
 import { defu } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs";
-import { parseURL, encodePath, decodePath, withQuery, hasProtocol, isScriptProtocol, joinURL, parseQuery, withTrailingSlash, withoutTrailingSlash } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs";
+import { parseURL, encodePath, decodePath, withQuery, hasProtocol, isScriptProtocol, joinURL, parseQuery, withTrailingSlash, withoutTrailingSlash, withLeadingSlash, withBase, withoutBase, stringifyQuery } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs";
 import "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs";
+import { useHead as useHead$1, headSymbol, useSeoMeta as useSeoMeta$1 } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@unhead/vue/dist/index.mjs";
+import { TemplateParamsPlugin, InferSeoMetaPlugin } from "unhead/plugins";
+import { titleCase, camelCase } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs";
+import { SchemaOrgUnheadPlugin, defineWebSite, defineWebPage } from "@unhead/schema-org/vue";
+import { toRouteMatcher, createRouter as createRouter$1 } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs";
+import { stringify } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js";
+import { hash } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs";
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from "vue/server-renderer";
-import { useHead as useHead$1, headSymbol, useSeoMeta as useSeoMeta$1 } from "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/@unhead/vue/dist/index.mjs";
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch$1.create({
     baseURL: baseURL()
@@ -20,6 +26,7 @@ if (!("global" in globalThis)) {
 }
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
 const asyncDataDefaults = { "value": null, "errorValue": null, "deep": true };
+const fetchDefaults = {};
 const appId = "nuxt-app";
 const crawlLinks = true;
 function getNuxtAppCtx(id = appId) {
@@ -389,13 +396,17 @@ function toArray(value) {
   return Array.isArray(value) ? value : [value];
 }
 const matcher = /* @__PURE__ */ (() => {
-  const $0 = { prerender: true }, $1 = {}, $2 = { payload: false, payload: false };
+  const $0 = { prerender: true }, $1 = {}, $2 = { payload: false, payload: false }, $3 = { payload: false };
   return (m, p) => {
     let r = [];
     if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
     if (p === "/") {
       r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/content/sql_dump.txt") {
+      r.unshift({ data: $0 });
     } else if (p === "/sitemap.xml") {
+      r.unshift({ data: $1 });
+    } else if (p === "/_nuxt") {
       r.unshift({ data: $1 });
     }
     let s = p.split("/"), l = s.length;
@@ -408,8 +419,24 @@ const matcher = /* @__PURE__ */ (() => {
         r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "book") {
         r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "magazine") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "linked-data") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "api") {
         r.unshift({ data: $2, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "__nuxt_content") {
+        r.unshift({ data: $3, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "_og") {
+        if (l > 2) {
+          if (s[2] === "d") {
+            r.unshift({ data: $1, params: { "_": s.slice(3).join("/") } });
+          } else if (s[2] === "r") {
+            r.unshift({ data: $1, params: { "_": s.slice(3).join("/") } });
+          } else if (s[2] === "s") {
+            r.unshift({ data: $1, params: { "_": s.slice(3).join("/") } });
+          }
+        }
       }
     }
     return r;
@@ -426,6 +453,15 @@ function getRouteRules(arg) {
     return {};
   }
 }
+const __nuxt_page_meta$5 = {
+  layout: "default"
+};
+const __nuxt_page_meta$4 = {
+  layout: "default"
+};
+const __nuxt_page_meta$3 = {
+  layout: "default"
+};
 const __nuxt_page_meta$2 = {
   layout: "default"
 };
@@ -439,20 +475,43 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import("./_nuxt/index-Dy_N4t_D.js")
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import("./_nuxt/index-583YOfEs.js")
   },
   {
     name: "page-slug",
     path: "/page/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import("./_nuxt/_slug_-DCNdS0Ry.js")
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import("./_nuxt/_slug_-CghQmVb1.js")
   },
   {
     name: "article-slug",
     path: "/article/:slug()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import("./_nuxt/_slug_-CNkchQrO.js")
+  },
+  {
+    name: "linked-data-slug",
+    path: "/linked-data/:slug(.*)*",
+    component: () => import("./_nuxt/_...slug_-DFlaOtsI.js")
+  },
+  {
+    name: "magazine-type",
+    path: "/magazine/:type()",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import("./_nuxt/index-Fn3KTQpM.js")
+  },
+  {
+    name: "magazine-type-slug",
+    path: "/magazine/:type()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import("./_nuxt/_slug_-BInJ1vkz.js")
+  },
+  {
+    name: "linked-data-type",
+    path: "/linked-data/:type()",
     meta: __nuxt_page_meta || {},
-    component: () => import("./_nuxt/_slug_-DEAfrqgq.js")
+    component: () => import("./_nuxt/index-Dr967J_d.js")
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -568,6 +627,17 @@ const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
   });
   return error;
 });
+const route_45aliases_45global = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
+  const path = to.path;
+  if (path.startsWith("/mag/") || path === "/mag") {
+    const newPath = path.replace("/mag", "/magazine");
+    return navigateTo(newPath, { redirectCode: 301 });
+  }
+  if (path.startsWith("/ld/") || path === "/ld") {
+    const newPath = path.replace("/ld", "/linked-data");
+    return navigateTo(newPath, { redirectCode: 301 });
+  }
+});
 const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
   {
     return;
@@ -575,6 +645,7 @@ const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware((to) =
 });
 const globalMiddleware = [
   validate,
+  route_45aliases_45global,
   manifest_45route_45rule
 ];
 const namedMiddleware = {};
@@ -868,6 +939,9 @@ function useState(...args) {
 function useRequestEvent(nuxtApp) {
   nuxtApp ||= useNuxtApp();
   return nuxtApp.ssrContext?.event;
+}
+function useRequestFetch() {
+  return useRequestEvent()?.$fetch || globalThis.$fetch;
 }
 function prerenderRoutes(path) {
   if (!import.meta.prerender) {
@@ -1202,58 +1276,975 @@ const revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms = /* @__
     }
   }
 });
-const LazyContentDoc = defineAsyncComponent(() => import("./_nuxt/ContentDoc-Bu6t6Roi.js").then((r) => r["default"] || r.default || r));
-const LazyContentList = defineAsyncComponent(() => import("./_nuxt/ContentList-DYaEMxHA.js").then((r) => r["default"] || r.default || r));
-const LazyContentNavigation = defineAsyncComponent(() => import("./_nuxt/ContentNavigation-DTGHILeC.js").then((r) => r["default"] || r.default || r));
-const LazyContentQuery = defineAsyncComponent(() => import("./_nuxt/ContentQuery-C4SAE5n1.js").then((r) => r["default"] || r.default || r));
-const LazyContentRenderer = defineAsyncComponent(() => import("./_nuxt/ContentRenderer-BF3k2gMn.js").then((r) => r["default"] || r.default || r));
-const LazyContentRendererMarkdown = defineAsyncComponent(() => import("./_nuxt/ContentRendererMarkdown-tklI2Ef2.js").then((r) => r["default"] || r.default || r));
-const LazyContentSlot = defineAsyncComponent(() => import("./_nuxt/ContentSlot-gIsfdgyy.js").then((r) => r["default"] || r.default || r));
-const LazyDocumentDrivenEmpty = defineAsyncComponent(() => import("./_nuxt/DocumentDrivenEmpty-CVfz7tly.js").then((r) => r["default"] || r.default || r));
-const LazyDocumentDrivenNotFound = defineAsyncComponent(() => import("./_nuxt/DocumentDrivenNotFound-4pTrsASA.js").then((r) => r["default"] || r.default || r));
-const LazyMarkdown = defineAsyncComponent(() => import("./_nuxt/Markdown-DlzLN90B.js").then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import("./_nuxt/ProseCode-C_vIM45j.js").then((r) => r["default"] || r.default || r));
-const LazyProseCodeInline = defineAsyncComponent(() => import("./_nuxt/ProseCodeInline-gUDc7YZA.js").then((r) => r["default"] || r.default || r));
-const LazyProsePre = defineAsyncComponent(() => import("./_nuxt/ProsePre-Cwno3XVq.js").then((r) => r["default"] || r.default || r));
-const LazyProseA = defineAsyncComponent(() => import("./_nuxt/ProseA-Cd65OBAN.js").then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import("./_nuxt/ProseBlockquote-w1IlV5x1.js").then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import("./_nuxt/ProseEm-DsKFzb4u.js").then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import("./_nuxt/ProseH1-CF_3_uD7.js").then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import("./_nuxt/ProseH2-dESTkeam.js").then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import("./_nuxt/ProseH3-DEYmJwdC.js").then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import("./_nuxt/ProseH4-CeSl3mto.js").then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import("./_nuxt/ProseH5-KIF-Ze4I.js").then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import("./_nuxt/ProseH6-B5HQbLXo.js").then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import("./_nuxt/ProseHr-hfhKTH6f.js").then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import("./_nuxt/ProseImg-CfeGSkZ2.js").then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import("./_nuxt/ProseLi-DFZvI-Z7.js").then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import("./_nuxt/ProseOl-BusGMI2P.js").then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import("./_nuxt/ProseP-DJozyCbG.js").then((r) => r["default"] || r.default || r));
-const LazyProseScript = defineAsyncComponent(() => import("./_nuxt/ProseScript-D0R07iM6.js").then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import("./_nuxt/ProseStrong-ygbzGVJf.js").then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import("./_nuxt/ProseTable-C7WAjD11.js").then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import("./_nuxt/ProseTbody-DXCBuAyT.js").then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import("./_nuxt/ProseTd-3E0y-ijR.js").then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import("./_nuxt/ProseTh-C9LrEbzk.js").then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import("./_nuxt/ProseThead-aNZZWQRs.js").then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import("./_nuxt/ProseTr-C27ANcGZ.js").then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import("./_nuxt/ProseUl-Ck1vn7Y5.js").then((r) => r["default"] || r.default || r));
+function useSiteConfig(options) {
+  const stack = useRequestEvent()?.context.siteConfig.get(defu({ resolveRefs: true }, options));
+  delete stack._priority;
+  return stack;
+}
+const siteConfig_vuqmRkLAUZxQvb5pvUwT3uUdVggfjhj1m5v7Pb6IE0w = /* @__PURE__ */ defineNuxtPlugin(() => {
+  const head = injectHead();
+  if (!head)
+    return;
+  const { tagPriority, separator, titleSeparator } = (/* @__PURE__ */ useRuntimeConfig()).public["seo-utils"];
+  const siteConfig = useSiteConfig();
+  const resolvedSeparator = siteConfig.separator || separator || siteConfig.titleSeparator || titleSeparator;
+  const resolvedTitleSeparator = siteConfig.titleSeparator || titleSeparator || siteConfig.separator || separator;
+  const input = {
+    meta: [],
+    templateParams: {
+      site: siteConfig,
+      // support legacy
+      siteUrl: siteConfig.url,
+      siteName: siteConfig.name
+    }
+  };
+  if (resolvedSeparator)
+    input.templateParams.separator = resolvedSeparator;
+  if (resolvedTitleSeparator)
+    input.templateParams.titleSeparator = resolvedTitleSeparator;
+  if (siteConfig.description) {
+    input.templateParams.siteDescription = siteConfig.description;
+    input.meta.push(
+      {
+        name: "description",
+        content: "%site.description",
+        tagPriority
+      }
+    );
+  }
+  head.push(input);
+});
+const inferSeoMetaPlugin_KsEotgC9NJyW_guR_3z04hFN8TI2h5dgP8bzHmpMm5o = /* @__PURE__ */ defineNuxtPlugin(() => {
+  const head = injectHead();
+  if (!head)
+    return;
+  head.use(TemplateParamsPlugin);
+  head.use(InferSeoMetaPlugin());
+});
+function useI18n() {
+  const siteConfig = useSiteConfig({
+    resolveRefs: false
+  });
+  return {
+    t: (_, fallback, _options) => fallback,
+    te: (_) => false,
+    strategy: "no_prefix",
+    defaultLocale: computed(() => {
+      return toValue(siteConfig.defaultLocale) || "en";
+    }),
+    locale: computed(() => {
+      return toValue(siteConfig.currentLocale) || toValue(siteConfig.defaultLocale) || "en";
+    })
+  };
+}
+function useFallbackTitle() {
+  const route = useRoute();
+  const err = /* @__PURE__ */ useError();
+  let i18n;
+  try {
+    i18n = useI18n();
+  } catch {
+  }
+  return computed(() => {
+    if (err.value?.statusCode && [404, 500].includes(err.value.statusCode)) {
+      return `${err.value.statusCode} - ${err.value.message}`;
+    }
+    if (typeof route.meta?.title === "string")
+      return route.meta?.title;
+    const path = withoutTrailingSlash(route.path || "/");
+    const lastSegment = path.split("/").pop();
+    let fallback = lastSegment ? titleCase(lastSegment) : null;
+    const matched = route.matched?.at(-1);
+    if (matched) {
+      const routeName = String(matched.name).split("___")?.[0];
+      if (routeName && i18n)
+        fallback = i18n.t(`pages.${routeName}.title`, fallback || "", { missingWarn: false }) || fallback;
+    }
+    return fallback;
+  });
+}
+const titles_Fth_MAhm7dgpxeTaMXibYXbcCjegjWK3QH9gKvbTRVg = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-seo:fallback-titles",
+  env: {
+    islands: false
+  },
+  setup() {
+    const title = useFallbackTitle();
+    const minimalPriority = {
+      // give nuxt.config values higher priority
+      tagPriority: 101
+    };
+    useHead({ title: () => title.value }, minimalPriority);
+  }
+});
+function useSchemaOrgConfig() {
+  const runtimeConfig = /* @__PURE__ */ useRuntimeConfig();
+  return defu(runtimeConfig["nuxt-schema-org"], {
+    scriptAttributes: {}
+  });
+}
+function useSchemaOrg(input) {
+  const config = useSchemaOrgConfig();
+  const nuxtApp = useNuxtApp();
+  const nodes = isRef(input) ? computed(() => nuxtApp.runWithContext(() => input.value)) : input;
+  const script = {
+    type: "application/ld+json",
+    key: "schema-org-graph",
+    // @ts-expect-error untyped
+    nodes,
+    tagPriority: "high",
+    ...config.scriptAttributes
+  };
+  {
+    return useHead({
+      script: [script]
+    });
+  }
+}
+const FILE_EXT_RE = /\.[0-9a-z]+$/i;
+function resolveSitePath(pathOrUrl, options) {
+  let path = pathOrUrl;
+  if (hasProtocol(pathOrUrl, { strict: false, acceptRelative: true })) {
+    const parsed = parseURL(pathOrUrl);
+    path = parsed.pathname;
+  }
+  const base = withLeadingSlash(options.base || "/");
+  if (base !== "/" && path.startsWith(base)) {
+    path = path.slice(base.length);
+  }
+  let origin = withoutTrailingSlash(options.absolute ? options.siteUrl : "");
+  if (base !== "/" && origin.endsWith(base)) {
+    origin = origin.slice(0, origin.indexOf(base));
+  }
+  const baseWithOrigin = options.withBase ? withBase(base, origin || "/") : origin;
+  const resolvedUrl = withBase(path, baseWithOrigin);
+  return path === "/" && !options.withBase ? withTrailingSlash(resolvedUrl) : fixSlashes(options.trailingSlash, resolvedUrl);
+}
+const fileExtensions = [
+  // Images
+  "jpg",
+  "jpeg",
+  "png",
+  "gif",
+  "bmp",
+  "webp",
+  "svg",
+  "ico",
+  // Documents
+  "pdf",
+  "doc",
+  "docx",
+  "xls",
+  "xlsx",
+  "ppt",
+  "pptx",
+  "txt",
+  "md",
+  "markdown",
+  // Archives
+  "zip",
+  "rar",
+  "7z",
+  "tar",
+  "gz",
+  // Audio
+  "mp3",
+  "wav",
+  "flac",
+  "ogg",
+  "opus",
+  "m4a",
+  "aac",
+  "midi",
+  "mid",
+  // Video
+  "mp4",
+  "avi",
+  "mkv",
+  "mov",
+  "wmv",
+  "flv",
+  "webm",
+  // Web
+  "html",
+  "css",
+  "js",
+  "json",
+  "xml",
+  "tsx",
+  "jsx",
+  "ts",
+  "vue",
+  "svelte",
+  "xsl",
+  "rss",
+  "atom",
+  // Programming
+  "php",
+  "py",
+  "rb",
+  "java",
+  "c",
+  "cpp",
+  "h",
+  "go",
+  // Data formats
+  "csv",
+  "tsv",
+  "sql",
+  "yaml",
+  "yml",
+  // Fonts
+  "woff",
+  "woff2",
+  "ttf",
+  "otf",
+  "eot",
+  // Executables/Binaries
+  "exe",
+  "msi",
+  "apk",
+  "ipa",
+  "dmg",
+  "iso",
+  "bin",
+  // Scripts/Config
+  "bat",
+  "cmd",
+  "sh",
+  "env",
+  "htaccess",
+  "conf",
+  "toml",
+  "ini",
+  // Package formats
+  "deb",
+  "rpm",
+  "jar",
+  "war",
+  // E-books
+  "epub",
+  "mobi",
+  // Common temporary/backup files
+  "log",
+  "tmp",
+  "bak",
+  "old",
+  "sav"
+];
+function isPathFile(path) {
+  const lastSegment = path.split("/").pop();
+  const ext = (lastSegment || path).match(FILE_EXT_RE)?.[0];
+  return !!(ext && fileExtensions.includes(ext.replace(".", "")));
+}
+function fixSlashes(trailingSlash, pathOrUrl) {
+  const $url = parseURL(pathOrUrl);
+  if (isPathFile($url.pathname))
+    return pathOrUrl;
+  const fixedPath = trailingSlash ? withTrailingSlash($url.pathname) : withoutTrailingSlash($url.pathname);
+  return `${$url.protocol ? `${$url.protocol}//` : ""}${$url.host || ""}${fixedPath}${$url.search || ""}${$url.hash || ""}`;
+}
+function getNitroOrigin(e) {
+  {
+    e = e || useRequestEvent();
+    return e?.context?.siteConfigNitroOrigin || "";
+  }
+}
+function useNitroOrigin(e) {
+  return getNitroOrigin(e);
+}
+function createSitePathResolver(options = {}) {
+  const siteConfig = useSiteConfig();
+  const nitroOrigin = useNitroOrigin();
+  const nuxtBase = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL || "/";
+  return (path) => {
+    return computed(() => resolveSitePath(unref(path), {
+      absolute: unref(options.absolute),
+      withBase: unref(options.withBase),
+      siteUrl: unref(options.canonical) !== false || import.meta.prerender ? siteConfig.url : nitroOrigin,
+      trailingSlash: siteConfig.trailingSlash,
+      base: nuxtBase
+    }));
+  };
+}
+function withSiteUrl(path, options = {}) {
+  const siteConfig = useSiteConfig();
+  const nitroOrigin = useNitroOrigin();
+  const base = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL || "/";
+  return computed(() => {
+    return resolveSitePath(unref(path), {
+      absolute: true,
+      siteUrl: unref(options.canonical) !== false || import.meta.prerender ? siteConfig.url : nitroOrigin,
+      trailingSlash: siteConfig.trailingSlash,
+      base,
+      withBase: unref(options.withBase)
+    });
+  });
+}
+function resolvePathDirect(siteConfig, path, options) {
+  const nuxtBase = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL || "/";
+  return resolveSitePath(path, {
+    absolute: options.absolute,
+    withBase: options.withBase,
+    siteUrl: toValue(siteConfig.url),
+    trailingSlash: toValue(siteConfig.trailingSlash),
+    base: nuxtBase
+  });
+}
+function initPlugin(nuxtApp) {
+  const head = injectHead();
+  const config = useSchemaOrgConfig();
+  const route = useRoute();
+  const siteConfig = useSiteConfig();
+  const resolveUrl = (path) => resolvePathDirect(siteConfig, path, { absolute: true, withBase: true });
+  function resolveSchemaOrg() {
+    const siteConfigResolved = {};
+    for (const key in siteConfig) {
+      if (key.startsWith("_")) {
+        continue;
+      }
+      siteConfigResolved[key] = toValue(siteConfig[key]);
+      if (typeof siteConfigResolved[key] === "object") {
+        for (const k in siteConfigResolved[key]) {
+          siteConfigResolved[key][k] = toValue(siteConfigResolved[key][k]);
+        }
+      }
+    }
+    return {
+      ...route.meta?.schemaOrg || {},
+      ...siteConfigResolved,
+      url: toValue(resolveUrl(route.path)),
+      host: withTrailingSlash(toValue(resolveUrl("/"))),
+      inLanguage: toValue(siteConfigResolved.currentLocale) || toValue(siteConfigResolved.defaultLocale),
+      path: route.path
+    };
+  }
+  useHead({
+    templateParams: { schemaOrg: resolveSchemaOrg() }
+  });
+  head.use(
+    SchemaOrgUnheadPlugin({}, async () => {
+      const meta = {};
+      await nuxtApp.hooks.callHook("schema-org:meta", meta);
+      return meta;
+    }, {
+      minify: config.minify,
+      trailingSlash: siteConfig.trailingSlash
+    })
+  );
+}
+function maybeAddIdentitySchemaOrg() {
+  const config = useSchemaOrgConfig();
+  const siteConfig = useSiteConfig({
+    resolveRefs: true
+  });
+  if (config.identity || siteConfig.identity) {
+    const identity = config.identity || siteConfig.identity;
+    let identityPayload = {
+      name: () => toValue(siteConfig.name),
+      url: () => toValue(siteConfig.url)
+    };
+    let identityType;
+    if (typeof identity !== "string") {
+      identityPayload = {
+        ...identityPayload,
+        ...identity
+      };
+      identityType = identity.type;
+      delete identityPayload.type;
+    } else {
+      identityType = identity;
+    }
+    if (siteConfig.twitter) {
+      const id = siteConfig.twitter.startsWith("@") ? siteConfig.twitter.slice(1) : siteConfig.twitter;
+      identityPayload.sameAs = [
+        `https://twitter.com/${id}`
+      ];
+    }
+    identityPayload._resolver = identityPayload._resolver || camelCase(identityType);
+    useSchemaOrg([identityPayload]);
+  }
+}
+const defaults_ZjgoYqsIrjWNaJMfDhci2B0eoNnvY4CDsoscm0L1fE0 = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-schema-org:defaults",
+  dependsOn: [
+    "nuxt-schema-org:init"
+  ],
+  setup() {
+    const error = /* @__PURE__ */ useError();
+    if (error.value?.error) {
+      return;
+    }
+    const siteConfig = useSiteConfig();
+    useSchemaOrg([
+      defineWebSite({
+        name: () => toValue(siteConfig.name) || "",
+        inLanguage: () => toValue(siteConfig.currentLocale) || "",
+        description: () => toValue(siteConfig.description) || ""
+      }),
+      defineWebPage()
+    ]);
+    maybeAddIdentitySchemaOrg();
+  }
+});
+const init_Ks1wcI1vuv3K3FXG7iAYRqIWlPli19G_eByed0tsXe0 = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-schema-org:init",
+  setup(nuxtApp) {
+    initPlugin(nuxtApp);
+  }
+});
+const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
+const MAX_PATH_LENGTH = 200;
+const RE_BASE64_PADDING = /=/g;
+const RE_BASE64_PLUS = /\+/g;
+const RE_BASE64_SLASH = /\//g;
+const RE_UNDERSCORE = /_/g;
+const RE_PERCENT20 = /%20/g;
+const RE_NON_ASCII = /[^\u0000-\u007F]/;
+const PARAM_ALIASES = {
+  w: "width",
+  h: "height",
+  c: "component",
+  em: "emojis",
+  k: "key",
+  a: "alt",
+  u: "url",
+  cache: "cacheMaxAgeSeconds",
+  p: "_path",
+  // page path - needs alias since _path starts with underscore
+  q: "_query",
+  // query params - needs alias since _query starts with underscore
+  ch: "_componentHash"
+  // component template hash for cache busting prerendered URLs
+};
+const PARAM_TO_ALIAS = Object.fromEntries(
+  Object.entries(PARAM_ALIASES).map(([alias, param]) => [param, alias])
+);
+const COMPLEX_PARAMS = /* @__PURE__ */ new Set(["satori", "resvg", "sharp", "screenshot", "takumi", "fonts", "_query", "_path"]);
+function b64Encode(str) {
+  let encoded;
+  if (typeof btoa === "function") {
+    const utf8 = new TextEncoder().encode(str);
+    const binary = String.fromCharCode(...utf8);
+    encoded = btoa(binary);
+  } else {
+    encoded = Buffer.from(str, "utf8").toString("base64");
+  }
+  return encoded.replace(RE_BASE64_PADDING, "").replace(RE_BASE64_PLUS, "-").replace(RE_BASE64_SLASH, "~");
+}
+function simpleHash(str) {
+  let hash2 = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash2 = (hash2 << 5) - hash2 + char;
+    hash2 = hash2 & hash2;
+  }
+  return Math.abs(hash2).toString(36);
+}
+function hashOgImageOptions(options, componentHash, version) {
+  const { _path, _hash, ...hashableOptions } = options;
+  const hashInput = hashableOptions;
+  return simpleHash(JSON.stringify(hashInput));
+}
+function encodeOgImageParams(options, defaults) {
+  const parts = [];
+  const flattened = {};
+  for (const [key, value] of Object.entries(options)) {
+    if (key === "props" && typeof value === "object") {
+      for (const [propKey, propValue] of Object.entries(value)) {
+        if (propValue === void 0 || propValue === null)
+          continue;
+        if (typeof propValue === "string" || typeof propValue === "number" || typeof propValue === "boolean") {
+          flattened[propKey] = propValue;
+        } else {
+          flattened.props = flattened.props || {};
+          flattened.props[propKey] = propValue;
+        }
+      }
+    } else {
+      flattened[key] = value;
+    }
+  }
+  for (const [key, value] of Object.entries(flattened)) {
+    if (value === void 0 || value === null || value === "") {
+      continue;
+    }
+    if (key === "extension" || key === "socialPreview")
+      continue;
+    if (key === "_path" && value === "/")
+      continue;
+    if (key === "_query" && typeof value === "object" && Object.keys(value).length === 0)
+      continue;
+    if (defaults && key in defaults && defaults[key] === value && key !== "component")
+      continue;
+    const alias = PARAM_TO_ALIAS[key] || key;
+    if (COMPLEX_PARAMS.has(key)) {
+      const json = JSON.stringify(value);
+      if (json === "{}")
+        continue;
+      const b64 = b64Encode(json);
+      parts.push(`${alias}_${b64}`);
+    } else if (typeof value === "object") {
+      const json = JSON.stringify(value);
+      if (json === "{}")
+        continue;
+      const b64 = b64Encode(json);
+      parts.push(`${alias}_${b64}`);
+    } else {
+      const str = String(value);
+      if (RE_NON_ASCII.test(str)) {
+        parts.push(`${alias}_~${b64Encode(str)}`);
+      } else {
+        const escaped = str.startsWith("~") ? `~${str}` : str;
+        const encoded = encodeURIComponent(escaped.replace(RE_UNDERSCORE, "__")).replace(RE_PERCENT20, "+");
+        if (encoded.includes("%")) {
+          parts.push(`${alias}_~${b64Encode(str)}`);
+        } else {
+          parts.push(`${alias}_${encoded}`);
+        }
+      }
+    }
+  }
+  return parts.join(",");
+}
+function buildOgImageUrl(options, extension = "png", isStatic = false, defaults, secret) {
+  const encoded = encodeOgImageParams(options, defaults);
+  const prefix = isStatic ? "/_og/s" : "/_og/d";
+  if (isStatic && (encoded.length > MAX_PATH_LENGTH || encoded.includes("%"))) {
+    const hash2 = hashOgImageOptions(options);
+    return {
+      url: `${prefix}/o_${hash2}.${extension}`,
+      hash: hash2
+    };
+  }
+  const segment = encoded || "default";
+  const signed = secret && !isStatic ? `${segment},s_${signEncodedParams(segment, secret)}` : segment;
+  return {
+    url: `${prefix}/${signed}.${extension}`
+  };
+}
+function signEncodedParams(encoded, secret) {
+  return hash(`${secret}:${encoded}`).slice(0, 16);
+}
+const RE_KEBAB_CASE = /-([a-z])/g;
+function generateMeta(url, resolvedOptions) {
+  const key = resolvedOptions.key || "og";
+  const isTwitterOnly = key === "twitter";
+  const includeTwitter = key === "og" || key === "twitter";
+  const meta = [];
+  if (includeTwitter) {
+    meta.push({ name: "twitter:card", content: "summary_large_image" });
+    meta.push({ name: "twitter:image", content: url });
+    meta.push({ name: "twitter:image:src", content: url });
+  }
+  if (!isTwitterOnly) {
+    meta.push({ property: "og:image", content: url });
+    meta.push({ property: "og:image:type", content: () => `image/${getExtension(toValue(url)) || resolvedOptions.extension}` });
+  }
+  if (resolvedOptions.width) {
+    if (!isTwitterOnly)
+      meta.push({ property: "og:image:width", content: resolvedOptions.width });
+    if (includeTwitter)
+      meta.push({ name: "twitter:image:width", content: resolvedOptions.width });
+  }
+  if (resolvedOptions.height) {
+    if (!isTwitterOnly)
+      meta.push({ property: "og:image:height", content: resolvedOptions.height });
+    if (includeTwitter)
+      meta.push({ name: "twitter:image:height", content: resolvedOptions.height });
+  }
+  if (resolvedOptions.alt) {
+    if (!isTwitterOnly)
+      meta.push({ property: "og:image:alt", content: resolvedOptions.alt });
+    if (includeTwitter)
+      meta.push({ name: "twitter:image:alt", content: resolvedOptions.alt });
+  }
+  return meta;
+}
+function isInternalRoute(path) {
+  return path.startsWith("/_") || path.startsWith("@");
+}
+function filterIsOgImageOption(key) {
+  const keys = [
+    "url",
+    "extension",
+    "width",
+    "height",
+    "alt",
+    "props",
+    "renderer",
+    "component",
+    "emojis",
+    "_query",
+    "_hash",
+    "fonts",
+    "satori",
+    "resvg",
+    "sharp",
+    "screenshot",
+    "takumi",
+    "cacheMaxAgeSeconds",
+    "cacheKey",
+    "key"
+  ];
+  return keys.includes(key);
+}
+function separateProps(options, ignoreKeys = []) {
+  options = options || {};
+  const _props = defu(options.props, Object.fromEntries(
+    Object.entries({ ...options }).filter(([k]) => !filterIsOgImageOption(k) && !ignoreKeys.includes(k))
+  ));
+  const props = {};
+  Object.entries(_props).forEach(([key, val]) => {
+    props[key.replace(RE_KEBAB_CASE, (g) => String(g[1]).toUpperCase())] = val;
+  });
+  const result = Object.fromEntries(
+    Object.entries({ ...options }).filter(([k]) => filterIsOgImageOption(k) || ignoreKeys.includes(k))
+  );
+  if (Object.keys(props).length > 0)
+    result.props = props;
+  return result;
+}
+function withoutQuery(path) {
+  return path.split("?")[0];
+}
+function getExtension(path) {
+  path = withoutQuery(path);
+  const lastSegment = path.split("/").pop() || path;
+  const extension = lastSegment.split(".").pop() || lastSegment;
+  if (extension === "jpg")
+    return "jpeg";
+  return extension;
+}
+function resolveUnrefHeadInput(input) {
+  if (input == null)
+    return input;
+  if (isRef(input) || typeof input === "function")
+    return resolveUnrefHeadInput(toValue(input));
+  if (Array.isArray(input))
+    return input.map(resolveUnrefHeadInput);
+  if (typeof input === "object") {
+    const result = {};
+    for (const k in input)
+      result[k] = resolveUnrefHeadInput(input[k]);
+    return result;
+  }
+  return input;
+}
+const RE_RENDERER_SUFFIX = /(Satori|Browser|Takumi)$/;
+function createOgImageMeta(src, input, ssrContext, pagePath, head) {
+  const ogImageConfig = useOgImageRuntimeConfig();
+  const { defaults } = ogImageConfig;
+  const resolvedOptions = separateProps(defu(input, defaults));
+  resolvedOptions.key = resolvedOptions.key || "og";
+  const payloads = ssrContext._ogImagePayloads || [];
+  const currentPayloadIdx = payloads.findIndex(([k]) => k === resolvedOptions.key);
+  const _input = separateProps(defu(input, currentPayloadIdx >= 0 ? payloads[currentPayloadIdx][1] : {}));
+  if (!src && !input.url && !resolvedOptions.url)
+    return;
+  const basePath = "/";
+  if (currentPayloadIdx === -1) {
+    payloads.push([resolvedOptions.key, _input, basePath]);
+  } else {
+    payloads[currentPayloadIdx] = [resolvedOptions.key, _input, basePath];
+  }
+  const baseURL2 = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL;
+  ssrContext._ogImageInstance?.dispose();
+  ssrContext._ogImageInstance = useHead({
+    // Meta is generated lazily so that title/description from useSeoMeta / useHead
+    // are available regardless of call ordering (all component setups have completed
+    // by the time Unhead resolves tags).
+    meta() {
+      const finalPayload = ssrContext._ogImagePayloads || [];
+      return finalPayload.flatMap(([_, options, payloadBasePath]) => {
+        const opts = { ...options, props: { ...options.props } };
+        const rawComponentName = opts.component || componentNames?.[0]?.pascalName;
+        const resolvedComponentName = rawComponentName ? resolveComponentName(rawComponentName) : void 0;
+        const resolvedComponent = resolvedComponentName ? componentNames?.find((c) => c.pascalName === resolvedComponentName || c.kebabName === resolvedComponentName) : void 0;
+        resolvedComponent?.propNames;
+        const extension = opts.extension || defaults?.extension || "png";
+        const isStatic = import.meta.prerender && !(ogImageConfig.security?.secret && ogImageConfig.security?.strict);
+        const urlOpts = { ...opts, _path: payloadBasePath };
+        const componentName = opts.component || componentNames?.[0]?.pascalName;
+        const component = componentNames?.find((c) => c.pascalName === componentName || c.kebabName === componentName);
+        if (component?.hash)
+          urlOpts._componentHash = component.hash;
+        const result = buildOgImageUrl(urlOpts, extension, isStatic, defaults, ogImageConfig.security?.secret || void 0);
+        if (result.hash) {
+          opts._hash = result.hash;
+          options._hash = result.hash;
+        }
+        const resolvedUrl = joinURL("/", baseURL2, result.url);
+        const finalUrl = opts._query && Object.keys(opts._query).length ? withQuery(resolvedUrl, { _query: opts._query }) : resolvedUrl;
+        if (isStatic && import.meta.prerender && ssrContext.event) {
+          const prerenderPaths = ssrContext.event.context._ogImagePrerenderPaths;
+          if (prerenderPaths) {
+            const ogKey = opts.key || "og";
+            prerenderPaths.set(ogKey, (finalUrl.split("?")[0] || finalUrl).replace(/,/g, "%2C"));
+          }
+        }
+        return generateMeta(finalUrl, opts);
+      });
+    }
+  }, {
+    processTemplateParams: true,
+    tagPriority: 35
+  });
+  if (import.meta.prerender) {
+    ssrContext._ogImageDevtoolsInstance?.dispose();
+    ssrContext._ogImageDevtoolsInstance = useHead({
+      script: [{
+        id: "nuxt-og-image-options",
+        type: "application/json",
+        processTemplateParams: true,
+        innerHTML: () => {
+          const devtoolsPayload = (ssrContext._ogImagePayloads || []).map(([key, options]) => {
+            const payload = resolveUnrefHeadInput(options);
+            const rawComponentName = payload.component || componentNames?.[0]?.pascalName;
+            const resolvedComponentName = rawComponentName ? resolveComponentName(rawComponentName) : void 0;
+            const component = resolvedComponentName ? componentNames?.find((c) => c.pascalName === resolvedComponentName || c.kebabName === resolvedComponentName) : void 0;
+            const declaredProps = component?.propNames;
+            if (payload.props && typeof payload.props.title === "undefined" && (!declaredProps || declaredProps.includes("title")))
+              payload.props.title = "%s";
+            if (typeof payload.component === "string") {
+              payload.component = resolveComponentName(payload.component);
+            } else if (payload.component) {
+              delete payload.component;
+            }
+            payload.key = key;
+            delete payload.url;
+            if (payload._query && Object.keys(payload._query).length === 0) {
+              delete payload._query;
+            }
+            if (payload.props && typeof payload.props === "object" && Object.keys(payload.props).length === 0) {
+              delete payload.props;
+            }
+            const ALWAYS_INCLUDE = /* @__PURE__ */ new Set(["component", "_hash", "key", "fonts"]);
+            const final = {};
+            for (const k in payload) {
+              if (payload[k] === "")
+                continue;
+              if (ALWAYS_INCLUDE.has(k) || payload[k] !== defaults[k]) {
+                final[k] = payload[k];
+              }
+            }
+            return final;
+          });
+          return stringify(devtoolsPayload);
+        },
+        tagPosition: "bodyClose"
+      }]
+    });
+  }
+  ssrContext._ogImagePayloads = payloads;
+}
+function resolveComponentName(component) {
+  component = component || componentNames?.[0]?.pascalName;
+  if (component && componentNames) {
+    const originalName = component;
+    const normalizedName = originalName.split(".").map((s, i) => i === 0 ? s : s.charAt(0).toUpperCase() + s.slice(1)).join("");
+    const inputBase = normalizedName.replace(RE_RENDERER_SUFFIX, "");
+    for (const component2 of componentNames) {
+      if (component2.pascalName === normalizedName)
+        return component2.pascalName;
+      const basePascalName = component2.pascalName.replace(RE_RENDERER_SUFFIX, "");
+      if (basePascalName === originalName || basePascalName === inputBase)
+        return component2.pascalName;
+      const prefixes = [
+        { prefix: "OgImageCommunity", overlapWord: "Community" },
+        { prefix: "OgImageTemplate", overlapWord: "Template" },
+        { prefix: "OgImage", overlapWord: "Image" }
+      ];
+      for (const { prefix, overlapWord } of prefixes) {
+        if (!basePascalName.startsWith(prefix))
+          continue;
+        const withoutPrefix = basePascalName.slice(prefix.length);
+        if (withoutPrefix === originalName || withoutPrefix === inputBase)
+          return component2.pascalName;
+        if (withoutPrefix && withoutPrefix !== overlapWord) {
+          const withOverlap = overlapWord + withoutPrefix;
+          if (withOverlap === originalName || withOverlap === inputBase)
+            return component2.pascalName;
+        }
+        break;
+      }
+    }
+  }
+  return component;
+}
+function getOgImagePath(_pagePath, _options) {
+  const { app, defaults, security } = useOgImageRuntimeConfig();
+  const baseURL2 = app.baseURL;
+  const extension = _options?.extension || defaults?.extension || "png";
+  const isStatic = import.meta.prerender && !(security?.secret && security?.strict);
+  const options = { ..._options, _path: _pagePath };
+  const componentName = _options?.component || componentNames?.[0]?.pascalName;
+  const component = componentNames?.find((c) => c.pascalName === componentName || c.kebabName === componentName);
+  if (component?.hash)
+    options._componentHash = component.hash;
+  const result = buildOgImageUrl(options, extension, isStatic, defaults, security?.secret || void 0);
+  const path = joinURL("/", baseURL2, result.url);
+  return {
+    path,
+    hash: result.hash
+  };
+}
+function useOgImageRuntimeConfig() {
+  const event = useRequestEvent();
+  const c = event ? /* @__PURE__ */ useRuntimeConfig() : /* @__PURE__ */ useRuntimeConfig();
+  const serverCfg = c["nuxt-og-image"] || {};
+  const publicCfg = c.public?.["nuxt-og-image"] || {};
+  const merged = { defaults: {}, ...publicCfg, ...serverCfg };
+  const overrideSecret = c.ogImage?.secret;
+  if (overrideSecret)
+    merged.security = { ...merged.security || {}, secret: overrideSecret };
+  merged.app = { baseURL: c.app.baseURL };
+  return merged;
+}
+const RE_COMMA = /,/g;
+function ogImageCanonicalUrls(nuxtApp) {
+  nuxtApp.hooks.hook("app:rendered", async (ctx) => {
+    const { ssrContext } = ctx;
+    const e = useRequestEvent();
+    const path = parseURL(e?.path || "").pathname;
+    if (isInternalRoute(path))
+      return;
+    ssrContext?.head.use(TemplateParamsPlugin);
+    ssrContext?.head.use({
+      key: "nuxt-og-image:overrides-and-canonical-urls",
+      hooks: {
+        "tags:afterResolve": (ctx2) => {
+          let title = "";
+          let description = "";
+          for (const tag of ctx2.tags) {
+            if (tag.tag === "title" && tag.textContent) {
+              title = tag.textContent;
+            } else if (tag.tag === "meta" && tag.props.name === "description") {
+              description = tag.props.content || "";
+            }
+            if (title && description)
+              break;
+          }
+          for (const tag of ctx2.tags) {
+            if (tag.tag === "meta" && (tag.props.property === "og:image" || ["twitter:image:src", "twitter:image"].includes(tag.props.name || ""))) {
+              if (!tag.props.content) {
+                tag.props = {};
+                continue;
+              }
+              tag.props.content = tag.props.content.replaceAll("%title", title).replaceAll("%description", description).replaceAll(" ", "+");
+              if (!tag.props.content?.startsWith("https")) {
+                nuxtApp.runWithContext(() => {
+                  tag.props.content = toValue(withSiteUrl(tag.props.content || "", {
+                    withBase: true,
+                    canonical: true
+                  }));
+                });
+              }
+            }
+          }
+        }
+      }
+    });
+  });
+}
+function routeRuleOgImage(nuxtApp) {
+  nuxtApp.hooks.hook("app:rendered", async (ctx) => {
+    const { ssrContext } = ctx;
+    const e = useRequestEvent();
+    const path = parseURL(e?.path || "").pathname;
+    if (isInternalRoute(path))
+      return;
+    const _routeRulesMatcher2 = toRouteMatcher(
+      createRouter$1({ routes: ssrContext?.runtimeConfig?.nitro?.routeRules })
+    );
+    const matchedRules = _routeRulesMatcher2.matchAll(
+      withoutBase(path.split("?")?.[0] || "", ssrContext?.runtimeConfig?.app.baseURL || "")
+    ).reverse();
+    const combinedRules = defu({}, ...matchedRules);
+    let routeRules = combinedRules?.ogImage;
+    if (typeof routeRules === "undefined")
+      return;
+    if (routeRules === false) {
+      nuxtApp.ssrContext._ogImageInstance?.dispose();
+      nuxtApp.ssrContext._ogImageDevtoolsInstance?.dispose();
+      nuxtApp.ssrContext._ogImageInstance = void 0;
+      nuxtApp.ssrContext._ogImagePayloads = [];
+      if (import.meta.prerender)
+        e?.context._ogImagePrerenderPaths?.clear();
+      return;
+    }
+    routeRules = defu(nuxtApp.ssrContext?.event?.context._nitro?.routeRules?.ogImage, routeRules);
+    const { path: src, hash: hash2 } = getOgImagePath(ssrContext.url, routeRules);
+    if (hash2) {
+      routeRules._hash = hash2;
+    }
+    createOgImageMeta(src, routeRules, nuxtApp.ssrContext);
+    if (import.meta.prerender && e) {
+      const ogKey = routeRules.key || "og";
+      const prerenderPath = (src.split("?")[0] || src).replace(RE_COMMA, "%2C");
+      const prerenderPaths = e.context._ogImagePrerenderPaths || (e.context._ogImagePrerenderPaths = /* @__PURE__ */ new Map());
+      prerenderPaths.set(ogKey, prerenderPath);
+    }
+  });
+}
+const og_image_canonical_urls_server_2uCBKzWxjEK91fSFBdBNPEWilWXRzR66cHJvjIi4FGA = /* @__PURE__ */ defineNuxtPlugin({
+  setup(nuxtApp) {
+    ogImageCanonicalUrls(nuxtApp);
+  }
+});
+const route_rule_og_image_server_yrHfzNQxtCKZyHaGhWqsbaa4V0Y5WoBOo3_wqkmh41k = /* @__PURE__ */ defineNuxtPlugin({
+  setup(nuxtApp) {
+    routeRuleOgImage(nuxtApp);
+  }
+});
+const robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk = /* @__PURE__ */ defineNuxtPlugin({
+  setup() {
+    const event = useRequestEvent();
+    const ctx = event?.context?.robots;
+    event?.context?.robotsProduction;
+    if (!ctx)
+      return;
+    useHead({
+      meta: [
+        {
+          "name": "robots",
+          "content": () => ctx.rule || "",
+          "data-hint": () => void 0,
+          "data-production-content": () => void 0
+        }
+      ]
+    });
+  }
+});
+const LazyProseA = defineAsyncComponent(() => import("./_nuxt/ProseA-DkGO5b59.js").then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import("./_nuxt/ProseBlockquote-DCcJoMYD.js").then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import("./_nuxt/ProseCode-BfhyOxBi.js").then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import("./_nuxt/ProseEm-BH7funYV.js").then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import("./_nuxt/ProseH1-C17UTHFd.js").then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import("./_nuxt/ProseH2-Cb9GQWGl.js").then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import("./_nuxt/ProseH3-BAEYuPzN.js").then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import("./_nuxt/ProseH4-C-PjAB3K.js").then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import("./_nuxt/ProseH5-CsjT45OU.js").then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import("./_nuxt/ProseH6-BNuIKpo0.js").then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import("./_nuxt/ProseHr-DolEqj2-.js").then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import("./_nuxt/ProseImg-OQVD8ifA.js").then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import("./_nuxt/ProseLi-CjYc9KH7.js").then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import("./_nuxt/ProseOl-Bu0bvtW0.js").then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import("./_nuxt/ProseP-QmWBDhfi.js").then((r) => r["default"] || r.default || r));
+const LazyProsePre = defineAsyncComponent(() => import("./_nuxt/ProsePre-ByG-rB1z.js").then((r) => r["default"] || r.default || r));
+const LazyProseScript = defineAsyncComponent(() => import("./_nuxt/ProseScript-B3ujpe25.js").then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import("./_nuxt/ProseStrong-CWe3U0eR.js").then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import("./_nuxt/ProseTable-DRjE3kJI.js").then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import("./_nuxt/ProseTbody-C7S1nSgr.js").then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import("./_nuxt/ProseTd-BNB4LEtx.js").then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import("./_nuxt/ProseTh-Cex4Xz3E.js").then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import("./_nuxt/ProseThead-D3i-SYyr.js").then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import("./_nuxt/ProseTr-Bs5sfj5n.js").then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import("./_nuxt/ProseUl-Dnb1iG-i.js").then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
-  ["ContentDoc", LazyContentDoc],
-  ["ContentList", LazyContentList],
-  ["ContentNavigation", LazyContentNavigation],
-  ["ContentQuery", LazyContentQuery],
-  ["ContentRenderer", LazyContentRenderer],
-  ["ContentRendererMarkdown", LazyContentRendererMarkdown],
-  ["MDCSlot", LazyContentSlot],
-  ["DocumentDrivenEmpty", LazyDocumentDrivenEmpty],
-  ["DocumentDrivenNotFound", LazyDocumentDrivenNotFound],
-  ["Markdown", LazyMarkdown],
-  ["ProseCode", LazyProseCode],
-  ["ProseCodeInline", LazyProseCodeInline],
-  ["ProsePre", LazyProsePre],
   ["ProseA", LazyProseA],
   ["ProseBlockquote", LazyProseBlockquote],
+  ["ProseCode", LazyProseCode],
   ["ProseEm", LazyProseEm],
   ["ProseH1", LazyProseH1],
   ["ProseH2", LazyProseH2],
@@ -1266,6 +2257,7 @@ const lazyGlobalComponents = [
   ["ProseLi", LazyProseLi],
   ["ProseOl", LazyProseOl],
   ["ProseP", LazyProseP],
+  ["ProsePre", LazyProsePre],
   ["ProseScript", LazyProseScript],
   ["ProseStrong", LazyProseStrong],
   ["ProseTable", LazyProseTable],
@@ -1320,13 +2312,358 @@ function processRoutes(routes2, currentPath = "/", routesToPrerender = /* @__PUR
   }
   return routesToPrerender;
 }
+function minifyJS(code) {
+  let result = "";
+  let i = 0;
+  const len = code.length;
+  while (i < len) {
+    const ch = code[i];
+    if (ch === "'" || ch === '"' || ch === "`") {
+      const quote = ch;
+      result += ch;
+      i++;
+      while (i < len && code[i] !== quote) {
+        if (code[i] === "\\") {
+          result += code[i++];
+        }
+        result += code[i++];
+      }
+      if (i < len)
+        result += code[i++];
+    } else if (ch === "/" && code[i + 1] === "/") {
+      i += 2;
+      while (i < len && code[i] !== "\n")
+        i++;
+    } else if (ch === "/" && code[i + 1] === "*") {
+      i += 2;
+      while (i < len && !(code[i] === "*" && code[i + 1] === "/"))
+        i++;
+      i += 2;
+    } else if (ch === " " || ch === "	" || ch === "\n" || ch === "\r") {
+      let hasNewline = false;
+      while (i < len && (code[i] === " " || code[i] === "	" || code[i] === "\n" || code[i] === "\r")) {
+        if (code[i] === "\n")
+          hasNewline = true;
+        i++;
+      }
+      const prev = result.at(-1);
+      const next = code[i];
+      if (hasNewline && prev && next && prev !== "{" && prev !== "}" && prev !== ";" && next !== "}" && next !== ";")
+        result += "\n";
+      else if (prev && next && isIdentChar(prev) && isIdentChar(next))
+        result += " ";
+      else if (prev && next && (prev === "+" && next === "+" || prev === "-" && next === "-"))
+        result += " ";
+    } else {
+      result += ch;
+      i++;
+    }
+  }
+  return result.trim();
+}
+function minifyCSS(code) {
+  let result = "";
+  let i = 0;
+  let parenDepth = 0;
+  const len = code.length;
+  while (i < len) {
+    const ch = code[i];
+    if (ch === "'" || ch === '"') {
+      const quote = ch;
+      result += ch;
+      i++;
+      while (i < len && code[i] !== quote) {
+        if (code[i] === "\\")
+          result += code[i++];
+        result += code[i++];
+      }
+      if (i < len)
+        result += code[i++];
+    } else if (ch === "/" && code[i + 1] === "*") {
+      i += 2;
+      while (i < len && !(code[i] === "*" && code[i + 1] === "/"))
+        i++;
+      i += 2;
+    } else if (ch === "(") {
+      parenDepth++;
+      result += ch;
+      i++;
+    } else if (ch === ")") {
+      parenDepth = Math.max(0, parenDepth - 1);
+      result += ch;
+      i++;
+    } else if (ch === " " || ch === "	" || ch === "\n" || ch === "\r") {
+      while (i < len && (code[i] === " " || code[i] === "	" || code[i] === "\n" || code[i] === "\r"))
+        i++;
+      const prev = result.at(-1);
+      const next = code[i];
+      if (next === "!")
+        continue;
+      if (parenDepth > 0) {
+        if (prev && next && !isCSSCalcPunctuation(prev) && !isCSSCalcPunctuation(next))
+          result += " ";
+      } else if (prev && next && !isCSSPunctuation(prev) && !isCSSPunctuation(next)) {
+        result += " ";
+      }
+    } else if (ch === ";") {
+      let j = i + 1;
+      while (j < len && (code[j] === " " || code[j] === "	" || code[j] === "\n" || code[j] === "\r"))
+        j++;
+      if (code[j] === "}") {
+        i++;
+      } else {
+        result += ch;
+        i++;
+      }
+    } else if (ch === "0" && code[i + 1] === "." && (code[i + 2] ?? "") >= "0" && (code[i + 2] ?? "") <= "9") {
+      const prev = result.at(-1);
+      if (prev && prev >= "0" && prev <= "9") {
+        result += ch;
+        i++;
+      } else {
+        i++;
+      }
+    } else {
+      result += ch;
+      i++;
+    }
+  }
+  return result.trim();
+}
+function isIdentChar(ch) {
+  return ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z" || ch >= "0" && ch <= "9" || ch === "_" || ch === "$";
+}
+function isCSSBasePunctuation(ch) {
+  return ch === "{" || ch === "}" || ch === ";" || ch === ":" || ch === ",";
+}
+function isCSSPunctuation(ch) {
+  return isCSSBasePunctuation(ch) || ch === ">" || ch === "+" || ch === "~";
+}
+function isCSSCalcPunctuation(ch) {
+  return isCSSBasePunctuation(ch) || ch === "*" || ch === "/";
+}
+function minifyJSON(code) {
+  return JSON.stringify(JSON.parse(code));
+}
+const JSON_TYPES = /* @__PURE__ */ new Set(["application/json", "application/ld+json"]);
+const SKIP_JS_TYPES = /* @__PURE__ */ new Set(["application/json", "application/ld+json", "speculationrules", "importmap"]);
+const minifyScripts_server_vI_uAmhP3_n8myLPfw5_eV1I7D4ANVXFZoE6G_rspLU = /* @__PURE__ */ defineNuxtPlugin({
+  enforce: "post",
+  setup() {
+    const head = injectHead();
+    if (!head)
+      return;
+    head.use({
+      key: "minify-inline",
+      hooks: {
+        "ssr:render": ({ tags }) => {
+          for (const tag of tags) {
+            const content = tag.innerHTML;
+            if (!content)
+              continue;
+            if (tag.tag === "script") {
+              const type = tag.props.type;
+              if (type && JSON_TYPES.has(type)) {
+                try {
+                  const minified = minifyJSON(content);
+                  if (minified.length < content.length)
+                    tag.innerHTML = minified;
+                } catch {
+                }
+                continue;
+              }
+              if (type && SKIP_JS_TYPES.has(type))
+                continue;
+              try {
+                const minified = minifyJS(content);
+                if (minified.length < content.length)
+                  tag.innerHTML = minified;
+              } catch {
+              }
+            } else if (tag.tag === "style") {
+              try {
+                const minified = minifyCSS(content);
+                if (minified.length < content.length)
+                  tag.innerHTML = minified;
+              } catch {
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+});
+const _1_absoluteImageUrls_server_2YTf8dZl0nl5nVc1xW7fV_4mFLM_syJu2DEHHvxD9lg = /* @__PURE__ */ defineNuxtPlugin({
+  enforce: "post",
+  setup() {
+    const head = injectHead();
+    if (!head)
+      return;
+    const resolver = createSitePathResolver({
+      withBase: true,
+      absolute: true,
+      canonical: true
+    });
+    head.use({
+      key: "absoluteImageUrls",
+      hooks: {
+        "tags:resolve": async ({ tags }) => {
+          for (const tag of tags) {
+            if (tag.tag !== "meta")
+              continue;
+            if (tag.props.property !== "og:image:url" && tag.props.property !== "og:image" && tag.props.name !== "twitter:image" && tag.props.name !== "twitter:image:src")
+              continue;
+            if (typeof tag.props.content !== "string" || !tag.props.content.trim() || tag.props.content.startsWith("http") || tag.props.content.startsWith("//"))
+              continue;
+            tag.props.content = unref(resolver(tag.props.content));
+          }
+        }
+      }
+    });
+  }
+});
+const _0_routeRules_3p7F2AZYQSP_eJRsw5nLkf3zyZXPOFcTrXNpZlBwROM = /* @__PURE__ */ defineNuxtPlugin({
+  enforce: "post",
+  env: { islands: false },
+  async setup() {
+    let __temp, __restore;
+    const head = injectHead();
+    if (!head)
+      return;
+    const { tagPriority } = (/* @__PURE__ */ useRuntimeConfig()).public["seo-utils"];
+    const routeRuleState = useState("nuxt-seo-utils:routeRules", () => null);
+    {
+      const event = useRequestEvent();
+      const routeRules = ([__temp, __restore] = executeAsync(() => getRouteRules(event)), __temp = await __temp, __restore(), __temp);
+      const rules = routeRules;
+      routeRuleState.value = {
+        head: rules.head,
+        seoMeta: rules.seoMeta
+      };
+    }
+    if (routeRuleState.value) {
+      const { head: headInput, seoMeta } = routeRuleState.value;
+      if (headInput)
+        head.push(headInput);
+      if (seoMeta)
+        useSeoMeta(seoMeta, { tagPriority });
+    }
+  }
+});
+const LOCALE_UNDERSCORE_RE = /_/g;
+function applyDefaults() {
+  const siteConfig = useSiteConfig({
+    resolveRefs: false
+  });
+  const resolveCurrentLocale = () => {
+    const locale = toValue(siteConfig.currentLocale) || toValue(siteConfig.defaultLocale) || "en";
+    return locale.replace(LOCALE_UNDERSCORE_RE, "-");
+  };
+  const head = injectHead();
+  head.use(TemplateParamsPlugin);
+  const { canonicalQueryWhitelist, canonicalLowercase, tagPriority, separator, titleSeparator } = (/* @__PURE__ */ useRuntimeConfig()).public["seo-utils"];
+  const route = useRoute();
+  const resolveUrl = createSitePathResolver({ withBase: true, absolute: true });
+  const err = /* @__PURE__ */ useError();
+  const resolveSeparator = () => toValue(siteConfig.separator) || separator || toValue(siteConfig.titleSeparator) || titleSeparator;
+  const resolveTitleSeparator = () => toValue(siteConfig.titleSeparator) || titleSeparator || toValue(siteConfig.separator) || separator;
+  const canonicalUrl = computed(() => {
+    if (err.value) {
+      return false;
+    }
+    const { query } = route;
+    let url = resolveUrl(route.path || "/").value || route.path;
+    if (canonicalLowercase) {
+      try {
+        url = url.toLocaleLowerCase(resolveCurrentLocale());
+      } catch {
+        url = url.toLowerCase();
+      }
+    }
+    const filteredQuery = Object.fromEntries(
+      Object.entries(query).filter(([key]) => canonicalQueryWhitelist.includes(key)).sort(([a], [b]) => a.localeCompare(b))
+      // Sort params
+    );
+    const href = Object.keys(filteredQuery).length ? `${url}?${stringifyQuery(filteredQuery)}` : url;
+    return { rel: "canonical", href };
+  });
+  const minimalPriority = {
+    // give nuxt.config values higher priority
+    tagPriority: "low"
+  };
+  const seoMetaPriority = {
+    tagPriority
+  };
+  useHead({
+    htmlAttrs: { lang: resolveCurrentLocale },
+    templateParams: {
+      site: () => siteConfig,
+      siteName: () => siteConfig.name,
+      separator: resolveSeparator,
+      titleSeparator: resolveTitleSeparator
+    },
+    titleTemplate: () => err.value ? "%s" : "%s %separator %siteName",
+    link: [() => canonicalUrl.value]
+  }, minimalPriority);
+  useSeoMeta({
+    ogLocale: () => {
+      const locale = resolveCurrentLocale();
+      if (locale) {
+        const l = locale.replace("-", "_");
+        if (l.includes("_")) {
+          return l;
+        }
+      }
+      return false;
+    }
+  }, minimalPriority);
+  const seoMeta = {
+    ogType: "website",
+    ogUrl: () => {
+      const url = canonicalUrl.value;
+      return url ? url.href : false;
+    },
+    ogSiteName: siteConfig.name
+  };
+  if (siteConfig.description)
+    useSeoMeta({ description: siteConfig.description }, minimalPriority);
+  if (siteConfig.twitter) {
+    const id = siteConfig.twitter.startsWith("@") ? siteConfig.twitter : `@${siteConfig.twitter}`;
+    seoMeta.twitterCreator = id;
+    seoMeta.twitterSite = id;
+  }
+  useSeoMeta(seoMeta, seoMetaPriority);
+}
+const defaults_0Sn7xIMAzGkdbab2otVWD8mX4GpY74A3Jy_gY_4_qYk = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-seo:defaults",
+  order: 999,
+  env: {
+    islands: false
+  },
+  setup() {
+    applyDefaults();
+  }
+});
 const plugins = [
   unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU,
   plugin,
   _0_siteConfig_tU0SxKrPeVRXWcGu2sOnIfhNDbYiKNfDCvYZhRueG0Q,
   revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms,
+  siteConfig_vuqmRkLAUZxQvb5pvUwT3uUdVggfjhj1m5v7Pb6IE0w,
+  inferSeoMetaPlugin_KsEotgC9NJyW_guR_3z04hFN8TI2h5dgP8bzHmpMm5o,
+  titles_Fth_MAhm7dgpxeTaMXibYXbcCjegjWK3QH9gKvbTRVg,
+  defaults_ZjgoYqsIrjWNaJMfDhci2B0eoNnvY4CDsoscm0L1fE0,
+  init_Ks1wcI1vuv3K3FXG7iAYRqIWlPli19G_eByed0tsXe0,
+  og_image_canonical_urls_server_2uCBKzWxjEK91fSFBdBNPEWilWXRzR66cHJvjIi4FGA,
+  route_rule_og_image_server_yrHfzNQxtCKZyHaGhWqsbaa4V0Y5WoBOo3_wqkmh41k,
+  robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk,
   components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4,
-  prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk
+  prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk,
+  minifyScripts_server_vI_uAmhP3_n8myLPfw5_eV1I7D4ANVXFZoE6G_rspLU,
+  _1_absoluteImageUrls_server_2YTf8dZl0nl5nVc1xW7fV_4mFLM_syJu2DEHHvxD9lg,
+  _0_routeRules_3p7F2AZYQSP_eJRsw5nLkf3zyZXPOFcTrXNpZlBwROM,
+  defaults_0Sn7xIMAzGkdbab2otVWD8mX4GpY74A3Jy_gY_4_qYk
 ];
 const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   name,
@@ -1791,8 +3128,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404-BkVfJtpe.js"));
-    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500-Q1zBDj2r.js"));
+    const _Error404 = defineAsyncComponent(() => import("./_nuxt/error-404-D1csT8ol.js"));
+    const _Error = defineAsyncComponent(() => import("./_nuxt/error-500-C3xuuDUL.js"));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -1886,15 +3223,14 @@ const entry_default = ((ssrContext) => entry(ssrContext));
 export {
   _export_sfc as _,
   __nuxt_component_0$1 as a,
-  useSeoMeta as b,
-  useRoute as c,
-  useRuntimeConfig as d,
+  useRoute as b,
+  useRequestFetch as c,
+  createError as d,
   entry_default as default,
-  useState as e,
-  useNuxtApp as f,
-  asyncDataDefaults as g,
-  createError as h,
-  useRequestEvent as i,
+  useRuntimeConfig as e,
+  fetchDefaults as f,
+  useNuxtApp as g,
+  asyncDataDefaults as h,
   useHead as u
 };
 //# sourceMappingURL=server.mjs.map

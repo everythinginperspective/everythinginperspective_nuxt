@@ -2,8 +2,10 @@ export default defineNuxtConfig({
   // Build hooks
   hooks: {
     'build:before': async () => {
-      console.log('\n🔗 Building relationship graph...')
       const { execSync } = await import('child_process')
+      console.log('\n📋 Building content types...')
+      execSync('node scripts/build-content-types.js', { stdio: 'inherit' })
+      console.log('\n🔗 Building relationship graph...')
       execSync('node scripts/build-graph.js', { stdio: 'inherit' })
     }
   },
@@ -32,7 +34,7 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', 'nuxt-ai-ready'],
   
   // Sitemap config
   sitemap: {
@@ -78,10 +80,17 @@ export default defineNuxtConfig({
   // Generate static site at build time
   routeRules: {
     '/': { prerender: true },
+    // Legacy routes (keeping for backwards compatibility)
     '/article/**': { prerender: true },
     '/perspective/**': { prerender: true },
     '/page/**': { prerender: true },
-    '/book/**': { prerender: true }
+    '/book/**': { prerender: true },
+    // New dynamic magazine routes
+    '/magazine/**': { prerender: true },
+    // Linked data routes
+    '/linked-data/**': { prerender: true },
+    // API routes - no cache
+    '/api/**': { cache: false }
   },
 
   // DevTools
