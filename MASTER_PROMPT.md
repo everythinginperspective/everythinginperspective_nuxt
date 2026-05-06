@@ -1,0 +1,1 @@
+../everythinginperspective/MASTER_PROMPT.md
