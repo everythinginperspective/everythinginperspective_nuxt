@@ -1,7 +1,7 @@
 ---
 title: "The Weather Crisis: Climate Data You Need to Know (And Why You Don&#x27;t) | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/article/weather-climate-data-literacy"
-last_updated: "2026-05-06T22:34:04.146Z"
+last_updated: "2026-05-06T22:46:56.444Z"
 meta:
   description: "Climate change isn't a future threat—it's reshaping weather today. The data everyone ignores and why climate literacy matters more than carbon reduction rhetoric."
   "og:description": "Climate change isn't a future threat—it's reshaping weather today. The data everyone ignores and why climate literacy matters more than carbon reduction rhetoric."

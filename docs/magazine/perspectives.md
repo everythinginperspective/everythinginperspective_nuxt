@@ -1,7 +1,7 @@
 ---
 title: "perspectives | Everything in Perspective | Everything in Perspective"
 canonical_url: "https://einp.surge.sh/magazine/perspectives"
-last_updated: "2026-05-06T22:34:03.685Z"
+last_updated: "2026-05-06T22:46:55.855Z"
 meta:
   description: "Browse all perspectives on Everything in Perspective"
   "og:description": "Browse all perspectives on Everything in Perspective"

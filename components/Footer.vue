@@ -29,20 +29,24 @@
       </div>
       <div class="border-t border-primary pt-6 sm:pt-8">
         <!-- Hilltopads Banner Ad -->
-        <div class="py-4 mb-4">
-          <script>
-          (function(nsr){
-          var d = document,
-              s = d.createElement('script'),
-              l = d.scripts[d.scripts.length - 1];
-          s.settings = nsr || {};
-          s.src = "//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT";
-          s.async = true;
-          s.referrerPolicy = 'no-referrer-when-downgrade';
-          l.parentNode.insertBefore(s, l);
-          })({})
-          </script>
-        </div>
+        <div class="py-4 mb-4" id="hilltopads-footer"></div>
+        <script>
+          (function() {
+            const d = document;
+            const container = d.getElementById('hilltopads-footer');
+            if (container) {
+              const s = d.createElement('script');
+              const l = d.scripts[d.scripts.length - 1];
+              s.settings = {};
+              s.src = '//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT';
+              s.async = true;
+              s.referrerPolicy = 'no-referrer-when-downgrade';
+              if (l && l.parentNode) {
+                l.parentNode.insertBefore(s, l);
+              }
+            }
+          })();
+        </script>
         <p class="text-xs text-center text-secondary">&copy; 2026 Everything in Perspective. All rights reserved.</p>
       </div>
     </div>
