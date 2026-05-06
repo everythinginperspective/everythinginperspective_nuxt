@@ -11,12 +11,13 @@
           </NuxtLink>
           <p class="text-muted text-xs sm:text-sm mt-2">Essays on trends, context & nuance</p>
         </div>
-        <div class="hidden lg:flex gap-8 text-sm nav-main">
+        <div class="hidden lg:flex gap-8 text-sm nav-main items-center">
           <NuxtLink to="/" class="hover:underline">Home</NuxtLink>
           <NuxtLink to="/magazine/articles" class="hover:underline">Articles</NuxtLink>
           <NuxtLink to="/magazine/perspectives" class="hover:underline">Perspectives</NuxtLink>
           <NuxtLink to="/page/faq" class="hover:underline">FAQ</NuxtLink>
           <NuxtLink to="/page/contact-us" class="hover:underline">Contact</NuxtLink>
+          <SearchBar />
         </div>
         <button @click="toggleNav" class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation">☰</button>
       </div>
