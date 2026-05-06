@@ -1,7 +1,7 @@
 ---
 title: "Contact Us | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/pages/contact-us"
-last_updated: "2026-05-06T23:23:13.013Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/pages/contact-us"
+last_updated: "2026-05-06T23:30:13.303Z"
 meta:
   description: "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
   "og:description": "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
@@ -18,11 +18,11 @@ Have a question, topic suggestion, or want to contribute? We'd love to hear from
 
 ## Email
 
-**General inquiries:** [hello@everythinginperspective.com](https://einp.surge.sh/mailto:hello@everythinginperspective.com)
+**General inquiries:** [hello@everythinginperspective.com](https://everythinginperspective.github.io/mailto:hello@everythinginperspective.com)
 
-**Topic suggestions:** [ideas@everythinginperspective.com](https://einp.surge.sh/mailto:ideas@everythinginperspective.com)
+**Topic suggestions:** [ideas@everythinginperspective.com](https://everythinginperspective.github.io/mailto:ideas@everythinginperspective.com)
 
-**Guest submissions:** [contribute@everythinginperspective.com](https://einp.surge.sh/mailto:contribute@everythinginperspective.com)
+**Guest submissions:** [contribute@everythinginperspective.com](https://everythinginperspective.github.io/mailto:contribute@everythinginperspective.com)
 
 ## Response time
 

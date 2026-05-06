@@ -1,7 +1,7 @@
 ---
 title: "Cookie Policy | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/pages/cookie-policy"
-last_updated: "2026-05-06T23:23:12.871Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/pages/cookie-policy"
+last_updated: "2026-05-06T23:30:13.126Z"
 meta:
   description: "How we use cookies."
   "og:description": "How we use cookies."

@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/articles/whatsapp-comunicacao-global"
-last_updated: "2026-05-06T23:23:12.759Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/whatsapp-comunicacao-global"
+last_updated: "2026-05-06T23:30:13.014Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"

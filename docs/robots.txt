@@ -2,5 +2,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://einp.surge.sh/sitemap_index.xml
+Sitemap: https://everythinginperspective.github.io/sitemap_index.xml
 # END nuxt-robots

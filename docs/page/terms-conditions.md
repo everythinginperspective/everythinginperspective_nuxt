@@ -1,7 +1,7 @@
 ---
 title: "Terms &amp; Conditions | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/page/terms-conditions"
-last_updated: "2026-05-06T23:23:13.187Z"
+canonical_url: "https://everythinginperspective.github.io/page/terms-conditions"
+last_updated: "2026-05-06T23:30:13.452Z"
 meta:
   description: "Our terms of service."
   "og:description": "Our terms of service."

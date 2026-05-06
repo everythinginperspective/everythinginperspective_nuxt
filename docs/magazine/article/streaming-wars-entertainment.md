@@ -1,7 +1,7 @@
 ---
 title: "Streaming Wars: How Entertainment Distribution Reshapes Culture and Labor | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/magazine/article/streaming-wars-entertainment"
-last_updated: "2026-05-06T23:23:12.692Z"
+canonical_url: "https://everythinginperspective.github.io/magazine/article/streaming-wars-entertainment"
+last_updated: "2026-05-06T23:30:12.977Z"
 meta:
   description: "From Netflix disruption to streaming saturation—how on-demand video changed entertainment economics, collapsed piracy, and created an unsustainable content arms race."
   "og:description": "From Netflix disruption to streaming saturation—how on-demand video changed entertainment economics, collapsed piracy, and created an unsustainable content arms race."

@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/ja"
-last_updated: "2026-05-06T23:23:13.643Z"
+canonical_url: "https://everythinginperspective.github.io/ja"
+last_updated: "2026-05-06T23:30:13.932Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"
@@ -16,7 +16,7 @@ May 7, 2026 • Technology
 
 亚马逊每月超过1.51亿次搜索。它如何从一家书店变成全球商业基础设施？为什么它征服了全世界，却在中国一败涂地？
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/amazon-global-dominance.zh)
+[**~~Read More → ~~**](https://everythinginperspective.github.io/article/amazon-global-dominance.zh)
 
 ### **ChatGPT und die Wissensarbeit: Wie KI 100 Millionen Nutzer und die europäische Wirtschaft verändert**
 
@@ -24,7 +24,7 @@ May 7, 2026 • Technology
 
 ChatGPT hat 100 Millionen Nutzer in 60 Tagen gewonnen. Was das für Wissensarbeiter, die deutsche Wirtschaft und Europas KI-Regulierung bedeutet.
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/chatgpt-wissensarbeit-ki-revolution.de)
+[**~~Read More → ~~**](https://everythinginperspective.github.io/article/chatgpt-wissensarbeit-ki-revolution.de)
 
 ### **Sarkari Result: Why 100 Million Indians Race for Government Jobs**
 
@@ -32,4 +32,4 @@ May 7, 2026 • Economics
 
 Over 100M Indians search 'sarkari result' monthly. Behind that number lies a sociology of economic anxiety, colonial legacy, and shifting social mobility.
 
-[**~~Read More → ~~**](https://einp.surge.sh/article/sarkari-result-india-government-jobs.en)
+[**~~Read More → ~~**](https://everythinginperspective.github.io/article/sarkari-result-india-government-jobs.en)

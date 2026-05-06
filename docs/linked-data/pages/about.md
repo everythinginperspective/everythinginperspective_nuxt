@@ -1,7 +1,7 @@
 ---
 title: "About Everything in Perspective | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/pages/about"
-last_updated: "2026-05-06T23:23:13.015Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/pages/about"
+last_updated: "2026-05-06T23:30:13.138Z"
 meta:
   description: "Learn about our mission to provide context and nuance on global trends"
   "og:description": "Learn about our mission to provide context and nuance on global trends"
@@ -43,4 +43,4 @@ We believe informed citizens need more than headlines. Subscribe to our newslett
 
 ## Contact
 
-Have a topic you'd like us to explore? [Get in touch](https://einp.surge.sh/page/contact-us/).
+Have a topic you'd like us to explore? [Get in touch](https://everythinginperspective.github.io/page/contact-us/).

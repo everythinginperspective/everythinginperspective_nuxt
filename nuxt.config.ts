@@ -53,14 +53,14 @@ export default defineNuxtConfig({
   
   // Site URL for SEO and sitemap
   site: {
-    url: 'https://einp.surge.sh',
+    url: 'https://everythinginperspective.github.io',
     name: 'Everything in Perspective'
   },
   
   // Site config for @nuxtjs/seo
   siteConfig: {
     name: 'Everything in Perspective',
-    url: 'https://einp.surge.sh',
+    url: 'https://everythinginperspective.github.io',
     description: 'Essays on trends, context & nuance'
   },
   

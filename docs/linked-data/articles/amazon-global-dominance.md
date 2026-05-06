@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/articles/amazon-global-dominance"
-last_updated: "2026-05-06T23:23:12.345Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/amazon-global-dominance"
+last_updated: "2026-05-06T23:30:12.590Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"

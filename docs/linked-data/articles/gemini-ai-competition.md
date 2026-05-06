@@ -1,7 +1,7 @@
 ---
 title: "Gemini and the AI Landscape: Beyond ChatGPT&#x27;s First-Mover Advantage | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://einp.surge.sh/linked-data/articles/gemini-ai-competition"
-last_updated: "2026-05-06T23:23:12.430Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/gemini-ai-competition"
+last_updated: "2026-05-06T23:30:12.709Z"
 meta:
   description: "ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing differently."
   "og:description": "ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing differently."

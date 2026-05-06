@@ -8,7 +8,7 @@
     "generate": "nuxt generate && rm -rf docs && cp -r .output/public docs && pagefind --site docs",
     "dev": "nuxt dev",
     "start": "nuxt preview",
-    "deploy": "npm run generate && surge ./docs einp.surge.sh"
+    "deploy": "npm run generate && git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main"
   },
   "keywords": [],
   "author": "Everything in Perspective",
