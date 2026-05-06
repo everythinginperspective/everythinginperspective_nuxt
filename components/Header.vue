@@ -1,11 +1,6 @@
 <template>
   <header class="border-b border-accent bg-secondary sticky top-0 z-50">
-    <!-- Hilltopads Banner Ad -->
-    <ClientOnly>
-      <div class="bg-secondary py-2">
-        <script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"></script>
-      </div>
-    </ClientOnly>
+    <!-- Hilltopads Banner Ad (injected via app.vue useHead) -->
     <Breadcrumbs />
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       <div class="flex justify-between items-start">

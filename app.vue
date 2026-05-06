@@ -33,6 +33,12 @@ useHead({
         description: 'Essays on trends, context & nuance',
         sameAs: []
       })
+    },
+    {
+      src: '//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT',
+      async: true,
+      referrerpolicy: 'no-referrer-when-downgrade',
+      defer: false
     }
   ]
 })

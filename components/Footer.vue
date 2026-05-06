@@ -28,12 +28,7 @@
         </div>
       </div>
       <div class="border-t border-primary pt-6 sm:pt-8">
-        <!-- Hilltopads Banner Ad -->
-        <ClientOnly>
-          <div class="py-4 mb-4">
-            <script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"></script>
-          </div>
-        </ClientOnly>
+        <!-- Hilltopads Banner Ad (injected via app.vue useHead) -->
         <p class="text-xs text-center text-secondary">&copy; 2026 Everything in Perspective. All rights reserved.</p>
       </div>
     </div>
