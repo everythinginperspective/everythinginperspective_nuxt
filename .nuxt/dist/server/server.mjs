@@ -26,7 +26,6 @@ if (!("global" in globalThis)) {
 }
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
 const asyncDataDefaults = { "value": null, "errorValue": null, "deep": true };
-const fetchDefaults = {};
 const appId = "nuxt-app";
 const crawlLinks = true;
 function getNuxtAppCtx(id = appId) {
@@ -476,42 +475,42 @@ const _routes = [
     name: "index",
     path: "/",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import("./_nuxt/index-DmpbClTR.js")
+    component: () => import("./_nuxt/index-D9Yuvbhl.js")
   },
   {
     name: "page-slug",
     path: "/page/:slug()",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import("./_nuxt/_slug_-CghQmVb1.js")
+    component: () => import("./_nuxt/_slug_-C19kOC4K.js")
   },
   {
     name: "article-slug",
     path: "/article/:slug()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import("./_nuxt/_slug_-CNkchQrO.js")
+    component: () => import("./_nuxt/_slug_-nyHHBzS4.js")
+  },
+  {
+    name: "magazine-plural",
+    path: "/magazine/:plural()",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import("./_nuxt/_plural_-CTYpGh93.js")
+  },
+  {
+    name: "linked-data-plural",
+    path: "/linked-data/:plural()",
+    component: () => import("./_nuxt/_plural_-CWyIhQ4P.js")
   },
   {
     name: "linked-data-slug",
     path: "/linked-data/:slug(.*)*",
-    component: () => import("./_nuxt/_...slug_-DFlaOtsI.js")
-  },
-  {
-    name: "magazine-type",
-    path: "/magazine/:type()",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import("./_nuxt/index-kLqmwbZH.js")
-  },
-  {
-    name: "magazine-type-slug",
-    path: "/magazine/:type()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import("./_nuxt/_slug_-DN-e4XTa.js")
+    component: () => import("./_nuxt/_...slug_-fO3OtPpT.js")
   },
   {
-    name: "linked-data-type",
-    path: "/linked-data/:type()",
+    name: "magazine-singular-slug",
+    path: "/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta || {},
-    component: () => import("./_nuxt/index-DQ4Z5h1a.js")
+    component: () => import("./_nuxt/_slug_-DAobG6fw.js")
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -939,9 +938,6 @@ function useState(...args) {
 function useRequestEvent(nuxtApp) {
   nuxtApp ||= useNuxtApp();
   return nuxtApp.ssrContext?.event;
-}
-function useRequestFetch() {
-  return useRequestEvent()?.$fetch || globalThis.$fetch;
 }
 function prerenderRoutes(path) {
   if (!import.meta.prerender) {
@@ -2220,14 +2216,14 @@ const LazyProseA = defineAsyncComponent(() => import("./_nuxt/ProseA-DkGO5b59.js
 const LazyProseBlockquote = defineAsyncComponent(() => import("./_nuxt/ProseBlockquote-DCcJoMYD.js").then((r) => r["default"] || r.default || r));
 const LazyProseCode = defineAsyncComponent(() => import("./_nuxt/ProseCode-BfhyOxBi.js").then((r) => r["default"] || r.default || r));
 const LazyProseEm = defineAsyncComponent(() => import("./_nuxt/ProseEm-BH7funYV.js").then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import("./_nuxt/ProseH1-C17UTHFd.js").then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import("./_nuxt/ProseH2-Cb9GQWGl.js").then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import("./_nuxt/ProseH3-BAEYuPzN.js").then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import("./_nuxt/ProseH4-C-PjAB3K.js").then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import("./_nuxt/ProseH5-CsjT45OU.js").then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import("./_nuxt/ProseH6-BNuIKpo0.js").then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import("./_nuxt/ProseH1-DoDUZyMj.js").then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import("./_nuxt/ProseH2--DLqVg5m.js").then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import("./_nuxt/ProseH3-BHakVcNz.js").then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import("./_nuxt/ProseH4-CJlDwS-e.js").then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import("./_nuxt/ProseH5-Dpk1ZEd0.js").then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import("./_nuxt/ProseH6-Boq1q68R.js").then((r) => r["default"] || r.default || r));
 const LazyProseHr = defineAsyncComponent(() => import("./_nuxt/ProseHr-DolEqj2-.js").then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import("./_nuxt/ProseImg-OQVD8ifA.js").then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import("./_nuxt/ProseImg-oKild0Pq.js").then((r) => r["default"] || r.default || r));
 const LazyProseLi = defineAsyncComponent(() => import("./_nuxt/ProseLi-CjYc9KH7.js").then((r) => r["default"] || r.default || r));
 const LazyProseOl = defineAsyncComponent(() => import("./_nuxt/ProseOl-Bu0bvtW0.js").then((r) => r["default"] || r.default || r));
 const LazyProseP = defineAsyncComponent(() => import("./_nuxt/ProseP-QmWBDhfi.js").then((r) => r["default"] || r.default || r));
@@ -3239,13 +3235,12 @@ export {
   _export_sfc as _,
   __nuxt_component_0$1 as a,
   useRoute as b,
-  useRequestFetch as c,
-  createError as d,
+  createError as c,
+  useRuntimeConfig as d,
   entry_default as default,
-  useRuntimeConfig as e,
-  fetchDefaults as f,
-  useNuxtApp as g,
-  asyncDataDefaults as h,
+  useNuxtApp as e,
+  asyncDataDefaults as f,
+  navigateTo as n,
   useHead as u
 };
 //# sourceMappingURL=server.mjs.map

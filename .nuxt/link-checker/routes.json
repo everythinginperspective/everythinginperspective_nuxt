@@ -1,1 +1,1 @@
-{"staticRoutes":["/"],"dynamicRoutes":["/page/:slug()","/article/:slug()","/linked-data/:slug(.*)*","/magazine/:type()","/magazine/:type()/:slug()","/linked-data/:type()"]}
+{"staticRoutes":["/"],"dynamicRoutes":["/page/:slug()","/article/:slug()","/magazine/:plural()","/linked-data/:plural()","/linked-data/:slug(.*)*","/magazine/:singular()/:slug()"]}

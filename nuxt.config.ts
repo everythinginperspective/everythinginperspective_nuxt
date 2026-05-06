@@ -51,7 +51,9 @@ export default defineNuxtConfig({
     },
     markdown: {
       anchorLinks: false
-    }
+    },
+    // Enable all file types: markdown, JSON, YAML, CSV, etc.
+    ignores: []
   },
 
   // CSS & styling

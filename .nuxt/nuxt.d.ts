@@ -1,6 +1,6 @@
 /// <reference types="@nuxtjs/sitemap" />
-/// <reference types="nuxt-ai-ready" />
 /// <reference types="@nuxt/telemetry" />
+/// <reference types="nuxt-ai-ready" />
 /// <reference types="@nuxt/content" />
 /// <reference types="@nuxtjs/seo" />
 /// <reference path="types/nitro-layouts.d.ts" />
