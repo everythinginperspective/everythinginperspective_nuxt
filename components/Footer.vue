@@ -27,8 +27,23 @@
           </ul>
         </div>
       </div>
-      <div class="border-t border-primary pt-6 sm:pt-8 text-xs text-center text-secondary">
-        <p>&copy; 2026 Everything in Perspective. All rights reserved.</p>
+      <div class="border-t border-primary pt-6 sm:pt-8">
+        <!-- Hilltopads Banner Ad -->
+        <div class="py-4 mb-4">
+          <script>
+          (function(nsr){
+          var d = document,
+              s = d.createElement('script'),
+              l = d.scripts[d.scripts.length - 1];
+          s.settings = nsr || {};
+          s.src = "//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT";
+          s.async = true;
+          s.referrerPolicy = 'no-referrer-when-downgrade';
+          l.parentNode.insertBefore(s, l);
+          })({})
+          </script>
+        </div>
+        <p class="text-xs text-center text-secondary">&copy; 2026 Everything in Perspective. All rights reserved.</p>
       </div>
     </div>
   </footer>
