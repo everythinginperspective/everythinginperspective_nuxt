@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://everythinginperspective.github.io/page/privacy-policy"
-last_updated: "2026-05-06T23:30:13.479Z"
+canonical_url: "https://humanitiesclinic.github.io/page/privacy-policy"
+last_updated: "2026-05-07T08:16:31.683Z"
 meta:
   description: "Last updated: May 5, 2026"
   "og:description": "Last updated: May 5, 2026"
@@ -76,7 +76,7 @@ You have the right to:
 - Deletion: Request we delete your email from our lists
 - Opt-out: Unsubscribe from emails at any time
 
-To exercise these rights, [contact us](https://everythinginperspective.github.io/page/contact-us/).
+To exercise these rights, [contact us](https://humanitiesclinic.github.io/page/contact-us/).
 
 ## Data security
 
@@ -94,7 +94,7 @@ We may update this policy as our services evolve. We'll notify subscribers of ma
 
 ## Questions?
 
-Have concerns about your privacy or our practices? [Get in touch](https://everythinginperspective.github.io/page/contact-us/). We take privacy seriously and welcome your feedback.
+Have concerns about your privacy or our practices? [Get in touch](https://humanitiesclinic.github.io/page/contact-us/). We take privacy seriously and welcome your feedback.
 
 ---
 

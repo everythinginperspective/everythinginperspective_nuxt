@@ -1,7 +1,7 @@
 ---
 title: "Everything in Perspective | Everything in Perspective"
-canonical_url: "https://everythinginperspective.github.io/magazine/article/amazon-global-dominance"
-last_updated: "2026-05-06T23:30:12.445Z"
+canonical_url: "https://humanitiesclinic.github.io/magazine/article/amazon-global-dominance"
+last_updated: "2026-05-07T08:16:29.939Z"
 meta:
   description: "Essays on trends, context & nuance"
   "og:description": "Essays on trends, context & nuance"

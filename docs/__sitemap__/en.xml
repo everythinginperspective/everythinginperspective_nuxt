@@ -1,303 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/__sitemap__/style.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://everythinginperspective.github.io/</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="en" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/fr" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/de" hreflang="de" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/es" hreflang="es" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/it" hreflang="it" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/nl" hreflang="nl" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/pt" hreflang="pt" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/zh" hreflang="zh" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ar" hreflang="ar" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ja" hreflang="ja" />
+        <loc>https://humanitiesclinic.github.io/</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/fr" hreflang="fr" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/de" hreflang="de" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/it" hreflang="it" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/es" hreflang="es" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/pt" hreflang="pt" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/nl" hreflang="nl" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/zh" hreflang="zh" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/ja" hreflang="ja" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/ar" hreflang="ar" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/articles</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/articles" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/articles" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/articles</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/articles" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/articles" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/pages</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/pages" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/pages" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/pages</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/pages" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/pages" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/perspectives</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspectives" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspectives" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/perspectives</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/perspectives" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/perspectives" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/about</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/about" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/about" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/about</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/about" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/about" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/contact-us</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/contact-us" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/contact-us" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/contact-us</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/contact-us" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/contact-us" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/cookie-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/cookie-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/cookie-policy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/cookie-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/cookie-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/cookie-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/faq</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/faq" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/faq" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/faq</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/faq" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/faq" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/privacy-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/privacy-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/privacy-policy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/privacy-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/privacy-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/privacy-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/page/terms-conditions</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/terms-conditions" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/page/terms-conditions" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/page/terms-conditions</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/terms-conditions" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/page/terms-conditions" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/amazon-global-dominance</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/amazon-global-dominance" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/amazon-global-dominance" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/amazon-global-dominance</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/amazon-global-dominance" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/amazon-global-dominance" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/chatgpt-wissensarbeit-ki-revolution" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/crickets-global-obsession</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/crickets-global-obsession" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/crickets-global-obsession" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/crickets-global-obsession</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/crickets-global-obsession" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/crickets-global-obsession" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/ecommerce-giants-market-dominance</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/ecommerce-giants-market-dominance" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/ecommerce-giants-market-dominance" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/ecommerce-giants-market-dominance</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/ecommerce-giants-market-dominance" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/ecommerce-giants-market-dominance" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/gemini-ai-competition</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/gemini-ai-competition" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/gemini-ai-competition" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/facebook-paradoxe-empire-meta</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/facebook-paradoxe-empire-meta" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/facebook-paradoxe-empire-meta" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/gold-inflation-hedge</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/gold-inflation-hedge" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/gold-inflation-hedge" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/gemini-ai-competition</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gemini-ai-competition" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gemini-ai-competition" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/google-maps-privacy-urban</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/google-maps-privacy-urban" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/google-maps-privacy-urban" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/gmail-identita-digitale-google</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gmail-identita-digitale-google" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gmail-identita-digitale-google" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/instagram-mental-health</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/instagram-mental-health" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/instagram-mental-health" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/gold-inflation-hedge</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gold-inflation-hedge" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/gold-inflation-hedge" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/restaurant-culture-post-pandemic</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/restaurant-culture-post-pandemic" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/restaurant-culture-post-pandemic" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/google-maps-privacy-urban</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/google-maps-privacy-urban" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/google-maps-privacy-urban" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/sarkari-result-india-government-jobs</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/sarkari-result-india-government-jobs" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/sarkari-result-india-government-jobs" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/great-firewall-internet-censorship-china</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/great-firewall-internet-censorship-china" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/great-firewall-internet-censorship-china" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/satta-king-economic-desperation</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/satta-king-economic-desperation" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/satta-king-economic-desperation" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/instagram-mental-health</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/instagram-mental-health" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/instagram-mental-health" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/streaming-wars-entertainment</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/streaming-wars-entertainment" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/streaming-wars-entertainment" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/restaurant-culture-post-pandemic</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/restaurant-culture-post-pandemic" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/restaurant-culture-post-pandemic" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/translation-globalization</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/translation-globalization" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/translation-globalization" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/sarkari-result-india-government-jobs</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/sarkari-result-india-government-jobs" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/sarkari-result-india-government-jobs" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/weather-climate-data-literacy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/weather-climate-data-literacy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/weather-climate-data-literacy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/satta-king-economic-desperation</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/satta-king-economic-desperation" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/satta-king-economic-desperation" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/whatsapp-comunicacao-global</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/whatsapp-comunicacao-global" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/whatsapp-comunicacao-global" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/streaming-wars-entertainment</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/streaming-wars-entertainment" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/streaming-wars-entertainment" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/wordle-language-psychology</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/wordle-language-psychology" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/wordle-language-psychology" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/translation-globalization</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/translation-globalization" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/translation-globalization" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/articles/youtube-algoritmo-creadores</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/youtube-algoritmo-creadores" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/youtube-algoritmo-creadores" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/weather-climate-data-literacy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/weather-climate-data-literacy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/weather-climate-data-literacy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/about</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/about" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/about" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/whatsapp-comunicacao-global</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/whatsapp-comunicacao-global" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/whatsapp-comunicacao-global" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/contact-us</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/contact-us" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/contact-us" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/wordle-language-psychology</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/wordle-language-psychology" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/wordle-language-psychology" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/cookie-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/cookie-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/cookie-policy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/articles/youtube-algoritmo-creadores</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/youtube-algoritmo-creadores" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/articles/youtube-algoritmo-creadores" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/faq</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/faq" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/faq" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/about</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/about" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/about" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/privacy-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/privacy-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/privacy-policy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/contact-us</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/contact-us" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/contact-us" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/pages/terms-conditions</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/terms-conditions" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/terms-conditions" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/cookie-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/cookie-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/cookie-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/linked-data/perspectives/chatgpt-in-perspective</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/perspectives/chatgpt-in-perspective" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/perspectives/chatgpt-in-perspective" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/faq</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/faq" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/faq" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/amazon-global-dominance</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/amazon-global-dominance" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/amazon-global-dominance" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/privacy-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/privacy-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/privacy-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/pages/terms-conditions</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/terms-conditions" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/pages/terms-conditions" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/crickets-global-obsession</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/crickets-global-obsession" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/crickets-global-obsession" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/linked-data/perspectives/chatgpt-in-perspective</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/perspectives/chatgpt-in-perspective" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/linked-data/perspectives/chatgpt-in-perspective" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/ecommerce-giants-market-dominance</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/ecommerce-giants-market-dominance" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/ecommerce-giants-market-dominance" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/amazon-global-dominance</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/amazon-global-dominance" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/amazon-global-dominance" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/gemini-ai-competition</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/gemini-ai-competition" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/gemini-ai-competition" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/chatgpt-wissensarbeit-ki-revolution" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/gold-inflation-hedge</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/gold-inflation-hedge" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/gold-inflation-hedge" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/facebook-paradoxe-empire-meta</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/facebook-paradoxe-empire-meta" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/facebook-paradoxe-empire-meta" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/google-maps-privacy-urban</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/google-maps-privacy-urban" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/google-maps-privacy-urban" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/gmail-identita-digitale-google</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/gmail-identita-digitale-google" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/gmail-identita-digitale-google" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/instagram-mental-health</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/instagram-mental-health" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/instagram-mental-health" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/great-firewall-internet-censorship-china</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/great-firewall-internet-censorship-china" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/great-firewall-internet-censorship-china" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/restaurant-culture-post-pandemic</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/restaurant-culture-post-pandemic" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/restaurant-culture-post-pandemic" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/sarkari-result-india-government-jobs</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/sarkari-result-india-government-jobs" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/sarkari-result-india-government-jobs" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/sarkari-result-india-government-jobs</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/sarkari-result-india-government-jobs" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/sarkari-result-india-government-jobs" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/whatsapp-comunicacao-global</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/whatsapp-comunicacao-global" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/whatsapp-comunicacao-global" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/satta-king-economic-desperation</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/satta-king-economic-desperation" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/satta-king-economic-desperation" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/wordle-language-psychology</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/wordle-language-psychology" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/wordle-language-psychology" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/streaming-wars-entertainment</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/streaming-wars-entertainment" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/streaming-wars-entertainment" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/article/youtube-algoritmo-creadores</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/youtube-algoritmo-creadores" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/article/youtube-algoritmo-creadores" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/translation-globalization</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/translation-globalization" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/translation-globalization" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/about</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/about" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/about" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/weather-climate-data-literacy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/weather-climate-data-literacy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/weather-climate-data-literacy" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/contact-us</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/contact-us" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/contact-us" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/whatsapp-comunicacao-global</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/whatsapp-comunicacao-global" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/whatsapp-comunicacao-global" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/cookie-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/cookie-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/cookie-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/wordle-language-psychology</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/wordle-language-psychology" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/wordle-language-psychology" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/faq</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/faq" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/faq" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/article/youtube-algoritmo-creadores</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/youtube-algoritmo-creadores" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/youtube-algoritmo-creadores" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/privacy-policy</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/privacy-policy" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/privacy-policy" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/about</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/about" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/about" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/page/terms-conditions</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/terms-conditions" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/page/terms-conditions" hreflang="en" />
     </url>
     <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/contact-us</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/contact-us" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/contact-us" hreflang="en" />
-    </url>
-    <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/cookie-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/cookie-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/cookie-policy" hreflang="en" />
-    </url>
-    <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/faq</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/faq" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/faq" hreflang="en" />
-    </url>
-    <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/privacy-policy</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/privacy-policy" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/privacy-policy" hreflang="en" />
-    </url>
-    <url>
-        <loc>https://everythinginperspective.github.io/magazine/page/terms-conditions</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/terms-conditions" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/terms-conditions" hreflang="en" />
-    </url>
-    <url>
-        <loc>https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective</loc>
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective" hreflang="x-default" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective" hreflang="en" />
+        <loc>https://humanitiesclinic.github.io/magazine/perspective/chatgpt-in-perspective</loc>
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/perspective/chatgpt-in-perspective" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://humanitiesclinic.github.io/magazine/perspective/chatgpt-in-perspective" hreflang="en" />
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-06T23:30:13.993Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-07T08:16:32.698Z -->

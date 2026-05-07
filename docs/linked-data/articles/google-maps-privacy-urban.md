@@ -1,7 +1,7 @@
 ---
 title: "Google Maps: How Location Data Reshapes Urban Planning, Privacy, and Power | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://everythinginperspective.github.io/linked-data/articles/google-maps-privacy-urban"
-last_updated: "2026-05-06T23:30:12.632Z"
+canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/google-maps-privacy-urban"
+last_updated: "2026-05-07T08:16:30.159Z"
 meta:
   description: "Google Maps promised directions. It delivered unprecedented surveillance of human movement. What location data reveals—and who has access to it."
   "og:description": "Google Maps promised directions. It delivered unprecedented surveillance of human movement. What location data reveals—and who has access to it."

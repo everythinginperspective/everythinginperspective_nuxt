@@ -1,9 +1,9 @@
 ---
-title: "Everything in Perspective | Everything in Perspective"
-canonical_url: "https://everythinginperspective.github.io/ar"
-last_updated: "2026-05-06T23:30:13.930Z"
+title: "Everything in Perspective | Essays on trends, context &amp; nuance | Everything in Perspective"
+canonical_url: "https://humanitiesclinic.github.io/ar"
+last_updated: "2026-05-07T08:16:32.534Z"
 meta:
-  description: "Essays on trends, context & nuance"
+  description: "Explore essays on global trends, economic forces, technology, and human behavior. Everything in Perspective delivers nuanced analysis and contextual thinking."
   "og:description": "Essays on trends, context & nuance"
   "og:title": "Everything in Perspective"
 ---
@@ -16,7 +16,7 @@ May 7, 2026 • Technology
 
 亚马逊每月超过1.51亿次搜索。它如何从一家书店变成全球商业基础设施？为什么它征服了全世界，却在中国一败涂地？
 
-[**~~Read More → ~~**](https://everythinginperspective.github.io/article/amazon-global-dominance.zh)
+[**~~Read More → ~~**](https://humanitiesclinic.github.io/article/amazon-global-dominance.zh)
 
 ### **ChatGPT und die Wissensarbeit: Wie KI 100 Millionen Nutzer und die europäische Wirtschaft verändert**
 
@@ -24,12 +24,12 @@ May 7, 2026 • Technology
 
 ChatGPT hat 100 Millionen Nutzer in 60 Tagen gewonnen. Was das für Wissensarbeiter, die deutsche Wirtschaft und Europas KI-Regulierung bedeutet.
 
-[**~~Read More → ~~**](https://everythinginperspective.github.io/article/chatgpt-wissensarbeit-ki-revolution.de)
+[**~~Read More → ~~**](https://humanitiesclinic.github.io/article/chatgpt-wissensarbeit-ki-revolution.de)
 
-### **Sarkari Result: Why 100 Million Indians Race for Government Jobs**
+### **Facebook est-il en train de mourir ? Le paradoxe de l'empire Meta**
 
-May 7, 2026 • Economics
+May 7, 2026 • Technology
 
-Over 100M Indians search 'sarkari result' monthly. Behind that number lies a sociology of economic anxiety, colonial legacy, and shifting social mobility.
+Facebook perd la Gen Z mais atteint 3 milliards d'utilisateurs. Analyse du paradoxe de Meta : déclin culturel ou domination silencieuse d'un empire numérique ?
 
-[**~~Read More → ~~**](https://everythinginperspective.github.io/article/sarkari-result-india-government-jobs.en)
+[**~~Read More → ~~**](https://humanitiesclinic.github.io/article/facebook-paradoxe-empire-meta.fr)
