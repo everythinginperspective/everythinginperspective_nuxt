@@ -65,20 +65,19 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-schema-org', 'nuxt-og-image', 'nuxt-robots', 'nuxt-canonical'],
+  modules: ['@nuxt/content', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-canonical'],
   
-  // @nuxtjs/seo configuration
+  // @nuxtjs/seo configuration (bundles: sitemap, robots, og-image, schema-org, seo-utils, link-checker)
   seo: {
     redirectToCanonicalSiteUrl: true,
     splash: false
   },
   
-  // nuxt-robots configuration
+  // Robots configuration (via @nuxtjs/robots bundled in @nuxtjs/seo)
   robots: {
-    UserAgent: '*',
-    Allow: '/',
-    Disallow: ['/api/', '/admin/'],
-    Sitemap: 'https://humanitiesclinic.github.io/sitemap.xml'
+    allow: '/',
+    disallow: ['/api/', '/admin/'],
+    sitemap: 'https://humanitiesclinic.github.io/sitemap.xml'
   },
   
   // nuxt-canonical configuration
