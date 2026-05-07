@@ -54,13 +54,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': 'https://humanitiesclinic.github.io/#website',
+        '@id': 'https://everythinginperspective.github.io/#website',
         name: 'Everything in Perspective',
-        url: 'https://humanitiesclinic.github.io',
+        url: 'https://everythinginperspective.github.io',
         description: 'Essays on trends, context & nuance',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://humanitiesclinic.github.io/?q={search_term_string}',
+          target: 'https://everythinginperspective.github.io/?q={search_term_string}',
           'query-input': 'required name=search_term_string'
         },
         sameAs: [],
@@ -72,12 +72,12 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        '@id': 'https://humanitiesclinic.github.io/#collection',
+        '@id': 'https://everythinginperspective.github.io/#collection',
         name: 'Everything in Perspective Essays',
         description: 'A curated collection of essays exploring global trends with nuance and context',
-        url: 'https://humanitiesclinic.github.io',
+        url: 'https://everythinginperspective.github.io',
         isPartOf: {
-          '@id': 'https://humanitiesclinic.github.io/#website'
+          '@id': 'https://everythinginperspective.github.io/#website'
         },
         mainEntity: {
           '@type': 'ItemList',
@@ -86,7 +86,7 @@ useHead({
             position: idx + 1,
             name: article.title,
             description: article.description,
-            url: `https://humanitiesclinic.github.io/magazine/article/${article.path?.split('/').pop()}`,
+            url: `https://everythinginperspective.github.io/magazine/article/${article.path?.split('/').pop()}`,
             image: article.image || '/og-default.png'
           }))
         }

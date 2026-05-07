@@ -17,7 +17,7 @@ const preloadRoutes = () => {
       try {
         const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
         for (const file of files) {
-          const slug = file.replace(/\.[a-z]{2}\.md$/, '').replace(/\.md$/, '')
+          const slug = file.replace(/\.md$/, '')
           routes.push(`/linked-data/${folder}/${slug}`)
           const singular = folder.replace(/s$/, '')
           routes.push(`/magazine/${singular}/${slug}`)
