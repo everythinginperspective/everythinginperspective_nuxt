@@ -26,16 +26,34 @@ const route = useRoute()
 const singular = route.params.singular as string
 const slug = route.params.slug as string
 
-// Get content type info - handle singular alias
-const contentType = await getContentTypeBySingular(singular)
-if (!contentType) {
+// Synchronous lookup — must not await before useAsyncData (breaks composable context in SSR)
+const folderMap: Record<string, string> = {
+  article: 'articles',
+  perspective: 'perspectives',
+  page: 'pages',
+  book: 'books',
+  person: 'people',
+  language: 'languages'
+}
+const pluralMap: Record<string, string> = {
+  article: 'articles',
+  perspective: 'perspectives',
+  page: 'pages',
+  book: 'books',
+  person: 'people',
+  language: 'languages'
+}
+const folder = folderMap[singular]
+const plural = pluralMap[singular]
+
+if (!folder) {
   throw createError({ statusCode: 404, message: 'Content type not found' })
 }
 
-// Fetch content (v3: queryCollection)
+// Fetch content — useAsyncData called before any await to preserve composable context
 const { data: content } = await useAsyncData(
   `${singular}-${slug}`,
-  () => queryCollection(contentType.folder as any).path(`/${contentType.folder}/${slug}`).first()
+  () => queryCollection(folder as any).path(`/${folder}/${slug}`).first()
 )
 
 // Map type to template component
@@ -144,8 +162,8 @@ watch(() => content.value, (newContent) => {
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: contentType.plural,
-                item: `https://einp.surge.sh/magazine/${contentType.plural}`
+                name: plural,
+                item: `https://einp.surge.sh/magazine/${plural}`
               },
               {
                 '@type': 'ListItem',
