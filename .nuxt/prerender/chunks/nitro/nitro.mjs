@@ -23,6 +23,7 @@ import { createRouterMatcher } from 'file:///Volumes/B87P4/everythinginperspecti
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve as resolve$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import { createFilter } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import { isAbsolute } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import localAdapter from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 
@@ -655,7 +656,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "b989062e-aac2-4752-9031-423299974082",
+    "buildId": "6177f859-88dd-4730-971d-95df5fbdc563",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -722,77 +723,77 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/en.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/fr.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/de.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/es.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/it.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/pt.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/nl.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/zh.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/ja.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/__sitemap__/ar.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-06T20:30:49.807Z"
+          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
         }
       },
       "/_og/d/**": {
@@ -1026,17 +1027,169 @@ const _inlineRuntimeConfig = {
             "*"
           ],
           "disallow": [
-            ""
+            "/api/",
+            "/fr/api/",
+            "/de/api/",
+            "/es/api/",
+            "/it/api/",
+            "/pt/api/",
+            "/nl/api/",
+            "/zh/api/",
+            "/ja/api/",
+            "/ar/api/",
+            "/admin/",
+            "/fr/admin/",
+            "/de/admin/",
+            "/es/admin/",
+            "/it/admin/",
+            "/pt/admin/",
+            "/nl/admin/",
+            "/zh/admin/",
+            "/ja/admin/",
+            "/ar/admin/"
           ],
-          "allow": [],
+          "allow": [
+            "/",
+            "/fr/",
+            "/de/",
+            "/es/",
+            "/it/",
+            "/pt/",
+            "/nl/",
+            "/zh/",
+            "/ja/",
+            "/ar/"
+          ],
           "contentUsage": [],
           "contentSignal": [],
           "_indexable": true,
-          "_rules": [],
+          "_rules": [
+            {
+              "pattern": "/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/fr/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/de/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/es/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/it/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/pt/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/nl/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/zh/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/ja/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/ar/api/",
+              "allow": false
+            },
+            {
+              "pattern": "/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/fr/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/de/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/es/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/it/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/pt/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/nl/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/zh/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/ja/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/ar/admin/",
+              "allow": false
+            },
+            {
+              "pattern": "/",
+              "allow": true
+            },
+            {
+              "pattern": "/fr/",
+              "allow": true
+            },
+            {
+              "pattern": "/de/",
+              "allow": true
+            },
+            {
+              "pattern": "/es/",
+              "allow": true
+            },
+            {
+              "pattern": "/it/",
+              "allow": true
+            },
+            {
+              "pattern": "/pt/",
+              "allow": true
+            },
+            {
+              "pattern": "/nl/",
+              "allow": true
+            },
+            {
+              "pattern": "/zh/",
+              "allow": true
+            },
+            {
+              "pattern": "/ja/",
+              "allow": true
+            },
+            {
+              "pattern": "/ar/",
+              "allow": true
+            }
+          ],
           "_normalized": true
         }
       ],
       "sitemap": [
+        "https://everythinginperspective.github.io/sitemap.xml",
         "/sitemap_index.xml"
       ],
       "header": true,
@@ -1067,7 +1220,7 @@ const _inlineRuntimeConfig = {
     "scriptAttributes": {
       "data-nuxt-schema-org": true
     },
-    "identity": "",
+    "identity": "Organization",
     "version": "6.0.4"
   },
   "content": {
@@ -1093,7 +1246,8 @@ const _inlineRuntimeConfig = {
       {
         "_priority": -3,
         "_context": "nuxt-site-config:config",
-        "url": "https://einp.surge.sh"
+        "url": "https://everythinginperspective.github.io",
+        "name": "Everything in Perspective"
       },
       {
         "_context": "@nuxtjs/i18n",
@@ -1115,17 +1269,169 @@ const _inlineRuntimeConfig = {
           "*"
         ],
         "disallow": [
-          ""
+          "/api/",
+          "/fr/api/",
+          "/de/api/",
+          "/es/api/",
+          "/it/api/",
+          "/pt/api/",
+          "/nl/api/",
+          "/zh/api/",
+          "/ja/api/",
+          "/ar/api/",
+          "/admin/",
+          "/fr/admin/",
+          "/de/admin/",
+          "/es/admin/",
+          "/it/admin/",
+          "/pt/admin/",
+          "/nl/admin/",
+          "/zh/admin/",
+          "/ja/admin/",
+          "/ar/admin/"
         ],
-        "allow": [],
+        "allow": [
+          "/",
+          "/fr/",
+          "/de/",
+          "/es/",
+          "/it/",
+          "/pt/",
+          "/nl/",
+          "/zh/",
+          "/ja/",
+          "/ar/"
+        ],
         "contentUsage": [],
         "contentSignal": [],
         "_indexable": true,
-        "_rules": [],
+        "_rules": [
+          {
+            "pattern": "/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/fr/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/de/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/es/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/it/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/pt/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/nl/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/zh/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/ja/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/ar/api/",
+            "allow": false
+          },
+          {
+            "pattern": "/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/fr/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/de/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/es/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/it/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/pt/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/nl/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/zh/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/ja/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/ar/admin/",
+            "allow": false
+          },
+          {
+            "pattern": "/",
+            "allow": true
+          },
+          {
+            "pattern": "/fr/",
+            "allow": true
+          },
+          {
+            "pattern": "/de/",
+            "allow": true
+          },
+          {
+            "pattern": "/es/",
+            "allow": true
+          },
+          {
+            "pattern": "/it/",
+            "allow": true
+          },
+          {
+            "pattern": "/pt/",
+            "allow": true
+          },
+          {
+            "pattern": "/nl/",
+            "allow": true
+          },
+          {
+            "pattern": "/zh/",
+            "allow": true
+          },
+          {
+            "pattern": "/ja/",
+            "allow": true
+          },
+          {
+            "pattern": "/ar/",
+            "allow": true
+          }
+        ],
         "_normalized": true
       }
     ],
     "sitemap": [
+      "https://everythinginperspective.github.io/sitemap.xml",
       "/sitemap_index.xml"
     ],
     "header": true,
@@ -3157,42 +3463,6 @@ function autoEjectCommunityTemplate(component, runtimeConfig, options) {
   return;
 }
 
-function createFilter(options = {}) {
-  const include = options.include || [];
-  const exclude = options.exclude || [];
-  if (include.length === 0 && exclude.length === 0)
-    return () => true;
-  const excludeRegex = exclude.filter((r) => r instanceof RegExp);
-  const includeRegex = include.filter((r) => r instanceof RegExp);
-  const excludeStrings = exclude.filter((r) => typeof r === "string");
-  const includeStrings = include.filter((r) => typeof r === "string");
-  const excludeMatcher = excludeStrings.length > 0 ? toRouteMatcher(createRouter({
-    routes: Object.fromEntries(excludeStrings.map((r) => [r, true])),
-    strictTrailingSlash: false
-  })) : null;
-  const includeMatcher = includeStrings.length > 0 ? toRouteMatcher(createRouter({
-    routes: Object.fromEntries(includeStrings.map((r) => [r, true])),
-    strictTrailingSlash: false
-  })) : null;
-  const excludeExact = new Set(excludeStrings);
-  const includeExact = new Set(includeStrings);
-  return function(path) {
-    if (excludeRegex.some((r) => r.test(path)))
-      return false;
-    if (excludeExact.has(path))
-      return false;
-    if (excludeMatcher && excludeMatcher.matchAll(path).length > 0)
-      return false;
-    if (includeRegex.some((r) => r.test(path)))
-      return true;
-    if (includeExact.has(path))
-      return true;
-    if (includeMatcher && includeMatcher.matchAll(path).length > 0)
-      return true;
-    return include.length === 0;
-  };
-}
-
 function fetchIsland(e, component, props, timeout) {
   const hashId = hash$1([component, props]).replaceAll("_", "-");
   const signal = timeout ? AbortSignal.timeout(timeout) : void 0;
@@ -4365,7 +4635,7 @@ function publicAssetsURL(...path) {
 }
 
 const checksums = {
-  "articles": "v3.5.0--xr3wAL2hHtAKiFaG6zXtodsK9KHndb20OFuxwO7ePQA",
+  "articles": "v3.5.0--0RlUPJnEtlRxfer4JkVaizxT3klibFhjR7c_KuiXEkc",
   "perspectives": "v3.5.0--Ga0LZ6jP_x7tVSJNdxs12T51N4M3YAnbEIoSgn_JWjE",
   "pages": "v3.5.0--gHRo8EtQ2kW4kndcKh9Xq31jpqQMRl0VVuHw10VgwsU",
   "books": "v3.5.0--McJY6dSkrRLSKXme3ja4k9YFQTTvGE4Y7zDCCqrv5uw",
@@ -5507,6 +5777,73 @@ const _APFHMZ = eventHandler(async (e) => {
   await nitroApp.hooks.callHook("site-config:init", ctx);
   e.context.siteConfig = ctx.siteConfig;
   e.context._initedSiteConfig = true;
+});
+
+const _7OYNAq = defineEventHandler(async (e) => {
+  const nitroApp = useNitroApp();
+  const { indexable} = getSiteRobotConfig(e);
+  const { credits, isNuxtContentV2, cacheControl } = useRuntimeConfigNuxtRobots(e);
+  let robotsTxtCtx = {
+    sitemaps: [],
+    groups: [
+      {
+        allow: [],
+        comment: [],
+        userAgent: ["*"],
+        disallow: ["/"]
+      }
+    ]
+  };
+  if (indexable) {
+    robotsTxtCtx = await resolveRobotsTxtContext(e);
+    robotsTxtCtx.sitemaps = [...new Set(
+      asArray(robotsTxtCtx.sitemaps).map((s) => !s.startsWith("http") ? withSiteUrl(e, s, { withBase: true}) : s)
+    )];
+    if (isNuxtContentV2) {
+      const contentWithRobotRules = await e.$fetch("/__robots__/nuxt-content.json", {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (String(contentWithRobotRules).trim().startsWith("<!DOCTYPE")) {
+        logger$3.error("Invalid HTML returned from /__robots__/nuxt-content.json, skipping.");
+      } else {
+        for (const group of robotsTxtCtx.groups) {
+          if (group.userAgent.includes("*")) {
+            group.disallow.push(...contentWithRobotRules);
+            group.disallow = group.disallow.filter(Boolean);
+          }
+        }
+      }
+    }
+  }
+  let robotsTxt = generateRobotsTxt(robotsTxtCtx);
+  if (credits) {
+    robotsTxt = [
+      `# START nuxt-robots (${indexable ? "indexable" : "indexing disabled"})`,
+      robotsTxt,
+      "# END nuxt-robots"
+    ].filter(Boolean).join("\n");
+  }
+  setHeader(e, "Content-Type", "text/plain; charset=utf-8");
+  setHeader(e, "Cache-Control", globalThis._importMeta_.test || !cacheControl ? "no-store" : cacheControl);
+  const hookCtx = { robotsTxt, e };
+  await nitroApp.hooks.callHook("robots:robots-txt", hookCtx);
+  return hookCtx.robotsTxt;
+});
+
+const _Yd0t8t = defineEventHandler(async (e) => {
+  if (e.path === "/robots.txt" || e.path.startsWith("/__") || e.path.startsWith("/api") || e.path.startsWith("/_nuxt"))
+    return;
+  const nuxtRobotsConfig = useRuntimeConfigNuxtRobots(e);
+  if (nuxtRobotsConfig) {
+    const { header } = nuxtRobotsConfig;
+    const robotConfig = getPathRobotConfig(e, { skipSiteIndexable: Boolean(getQuery$1(e)?.mockProductionEnv) });
+    if (header) {
+      setHeader(e, "X-Robots-Tag", robotConfig.rule);
+    }
+    e.context.robots = robotConfig;
+  }
 });
 
 const filters = new Map();
@@ -7580,70 +7917,9 @@ async function sitemapChildXmlEventHandler(e) {
 
 const _omnzNW = defineEventHandler(sitemapXmlEventHandler);
 
-const _7OYNAq = defineEventHandler(async (e) => {
-  const nitroApp = useNitroApp();
-  const { indexable} = getSiteRobotConfig(e);
-  const { credits, isNuxtContentV2, cacheControl } = useRuntimeConfigNuxtRobots(e);
-  let robotsTxtCtx = {
-    sitemaps: [],
-    groups: [
-      {
-        allow: [],
-        comment: [],
-        userAgent: ["*"],
-        disallow: ["/"]
-      }
-    ]
-  };
-  if (indexable) {
-    robotsTxtCtx = await resolveRobotsTxtContext(e);
-    robotsTxtCtx.sitemaps = [...new Set(
-      asArray(robotsTxtCtx.sitemaps).map((s) => !s.startsWith("http") ? withSiteUrl(e, s, { withBase: true}) : s)
-    )];
-    if (isNuxtContentV2) {
-      const contentWithRobotRules = await e.$fetch("/__robots__/nuxt-content.json", {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (String(contentWithRobotRules).trim().startsWith("<!DOCTYPE")) {
-        logger$3.error("Invalid HTML returned from /__robots__/nuxt-content.json, skipping.");
-      } else {
-        for (const group of robotsTxtCtx.groups) {
-          if (group.userAgent.includes("*")) {
-            group.disallow.push(...contentWithRobotRules);
-            group.disallow = group.disallow.filter(Boolean);
-          }
-        }
-      }
-    }
-  }
-  let robotsTxt = generateRobotsTxt(robotsTxtCtx);
-  if (credits) {
-    robotsTxt = [
-      `# START nuxt-robots (${indexable ? "indexable" : "indexing disabled"})`,
-      robotsTxt,
-      "# END nuxt-robots"
-    ].filter(Boolean).join("\n");
-  }
-  setHeader(e, "Content-Type", "text/plain; charset=utf-8");
-  setHeader(e, "Cache-Control", globalThis._importMeta_.test || !cacheControl ? "no-store" : cacheControl);
-  const hookCtx = { robotsTxt, e };
-  await nitroApp.hooks.callHook("robots:robots-txt", hookCtx);
-  return hookCtx.robotsTxt;
-});
-
-const _Yd0t8t = defineEventHandler(async (e) => {
-  if (e.path === "/robots.txt" || e.path.startsWith("/__") || e.path.startsWith("/api") || e.path.startsWith("/_nuxt"))
+const _GBD0zM = defineEventHandler((e) => {
+  {
     return;
-  const nuxtRobotsConfig = useRuntimeConfigNuxtRobots(e);
-  if (nuxtRobotsConfig) {
-    const { header } = nuxtRobotsConfig;
-    const robotConfig = getPathRobotConfig(e, { skipSiteIndexable: Boolean(getQuery$1(e)?.mockProductionEnv) });
-    if (header) {
-      setHeader(e, "X-Robots-Tag", robotConfig.rule);
-    }
-    e.context.robots = robotConfig;
   }
 });
 
@@ -8090,16 +8366,17 @@ const handlers = [
   { route: '/api/:type/**:slug', handler: _lazy_wbQLj0, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
   { route: '', handler: _APFHMZ, lazy: false, middleware: true, method: undefined },
+  { route: '/robots.txt', handler: _7OYNAq, lazy: false, middleware: false, method: undefined },
+  { route: '', handler: _Yd0t8t, lazy: false, middleware: true, method: undefined },
   { route: '/__sitemap__/nuxt-content-urls.json', handler: _pQl8oA, lazy: false, middleware: false, method: undefined },
   { route: '/sitemap_index.xml', handler: _lazy_8DbdRX, lazy: true, middleware: false, method: undefined },
   { route: '/__sitemap__/**:sitemap', handler: _lazy_mkrgRi, lazy: true, middleware: false, method: undefined },
   { route: '/__sitemap__/style.xsl', handler: _to1iB6, lazy: false, middleware: false, method: undefined },
   { route: '/sitemap.xml', handler: _omnzNW, lazy: false, middleware: false, method: undefined },
-  { route: '/robots.txt', handler: _7OYNAq, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _Yd0t8t, lazy: false, middleware: true, method: undefined },
   { route: '/_og/d/**', handler: _lazy_hamhGY, lazy: true, middleware: false, method: undefined },
   { route: '/_og/s/**', handler: _lazy_hamhGY, lazy: true, middleware: false, method: undefined },
   { route: '/_og/r/**', handler: _lazy_s_PDuW, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _GBD0zM, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_content/articles/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/perspectives/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_content/pages/sql_dump.txt', handler: _9nVQ4N, lazy: false, middleware: false, method: undefined },

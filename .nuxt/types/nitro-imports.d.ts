@@ -190,10 +190,10 @@ export { defineNitroErrorHandler } from 'nitropack/runtime/internal/error/utils'
 export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/paths';
 export { defineAppConfig } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/nitro-server/dist/runtime/utils/config';
 export { queryCollection, queryCollectionSearchSections, queryCollectionNavigation, queryCollectionItemSurroundings } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/dist/runtime/nitro';
-export { defineSitemapEventHandler } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/defineSitemapEventHandler';
-export { asSitemapUrl } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
 export { parseMarkdown } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/mdc/dist/runtime/parser';
 export { stringifyMarkdown } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/mdc/dist/runtime/stringify';
+export { defineSitemapEventHandler } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/defineSitemapEventHandler';
+export { asSitemapUrl } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/sitemap/dist/runtime/server/composables/asSitemapUrl';
 export { defineI18nLocale, defineI18nConfig } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/dist/runtime/composables/shared';
 export { defineI18nLocaleDetector } from '/Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/dist/runtime/composables/server';
 export { useTranslation } from '@intlify/h3';

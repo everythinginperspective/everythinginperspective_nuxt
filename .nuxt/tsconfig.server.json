@@ -56,17 +56,14 @@
       "@nuxtjs/mdc": [
         "../node_modules/@nuxtjs/mdc"
       ],
-      "nuxt-site-config": [
-        "../node_modules/nuxt-site-config"
-      ],
       "@nuxtjs/robots": [
         "../node_modules/@nuxtjs/robots"
       ],
       "nuxt-link-checker": [
         "../node_modules/nuxt-link-checker"
       ],
-      "nuxtseo-shared": [
-        "../node_modules/nuxtseo-shared"
+      "nuxt-site-config": [
+        "../node_modules/nuxt-site-config"
       ],
       "vue-i18n": [
         "../node_modules/vue-i18n"
@@ -155,18 +152,6 @@
       "#internal/nuxt/paths": [
         "../node_modules/@nuxt/nitro-server/dist/runtime/utils/paths"
       ],
-      "#sitemap": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime"
-      ],
-      "#sitemap/*": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
-      ],
-      "#site-config": [
-        "../node_modules/nuxt-site-config/dist/runtime"
-      ],
-      "#site-config/*": [
-        "../node_modules/nuxt-site-config/dist/runtime/*"
-      ],
       "#i18n": [
         "../node_modules/@nuxtjs/i18n/dist/runtime/composables/index-server"
       ],
@@ -191,11 +176,23 @@
       "#mdc-imports": [
         "./mdc-imports"
       ],
+      "#site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime"
+      ],
+      "#site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/*"
+      ],
       "#robots": [
         "../node_modules/@nuxtjs/robots/dist/runtime"
       ],
       "#robots/*": [
         "../node_modules/@nuxtjs/robots/dist/runtime/*"
+      ],
+      "#sitemap": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime"
+      ],
+      "#sitemap/*": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
       ],
       "#og-image": [
         "../node_modules/nuxt-og-image/dist/shared/runtime"
@@ -291,19 +288,17 @@
     "../node_modules",
     "../node_modules/nuxt/node_modules",
     "../node_modules/@nuxt/content/node_modules",
-    "../node_modules/nuxt-site-config/node_modules",
-    "../node_modules/@nuxtjs/sitemap/node_modules",
     "../node_modules/@nuxtjs/seo/node_modules",
     "../node_modules/@nuxtjs/i18n/node_modules",
-    "../node_modules/nuxt-ai-ready/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../node_modules/@nuxtjs/mdc/node_modules",
+    "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/@nuxtjs/robots/node_modules",
+    "../node_modules/@nuxtjs/sitemap/node_modules",
     "../node_modules/nuxt-link-checker/node_modules",
     "../node_modules/nuxt-og-image/node_modules",
     "../node_modules/nuxt-schema-org/node_modules",
     "../node_modules/nuxt-seo-utils/node_modules",
-    "../node_modules/nuxtseo-shared/node_modules",
     "../dist"
   ]
 }

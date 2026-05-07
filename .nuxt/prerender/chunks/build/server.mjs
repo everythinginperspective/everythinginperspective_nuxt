@@ -5,10 +5,10 @@ import { G as baseURL } from '../nitro/nitro.mjs';
 import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
 import { getContext, executeAsync } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
 import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
 import { createDefu, defu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
 import { klona } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
+import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
 import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
 import { titleCase, camelCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
 import { setupDevtoolsPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
@@ -19,7 +19,7 @@ import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///Vol
 import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
 import { stringify } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import { hash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 import { u as useHead$1, h as headSymbol, a as useSeoMeta$1 } from '../_/server.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
@@ -33,6 +33,7 @@ import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/
 import 'node:fs';
 import 'node:url';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
@@ -49,6 +50,7 @@ if (!("global" in globalThis)) {
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
 const asyncDataDefaults = { "value": null, "errorValue": null, "deep": true };
 const appId = "nuxt-app";
+const crawlLinks = true;
 function getNuxtAppCtx(id = appId) {
   return getContext(id, {
     asyncContext: false
@@ -404,927 +406,6 @@ const createError = (error) => {
   });
   return nuxtError;
 };
-const unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt:head",
-  enforce: "pre",
-  setup(nuxtApp) {
-    const head = nuxtApp.ssrContext.head;
-    nuxtApp.vueApp.use(head);
-  }
-});
-function toArray$2(value) {
-  return Array.isArray(value) ? value : [value];
-}
-const matcher = /* @__PURE__ */ (() => {
-  const $0 = { prerender: true }, $1 = { redirect: "/sitemap_index.xml" }, $2 = {}, $3 = { payload: false, payload: false }, $4 = { payload: false };
-  return (m, p) => {
-    let r = [];
-    if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
-    if (p === "/") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/articles/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/perspectives/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/pages/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/books/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/people/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/__nuxt_content/languages/sql_dump.txt") {
-      r.unshift({ data: $0 });
-    } else if (p === "/sitemap.xml") {
-      r.unshift({ data: $1 });
-    } else if (p === "/sitemap_index.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/en.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/fr.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/de.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/es.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/it.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/pt.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/nl.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/zh.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/ja.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/__sitemap__/ar.xml") {
-      r.unshift({ data: $2 });
-    } else if (p === "/_nuxt") {
-      r.unshift({ data: $2 });
-    }
-    let s = p.split("/"), l = s.length;
-    if (l > 1) {
-      if (s[1] === "article") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "perspective") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "page") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "book") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "magazine") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "linked-data") {
-        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "api") {
-        r.unshift({ data: $3, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "__nuxt_content") {
-        r.unshift({ data: $4, params: { "_": s.slice(2).join("/") } });
-      } else if (s[1] === "_og") {
-        if (l > 2) {
-          if (s[2] === "d") {
-            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
-          } else if (s[2] === "r") {
-            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
-          } else if (s[2] === "s") {
-            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
-          }
-        }
-      }
-    }
-    return r;
-  };
-})();
-const _routeRulesMatcher = (path) => defu({}, ...matcher("", path).map((r) => r.data).reverse());
-const routeRulesMatcher$1 = _routeRulesMatcher;
-function getRouteRules(arg) {
-  const path = typeof arg === "string" ? arg : arg.path;
-  try {
-    return routeRulesMatcher$1(path);
-  } catch (e) {
-    console.error("[nuxt] Error matching route rules.", e);
-    return {};
-  }
-}
-const __nuxt_page_meta$6 = {
-  layout: "default"
-};
-const __nuxt_page_meta$5 = {
-  layout: "default"
-};
-const __nuxt_page_meta$4 = {
-  layout: "default"
-};
-const __nuxt_page_meta$3 = {
-  layout: "default"
-};
-const __nuxt_page_meta$2 = {
-  layout: "default"
-};
-const __nuxt_page_meta$1 = {
-  layout: "default"
-};
-const __nuxt_page_meta = null;
-const component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw = {};
-const _routes = [
-  {
-    name: "index___en",
-    path: "/",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___fr",
-    path: "/fr",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___de",
-    path: "/de",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___es",
-    path: "/es",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___it",
-    path: "/it",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___pt",
-    path: "/pt",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___nl",
-    path: "/nl",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___zh",
-    path: "/zh",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___ja",
-    path: "/ja",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "index___ar",
-    path: "/ar",
-    meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-1qACyh6-.mjs')
-  },
-  {
-    name: "page-slug___en",
-    path: "/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___fr",
-    path: "/fr/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___de",
-    path: "/de/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___es",
-    path: "/es/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___it",
-    path: "/it/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___pt",
-    path: "/pt/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___nl",
-    path: "/nl/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___zh",
-    path: "/zh/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___ja",
-    path: "/ja/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "page-slug___ar",
-    path: "/ar/page/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-DY9uyJsp.mjs')
-  },
-  {
-    name: "article-slug___en",
-    path: "/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___fr",
-    path: "/fr/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___de",
-    path: "/de/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___es",
-    path: "/es/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___it",
-    path: "/it/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___pt",
-    path: "/pt/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___nl",
-    path: "/nl/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___zh",
-    path: "/zh/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___ja",
-    path: "/ja/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "article-slug___ar",
-    path: "/ar/article/:slug()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_slug_-D9uiRG7c.mjs')
-  },
-  {
-    name: "magazine-plural___en",
-    path: "/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___fr",
-    path: "/fr/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___de",
-    path: "/de/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___es",
-    path: "/es/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___it",
-    path: "/it/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___pt",
-    path: "/pt/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___nl",
-    path: "/nl/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___zh",
-    path: "/zh/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___ja",
-    path: "/ja/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "magazine-plural___ar",
-    path: "/ar/magazine/:plural()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_plural_-D1Qg6cMG.mjs')
-  },
-  {
-    name: "linked-data-plural___en",
-    path: "/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___fr",
-    path: "/fr/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___de",
-    path: "/de/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___es",
-    path: "/es/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___it",
-    path: "/it/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___pt",
-    path: "/pt/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___nl",
-    path: "/nl/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___zh",
-    path: "/zh/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___ja",
-    path: "/ja/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-plural___ar",
-    path: "/ar/linked-data/:plural()",
-    component: () => import('./_plural_-CjQFfFWU.mjs')
-  },
-  {
-    name: "linked-data-slug___en",
-    path: "/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___fr",
-    path: "/fr/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___de",
-    path: "/de/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___es",
-    path: "/es/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___it",
-    path: "/it/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___pt",
-    path: "/pt/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___nl",
-    path: "/nl/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___zh",
-    path: "/zh/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___ja",
-    path: "/ja/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "linked-data-slug___ar",
-    path: "/ar/linked-data/:slug(.*)*",
-    meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-CH29RglL.mjs')
-  },
-  {
-    name: "magazine-singular-slug___en",
-    path: "/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___fr",
-    path: "/fr/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___de",
-    path: "/de/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___es",
-    path: "/es/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___it",
-    path: "/it/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___pt",
-    path: "/pt/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___nl",
-    path: "/nl/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___zh",
-    path: "/zh/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___ja",
-    path: "/ja/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: "magazine-singular-slug___ar",
-    path: "/ar/magazine/:singular()/:slug()",
-    meta: __nuxt_page_meta$1 || {},
-    component: () => import('./_slug_-B9JNqcQa.mjs')
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/fr/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/de/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/es/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/it/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/pt/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/nl/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/zh/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/ja/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  },
-  {
-    name: __nuxt_page_meta?.name,
-    path: "/ar/sitemap.xml",
-    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
-  }
-];
-const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
-const ROUTE_KEY_SYMBOLS_RE = /(:\w+)[?+*]/g;
-const ROUTE_KEY_NORMAL_RE = /:\w+/g;
-function generateRouteKey(route) {
-  const source = route?.meta.key ?? route.path.replace(ROUTE_KEY_PARENTHESES_RE, "$1").replace(ROUTE_KEY_SYMBOLS_RE, "$1").replace(ROUTE_KEY_NORMAL_RE, (r) => route.params[r.slice(1)]?.toString() || "");
-  return typeof source === "function" ? source(route) : source;
-}
-function isChangingPage(to, from) {
-  if (to === from || from === START_LOCATION) {
-    return false;
-  }
-  if (generateRouteKey(to) !== generateRouteKey(from)) {
-    return true;
-  }
-  const areComponentsSame = to.matched.every(
-    (comp, index) => comp.components && comp.components.default === from.matched[index]?.components?.default
-  );
-  if (areComponentsSame) {
-    return false;
-  }
-  return true;
-}
-const routerOptions0 = {
-  scrollBehavior(to, from, savedPosition) {
-    const nuxtApp = useNuxtApp();
-    const hashScrollBehaviour = useRouter().options?.scrollBehaviorType ?? "auto";
-    if (to.path.replace(/\/$/, "") === from.path.replace(/\/$/, "")) {
-      if (from.hash && !to.hash) {
-        return { left: 0, top: 0 };
-      }
-      if (to.hash) {
-        return { el: to.hash, top: _getHashElementScrollMarginTop(to.hash), behavior: hashScrollBehaviour };
-      }
-      return false;
-    }
-    const routeAllowsScrollToTop = typeof to.meta.scrollToTop === "function" ? to.meta.scrollToTop(to, from) : to.meta.scrollToTop;
-    if (routeAllowsScrollToTop === false) {
-      return false;
-    }
-    if (from === START_LOCATION) {
-      return _calculatePosition(to, from, savedPosition, hashScrollBehaviour);
-    }
-    return new Promise((resolve) => {
-      const doScroll = () => {
-        requestAnimationFrame(() => resolve(_calculatePosition(to, from, savedPosition, hashScrollBehaviour)));
-      };
-      nuxtApp.hooks.hookOnce("page:loading:end", () => {
-        const transitionPromise = nuxtApp["~transitionPromise"];
-        if (transitionPromise) {
-          transitionPromise.then(doScroll);
-        } else {
-          doScroll();
-        }
-      });
-    });
-  }
-};
-function _getHashElementScrollMarginTop(selector) {
-  try {
-    const elem = (void 0).querySelector(selector);
-    if (elem) {
-      return (Number.parseFloat(getComputedStyle(elem).scrollMarginTop) || 0) + (Number.parseFloat(getComputedStyle((void 0).documentElement).scrollPaddingTop) || 0);
-    }
-  } catch {
-  }
-  return 0;
-}
-function _calculatePosition(to, from, savedPosition, defaultHashScrollBehaviour) {
-  if (savedPosition) {
-    return savedPosition;
-  }
-  if (to.hash) {
-    return {
-      el: to.hash,
-      top: _getHashElementScrollMarginTop(to.hash),
-      behavior: isChangingPage(to, from) ? defaultHashScrollBehaviour : "instant"
-    };
-  }
-  return {
-    left: 0,
-    top: 0
-  };
-}
-const configRouterOptions = {
-  hashMode: false,
-  scrollBehaviorType: "auto"
-};
-const routerOptions = {
-  ...configRouterOptions,
-  ...routerOptions0
-};
-const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
-  let __temp, __restore;
-  if (!to.meta?.validate) {
-    return;
-  }
-  const result = ([__temp, __restore] = executeAsync(() => Promise.resolve(to.meta.validate(to))), __temp = await __temp, __restore(), __temp);
-  if (result === true) {
-    return;
-  }
-  const error = createError({
-    fatal: false,
-    // eslint-disable-next-line @typescript-eslint/no-deprecated
-    status: result && (result.status || result.statusCode) || 404,
-    // eslint-disable-next-line @typescript-eslint/no-deprecated
-    statusText: result && (result.statusText || result.statusMessage) || `Page Not Found: ${to.fullPath}`,
-    data: {
-      path: to.fullPath
-    }
-  });
-  return error;
-});
-const route_45aliases_45global = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
-  const path = to.path;
-  if (path.startsWith("/mag/") || path === "/mag") {
-    const newPath = path.replace("/mag", "/magazine");
-    return navigateTo(newPath, { redirectCode: 301 });
-  }
-  if (path.startsWith("/ld/") || path === "/ld") {
-    const newPath = path.replace("/ld", "/linked-data");
-    return navigateTo(newPath, { redirectCode: 301 });
-  }
-});
-const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
-  {
-    return;
-  }
-});
-const globalMiddleware = [
-  validate,
-  route_45aliases_45global,
-  manifest_45route_45rule
-];
-const namedMiddleware = {};
-const plugin = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt:router",
-  enforce: "pre",
-  async setup(nuxtApp) {
-    let __temp, __restore;
-    let routerBase = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL;
-    const history = routerOptions.history?.(routerBase) ?? createMemoryHistory(routerBase);
-    const routes2 = routerOptions.routes ? ([__temp, __restore] = executeAsync(() => routerOptions.routes(_routes)), __temp = await __temp, __restore(), __temp) ?? _routes : _routes;
-    let startPosition;
-    const router = createRouter({
-      ...routerOptions,
-      scrollBehavior: (to, from, savedPosition) => {
-        if (from === START_LOCATION) {
-          startPosition = savedPosition;
-          return;
-        }
-        if (routerOptions.scrollBehavior) {
-          router.options.scrollBehavior = routerOptions.scrollBehavior;
-          if ("scrollRestoration" in (void 0).history) {
-            const unsub = router.beforeEach(() => {
-              unsub();
-              (void 0).history.scrollRestoration = "manual";
-            });
-          }
-          return routerOptions.scrollBehavior(to, START_LOCATION, startPosition || savedPosition);
-        }
-      },
-      history,
-      routes: routes2
-    });
-    nuxtApp.vueApp.use(router);
-    const previousRoute = shallowRef(router.currentRoute.value);
-    router.afterEach((_to, from) => {
-      previousRoute.value = from;
-    });
-    Object.defineProperty(nuxtApp.vueApp.config.globalProperties, "previousRoute", {
-      get: () => previousRoute.value
-    });
-    const initialURL = nuxtApp.ssrContext.url;
-    const _route = shallowRef(router.currentRoute.value);
-    const syncCurrentRoute = () => {
-      _route.value = router.currentRoute.value;
-    };
-    router.afterEach((to, from) => {
-      const lastTo = to.matched.at(-1)?.components?.default;
-      const lastFrom = from.matched.at(-1)?.components?.default;
-      if (lastTo === lastFrom) {
-        syncCurrentRoute();
-        return;
-      }
-      if (to.matched.length < from.matched.length && to.matched.every((m, i) => m.components?.default === from.matched[i]?.components?.default)) {
-        syncCurrentRoute();
-      }
-    });
-    const route = { sync: syncCurrentRoute };
-    for (const key in _route.value) {
-      Object.defineProperty(route, key, {
-        get: () => _route.value[key],
-        enumerable: true
-      });
-    }
-    nuxtApp._route = shallowReactive(route);
-    nuxtApp._middleware ||= {
-      global: [],
-      named: {}
-    };
-    const error = /* @__PURE__ */ useError();
-    if (!nuxtApp.ssrContext?.islandContext) {
-      router.afterEach(async (to, _from, failure) => {
-        delete nuxtApp._processingMiddleware;
-        if (failure) {
-          await nuxtApp.callHook("page:loading:end");
-        }
-        if (failure?.type === 4) {
-          return;
-        }
-        if (to.redirectedFrom && to.fullPath !== initialURL) {
-          await nuxtApp.runWithContext(() => navigateTo(to.fullPath || "/"));
-        }
-      });
-    }
-    try {
-      if (true) {
-        ;
-        [__temp, __restore] = executeAsync(() => router.push(initialURL)), await __temp, __restore();
-        ;
-      }
-      ;
-      [__temp, __restore] = executeAsync(() => router.isReady()), await __temp, __restore();
-      ;
-    } catch (error2) {
-      [__temp, __restore] = executeAsync(() => nuxtApp.runWithContext(() => showError(error2))), await __temp, __restore();
-    }
-    const resolvedInitialRoute = router.currentRoute.value;
-    const hasDeferredRoute = false;
-    syncCurrentRoute();
-    if (nuxtApp.ssrContext?.islandContext) {
-      return { provide: { router } };
-    }
-    const initialLayout = nuxtApp.payload.state._layout;
-    router.beforeEach(async (to, from) => {
-      await nuxtApp.callHook("page:loading:start");
-      to.meta = reactive(to.meta);
-      if (nuxtApp.isHydrating && initialLayout && !isReadonly(to.meta.layout)) {
-        to.meta.layout = initialLayout;
-      }
-      nuxtApp._processingMiddleware = true;
-      if (!nuxtApp.ssrContext?.islandContext) {
-        const middlewareEntries = /* @__PURE__ */ new Set([...globalMiddleware, ...nuxtApp._middleware.global]);
-        for (const component of to.matched) {
-          const componentMiddleware = component.meta.middleware;
-          if (!componentMiddleware) {
-            continue;
-          }
-          for (const entry2 of toArray$2(componentMiddleware)) {
-            middlewareEntries.add(entry2);
-          }
-        }
-        const routeRules = getRouteRules({ path: to.path });
-        if (routeRules.appMiddleware) {
-          for (const key in routeRules.appMiddleware) {
-            if (routeRules.appMiddleware[key]) {
-              middlewareEntries.add(key);
-            } else {
-              middlewareEntries.delete(key);
-            }
-          }
-        }
-        for (const entry2 of middlewareEntries) {
-          const middleware = typeof entry2 === "string" ? nuxtApp._middleware.named[entry2] || await namedMiddleware[entry2]?.().then((r) => r.default || r) : entry2;
-          if (!middleware) {
-            throw new Error(`Unknown route middleware: '${entry2}'.`);
-          }
-          try {
-            if (false) ;
-            const result = await nuxtApp.runWithContext(() => middleware(to, from));
-            if (true) {
-              if (result === false || result instanceof Error) {
-                const error2 = result || createError({
-                  status: 404,
-                  statusText: `Page Not Found: ${initialURL}`
-                });
-                await nuxtApp.runWithContext(() => showError(error2));
-                return false;
-              }
-            }
-            if (result === true) {
-              continue;
-            }
-            if (result === false) {
-              return result;
-            }
-            if (result) {
-              if (isNuxtError(result) && result.fatal) {
-                await nuxtApp.runWithContext(() => showError(result));
-              }
-              return result;
-            }
-          } catch (err) {
-            const error2 = createError(err);
-            if (error2.fatal) {
-              await nuxtApp.runWithContext(() => showError(error2));
-            }
-            return error2;
-          }
-        }
-      }
-    });
-    router.onError(async () => {
-      delete nuxtApp._processingMiddleware;
-      await nuxtApp.callHook("page:loading:end");
-    });
-    router.afterEach((to) => {
-      if (to.matched.length === 0 && !error.value) {
-        return nuxtApp.runWithContext(() => showError(createError({
-          status: 404,
-          fatal: false,
-          statusText: `Page not found: ${to.fullPath}`,
-          data: {
-            path: to.fullPath
-          }
-        })));
-      }
-    });
-    nuxtApp.hooks.hookOnce("app:created", async () => {
-      try {
-        if ("name" in resolvedInitialRoute) {
-          resolvedInitialRoute.name = void 0;
-        }
-        if (hasDeferredRoute) ;
-        else {
-          await router.replace({
-            ...resolvedInitialRoute,
-            force: true
-          });
-        }
-        router.options.scrollBehavior = routerOptions.scrollBehavior;
-      } catch (error2) {
-        await nuxtApp.runWithContext(() => showError(error2));
-      }
-    });
-    return { provide: { router } };
-  }
-});
 function injectHead(nuxtApp) {
   const nuxt = nuxtApp || tryUseNuxtApp();
   return nuxt?.ssrContext?.head || nuxt?.runWithContext(() => {
@@ -1351,6 +432,28 @@ defineComponent({
     return createElementBlock("div");
   }
 });
+const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
+const ROUTE_KEY_SYMBOLS_RE = /(:\w+)[?+*]/g;
+const ROUTE_KEY_NORMAL_RE = /:\w+/g;
+function generateRouteKey(route) {
+  const source = route?.meta.key ?? route.path.replace(ROUTE_KEY_PARENTHESES_RE, "$1").replace(ROUTE_KEY_SYMBOLS_RE, "$1").replace(ROUTE_KEY_NORMAL_RE, (r) => route.params[r.slice(1)]?.toString() || "");
+  return typeof source === "function" ? source(route) : source;
+}
+function isChangingPage(to, from) {
+  if (to === from || from === START_LOCATION) {
+    return false;
+  }
+  if (generateRouteKey(to) !== generateRouteKey(from)) {
+    return true;
+  }
+  const areComponentsSame = to.matched.every(
+    (comp, index) => comp.components && comp.components.default === from.matched[index]?.components?.default
+  );
+  if (areComponentsSame) {
+    return false;
+  }
+  return true;
+}
 const clientOnlySymbol = /* @__PURE__ */ Symbol.for("nuxt:client-only");
 defineComponent({
   name: "ClientOnly",
@@ -1480,6 +583,96 @@ function writeServerCookie(event, name, value, opts = {}) {
     }
   }
 }
+const matcher = /* @__PURE__ */ (() => {
+  const $0 = { prerender: true }, $1 = { redirect: "/sitemap_index.xml" }, $2 = {}, $3 = { payload: false, payload: false }, $4 = { payload: false };
+  return (m, p) => {
+    let r = [];
+    if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
+    if (p === "/") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/articles/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/perspectives/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/pages/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/books/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/people/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/__nuxt_content/languages/sql_dump.txt") {
+      r.unshift({ data: $0 });
+    } else if (p === "/sitemap.xml") {
+      r.unshift({ data: $1 });
+    } else if (p === "/sitemap_index.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/en.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/fr.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/de.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/es.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/it.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/pt.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/nl.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/zh.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/ja.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/__sitemap__/ar.xml") {
+      r.unshift({ data: $2 });
+    } else if (p === "/_nuxt") {
+      r.unshift({ data: $2 });
+    }
+    let s = p.split("/"), l = s.length;
+    if (l > 1) {
+      if (s[1] === "article") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "perspective") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "page") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "book") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "magazine") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "linked-data") {
+        r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "api") {
+        r.unshift({ data: $3, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "__nuxt_content") {
+        r.unshift({ data: $4, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "_og") {
+        if (l > 2) {
+          if (s[2] === "d") {
+            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
+          } else if (s[2] === "r") {
+            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
+          } else if (s[2] === "s") {
+            r.unshift({ data: $2, params: { "_": s.slice(3).join("/") } });
+          }
+        }
+      }
+    }
+    return r;
+  };
+})();
+const _routeRulesMatcher = (path) => defu({}, ...matcher("", path).map((r) => r.data).reverse());
+const routeRulesMatcher = _routeRulesMatcher;
+function getRouteRules(arg) {
+  const path = typeof arg === "string" ? arg : arg.path;
+  try {
+    return routeRulesMatcher(path);
+  } catch (e) {
+    console.error("[nuxt] Error matching route rules.", e);
+    return {};
+  }
+}
 function definePayloadReducer(name, reduce) {
   {
     useNuxtApp().ssrContext["~payloadReducers"][name] = reduce;
@@ -1490,6 +683,75 @@ function useRequestURL(opts) {
     return getRequestURL(useRequestEvent(), opts);
   }
 }
+const routerOptions0 = {
+  scrollBehavior(to, from, savedPosition) {
+    const nuxtApp = useNuxtApp();
+    const hashScrollBehaviour = useRouter().options?.scrollBehaviorType ?? "auto";
+    if (to.path.replace(/\/$/, "") === from.path.replace(/\/$/, "")) {
+      if (from.hash && !to.hash) {
+        return { left: 0, top: 0 };
+      }
+      if (to.hash) {
+        return { el: to.hash, top: _getHashElementScrollMarginTop(to.hash), behavior: hashScrollBehaviour };
+      }
+      return false;
+    }
+    const routeAllowsScrollToTop = typeof to.meta.scrollToTop === "function" ? to.meta.scrollToTop(to, from) : to.meta.scrollToTop;
+    if (routeAllowsScrollToTop === false) {
+      return false;
+    }
+    if (from === START_LOCATION) {
+      return _calculatePosition(to, from, savedPosition, hashScrollBehaviour);
+    }
+    return new Promise((resolve) => {
+      const doScroll = () => {
+        requestAnimationFrame(() => resolve(_calculatePosition(to, from, savedPosition, hashScrollBehaviour)));
+      };
+      nuxtApp.hooks.hookOnce("page:loading:end", () => {
+        const transitionPromise = nuxtApp["~transitionPromise"];
+        if (transitionPromise) {
+          transitionPromise.then(doScroll);
+        } else {
+          doScroll();
+        }
+      });
+    });
+  }
+};
+function _getHashElementScrollMarginTop(selector) {
+  try {
+    const elem = (void 0).querySelector(selector);
+    if (elem) {
+      return (Number.parseFloat(getComputedStyle(elem).scrollMarginTop) || 0) + (Number.parseFloat(getComputedStyle((void 0).documentElement).scrollPaddingTop) || 0);
+    }
+  } catch {
+  }
+  return 0;
+}
+function _calculatePosition(to, from, savedPosition, defaultHashScrollBehaviour) {
+  if (savedPosition) {
+    return savedPosition;
+  }
+  if (to.hash) {
+    return {
+      el: to.hash,
+      top: _getHashElementScrollMarginTop(to.hash),
+      behavior: isChangingPage(to, from) ? defaultHashScrollBehaviour : "instant"
+    };
+  }
+  return {
+    left: 0,
+    top: 0
+  };
+}
+const configRouterOptions = {
+  hashMode: false,
+  scrollBehaviorType: "auto"
+};
+const routerOptions = {
+  ...configRouterOptions,
+  ...routerOptions0
+};
 const firstNonUndefined = (...args) => args.find((arg) => arg !== void 0);
 // @__NO_SIDE_EFFECTS__
 function defineNuxtLink(options) {
@@ -1764,7 +1026,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_0$2 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
+const __nuxt_component_0$1 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
 function applyTrailingSlashBehavior(to, trailingSlash) {
   const normalizeFn = trailingSlash === "append" ? withTrailingSlash : withoutTrailingSlash;
   const hasProtocolDifferentFromHttp = hasProtocol(to) && !to.startsWith("http");
@@ -1795,6 +1057,746 @@ const _0_siteConfig_tU0SxKrPeVRXWcGu2sOnIfhNDbYiKNfDCvYZhRueG0Q = /* @__PURE__ *
         nuxtSiteConfig: stack
       }
     };
+  }
+});
+const unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt:head",
+  enforce: "pre",
+  setup(nuxtApp) {
+    const head = nuxtApp.ssrContext.head;
+    nuxtApp.vueApp.use(head);
+  }
+});
+function toArray$2(value) {
+  return Array.isArray(value) ? value : [value];
+}
+const __nuxt_page_meta$6 = {
+  layout: "default"
+};
+const __nuxt_page_meta$5 = {
+  layout: "default"
+};
+const __nuxt_page_meta$4 = {
+  layout: "default"
+};
+const __nuxt_page_meta$3 = {
+  layout: "default"
+};
+const __nuxt_page_meta$2 = {
+  layout: "default"
+};
+const __nuxt_page_meta$1 = {
+  layout: "default"
+};
+const __nuxt_page_meta = null;
+const component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw = {};
+const _routes = [
+  {
+    name: "index___en",
+    path: "/",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___fr",
+    path: "/fr",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___de",
+    path: "/de",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___es",
+    path: "/es",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___it",
+    path: "/it",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___pt",
+    path: "/pt",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___nl",
+    path: "/nl",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___zh",
+    path: "/zh",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___ja",
+    path: "/ja",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "index___ar",
+    path: "/ar",
+    meta: __nuxt_page_meta$6 || {},
+    component: () => import('./index-DiTrBOEa.mjs')
+  },
+  {
+    name: "page-slug___en",
+    path: "/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___fr",
+    path: "/fr/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___de",
+    path: "/de/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___es",
+    path: "/es/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___it",
+    path: "/it/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___pt",
+    path: "/pt/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___nl",
+    path: "/nl/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___zh",
+    path: "/zh/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___ja",
+    path: "/ja/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "page-slug___ar",
+    path: "/ar/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-CE59yNDE.mjs')
+  },
+  {
+    name: "article-slug___en",
+    path: "/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___fr",
+    path: "/fr/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___de",
+    path: "/de/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___es",
+    path: "/es/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___it",
+    path: "/it/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___pt",
+    path: "/pt/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___nl",
+    path: "/nl/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___zh",
+    path: "/zh/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___ja",
+    path: "/ja/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "article-slug___ar",
+    path: "/ar/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-DzaOmWnT.mjs')
+  },
+  {
+    name: "magazine-plural___en",
+    path: "/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___fr",
+    path: "/fr/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___de",
+    path: "/de/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___es",
+    path: "/es/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___it",
+    path: "/it/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___pt",
+    path: "/pt/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___nl",
+    path: "/nl/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___zh",
+    path: "/zh/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___ja",
+    path: "/ja/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "magazine-plural___ar",
+    path: "/ar/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-vgBSh65a.mjs')
+  },
+  {
+    name: "linked-data-plural___en",
+    path: "/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___fr",
+    path: "/fr/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___de",
+    path: "/de/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___es",
+    path: "/es/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___it",
+    path: "/it/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___pt",
+    path: "/pt/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___nl",
+    path: "/nl/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___zh",
+    path: "/zh/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___ja",
+    path: "/ja/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___ar",
+    path: "/ar/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-slug___en",
+    path: "/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___fr",
+    path: "/fr/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___de",
+    path: "/de/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___es",
+    path: "/es/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___it",
+    path: "/it/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___pt",
+    path: "/pt/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___nl",
+    path: "/nl/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___zh",
+    path: "/zh/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___ja",
+    path: "/ja/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "linked-data-slug___ar",
+    path: "/ar/linked-data/:slug(.*)*",
+    meta: __nuxt_page_meta$2 || {},
+    component: () => import('./_...slug_-TnvfhUba.mjs')
+  },
+  {
+    name: "magazine-singular-slug___en",
+    path: "/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___fr",
+    path: "/fr/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___de",
+    path: "/de/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___es",
+    path: "/es/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___it",
+    path: "/it/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___pt",
+    path: "/pt/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___nl",
+    path: "/nl/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___zh",
+    path: "/zh/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___ja",
+    path: "/ja/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: "magazine-singular-slug___ar",
+    path: "/ar/magazine/:singular()/:slug()",
+    meta: __nuxt_page_meta$1 || {},
+    component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/fr/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/de/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/es/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/it/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/pt/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/nl/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/zh/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ja/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ar/sitemap.xml",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  }
+];
+const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
+  let __temp, __restore;
+  if (!to.meta?.validate) {
+    return;
+  }
+  const result = ([__temp, __restore] = executeAsync(() => Promise.resolve(to.meta.validate(to))), __temp = await __temp, __restore(), __temp);
+  if (result === true) {
+    return;
+  }
+  const error = createError({
+    fatal: false,
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
+    status: result && (result.status || result.statusCode) || 404,
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
+    statusText: result && (result.statusText || result.statusMessage) || `Page Not Found: ${to.fullPath}`,
+    data: {
+      path: to.fullPath
+    }
+  });
+  return error;
+});
+const route_45aliases_45global = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
+  const path = to.path;
+  if (path.startsWith("/mag/") || path === "/mag") {
+    const newPath = path.replace("/mag", "/magazine");
+    return navigateTo(newPath, { redirectCode: 301 });
+  }
+  if (path.startsWith("/ld/") || path === "/ld") {
+    const newPath = path.replace("/ld", "/linked-data");
+    return navigateTo(newPath, { redirectCode: 301 });
+  }
+});
+const manifest_45route_45rule = /* @__PURE__ */ defineNuxtRouteMiddleware((to) => {
+  {
+    return;
+  }
+});
+const globalMiddleware = [
+  validate,
+  route_45aliases_45global,
+  manifest_45route_45rule
+];
+const namedMiddleware = {};
+const plugin = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt:router",
+  enforce: "pre",
+  async setup(nuxtApp) {
+    let __temp, __restore;
+    let routerBase = (/* @__PURE__ */ useRuntimeConfig()).app.baseURL;
+    const history = routerOptions.history?.(routerBase) ?? createMemoryHistory(routerBase);
+    const routes2 = routerOptions.routes ? ([__temp, __restore] = executeAsync(() => routerOptions.routes(_routes)), __temp = await __temp, __restore(), __temp) ?? _routes : _routes;
+    let startPosition;
+    const router = createRouter({
+      ...routerOptions,
+      scrollBehavior: (to, from, savedPosition) => {
+        if (from === START_LOCATION) {
+          startPosition = savedPosition;
+          return;
+        }
+        if (routerOptions.scrollBehavior) {
+          router.options.scrollBehavior = routerOptions.scrollBehavior;
+          if ("scrollRestoration" in (void 0).history) {
+            const unsub = router.beforeEach(() => {
+              unsub();
+              (void 0).history.scrollRestoration = "manual";
+            });
+          }
+          return routerOptions.scrollBehavior(to, START_LOCATION, startPosition || savedPosition);
+        }
+      },
+      history,
+      routes: routes2
+    });
+    nuxtApp.vueApp.use(router);
+    const previousRoute = shallowRef(router.currentRoute.value);
+    router.afterEach((_to, from) => {
+      previousRoute.value = from;
+    });
+    Object.defineProperty(nuxtApp.vueApp.config.globalProperties, "previousRoute", {
+      get: () => previousRoute.value
+    });
+    const initialURL = nuxtApp.ssrContext.url;
+    const _route = shallowRef(router.currentRoute.value);
+    const syncCurrentRoute = () => {
+      _route.value = router.currentRoute.value;
+    };
+    router.afterEach((to, from) => {
+      const lastTo = to.matched.at(-1)?.components?.default;
+      const lastFrom = from.matched.at(-1)?.components?.default;
+      if (lastTo === lastFrom) {
+        syncCurrentRoute();
+        return;
+      }
+      if (to.matched.length < from.matched.length && to.matched.every((m, i) => m.components?.default === from.matched[i]?.components?.default)) {
+        syncCurrentRoute();
+      }
+    });
+    const route = { sync: syncCurrentRoute };
+    for (const key in _route.value) {
+      Object.defineProperty(route, key, {
+        get: () => _route.value[key],
+        enumerable: true
+      });
+    }
+    nuxtApp._route = shallowReactive(route);
+    nuxtApp._middleware ||= {
+      global: [],
+      named: {}
+    };
+    const error = /* @__PURE__ */ useError();
+    if (!nuxtApp.ssrContext?.islandContext) {
+      router.afterEach(async (to, _from, failure) => {
+        delete nuxtApp._processingMiddleware;
+        if (failure) {
+          await nuxtApp.callHook("page:loading:end");
+        }
+        if (failure?.type === 4) {
+          return;
+        }
+        if (to.redirectedFrom && to.fullPath !== initialURL) {
+          await nuxtApp.runWithContext(() => navigateTo(to.fullPath || "/"));
+        }
+      });
+    }
+    try {
+      if (true) {
+        ;
+        [__temp, __restore] = executeAsync(() => router.push(initialURL)), await __temp, __restore();
+        ;
+      }
+      ;
+      [__temp, __restore] = executeAsync(() => router.isReady()), await __temp, __restore();
+      ;
+    } catch (error2) {
+      [__temp, __restore] = executeAsync(() => nuxtApp.runWithContext(() => showError(error2))), await __temp, __restore();
+    }
+    const resolvedInitialRoute = router.currentRoute.value;
+    const hasDeferredRoute = false;
+    syncCurrentRoute();
+    if (nuxtApp.ssrContext?.islandContext) {
+      return { provide: { router } };
+    }
+    const initialLayout = nuxtApp.payload.state._layout;
+    router.beforeEach(async (to, from) => {
+      await nuxtApp.callHook("page:loading:start");
+      to.meta = reactive(to.meta);
+      if (nuxtApp.isHydrating && initialLayout && !isReadonly(to.meta.layout)) {
+        to.meta.layout = initialLayout;
+      }
+      nuxtApp._processingMiddleware = true;
+      if (!nuxtApp.ssrContext?.islandContext) {
+        const middlewareEntries = /* @__PURE__ */ new Set([...globalMiddleware, ...nuxtApp._middleware.global]);
+        for (const component of to.matched) {
+          const componentMiddleware = component.meta.middleware;
+          if (!componentMiddleware) {
+            continue;
+          }
+          for (const entry2 of toArray$2(componentMiddleware)) {
+            middlewareEntries.add(entry2);
+          }
+        }
+        const routeRules = getRouteRules({ path: to.path });
+        if (routeRules.appMiddleware) {
+          for (const key in routeRules.appMiddleware) {
+            if (routeRules.appMiddleware[key]) {
+              middlewareEntries.add(key);
+            } else {
+              middlewareEntries.delete(key);
+            }
+          }
+        }
+        for (const entry2 of middlewareEntries) {
+          const middleware = typeof entry2 === "string" ? nuxtApp._middleware.named[entry2] || await namedMiddleware[entry2]?.().then((r) => r.default || r) : entry2;
+          if (!middleware) {
+            throw new Error(`Unknown route middleware: '${entry2}'.`);
+          }
+          try {
+            if (false) ;
+            const result = await nuxtApp.runWithContext(() => middleware(to, from));
+            if (true) {
+              if (result === false || result instanceof Error) {
+                const error2 = result || createError({
+                  status: 404,
+                  statusText: `Page Not Found: ${initialURL}`
+                });
+                await nuxtApp.runWithContext(() => showError(error2));
+                return false;
+              }
+            }
+            if (result === true) {
+              continue;
+            }
+            if (result === false) {
+              return result;
+            }
+            if (result) {
+              if (isNuxtError(result) && result.fatal) {
+                await nuxtApp.runWithContext(() => showError(result));
+              }
+              return result;
+            }
+          } catch (err) {
+            const error2 = createError(err);
+            if (error2.fatal) {
+              await nuxtApp.runWithContext(() => showError(error2));
+            }
+            return error2;
+          }
+        }
+      }
+    });
+    router.onError(async () => {
+      delete nuxtApp._processingMiddleware;
+      await nuxtApp.callHook("page:loading:end");
+    });
+    router.afterEach((to) => {
+      if (to.matched.length === 0 && !error.value) {
+        return nuxtApp.runWithContext(() => showError(createError({
+          status: 404,
+          fatal: false,
+          statusText: `Page not found: ${to.fullPath}`,
+          data: {
+            path: to.fullPath
+          }
+        })));
+      }
+    });
+    nuxtApp.hooks.hookOnce("app:created", async () => {
+      try {
+        if ("name" in resolvedInitialRoute) {
+          resolvedInitialRoute.name = void 0;
+        }
+        if (hasDeferredRoute) ;
+        else {
+          await router.replace({
+            ...resolvedInitialRoute,
+            force: true
+          });
+        }
+        router.options.scrollBehavior = routerOptions.scrollBehavior;
+      } catch (error2) {
+        await nuxtApp.runWithContext(() => showError(error2));
+      }
+    });
+    return { provide: { router } };
   }
 });
 const reducers = [
@@ -8587,31 +8589,90 @@ const robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk = /* @__PURE
     });
   }
 });
-const LazyProseA = defineAsyncComponent(() => import('./ProseA-8wMpuBgU.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-GgNwMjGQ.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-C8hcuAdm.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-C2SOsGIK.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-Cu-ez9Te.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-DZhvw_XS.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-D-mmi4W8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-lBrdGZz5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BKyElsXe.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CVkq5HP5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-CeP93wD2.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-DQbEks70.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-BWQ_h1wt.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CKp-3Pxs.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import('./ProseP-DQ0PQPnq.mjs').then((r) => r["default"] || r.default || r));
+const i18nPluginDeps = ["i18n:plugin", "i18n:plugin:ssg-detect", "i18n:plugin:route-locale-detect"];
+function getSiteConfigStack() {
+  return useRequestEvent()?.context.siteConfig;
+}
+function resolveDefaultLocale(i18n) {
+  const locale = toValue(i18n.locales).find((l) => l.code === i18n.defaultLocale);
+  return locale?.language || locale?.iso || i18n.defaultLocale;
+}
+function resolveI18nUrl(i18n) {
+  return toValue(i18n.baseUrl) || void 0;
+}
+function resolveCurrentLocale(i18n) {
+  const properties = toValue(i18n.localeProperties);
+  if (properties.language)
+    return properties.language;
+  return resolveDefaultLocale(i18n);
+}
+function resolveDescription(i18n) {
+  return i18n.te("nuxtSiteConfig.description") ? i18n.t("nuxtSiteConfig.description") : void 0;
+}
+function resolveName(i18n) {
+  return i18n.te("nuxtSiteConfig.name") ? i18n.t("nuxtSiteConfig.name") : void 0;
+}
+const i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ = /* @__PURE__ */ defineNuxtPlugin({
+  name: "nuxt-site-config:i18n",
+  dependsOn: i18nPluginDeps,
+  setup(nuxtApp) {
+    const i18n = nuxtApp.$i18n;
+    if (!i18n)
+      return;
+    const stack = getSiteConfigStack();
+    const i18nBaseUrl = toValue(i18n.baseUrl);
+    if (i18nBaseUrl) {
+      const siteConfig = stack.get({ resolveRefs: true });
+      const currentUrl = siteConfig.url;
+      if (currentUrl && !currentUrl.includes("localhost")) {
+        const i18nURL = parseURL(i18nBaseUrl, "https://");
+        const siteConfigURL = parseURL(currentUrl, "https://");
+        if (i18nURL.host !== siteConfigURL.host) {
+          if (siteConfig.env === "production") {
+            console.error(`[Nuxt Site Config] Your I18n baseUrl \`${i18nURL.host}\` doesn't match your site url ${siteConfigURL.host}. This will cause production SEO issues. Either provide a matching baseUrl or remove the site url config.`);
+          }
+        }
+      }
+    }
+    {
+      stack.push({
+        _priority: SiteConfigPriority.i18n,
+        _context: "@nuxtjs/i18n",
+        url: () => resolveI18nUrl(i18n),
+        defaultLocale: () => resolveDefaultLocale(i18n),
+        currentLocale: () => resolveCurrentLocale(i18n),
+        description: () => resolveDescription(i18n),
+        name: () => resolveName(i18n)
+      });
+      return;
+    }
+  }
+});
+const LazyProseA = defineAsyncComponent(() => import('./ProseA-CKtUyk1c.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-DaLK1usc.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-DOZPVh40.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-By-tE54Z.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-kRyDlI8t.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-Cy_ERgTF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-BJqHofZo.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-DxegT8cn.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-DQWEe9nF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-DUkaLk3c.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-B8T6E_yT.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-BM8Ab-kF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-BpOmf09C.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CKGnb3lN.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import('./ProseP-BVASwYY_.mjs').then((r) => r["default"] || r.default || r));
 const LazyProsePre = defineAsyncComponent(() => import('./ProsePre-ByG-rB1z.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseScript = defineAsyncComponent(() => import('./ProseScript-B3ujpe25.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-4nlycFP5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-Bi4OhcXu.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-CJTEHC4_.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-PkKRzrIr.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-CYYtzDQ8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-BCZ7ZOtd.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-rRtFruPm.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-eIP-SeNK.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-CjCgZ-u_.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-Ci3K4VXd.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-Bi0zXwfC.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-C_BlgbV3.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-hybVj8iO.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-B6pqxsTa.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-CeywT7NJ.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-Dk1UYyUY.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["ProseA", LazyProseA],
   ["ProseBlockquote", LazyProseBlockquote],
@@ -8835,66 +8896,6 @@ const i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM = /* @__PURE__ */ defineN
     nuxt.provide("switchLocalePath", useSwitchLocalePath(nuxt));
   }
 });
-const i18nPluginDeps = ["i18n:plugin", "i18n:plugin:ssg-detect", "i18n:plugin:route-locale-detect"];
-function getSiteConfigStack() {
-  return useRequestEvent()?.context.siteConfig;
-}
-function resolveDefaultLocale(i18n) {
-  const locale = toValue(i18n.locales).find((l) => l.code === i18n.defaultLocale);
-  return locale?.language || locale?.iso || i18n.defaultLocale;
-}
-function resolveI18nUrl(i18n) {
-  return toValue(i18n.baseUrl) || void 0;
-}
-function resolveCurrentLocale(i18n) {
-  const properties = toValue(i18n.localeProperties);
-  if (properties.language)
-    return properties.language;
-  return resolveDefaultLocale(i18n);
-}
-function resolveDescription(i18n) {
-  return i18n.te("nuxtSiteConfig.description") ? i18n.t("nuxtSiteConfig.description") : void 0;
-}
-function resolveName(i18n) {
-  return i18n.te("nuxtSiteConfig.name") ? i18n.t("nuxtSiteConfig.name") : void 0;
-}
-const i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ = /* @__PURE__ */ defineNuxtPlugin({
-  name: "nuxt-site-config:i18n",
-  dependsOn: i18nPluginDeps,
-  setup(nuxtApp) {
-    const i18n = nuxtApp.$i18n;
-    if (!i18n)
-      return;
-    const stack = getSiteConfigStack();
-    const i18nBaseUrl = toValue(i18n.baseUrl);
-    if (i18nBaseUrl) {
-      const siteConfig = stack.get({ resolveRefs: true });
-      const currentUrl = siteConfig.url;
-      if (currentUrl && !currentUrl.includes("localhost")) {
-        const i18nURL = parseURL(i18nBaseUrl, "https://");
-        const siteConfigURL = parseURL(currentUrl, "https://");
-        if (i18nURL.host !== siteConfigURL.host) {
-          if (siteConfig.env === "production") {
-            console.error(`[Nuxt Site Config] Your I18n baseUrl \`${i18nURL.host}\` doesn't match your site url ${siteConfigURL.host}. This will cause production SEO issues. Either provide a matching baseUrl or remove the site url config.`);
-          }
-        }
-      }
-    }
-    {
-      stack.push({
-        _priority: SiteConfigPriority.i18n,
-        _context: "@nuxtjs/i18n",
-        url: () => resolveI18nUrl(i18n),
-        defaultLocale: () => resolveDefaultLocale(i18n),
-        currentLocale: () => resolveCurrentLocale(i18n),
-        description: () => resolveDescription(i18n),
-        name: () => resolveName(i18n)
-      });
-      return;
-    }
-  }
-});
-const routeRulesMatcher = _routeRulesMatcher;
 let routes;
 const prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk = /* @__PURE__ */ defineNuxtPlugin(async () => {
   let __temp, __restore;
@@ -8907,18 +8908,18 @@ const prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk = /* @__PURE_
 });
 const OPTIONAL_PARAM_RE = /^\/?:.*(?:\?|\(\.\*\)\*)$/;
 function shouldPrerender(path) {
-  return !!routeRulesMatcher(path).prerender;
+  return crawlLinks;
 }
 function processRoutes(routes2, currentPath = "/", routesToPrerender = /* @__PURE__ */ new Set()) {
   for (const route of routes2) {
-    if (OPTIONAL_PARAM_RE.test(route.path) && !route.children?.length && shouldPrerender(currentPath)) {
+    if (OPTIONAL_PARAM_RE.test(route.path) && !route.children?.length && shouldPrerender()) {
       routesToPrerender.add(currentPath);
     }
     if (route.path.includes(":")) {
       continue;
     }
     const fullPath = joinURL(currentPath, route.path);
-    if (shouldPrerender(fullPath)) {
+    {
       routesToPrerender.add(fullPath);
     }
     if (route.children) {
@@ -9190,9 +9191,9 @@ const init_IycSiUTa0ooOjNElHE0EG94Rz0cZb4_bKuXwa_4z9aY = /* @__PURE__ */ defineN
   }
 });
 const plugins = [
+  _0_siteConfig_tU0SxKrPeVRXWcGu2sOnIfhNDbYiKNfDCvYZhRueG0Q,
   unhead_k2P3m_ZDyjlr2mMYnoDPwavjsDN8hBlk9cFai0bbopU,
   plugin,
-  _0_siteConfig_tU0SxKrPeVRXWcGu2sOnIfhNDbYiKNfDCvYZhRueG0Q,
   revive_payload_server_MVtmlZaQpj6ApFmshWfUWl5PehCebzaBf2NuRMiIbms,
   siteConfig_vuqmRkLAUZxQvb5pvUwT3uUdVggfjhj1m5v7Pb6IE0w,
   inferSeoMetaPlugin_KsEotgC9NJyW_guR_3z04hFN8TI2h5dgP8bzHmpMm5o,
@@ -9202,12 +9203,12 @@ const plugins = [
   og_image_canonical_urls_server_2uCBKzWxjEK91fSFBdBNPEWilWXRzR66cHJvjIi4FGA,
   route_rule_og_image_server_yrHfzNQxtCKZyHaGhWqsbaa4V0Y5WoBOo3_wqkmh41k,
   robot_meta_server_bRHpso_4KN_Ec3RJzqCvbuvfZsNOeE_4TgpL8dCNuwk,
+  i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ,
   components_plugin_z4hgvsiddfKkfXTP6M8M4zG5Cb7sGnDhcryKVM45Di4,
   switch_locale_path_ssr_NflG9_QeVcJ1jVig0vCfxB_cZhpEMQ9U2ujRUiYbbVw,
   route_locale_detect__HPHJq3Jg7gwhwgKEI8tQavopSAjmrCSPXl9HgL2h9U,
   preload_30FByJAs5vQa4mNNQLX15KPGCCVjIGrzdTjh6ve5W24,
   i18n_EI7LsD1KYQADczz5hrChviGQCdVM8yUkvFEZLJpmnvM,
-  i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ,
   prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk,
   minifyScripts_server_vI_uAmhP3_n8myLPfw5_eV1I7D4ANVXFZoE6G_rspLU,
   _1_absoluteImageUrls_server_2YTf8dZl0nl5nVc1xW7fV_4mFLM_syJu2DEHHvxD9lg,
@@ -9247,7 +9248,7 @@ const defineRouteProvider = (name = "RouteProvider") => defineComponent({
   }
 });
 const RouteProvider = defineRouteProvider();
-const __nuxt_component_0$1 = defineComponent({
+const __nuxt_component_0 = defineComponent({
   name: "NuxtPage",
   inheritAttrs: false,
   props: {
@@ -9351,14 +9352,22 @@ const useBreadcrumbs = () => {
       });
       return crumbs;
     }
-    if (path.startsWith("/linked-data/") && path.match(/^\/linked-data\/[^/]+\//)) {
-      const plural = params.plural;
+    if (path.startsWith("/linked-data/")) {
       const slug = params.slug;
-      const slugStr = Array.isArray(slug) ? slug.join("/") : slug;
-      crumbs.push(
-        { label: "Linked Data " + toTitleCase(plural), to: `/linked-data/${plural}` },
-        { label: route.meta.pageTitle || toTitleCase(slugStr), to: `/linked-data/${plural}/${slugStr}` }
-      );
+      const slugArr = Array.isArray(slug) ? slug : [slug];
+      slugArr.join("/");
+      const plural = slugArr[0];
+      if (slugArr.length > 1) {
+        crumbs.push(
+          { label: "Linked Data " + toTitleCase(plural), to: `/linked-data/${plural}` },
+          { label: route.meta.pageTitle || toTitleCase(slugArr[slugArr.length - 1]), to: path }
+        );
+      } else {
+        crumbs.push({
+          label: "Linked Data " + toTitleCase(plural),
+          to: path
+        });
+      }
       return crumbs;
     }
     return crumbs;
@@ -9368,6 +9377,7 @@ const useBreadcrumbs = () => {
   };
 };
 const toTitleCase = (str) => {
+  if (!str) return "";
   return str.split("-").map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(" ");
 };
 const getPluralFromSingular = (singular) => {
@@ -9380,13 +9390,13 @@ const getPluralFromSingular = (singular) => {
   };
   return pluralMap[singular] || singular + "s";
 };
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "Breadcrumbs",
   __ssrInlineRender: true,
   setup(__props) {
     const { breadcrumbs } = useBreadcrumbs();
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_0$2;
+      const _component_NuxtLink = __nuxt_component_0$1;
       if (unref(breadcrumbs).length > 1) {
         _push(`<nav${ssrRenderAttrs(mergeProps({ class: "breadcrumbs-nav" }, _attrs))} data-v-ca664336><div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 text-sm" data-v-ca664336><ol class="flex flex-wrap gap-2 items-center" data-v-ca664336><!--[-->`);
         ssrRenderList(unref(breadcrumbs), (crumb, index) => {
@@ -9430,24 +9440,69 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
+const _sfc_setup$6 = _sfc_main$6.setup;
+_sfc_main$6.setup = (props, ctx) => {
+  const ssrContext = useSSRContext();
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Breadcrumbs.vue");
+  return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
+};
+const Breadcrumbs = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-ca664336"]]);
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+  __name: "SearchBar",
+  __ssrInlineRender: true,
+  setup(__props) {
+    const query = ref("");
+    const showResults = ref(false);
+    const allResults = ref([]);
+    const results = computed(() => {
+      if (!query.value) return [];
+      return allResults.value.filter(
+        (r) => r.title?.toLowerCase().includes(query.value.toLowerCase()) || r.excerpt?.toLowerCase().includes(query.value.toLowerCase())
+      );
+    });
+    return (_ctx, _push, _parent, _attrs) => {
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative" }, _attrs))} data-v-170cc6af><div class="flex items-center gap-2" data-v-170cc6af><input${ssrRenderAttr("value", query.value)} type="text" placeholder="Search articles..." class="search-input" data-v-170cc6af><button class="search-button" aria-label="Search" data-v-170cc6af> 🔍 </button></div>`);
+      if (showResults.value && (query.value.length > 0 || results.value.length > 0)) {
+        _push(`<div class="search-results" data-v-170cc6af>`);
+        if (query.value.length === 0) {
+          _push(`<div class="p-4 text-sm text-muted" data-v-170cc6af> Type to search... </div>`);
+        } else if (results.value.length === 0) {
+          _push(`<div class="p-4 text-sm text-muted" data-v-170cc6af> No results found for &quot;${ssrInterpolate(query.value)}&quot; </div>`);
+        } else {
+          _push(`<div class="max-h-96 overflow-y-auto" data-v-170cc6af><!--[-->`);
+          ssrRenderList(results.value.slice(0, 10), (result) => {
+            _push(`<div class="search-result-item" data-v-170cc6af><div class="font-bold text-sm" data-v-170cc6af>${ssrInterpolate(result.title)}</div><div class="text-xs text-muted line-clamp-2" data-v-170cc6af>${ssrInterpolate(result.excerpt)}</div></div>`);
+          });
+          _push(`<!--]--></div>`);
+        }
+        _push(`</div>`);
+      } else {
+        _push(`<!---->`);
+      }
+      _push(`</div>`);
+    };
+  }
+});
 const _sfc_setup$5 = _sfc_main$5.setup;
 _sfc_main$5.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Breadcrumbs.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SearchBar.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_0 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-ca664336"]]);
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-170cc6af"]]);
+const hilltopadsScript$1 = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>';
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Header",
   __ssrInlineRender: true,
   setup(__props) {
     const navOpen = ref(false);
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_Breadcrumbs = __nuxt_component_0;
-      const _component_NuxtLink = __nuxt_component_0$2;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-06c2b5b5>`);
+      const _component_Breadcrumbs = Breadcrumbs;
+      const _component_NuxtLink = __nuxt_component_0$1;
+      const _component_SearchBar = __nuxt_component_2;
+      _push(`<header${ssrRenderAttrs(mergeProps({ class: "border-b border-accent bg-secondary sticky top-0 z-50" }, _attrs))} data-v-266b489a><div class="bg-secondary py-2" data-v-266b489a>${hilltopadsScript$1}</div>`);
       _push(ssrRenderComponent(_component_Breadcrumbs, null, null, _parent));
-      _push(`<div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-06c2b5b5><div class="flex justify-between items-start" data-v-06c2b5b5><div data-v-06c2b5b5>`);
+      _push(`<div class="max-w-6xl mx-auto px-4 sm:px-6 py-8" data-v-266b489a><div class="flex justify-between items-start" data-v-266b489a><div data-v-266b489a>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "text-2xl sm:text-4xl font-serif font-bold tracking-tight"
@@ -9463,7 +9518,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-06c2b5b5>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main" data-v-06c2b5b5>`);
+      _push(`<p class="text-muted text-xs sm:text-sm mt-2" data-v-266b489a>Essays on trends, context &amp; nuance</p></div><div class="hidden lg:flex gap-8 text-sm nav-main items-center" data-v-266b489a>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
         class: "hover:underline"
@@ -9539,9 +9594,10 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-06c2b5b5>☰</button></div></div>`);
+      _push(ssrRenderComponent(_component_SearchBar, null, null, _parent));
+      _push(`</div><button class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation" data-v-266b489a>☰</button></div></div>`);
       if (unref(navOpen)) {
-        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-06c2b5b5><div class="space-y-4" data-v-06c2b5b5>`);
+        _push(`<nav class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4" data-v-266b489a><div class="space-y-4" data-v-266b489a>`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/",
           class: "block"
@@ -9646,131 +9702,137 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-06c2b5b5"]]);
-const _sfc_main$3 = {};
-function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_NuxtLink = __nuxt_component_0$2;
-  _push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-accent text-secondary mt-16 sm:mt-24 py-8 sm:py-12 border-t border-primary" }, _attrs))} data-v-ddf4f40a><div class="max-w-6xl mx-auto px-4 sm:px-6" data-v-ddf4f40a><div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12" data-v-ddf4f40a><div data-v-ddf4f40a><h4 class="font-serif font-bold mb-4" data-v-ddf4f40a>Magazine</h4><ul class="text-xs sm:text-sm space-y-2" data-v-ddf4f40a><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Home`);
-      } else {
-        return [
-          createTextVNode("Home")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-ddf4f40a><a href="/sitemap.xml" class="hover:underline" data-v-ddf4f40a>Sitemap</a></li><li data-v-ddf4f40a><a href="/feed.xml" class="hover:underline" data-v-ddf4f40a>RSS</a></li></ul></div><div data-v-ddf4f40a><h4 class="font-serif font-bold mb-4" data-v-ddf4f40a>Brand</h4><ul class="text-xs sm:text-sm space-y-2" data-v-ddf4f40a><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/about",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`About`);
-      } else {
-        return [
-          createTextVNode("About")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/faq",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`FAQ`);
-      } else {
-        return [
-          createTextVNode("FAQ")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/contact-us",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Contact`);
-      } else {
-        return [
-          createTextVNode("Contact")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li></ul></div><div data-v-ddf4f40a><h4 class="font-serif font-bold mb-4" data-v-ddf4f40a>Legal</h4><ul class="text-xs sm:text-sm space-y-2" data-v-ddf4f40a><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/privacy-policy",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Privacy`);
-      } else {
-        return [
-          createTextVNode("Privacy")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/terms-conditions",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Terms`);
-      } else {
-        return [
-          createTextVNode("Terms")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li><li data-v-ddf4f40a>`);
-  _push(ssrRenderComponent(_component_NuxtLink, {
-    to: "/page/cookie-policy",
-    class: "hover:underline"
-  }, {
-    default: withCtx((_, _push2, _parent2, _scopeId) => {
-      if (_push2) {
-        _push2(`Cookies`);
-      } else {
-        return [
-          createTextVNode("Cookies")
-        ];
-      }
-    }),
-    _: 1
-  }, _parent));
-  _push(`</li></ul></div></div><div class="border-t border-primary pt-6 sm:pt-8 text-xs text-center text-secondary" data-v-ddf4f40a><p data-v-ddf4f40a>© 2026 Everything in Perspective. All rights reserved.</p></div></div></footer>`);
-}
+const Header = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-266b489a"]]);
+const hilltopadsScript = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>';
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+  __name: "Footer",
+  __ssrInlineRender: true,
+  setup(__props) {
+    return (_ctx, _push, _parent, _attrs) => {
+      const _component_NuxtLink = __nuxt_component_0$1;
+      _push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-accent text-secondary mt-16 sm:mt-24 py-8 sm:py-12 border-t border-primary" }, _attrs))} data-v-2c4d06f9><div class="max-w-6xl mx-auto px-4 sm:px-6" data-v-2c4d06f9><div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12" data-v-2c4d06f9><div data-v-2c4d06f9><h4 class="font-serif font-bold mb-4" data-v-2c4d06f9>Magazine</h4><ul class="text-xs sm:text-sm space-y-2" data-v-2c4d06f9><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Home`);
+          } else {
+            return [
+              createTextVNode("Home")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li><li data-v-2c4d06f9><a href="/sitemap.xml" class="hover:underline" data-v-2c4d06f9>Sitemap</a></li></ul></div><div data-v-2c4d06f9><h4 class="font-serif font-bold mb-4" data-v-2c4d06f9>Brand</h4><ul class="text-xs sm:text-sm space-y-2" data-v-2c4d06f9><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/about",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`About`);
+          } else {
+            return [
+              createTextVNode("About")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/faq",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`FAQ`);
+          } else {
+            return [
+              createTextVNode("FAQ")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/contact-us",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Contact`);
+          } else {
+            return [
+              createTextVNode("Contact")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li></ul></div><div data-v-2c4d06f9><h4 class="font-serif font-bold mb-4" data-v-2c4d06f9>Legal</h4><ul class="text-xs sm:text-sm space-y-2" data-v-2c4d06f9><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/privacy-policy",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Privacy`);
+          } else {
+            return [
+              createTextVNode("Privacy")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/terms-conditions",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Terms`);
+          } else {
+            return [
+              createTextVNode("Terms")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li><li data-v-2c4d06f9>`);
+      _push(ssrRenderComponent(_component_NuxtLink, {
+        to: "/page/cookie-policy",
+        class: "hover:underline"
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`Cookies`);
+          } else {
+            return [
+              createTextVNode("Cookies")
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(`</li></ul></div></div><div class="border-t border-primary pt-6 sm:pt-8" data-v-2c4d06f9><div class="py-4 mb-4" data-v-2c4d06f9>${hilltopadsScript}</div><p class="text-xs text-center text-secondary" data-v-2c4d06f9>© 2026 Everything in Perspective. All rights reserved.</p></div></div></footer>`);
+    };
+  }
+});
 const _sfc_setup$3 = _sfc_main$3.setup;
 _sfc_main$3.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Footer.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const Footer = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["ssrRender", _sfc_ssrRender], ["__scopeId", "data-v-ddf4f40a"]]);
+const Footer = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-2c4d06f9"]]);
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
@@ -9790,8 +9852,8 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Everything in Perspective",
-            url: "https://einp.surge.sh",
-            logo: "https://einp.surge.sh/logo.png",
+            url: "https://humanitiesclinic.github.io",
+            logo: "https://humanitiesclinic.github.io/logo.png",
             description: "Essays on trends, context & nuance",
             sameAs: []
           })
@@ -9799,9 +9861,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       ]
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtPage = __nuxt_component_0$1;
+      const _component_NuxtPage = __nuxt_component_0;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-secondary text-primary" }, _attrs))}>`);
       _push(ssrRenderComponent(Header, null, null, _parent));
+      _push(ssrRenderComponent(Breadcrumbs, null, null, _parent));
       _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
       _push(ssrRenderComponent(Footer, null, null, _parent));
       _push(`</div>`);
@@ -9828,8 +9891,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-C5SG5QOD.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-CGQLxAe7.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-DPIdW6RC.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-BOxv6rm5.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -9921,5 +9984,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, __nuxt_component_0$2 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
 //# sourceMappingURL=server.mjs.map

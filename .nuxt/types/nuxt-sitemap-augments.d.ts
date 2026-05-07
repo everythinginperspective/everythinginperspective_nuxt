@@ -7,11 +7,9 @@ declare module 'nitropack' {
     _sitemap?: SitemapUrl
   }
   interface NitroRouteRules {
-    robots?: boolean
     sitemap?: SitemapItemDefaults | false
   }
   interface NitroRouteConfig {
-    robots?: boolean
     sitemap?: SitemapItemDefaults | false
   }
   interface NitroRuntimeHooks {
@@ -28,11 +26,9 @@ declare module 'nitropack/types' {
     _sitemap?: SitemapUrl
   }
   interface NitroRouteRules {
-    robots?: boolean
     sitemap?: SitemapItemDefaults | false
   }
   interface NitroRouteConfig {
-    robots?: boolean
     sitemap?: SitemapItemDefaults | false
   }
   interface NitroRuntimeHooks {

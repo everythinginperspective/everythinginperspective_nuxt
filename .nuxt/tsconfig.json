@@ -28,17 +28,14 @@
       "@nuxtjs/mdc": [
         "../node_modules/@nuxtjs/mdc"
       ],
-      "nuxt-site-config": [
-        "../node_modules/nuxt-site-config"
-      ],
       "@nuxtjs/robots": [
         "../node_modules/@nuxtjs/robots"
       ],
       "nuxt-link-checker": [
         "../node_modules/nuxt-link-checker"
       ],
-      "nuxtseo-shared": [
-        "../node_modules/nuxtseo-shared"
+      "nuxt-site-config": [
+        "../node_modules/nuxt-site-config"
       ],
       "vue-i18n": [
         "../node_modules/vue-i18n/dist/vue-i18n",
@@ -158,18 +155,6 @@
       "vue-demi": [
         "../node_modules/nuxt/dist/app/compat/vue-demi"
       ],
-      "#sitemap": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime"
-      ],
-      "#sitemap/*": [
-        "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
-      ],
-      "#site-config": [
-        "../node_modules/nuxt-site-config/dist/runtime"
-      ],
-      "#site-config/*": [
-        "../node_modules/nuxt-site-config/dist/runtime/*"
-      ],
       "#i18n": [
         "../node_modules/@nuxtjs/i18n/dist/runtime/composables/index"
       ],
@@ -200,11 +185,23 @@
       "#mdc-imports": [
         "./mdc-imports.mjs"
       ],
+      "#site-config": [
+        "../node_modules/nuxt-site-config/dist/runtime"
+      ],
+      "#site-config/*": [
+        "../node_modules/nuxt-site-config/dist/runtime/*"
+      ],
       "#robots": [
         "../node_modules/@nuxtjs/robots/dist/runtime"
       ],
       "#robots/*": [
         "../node_modules/@nuxtjs/robots/dist/runtime/*"
+      ],
+      "#sitemap": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime"
+      ],
+      "#sitemap/*": [
+        "../node_modules/@nuxtjs/sitemap/dist/runtime/*"
       ],
       "#og-image": [
         "../node_modules/nuxt-og-image/dist/shared/runtime"
@@ -228,7 +225,7 @@
         "../node_modules/nuxt-seo-utils/dist/runtime/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/b989062e-aac2-4752-9031-423299974082.json"
+        "./manifest/meta/6177f859-88dd-4730-971d-95df5fbdc563.json"
       ],
       "#components": [
         "./components"

@@ -18,6 +18,7 @@ interface _GlobalComponents {
   FilterUI: typeof import("../../components/FilterUI.vue")['default']
   Footer: typeof import("../../components/Footer.vue")['default']
   Header: typeof import("../../components/Header.vue")['default']
+  SearchBar: typeof import("../../components/SearchBar.vue")['default']
   MagazineArticleTemplate: typeof import("../../components/magazine/ArticleTemplate.vue")['default']
   MagazineBookTemplate: typeof import("../../components/magazine/BookTemplate.vue")['default']
   MagazineLanguageTemplate: typeof import("../../components/magazine/LanguageTemplate.vue")['default']
@@ -106,6 +107,7 @@ interface _GlobalComponents {
   LazyFilterUI: LazyComponent<typeof import("../../components/FilterUI.vue")['default']>
   LazyFooter: LazyComponent<typeof import("../../components/Footer.vue")['default']>
   LazyHeader: LazyComponent<typeof import("../../components/Header.vue")['default']>
+  LazySearchBar: LazyComponent<typeof import("../../components/SearchBar.vue")['default']>
   LazyMagazineArticleTemplate: LazyComponent<typeof import("../../components/magazine/ArticleTemplate.vue")['default']>
   LazyMagazineBookTemplate: LazyComponent<typeof import("../../components/magazine/BookTemplate.vue")['default']>
   LazyMagazineLanguageTemplate: LazyComponent<typeof import("../../components/magazine/LanguageTemplate.vue")['default']>
