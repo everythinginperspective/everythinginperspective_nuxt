@@ -28,8 +28,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Everything in Perspective',
-        url: 'https://einp.surge.sh',
-        logo: 'https://einp.surge.sh/logo.png',
+        url: 'https://humanitiesclinic.github.io',
+        logo: 'https://humanitiesclinic.github.io/logo.png',
         description: 'Essays on trends, context & nuance',
         sameAs: []
       })

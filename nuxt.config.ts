@@ -53,24 +53,37 @@ export default defineNuxtConfig({
   
   // Site URL for SEO and sitemap
   site: {
-    url: 'https://everythinginperspective.github.io',
+    url: 'https://humanitiesclinic.github.io',
     name: 'Everything in Perspective'
   },
   
   // Site config for @nuxtjs/seo
   siteConfig: {
     name: 'Everything in Perspective',
-    url: 'https://everythinginperspective.github.io',
+    url: 'https://humanitiesclinic.github.io',
     description: 'Essays on trends, context & nuance'
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-schema-org', 'nuxt-og-image'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-schema-org', 'nuxt-og-image', 'nuxt-robots', 'nuxt-canonical'],
   
   // @nuxtjs/seo configuration
   seo: {
     redirectToCanonicalSiteUrl: true,
     splash: false
+  },
+  
+  // nuxt-robots configuration
+  robots: {
+    UserAgent: '*',
+    Allow: '/',
+    Disallow: ['/api/', '/admin/'],
+    Sitemap: 'https://humanitiesclinic.github.io/sitemap.xml'
+  },
+  
+  // nuxt-canonical configuration
+  canonical: {
+    baseURL: 'https://humanitiesclinic.github.io'
   },
   
   // nuxt-schema-org configuration  
