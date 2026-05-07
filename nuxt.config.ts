@@ -14,6 +14,10 @@ const preloadRoutes = () => {
     
     for (const folder of folders) {
       const folderPath = join(contentDir, folder)
+      // Add collection index routes for all content types
+      routes.push(`/magazine/${folder}`)
+      routes.push(`/linked-data/${folder}`)
+      
       try {
         const files = readdirSync(folderPath).filter(f => f.endsWith('.md'))
         for (const file of files) {

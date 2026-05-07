@@ -5,14 +5,14 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="en" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/fr" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/it" hreflang="it" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/de" hreflang="de" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/es" hreflang="es" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/pt" hreflang="pt" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/it" hreflang="it" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/nl" hreflang="nl" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/zh" hreflang="zh" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ar" hreflang="ar" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ja" hreflang="ja" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ar" hreflang="ar" />
     </url>
     <url>
         <loc>https://everythinginperspective.github.io/article/amazon-global-dominance</loc>
@@ -113,9 +113,24 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/articles" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/magazine/books</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/books" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/books" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/languages</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/languages" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/languages" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/magazine/pages</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/pages" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/pages" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/people</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/people" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/people" hreflang="en" />
     </url>
     <url>
         <loc>https://everythinginperspective.github.io/magazine/perspectives</loc>
@@ -458,6 +473,11 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/youtube-algoritmo-creadores.es" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/languages</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/languages" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/languages" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/magazine/page/about</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/about" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/about" hreflang="en" />
@@ -488,9 +508,14 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/page/terms-conditions" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/magazine/person/authors</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/authors" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/authors" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en" hreflang="en" />
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-07T21:31:55.882Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-07T22:00:16.686Z -->
