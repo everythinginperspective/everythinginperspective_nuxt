@@ -53,14 +53,14 @@ export default defineNuxtConfig({
   
   // Site URL for SEO and sitemap
   site: {
-    url: 'https://humanitiesclinic.github.io',
+    url: 'https://everythinginperspective.github.io',
     name: 'Everything in Perspective'
   },
   
   // Site config for @nuxtjs/seo
   siteConfig: {
     name: 'Everything in Perspective',
-    url: 'https://humanitiesclinic.github.io',
+    url: 'https://everythinginperspective.github.io',
     description: 'Essays on trends, context & nuance'
   },
   
@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   robots: {
     allow: '/',
     disallow: ['/api/', '/admin/'],
-    sitemap: 'https://humanitiesclinic.github.io/sitemap.xml'
+    sitemap: 'https://everythinginperspective.github.io/sitemap.xml'
   },
   
   // nuxt-schema-org configuration  

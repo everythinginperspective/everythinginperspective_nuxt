@@ -85,7 +85,7 @@ watch(() => article.value, (newArticle) => {
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'NewsArticle',
-            '@id': `https://einp.surge.sh/article/${slug}#article`,
+            '@id': `https://everythinginperspective.github.io/article/${slug}#article`,
             headline: newArticle.title,
             name: newArticle.title,
             description: newArticle.description,
@@ -100,7 +100,7 @@ watch(() => article.value, (newArticle) => {
             author: {
               '@type': 'Person',
               name: newArticle.author || 'Everything in Perspective',
-              url: 'https://einp.surge.sh'
+              url: 'https://everythinginperspective.github.io'
             },
             creator: {
               '@type': 'Person',
@@ -109,10 +109,10 @@ watch(() => article.value, (newArticle) => {
             publisher: {
               '@type': 'Organization',
               name: 'Everything in Perspective',
-              url: 'https://einp.surge.sh',
+              url: 'https://everythinginperspective.github.io',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://einp.surge.sh/logo.png',
+                url: 'https://everythinginperspective.github.io/logo.png',
                 width: 250,
                 height: 60
               },
@@ -126,10 +126,10 @@ watch(() => article.value, (newArticle) => {
             keywords: newArticle.keywords ? newArticle.keywords.join(', ') : newArticle.tags?.join(', ') || newArticle.category || 'perspective',
             inLanguage: 'en-US',
             isAccessibleForFree: true,
-            url: `https://einp.surge.sh/article/${slug}`,
+            url: `https://everythinginperspective.github.io/article/${slug}`,
             mainEntity: {
               '@type': 'NewsArticle',
-              '@id': `https://einp.surge.sh/article/${slug}#article`
+              '@id': `https://everythinginperspective.github.io/article/${slug}#article`
             }
           })
         },
@@ -143,19 +143,19 @@ watch(() => article.value, (newArticle) => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://einp.surge.sh'
+                item: 'https://everythinginperspective.github.io'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Articles',
-                item: 'https://einp.surge.sh/magazine/articles'
+                item: 'https://everythinginperspective.github.io/magazine/articles'
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: newArticle.title,
-                item: `https://einp.surge.sh/article/${slug}`
+                item: `https://everythinginperspective.github.io/article/${slug}`
               }
             ]
           })

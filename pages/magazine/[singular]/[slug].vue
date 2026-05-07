@@ -95,7 +95,7 @@ watch(() => content.value, (newContent) => {
     const schemaObject: Record<string, any> = {
       '@context': 'https://schema.org',
       '@type': schemaType,
-      '@id': `https://einp.surge.sh/magazine/${singular}/${slug}#${schemaType.toLowerCase()}`,
+      '@id': `https://everythinginperspective.github.io/magazine/${singular}/${slug}#${schemaType.toLowerCase()}`,
       headline: newContent.title,
       name: newContent.title,
       description: newContent.description,
@@ -109,7 +109,7 @@ watch(() => content.value, (newContent) => {
       author: newContent.author ? {
         '@type': 'Person',
         name: newContent.author,
-        url: 'https://einp.surge.sh'
+        url: 'https://everythinginperspective.github.io'
       } : undefined,
       creator: newContent.author ? {
         '@type': 'Person',
@@ -118,10 +118,10 @@ watch(() => content.value, (newContent) => {
       publisher: {
         '@type': 'Organization',
         name: 'Everything in Perspective',
-        url: 'https://einp.surge.sh',
+        url: 'https://everythinginperspective.github.io',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://einp.surge.sh/logo.png',
+          url: 'https://everythinginperspective.github.io/logo.png',
           width: 250,
           height: 60
         }
@@ -129,7 +129,7 @@ watch(() => content.value, (newContent) => {
       datePublished: publishedDate,
       dateModified: publishedDate,
       dateCreated: publishedDate,
-      url: `https://einp.surge.sh/magazine/${singular}/${slug}`,
+      url: `https://everythinginperspective.github.io/magazine/${singular}/${slug}`,
       inLanguage: 'en-US',
       isAccessibleForFree: true,
       keywords: newContent.keywords ? newContent.keywords.join(', ') : newContent.tags?.join(', ') || newContent.category || singular
@@ -157,19 +157,19 @@ watch(() => content.value, (newContent) => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://einp.surge.sh'
+                item: 'https://everythinginperspective.github.io'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: plural,
-                item: `https://einp.surge.sh/magazine/${plural}`
+                item: `https://everythinginperspective.github.io/magazine/${plural}`
               },
               {
                 '@type': 'ListItem',
                 position: 3,
                 name: newContent.title,
-                item: `https://einp.surge.sh/magazine/${singular}/${slug}`
+                item: `https://everythinginperspective.github.io/magazine/${singular}/${slug}`
               }
             ]
           })

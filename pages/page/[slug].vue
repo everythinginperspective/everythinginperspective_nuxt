@@ -46,13 +46,13 @@ watch(() => page.value, (newPage) => {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://einp.surge.sh'
+                item: 'https://everythinginperspective.github.io'
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: newPage.title,
-                item: `https://einp.surge.sh/page/${slug}`
+                item: `https://everythinginperspective.github.io/page/${slug}`
               }
             ]
           })
