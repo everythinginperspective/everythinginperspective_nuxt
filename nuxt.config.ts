@@ -65,7 +65,7 @@ export default defineNuxtConfig({
   },
   
   // Modules
-  modules: ['@nuxt/content', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready', 'nuxt-canonical'],
+  modules: ['@nuxt/content', '@nuxtjs/seo', '@nuxtjs/i18n', 'nuxt-ai-ready'],
   
   // @nuxtjs/seo configuration (bundles: sitemap, robots, og-image, schema-org, seo-utils, link-checker)
   seo: {
@@ -78,11 +78,6 @@ export default defineNuxtConfig({
     allow: '/',
     disallow: ['/api/', '/admin/'],
     sitemap: 'https://humanitiesclinic.github.io/sitemap.xml'
-  },
-  
-  // nuxt-canonical configuration
-  canonical: {
-    baseURL: 'https://humanitiesclinic.github.io'
   },
   
   // nuxt-schema-org configuration  
