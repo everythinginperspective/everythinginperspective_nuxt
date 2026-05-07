@@ -47,9 +47,6 @@
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
       ],
-      "unplugin-vue-router/client": [
-        "../node_modules/unplugin-vue-router/client"
-      ],
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
       ],
@@ -125,18 +122,6 @@
       "#shared/*": [
         "../shared/*"
       ],
-      "assets": [
-        "../assets"
-      ],
-      "assets/*": [
-        "../assets/*"
-      ],
-      "public": [
-        "../public"
-      ],
-      "public/*": [
-        "../public/*"
-      ],
       "#server": [
         "../server"
       ],
@@ -165,7 +150,7 @@
         "../node_modules/@nuxtjs/i18n/dist/types"
       ],
       "#unhead/composables": [
-        "../node_modules/nuxt/dist/head/runtime/composables/v3"
+        "../node_modules/nuxt/dist/head/runtime/composables"
       ],
       "#mdc-configs": [
         "./mdc-configs"
@@ -281,8 +266,7 @@
     "../node_modules/nuxt-site-config/dist/dist/runtime/server",
     "../server/**/*",
     "../shared/**/*.d.ts",
-    "./types/nitro.d.ts",
-    "../**/*"
+    "./types/nitro.d.ts"
   ],
   "exclude": [
     "../node_modules",

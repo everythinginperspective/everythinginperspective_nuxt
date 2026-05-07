@@ -1,39 +1,38 @@
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { encodePath, joinURL } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
-import { k as buildAssetsURL, p as publicAssetsURL, m as appRootTag, n as appRootAttrs, o as useRuntimeConfig, d as useStorage, q as appId, t as defineRenderHandler, v as appTeleportTag, w as appTeleportAttrs, x as appHead, y as getRouteRules, z as useNitroApp } from '../nitro/nitro.mjs';
-import { propsToString, renderSSRHead } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file:///workspace/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { encodePath, joinURL } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import destr from 'file:///workspace/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
+import { k as buildAssetsURL, p as publicAssetsURL, m as appRootTag, n as appRootAttrs, o as appSpaLoaderTag, q as appSpaLoaderAttrs, t as useRuntimeConfig, d as useStorage, v as appId, w as defineRenderHandler, x as appTeleportTag, y as appTeleportAttrs, z as appHead, A as getRouteRules, B as useNitroApp } from '../nitro/nitro.mjs';
+import { renderToString } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { propsToString, renderSSRHead } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file:///workspace/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import { c as createHead } from './server.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
 import 'node:crypto';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/ohash/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
-import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
+import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
 
+const NUXT_PAYLOAD_INLINE = true;
 const NUXT_RUNTIME_PAYLOAD_EXTRACTION = false;
 
 // @ts-expect-error private property consumed by vite-generated url helpers
@@ -74,7 +73,11 @@ const getSPARenderer = lazyCachedFunction(async () => {
 	// @ts-expect-error virtual file
 	const spaTemplate = await import('../virtual/_virtual_spa-template.mjs').then((r) => r.template).catch(() => "").then((r) => {
 		{
-			return APP_ROOT_OPEN_TAG + r + APP_ROOT_CLOSE_TAG;
+			const APP_SPA_LOADER_OPEN_TAG = `<${appSpaLoaderTag}${propsToString(appSpaLoaderAttrs)}>`;
+			const APP_SPA_LOADER_CLOSE_TAG = `</${appSpaLoaderTag}>`;
+			const appTemplate = APP_ROOT_OPEN_TAG + APP_ROOT_CLOSE_TAG;
+			const loaderTemplate = r ? APP_SPA_LOADER_OPEN_TAG + r + APP_SPA_LOADER_CLOSE_TAG : "";
+			return appTemplate + loaderTemplate;
 		}
 	});
 	
@@ -121,6 +124,20 @@ const getSSRStyles = lazyCachedFunction(() => import('../build/styles.mjs').then
 const payloadCache = useStorage("internal:nuxt:prerender:payload") ;
 useStorage("internal:nuxt:prerender:island") ;
 useStorage("internal:nuxt:prerender:island-props") ;
+const sharedPrerenderPromises = new Map() ;
+const sharedPrerenderKeys = new Set();
+const sharedPrerenderCache = {
+	get(key) {
+		if (sharedPrerenderKeys.has(key)) {
+			return sharedPrerenderPromises.get(key) ?? useStorage("internal:nuxt:prerender:shared").getItem(key);
+		}
+	},
+	async set(key, value) {
+		sharedPrerenderKeys.add(key);
+		sharedPrerenderPromises.set(key, value);
+		useStorage("internal:nuxt:prerender:shared").setItem(key, await value).finally(() => sharedPrerenderPromises.delete(key));
+	}
+} ;
 
 function renderPayloadResponse(ssrContext) {
 	return {
@@ -170,8 +187,6 @@ function splitPayload(ssrContext) {
 
 const unheadOptions = {
   disableDefaults: true,
-  disableCapoSorting: false,
-  plugins: [DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin],
 };
 
 const PRERENDER_NO_SSR_ROUTES = new Set([
@@ -202,6 +217,9 @@ function createSSRContext(event) {
 		modules: new Set()
 	};
 	{
+		{
+			ssrContext["~sharedPrerenderCache"] = sharedPrerenderCache;
+		}
 		ssrContext.payload.prerenderedAt = Date.now();
 	}
 	return ssrContext;
@@ -225,9 +243,9 @@ async function renderInlineStyles(usedModules) {
 	return Array.from(inlinedStyles).map((style) => ({ innerHTML: style }));
 }
 
-const renderSSRHeadOptions = {"omitLineBreaks":false};
+const renderSSRHeadOptions = {"omitLineBreaks":true};
 
-const entryIds = ["node_modules/nuxt/dist/app/entry.js"];
+const entryIds = [];
 
 // @ts-expect-error private property consumed by vite-generated url helpers
 globalThis.__buildAssetsURL = buildAssetsURL;
@@ -261,18 +279,27 @@ const handler = defineRenderHandler(async (event) => {
 			
 			ssrError.status = ssrError.statusCode = Number.parseInt(status);
 		}
+		if (typeof ssrError.data === "string") {
+			try {
+				ssrError.data = destr(ssrError.data);
+			} catch {}
+		}
 		setSSRError(ssrContext, ssrError);
 	}
 	
 	const routeOptions = getRouteRules(event);
 	
 	const _PAYLOAD_EXTRACTION = !ssrContext.noSSR && (NUXT_RUNTIME_PAYLOAD_EXTRACTION);
+	
+	
+	
+	const _PAYLOAD_INLINE = !_PAYLOAD_EXTRACTION || NUXT_PAYLOAD_INLINE;
 	const isRenderingPayload = (_PAYLOAD_EXTRACTION || false) && PAYLOAD_URL_RE.test(ssrContext.url);
 	if (isRenderingPayload) {
 		const url = ssrContext.url.substring(0, ssrContext.url.lastIndexOf("/")) || "/";
 		ssrContext.url = url;
 		event._path = event.node.req.url = url;
-		if (await payloadCache.hasItem(url)) {
+		if (payloadCache && await payloadCache.hasItem(url)) {
 			return payloadCache.getItem(url);
 		}
 	}
@@ -316,40 +343,34 @@ const handler = defineRenderHandler(async (event) => {
 	
 	if (isRenderingPayload) {
 		const response = renderPayloadResponse(ssrContext);
-		{
+		if (payloadCache) {
 			await payloadCache.setItem(ssrContext.url, response);
 		}
 		return response;
 	}
-	if (_PAYLOAD_EXTRACTION && true) {
+	if (_PAYLOAD_EXTRACTION) {
+		{
+			
+			appendResponseHeader(event, "x-nitro-prerender", joinURL(ssrContext.url.replace(/\?.*$/, ""), PAYLOAD_FILENAME));
+		}
 		
-		appendResponseHeader(event, "x-nitro-prerender", joinURL(ssrContext.url.replace(/\?.*$/, ""), PAYLOAD_FILENAME));
 		
-		await payloadCache.setItem(ssrContext.url === "/" ? "/" : ssrContext.url.replace(/\/$/, ""), renderPayloadResponse(ssrContext));
+		if (payloadCache) {
+			await payloadCache.setItem(ssrContext.url === "/" ? "/" : ssrContext.url.replace(/\/$/, ""), renderPayloadResponse(ssrContext));
+		}
 	}
 	const NO_SCRIPTS = routeOptions.noScripts;
 	
 	const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
 	
-	if (_PAYLOAD_EXTRACTION && !NO_SCRIPTS) {
+	
+	if (_PAYLOAD_EXTRACTION && !_PAYLOAD_INLINE && !NO_SCRIPTS) {
 		ssrContext.head.push({ link: [{
 			rel: "preload",
 			as: "fetch",
 			crossorigin: "anonymous",
 			href: payloadURL
 		} ] }, headEntryOptions);
-	}
-	if (ssrContext["~preloadManifest"] && !NO_SCRIPTS) {
-		ssrContext.head.push({ link: [{
-			rel: "preload",
-			as: "fetch",
-			fetchpriority: "low",
-			crossorigin: "anonymous",
-			href: buildAssetsURL(`builds/meta/${ssrContext.runtimeConfig.app.buildId}.json`)
-		}] }, {
-			...headEntryOptions,
-			tagPriority: "low"
-		});
 	}
 	
 	if (inlinedStyles.length) {
@@ -378,19 +399,19 @@ const handler = defineRenderHandler(async (event) => {
 				ssrContext.modules?.delete(id);
 			}
 		}
-		
 		ssrContext.head.push({ link: getPreloadLinks(ssrContext, renderer.rendererContext) }, headEntryOptions);
 		ssrContext.head.push({ link: getPrefetchLinks(ssrContext, renderer.rendererContext) }, headEntryOptions);
 		
-		ssrContext.head.push({ script: _PAYLOAD_EXTRACTION ? renderPayloadJsonScript({
+		ssrContext.head.push({ script: _PAYLOAD_INLINE ? renderPayloadJsonScript({
+			ssrContext,
+			data: ssrContext.payload
+		})  : renderPayloadJsonScript({
 			ssrContext,
 			data: splitPayload(ssrContext).initial,
 			src: payloadURL
-		})  : renderPayloadJsonScript({
-			ssrContext,
-			data: ssrContext.payload
 		})  }, {
 			...headEntryOptions,
+			
 			tagPosition: "bodyClose",
 			tagPriority: "high"
 		});
@@ -402,6 +423,8 @@ const handler = defineRenderHandler(async (event) => {
 			type: resource.module ? "module" : null,
 			src: renderer.rendererContext.buildAssetsURL(resource.file),
 			defer: resource.module ? null : true,
+			
+			
 			tagPosition,
 			crossorigin: ""
 		})) }, headEntryOptions);

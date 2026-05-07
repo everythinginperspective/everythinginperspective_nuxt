@@ -11,6 +11,8 @@ declare global {
   const computed: typeof import('vue').computed
   const createError: typeof import('../../node_modules/nuxt/dist/app/composables/error').createError
   const createSitePathResolver: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils').createSitePathResolver
+  const createUseAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').createUseAsyncData
+  const createUseFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch').createUseFetch
   const customRef: typeof import('vue').customRef
   const defineAddress: typeof import('../../node_modules/@unhead/schema-org/vue').defineAddress
   const defineAggregateOffer: typeof import('../../node_modules/@unhead/schema-org/vue').defineAggregateOffer
@@ -53,7 +55,7 @@ declare global {
   const defineOgImageScreenshot: typeof import('../../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImageScreenshot').defineOgImageScreenshot
   const defineOpeningHours: typeof import('../../node_modules/@unhead/schema-org/vue').defineOpeningHours
   const defineOrganization: typeof import('../../node_modules/@unhead/schema-org/vue').defineOrganization
-  const definePageMeta: typeof import('../../node_modules/nuxt/dist/pages/runtime/composables').definePageMeta
+  const definePageMeta: typeof import('../../node_modules/nuxt/dist/app/composables/pages').definePageMeta
   const definePayloadPlugin: typeof import('../../node_modules/nuxt/dist/app/nuxt').definePayloadPlugin
   const definePayloadReducer: typeof import('../../node_modules/nuxt/dist/app/composables/payload').definePayloadReducer
   const definePayloadReviver: typeof import('../../node_modules/nuxt/dist/app/composables/payload').definePayloadReviver
@@ -161,6 +163,7 @@ declare global {
   const unwrapSlot: typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node').flatUnwrap
   const updateAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').updateAppConfig
   const updateSiteConfig: typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/updateSiteConfig').updateSiteConfig
+  const useAnnouncer: typeof import('../../node_modules/nuxt/dist/app/composables/announcer').useAnnouncer
   const useAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').useAppConfig
   const useAsyncData: typeof import('../../node_modules/nuxt/dist/app/composables/asyncData').useAsyncData
   const useAttrs: typeof import('vue').useAttrs
@@ -278,6 +281,9 @@ declare global {
   export type { Component, ComponentPublicInstance, ComputedRef, DirectiveBinding, ExtractDefaultPropTypes, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode, WritableComputedRef } from 'vue'
   import('vue')
   // @ts-ignore
+  export type { PageMeta } from '../../node_modules/nuxt/dist/app/composables/pages'
+  import('../../node_modules/nuxt/dist/app/composables/pages')
+  // @ts-ignore
   export type { ContentType } from '../../composables/useContentTypes'
   import('../../composables/useContentTypes')
 }
@@ -295,6 +301,8 @@ declare module 'vue' {
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createError: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/error')['createError']>
     readonly createSitePathResolver: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/utils')['createSitePathResolver']>
+    readonly createUseAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['createUseAsyncData']>
+    readonly createUseFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['createUseFetch']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAddress: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineAddress']>
     readonly defineAggregateOffer: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineAggregateOffer']>
@@ -337,7 +345,7 @@ declare module 'vue' {
     readonly defineOgImageScreenshot: UnwrapRef<typeof import('../../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImageScreenshot')['defineOgImageScreenshot']>
     readonly defineOpeningHours: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOpeningHours']>
     readonly defineOrganization: UnwrapRef<typeof import('../../node_modules/@unhead/schema-org/vue')['defineOrganization']>
-    readonly definePageMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/pages/runtime/composables')['definePageMeta']>
+    readonly definePageMeta: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/pages')['definePageMeta']>
     readonly definePayloadPlugin: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['definePayloadPlugin']>
     readonly definePayloadReducer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReducer']>
     readonly definePayloadReviver: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/payload')['definePayloadReviver']>
@@ -445,6 +453,7 @@ declare module 'vue' {
     readonly unwrapSlot: UnwrapRef<typeof import('../../node_modules/@nuxtjs/mdc/dist/runtime/utils/node')['flatUnwrap']>
     readonly updateAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['updateAppConfig']>
     readonly updateSiteConfig: UnwrapRef<typeof import('../../node_modules/nuxt-site-config/dist/runtime/app/composables/updateSiteConfig')['updateSiteConfig']>
+    readonly useAnnouncer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/announcer')['useAnnouncer']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['useAppConfig']>
     readonly useAsyncData: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/asyncData')['useAsyncData']>
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>

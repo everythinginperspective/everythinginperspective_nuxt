@@ -15,6 +15,7 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 interface _GlobalComponents {
   Breadcrumbs: typeof import("../../components/Breadcrumbs.vue")['default']
+  CarouselRow: typeof import("../../components/CarouselRow.vue")['default']
   FilterUI: typeof import("../../components/FilterUI.vue")['default']
   Footer: typeof import("../../components/Footer.vue")['default']
   Header: typeof import("../../components/Header.vue")['default']
@@ -60,6 +61,7 @@ interface _GlobalComponents {
   NuxtLoadingIndicator: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
   NuxtTime: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']
   NuxtRouteAnnouncer: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
+  NuxtAnnouncer: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']
   NuxtImg: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
   NuxtPicture: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
   ContentRenderer: typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue")['default']
@@ -104,6 +106,7 @@ interface _GlobalComponents {
   SchemaOrgSoftwareApp: typeof import("@unhead/schema-org/vue")['SchemaOrgSoftwareApp']
   NuxtIsland: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
   LazyBreadcrumbs: LazyComponent<typeof import("../../components/Breadcrumbs.vue")['default']>
+  LazyCarouselRow: LazyComponent<typeof import("../../components/CarouselRow.vue")['default']>
   LazyFilterUI: LazyComponent<typeof import("../../components/FilterUI.vue")['default']>
   LazyFooter: LazyComponent<typeof import("../../components/Footer.vue")['default']>
   LazyHeader: LazyComponent<typeof import("../../components/Header.vue")['default']>
@@ -149,6 +152,7 @@ interface _GlobalComponents {
   LazyNuxtLoadingIndicator: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']>
   LazyNuxtTime: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']>
   LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
+  LazyNuxtAnnouncer: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']>
   LazyNuxtImg: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
   LazyNuxtPicture: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
   LazyContentRenderer: LazyComponent<typeof import("../../node_modules/@nuxt/content/dist/runtime/components/ContentRenderer.vue")['default']>
