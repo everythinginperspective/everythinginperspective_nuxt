@@ -7,7 +7,7 @@
           <ul class="text-xs sm:text-sm space-y-2">
             <li><NuxtLink to="/" class="hover:underline">Home</NuxtLink></li>
             <li><a href="/sitemap.xml" class="hover:underline">Sitemap</a></li>
-            <li><a href="/feed.xml" class="hover:underline">RSS</a></li>
+            <!-- <li><a href="/feed.xml" class="hover:underline">RSS</a></li> -->
           </ul>
         </div>
         <div>
