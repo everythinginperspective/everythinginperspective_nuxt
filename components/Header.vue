@@ -1,37 +1,126 @@
 <template>
-  <header class="border-b border-accent bg-secondary sticky top-0 z-50">
-    <!-- Hilltopads Banner Ad -->
-    <div class="bg-secondary py-2" v-html="hilltopadsScript"></div>
+  <header class="sticky top-0 z-50">
+    <!-- Hilltopads Banner Ad (optional) -->
+    <div class="bg-stone-50 py-2" v-html="hilltopadsScript"></div>
     <Breadcrumbs />
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-      <div class="flex justify-between items-start">
-        <div>
-          <NuxtLink to="/" class="text-2xl sm:text-4xl font-serif font-bold tracking-tight">
-            Everything in Perspective
-          </NuxtLink>
-          <p class="text-muted text-xs sm:text-sm mt-2">Essays on trends, context & nuance</p>
+    <div class="bg-stone-50 border-b border-stone-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+        <div class="flex justify-between items-start">
+          <!-- Logo/Branding -->
+          <div class="flex-1">
+            <NuxtLink to="/" class="inline-block">
+              <h1 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal tracking-tight text-stone-900">
+                Everything in Perspective
+              </h1>
+            </NuxtLink>
+            <p class="text-stone-600 text-xs sm:text-sm mt-1 sm:mt-2">Essays on trends, context & nuance</p>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex gap-8 text-sm nav-main items-center ml-12">
+            <NuxtLink to="/" class="text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors">
+              Home
+            </NuxtLink>
+            <NuxtLink to="/magazine/articles" class="text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors">
+              Articles
+            </NuxtLink>
+            <NuxtLink to="/magazine/perspectives" class="text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors">
+              Perspectives
+            </NuxtLink>
+            <NuxtLink to="/page/faq" class="text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors">
+              FAQ
+            </NuxtLink>
+            <NuxtLink to="/page/contact-us" class="text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors">
+              Contact
+            </NuxtLink>
+            <SearchBar />
+          </nav>
+
+          <!-- Mobile Menu Toggle -->
+          <button 
+            @click="navOpen = !navOpen" 
+            class="lg:hidden nav-drawer-toggle text-stone-900 text-2xl p-2 hover:text-rainbow-blue transition-colors"
+            :aria-label="navOpen ? 'Close navigation' : 'Open navigation'"
+            :aria-expanded="navOpen"
+          >
+            {{ navOpen ? '✕' : '☰' }}
+          </button>
         </div>
-        <div class="hidden lg:flex gap-8 text-sm nav-main items-center">
-          <NuxtLink to="/" class="hover:underline">Home</NuxtLink>
-          <NuxtLink to="/magazine/articles" class="hover:underline">Articles</NuxtLink>
-          <NuxtLink to="/magazine/perspectives" class="hover:underline">Perspectives</NuxtLink>
-          <NuxtLink to="/page/faq" class="hover:underline">FAQ</NuxtLink>
-          <NuxtLink to="/page/contact-us" class="hover:underline">Contact</NuxtLink>
-          <SearchBar />
-        </div>
-        <button @click="toggleNav" class="lg:hidden nav-drawer-toggle" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
-    
-    <!-- Mobile nav drawer -->
-    <nav v-if="navOpen" class="nav-drawer lg:hidden border-t border-accent bg-secondary p-4">
-      <div class="space-y-4">
-        <NuxtLink to="/" class="block">Home</NuxtLink>
-        <NuxtLink to="/page/faq" class="block">FAQ</NuxtLink>
-        <NuxtLink to="/page/contact-us" class="block">Contact</NuxtLink>
-        <NuxtLink to="/page/privacy-policy" class="block">Privacy</NuxtLink>
-        <NuxtLink to="/page/terms-conditions" class="block">Terms</NuxtLink>
-        <NuxtLink to="/page/cookie-policy" class="block">Cookies</NuxtLink>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav 
+      v-if="navOpen"
+      class="nav-drawer lg:hidden fixed inset-y-0 left-0 w-xs max-w-xs bg-stone-900 text-stone-50 p-6 overflow-y-auto"
+      @click.self="navOpen = false"
+    >
+      <button 
+        @click="navOpen = false"
+        class="absolute top-6 right-6 text-stone-50 text-2xl p-2 hover:text-rainbow-yellow transition-colors"
+        aria-label="Close navigation"
+      >
+        ✕
+      </button>
+      <div class="space-y-6 mt-12">
+        <NuxtLink 
+          to="/" 
+          class="block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors"
+          @click="navOpen = false"
+        >
+          Home
+        </NuxtLink>
+        <NuxtLink 
+          to="/magazine/articles" 
+          class="block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors"
+          @click="navOpen = false"
+        >
+          Articles
+        </NuxtLink>
+        <NuxtLink 
+          to="/magazine/perspectives" 
+          class="block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors"
+          @click="navOpen = false"
+        >
+          Perspectives
+        </NuxtLink>
+        <NuxtLink 
+          to="/page/faq" 
+          class="block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors"
+          @click="navOpen = false"
+        >
+          FAQ
+        </NuxtLink>
+        <NuxtLink 
+          to="/page/contact-us" 
+          class="block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors"
+          @click="navOpen = false"
+        >
+          Contact
+        </NuxtLink>
+        <div class="border-t border-stone-700 pt-6 mt-6">
+          <NuxtLink 
+            to="/page/privacy-policy" 
+            class="block text-sm text-stone-300 hover:text-stone-50 transition-colors mb-4"
+            @click="navOpen = false"
+          >
+            Privacy Policy
+          </NuxtLink>
+          <NuxtLink 
+            to="/page/terms-conditions" 
+            class="block text-sm text-stone-300 hover:text-stone-50 transition-colors mb-4"
+            @click="navOpen = false"
+          >
+            Terms & Conditions
+          </NuxtLink>
+          <NuxtLink 
+            to="/page/cookie-policy" 
+            class="block text-sm text-stone-300 hover:text-stone-50 transition-colors"
+            @click="navOpen = false"
+          >
+            Cookie Policy
+          </NuxtLink>
+        </div>
       </div>
     </nav>
   </header>
@@ -40,35 +129,5 @@
 <script setup lang="ts">
 const navOpen = ref(false)
 
-const toggleNav = () => {
-  navOpen.value = !navOpen.value
-}
-
 const hilltopadsScript = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>'
 </script>
-
-<style scoped>
-.border-accent {
-  border-color: #1a1a1a;
-}
-.text-muted {
-  color: #666666;
-}
-.search-wrapper {
-  display: flex;
-  align-items: center;
-}
-.search-input {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 0.875rem;
-}
-.language-select {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: white;
-  cursor: pointer;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-secondary text-primary">
+  <div class="bg-stone-50 text-stone-900">
     <Header />
     <Breadcrumbs />
     <NuxtPage />
@@ -37,22 +37,3 @@ useHead({
   ]
 })
 </script>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #FFFFFF;
-  color: #000000;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, Garamond, serif;
-  font-weight: 400;
-}
-</style>
