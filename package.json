@@ -28,10 +28,12 @@
     "nuxt-skew-protection": "1.1.1",
     "pagefind": "^1.5.2",
     "pluralize": "^8.0.0",
+    "tailwindcss": "^4.1.0",
     "vue": "^3.4.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.15",
     "typescript": "^5.3.0",
     "vue-tsc": "^1.8.0"
   }

@@ -1,341 +1,158 @@
-/* Typography */
-:root {
-  --primary: #000000;
-  --secondary: #FFFFFF;
-  --accent: #1a1a1a;
-  --light: #F5F5F5;
-  --muted: #666666;
-  --gold: #D4AF37;
-  --border: #e0e0e0;
-}
+/* Tailwind CSS with magazine-style theme */
+@import 'tailwindcss';
 
+/* Set default background and text color */
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: var(--primary);
-  background: var(--secondary);
-  line-height: 1.6;
+  @apply bg-stone-50 text-stone-900;
 }
 
+/* Serif headlines */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, Garamond, serif;
-  font-weight: 400;
-  line-height: 1.2;
+  @apply font-serif font-normal;
 }
 
-/* Responsive Grid: 4 cols desktop, 2 cols mobile */
+h1 { @apply text-5xl sm:text-6xl leading-tight mb-6; }
+h2 { @apply text-4xl sm:text-5xl leading-tight mb-5; }
+h3 { @apply text-3xl sm:text-4xl leading-tight mb-4; }
+h4 { @apply text-2xl sm:text-3xl leading-tight mb-3; }
+h5 { @apply text-xl sm:text-2xl leading-tight mb-2; }
+h6 { @apply text-lg sm:text-xl leading-tight mb-2; }
+
+/* Responsive Grid: 4 cols desktop, 2 cols tablet, 1 col mobile */
 .grid-responsive {
-  display: grid;
-  gap: 2rem;
+  @apply grid gap-6 md:gap-8;
 }
 
 @media (min-width: 1024px) {
   .grid-responsive {
-    grid-template-columns: repeat(4, 1fr);
+    @apply grid-cols-4;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .grid-responsive {
-    grid-template-columns: repeat(4, 1fr);
+    @apply grid-cols-2;
   }
 }
 
 @media (max-width: 767px) {
   .grid-responsive {
-    grid-template-columns: repeat(2, 1fr);
+    @apply grid-cols-1;
   }
 }
 
 /* Navigation Drawer */
 .nav-drawer {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  max-width: 300px;
-  height: 100vh;
-  background: var(--accent);
-  color: var(--secondary);
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
-  padding: 2rem 1.5rem;
-  overflow-y: auto;
+  @apply fixed left-0 top-0 w-full max-w-xs h-screen bg-stone-900 text-stone-50 transform -translate-x-full transition-transform duration-300 z-50 p-6 overflow-y-auto;
 }
 
 .nav-drawer.open {
-  transform: translateX(0);
+  @apply translate-x-0;
 }
 
 .nav-drawer-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
+  @apply hidden bg-transparent border-none cursor-pointer p-2 text-stone-900 hover:text-rainbow-blue transition-colors;
 }
 
 /* Mobile/Tablet: show drawer toggle */
 @media (max-width: 1023px) {
   .nav-drawer-toggle {
-    display: block;
+    @apply block;
   }
   
   .nav-main {
-    display: none;
+    @apply hidden;
   }
   
   .nav-main.open {
-    display: block;
+    @apply block;
   }
 }
 
 /* Desktop: hide drawer, show inline nav */
 @media (min-width: 1024px) {
   .nav-drawer {
-    display: none !important;
+    @apply hidden;
   }
   
   .nav-drawer-toggle {
-    display: none;
+    @apply hidden;
   }
   
   .nav-main {
-    display: flex !important;
-    gap: 2rem;
-    align-items: center;
+    @apply flex gap-8 items-center;
   }
 }
 
 .nav-drawer a, .nav-main a {
-  text-decoration: none;
-  color: inherit;
-  padding: 0.5rem 0;
-  display: block;
-}
-
-.nav-drawer a:hover, .nav-main a:hover {
-  text-decoration: underline;
+  @apply no-underline text-inherit p-2 block hover:underline transition-all;
 }
 
 /* Header */
 header {
-  border-bottom: 1px solid var(--accent);
-  background: var(--secondary);
+  @apply border-b border-stone-200 bg-stone-50;
 }
 
 /* Content */
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+  @apply max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12;
 }
 
+/* Article content */
 article {
-  max-width: 720px;
+  @apply max-w-3xl mx-auto;
 }
 
 article p {
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
+  @apply mb-6 leading-relaxed;
 }
 
 article h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
+  @apply mt-8 mb-4 text-3xl sm:text-4xl font-serif;
 }
 
 article h3 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+  @apply mt-6 mb-3 text-2xl sm:text-3xl font-serif;
 }
 
 article blockquote {
-  border-left: 4px solid var(--primary);
-  padding-left: 1.5rem;
-  margin: 2rem 0;
-  font-style: italic;
-  color: var(--muted);
+  @apply border-l-4 border-stone-900 pl-6 my-6 italic text-stone-600;
 }
 
 article ul, article ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  @apply ml-6 mb-6 space-y-2;
 }
 
 article li {
-  margin-bottom: 0.5rem;
+  @apply mb-2;
 }
 
 article a {
-  color: var(--primary);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  @apply text-rainbow-blue underline hover:text-rainbow-indigo transition-colors;
 }
 
 article img {
-  max-width: 100%;
-  height: auto;
-  margin: 2rem 0;
+  @apply max-w-full h-auto my-8 rounded-lg;
 }
 
 /* Footer */
 footer {
-  background: var(--accent);
-  color: var(--secondary);
-  margin-top: 6rem;
-  padding: 3rem 1.5rem;
-  border-top: 1px solid var(--primary);
+  @apply bg-stone-900 text-stone-50 mt-16 sm:mt-24 py-12 sm:py-16 border-t border-stone-700;
 }
 
 footer h4 {
-  color: var(--secondary);
+  @apply text-stone-50 font-serif font-normal;
 }
 
 footer a {
-  color: var(--secondary);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  @apply text-stone-50 no-underline hover:underline transition-all;
 }
 
 /* Cards */
 .card {
-  background: var(--light);
-  padding: 1.5rem;
-  border: 1px solid var(--border);
+  @apply bg-stone-100 p-6 border border-stone-200 rounded-lg hover:shadow-lg transition-shadow;
 }
 
 .card a {
-  color: var(--primary);
-}
-
-/* Responsive utilities */
-@media (max-width: 767px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  main {
-    padding: 1.5rem 1rem;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-}
-
-/* Tailwind Utility Classes */
-/* Background utilities */
-.bg-primary { background-color: var(--primary); }
-.bg-secondary { background-color: var(--secondary); }
-.bg-accent { background-color: var(--accent); }
-.bg-light { background-color: var(--light); }
-
-/* Text color utilities */
-.text-primary { color: var(--primary); }
-.text-secondary { color: var(--secondary); }
-.text-accent { color: var(--accent); }
-.text-muted { color: var(--muted); }
-.text-gold { color: var(--gold); }
-
-/* Font utilities */
-.font-serif { font-family: Georgia, Garamond, serif; }
-.font-sans { font-family: 'Helvetica Neue', Arial, sans-serif; }
-.font-bold { font-weight: 700; }
-.font-normal { font-weight: 400; }
-
-/* Text size utilities */
-.text-xs { font-size: 0.75rem; }
-.text-sm { font-size: 0.875rem; }
-.text-base { font-size: 1rem; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
-.text-2xl { font-size: 1.5rem; }
-.text-3xl { font-size: 1.875rem; }
-.text-4xl { font-size: 2.25rem; }
-.text-5xl { font-size: 3rem; }
-
-/* Spacing utilities */
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-.py-6 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-.mb-8 { margin-bottom: 2rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mt-8 { margin-top: 2rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-
-/* Border utilities */
-.border-b { border-bottom: 1px solid var(--border); }
-.border-t { border-top: 1px solid var(--border); }
-.border-accent { border-color: var(--accent); }
-
-/* Display utilities */
-.block { display: block; }
-.flex { display: flex; }
-.hidden { display: none; }
-.space-y-4 > * + * { margin-top: 1rem; }
-.gap-8 { gap: 2rem; }
-
-/* Flex utilities */
-.justify-between { justify-content: space-between; }
-.items-start { align-items: flex-start; }
-.items-center { align-items: center; }
-.flex-col { flex-direction: column; }
-
-/* Max width utilities */
-.max-w-6xl { max-width: 64rem; }
-.max-w-2xl { max-width: 42rem; }
-
-/* Sticky/Position */
-.sticky { position: sticky; }
-.top-0 { top: 0; }
-.z-50 { z-index: 50; }
-
-/* Tracking (letter spacing) */
-.tracking-tight { letter-spacing: -0.015em; }
-
-/* Hover states */
-.hover\:underline:hover { text-decoration: underline; }
-
-/* Responsive display */
-@media (max-width: 1023px) {
-  .hidden.lg\:flex { display: none; }
-  .lg\:hidden { display: none !important; }
-  .sm\:text-5xl { font-size: 3rem; }
-  .sm\:text-sm { font-size: 0.875rem; }
-  .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .sm\:py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-  .sm\:mt-8 { margin-top: 2rem; }
-}
-
-@media (min-width: 1024px) {
-  .lg\:hidden { display: none; }
-  .lg\:flex { display: flex; }
+  @apply text-rainbow-blue hover:text-rainbow-indigo;
 }
