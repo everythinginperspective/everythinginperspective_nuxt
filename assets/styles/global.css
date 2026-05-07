@@ -53,3 +53,11 @@ a:hover {
 .text-secondary {
   color: var(--color-secondary);
 }
+
+/* EMERGENCY: Uncomment below if CDN is down or to disable all images */
+/* This preserves SEO metadata while hiding broken images from users */
+/*
+img {
+  display: none !important;
+}
+*/
