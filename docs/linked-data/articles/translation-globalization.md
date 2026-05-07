@@ -1,7 +1,7 @@
 ---
 title: "Translation and Globalization: How Breaking Language Barriers Reshapes Power | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/translation-globalization"
-last_updated: "2026-05-07T08:16:30.731Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/translation-globalization"
+last_updated: "2026-05-07T16:10:51.535Z"
 meta:
   description: "From human translators to AI translation—how breaking language barriers reshapes economies, culture, and global power structures. What's gained, what's lost."
   "og:description": "From human translators to AI translation—how breaking language barriers reshapes economies, culture, and global power structures. What's gained, what's lost."

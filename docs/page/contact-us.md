@@ -1,7 +1,7 @@
 ---
 title: "Contact Us | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/page/contact-us"
-last_updated: "2026-05-07T08:16:31.818Z"
+canonical_url: "https://everythinginperspective.github.io/page/contact-us"
+last_updated: "2026-05-07T16:10:52.906Z"
 meta:
   description: "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
   "og:description": "Have a question, topic suggestion, or want to contribute? We'd love to hear from you."
@@ -16,11 +16,11 @@ Have a question, topic suggestion, or want to contribute? We'd love to hear from
 
 ## Email
 
-**General inquiries:** [hello@everythinginperspective.com](https://humanitiesclinic.github.io/mailto:hello@everythinginperspective.com)
+**General inquiries:** [hello@everythinginperspective.com](https://everythinginperspective.github.io/mailto:hello@everythinginperspective.com)
 
-**Topic suggestions:** [ideas@everythinginperspective.com](https://humanitiesclinic.github.io/mailto:ideas@everythinginperspective.com)
+**Topic suggestions:** [ideas@everythinginperspective.com](https://everythinginperspective.github.io/mailto:ideas@everythinginperspective.com)
 
-**Guest submissions:** [contribute@everythinginperspective.com](https://humanitiesclinic.github.io/mailto:contribute@everythinginperspective.com)
+**Guest submissions:** [contribute@everythinginperspective.com](https://everythinginperspective.github.io/mailto:contribute@everythinginperspective.com)
 
 ## Response time
 

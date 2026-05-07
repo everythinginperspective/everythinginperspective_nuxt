@@ -1,7 +1,7 @@
 ---
 title: "Instagram and Mental Health: The Hidden Cost of Connection | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/instagram-mental-health"
-last_updated: "2026-05-07T08:16:30.161Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/instagram-mental-health"
+last_updated: "2026-05-07T16:10:50.697Z"
 meta:
   description: "Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn't want you to know."
   "og:description": "Instagram promised connection. Instead, it delivered comparison, anxiety, and algorithmic manipulation. What research actually shows—and what the platform doesn't want you to know."

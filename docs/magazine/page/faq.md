@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/magazine/page/faq"
-last_updated: "2026-05-07T08:16:31.443Z"
+canonical_url: "https://everythinginperspective.github.io/magazine/page/faq"
+last_updated: "2026-05-07T16:10:52.538Z"
 meta:
   "og:title": "Frequently Asked Questions"
 ---
@@ -34,7 +34,7 @@ We pick topics based on relevance, searchability, and opportunity to provide con
 
 ## Do you accept submissions or guest essays?
 
-Yes. If you have expertise on a topic and want to contribute, [contact us](https://humanitiesclinic.github.io/page/contact-us/) with a pitch. We're looking for rigorous, well-researched essays that fit our editorial standards.
+Yes. If you have expertise on a topic and want to contribute, [contact us](https://everythinginperspective.github.io/page/contact-us/) with a pitch. We're looking for rigorous, well-researched essays that fit our editorial standards.
 
 ## Can I share your essays?
 
@@ -61,4 +61,4 @@ That's what separates understanding from information overload.
 
 ## Can I submit a topic suggestion?
 
-Yes. Have a topic you think we should cover? [Reach out](https://humanitiesclinic.github.io/page/contact-us/). We read every suggestion and use reader feedback to guide our editorial calendar.
+Yes. Have a topic you think we should cover? [Reach out](https://everythinginperspective.github.io/page/contact-us/). We read every suggestion and use reader feedback to guide our editorial calendar.

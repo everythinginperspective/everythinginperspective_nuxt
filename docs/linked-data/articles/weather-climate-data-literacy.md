@@ -1,7 +1,7 @@
 ---
 title: "The Weather Crisis: Climate Data You Need to Know (And Why You Don&#x27;t) | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/weather-climate-data-literacy"
-last_updated: "2026-05-07T08:16:30.760Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/weather-climate-data-literacy"
+last_updated: "2026-05-07T16:10:51.651Z"
 meta:
   description: "Climate change isn't a future threat—it's reshaping weather today. The data everyone ignores and why climate literacy matters more than carbon reduction rhetoric."
   "og:description": "Climate change isn't a future threat—it's reshaping weather today. The data everyone ignores and why climate literacy matters more than carbon reduction rhetoric."

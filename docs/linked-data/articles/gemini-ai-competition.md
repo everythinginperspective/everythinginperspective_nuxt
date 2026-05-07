@@ -1,7 +1,7 @@
 ---
 title: "Gemini and the AI Landscape: Beyond ChatGPT&#x27;s First-Mover Advantage | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/gemini-ai-competition"
-last_updated: "2026-05-07T08:16:30.042Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/gemini-ai-competition"
+last_updated: "2026-05-07T16:10:50.053Z"
 meta:
   description: "ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing differently."
   "og:description": "ChatGPT won the public narrative. But the actual AI competition is far more nuanced—and OpenAI's dominance is fragile. What Gemini, Claude, and others are doing differently."

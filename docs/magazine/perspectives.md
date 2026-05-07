@@ -1,7 +1,7 @@
 ---
 title: "perspectives | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/magazine/perspectives"
-last_updated: "2026-05-07T08:16:32.083Z"
+canonical_url: "https://everythinginperspective.github.io/magazine/perspectives"
+last_updated: "2026-05-07T16:10:53.026Z"
 meta:
   description: "Browse all perspectives on Everything in Perspective"
   "og:description": "Browse all perspectives on Everything in Perspective"
@@ -24,4 +24,4 @@ Staff
 
 1 of 1 perspectives found
 
-[<h2>**ChatGPT in Perspective**</h2>Understanding ChatGPT's impact beyond the hype—historical context, labor implications, and systemic changes.By Staff · May 4, 2026](https://humanitiesclinic.github.io/magazine/perspective/chatgpt-in-perspective.en)
+[<h2>**ChatGPT in Perspective**</h2>Understanding ChatGPT's impact beyond the hype—historical context, labor implications, and systemic changes.By Staff · May 4, 2026](https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en)

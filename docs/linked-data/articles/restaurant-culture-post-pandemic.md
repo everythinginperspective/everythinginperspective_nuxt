@@ -1,7 +1,7 @@
 ---
 title: "Restaurant Culture Post-Pandemic: Community, Economics, and the Future of Dining | Everything in Perspective | Everything in Perspective"
-canonical_url: "https://humanitiesclinic.github.io/linked-data/articles/restaurant-culture-post-pandemic"
-last_updated: "2026-05-07T08:16:30.670Z"
+canonical_url: "https://everythinginperspective.github.io/linked-data/articles/restaurant-culture-post-pandemic"
+last_updated: "2026-05-07T16:10:50.936Z"
 meta:
   description: "How restaurants transformed during pandemic lockdowns and what the post-2024 landscape reveals about urban community, labor, and local economics."
   "og:description": "How restaurants transformed during pandemic lockdowns and what the post-2024 landscape reveals about urban community, labor, and local economics."
