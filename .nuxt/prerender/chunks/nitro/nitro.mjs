@@ -656,7 +656,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "6177f859-88dd-4730-971d-95df5fbdc563",
+    "buildId": "99265d03-70e8-486c-bc5d-c51ae6c8705e",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -667,6 +667,22 @@ const _inlineRuntimeConfig = {
         "cache": false
       },
       "/": {
+        "prerender": true
+      },
+      "/mag/**": {
+        "redirect": {
+          "to": "/magazine/**",
+          "statusCode": 301,
+          "_redirectStripBase": "/mag"
+        },
+        "prerender": true
+      },
+      "/ld/**": {
+        "redirect": {
+          "to": "/linked-data/**",
+          "statusCode": 301,
+          "_redirectStripBase": "/ld"
+        },
         "prerender": true
       },
       "/article/**": {
@@ -723,77 +739,77 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/en.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/fr.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/de.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/es.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/it.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/pt.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/nl.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/zh.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/ja.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/__sitemap__/ar.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-07T19:25:21.903Z"
+          "X-Sitemap-Prerendered": "2026-05-07T21:30:09.819Z"
         }
       },
       "/_og/d/**": {

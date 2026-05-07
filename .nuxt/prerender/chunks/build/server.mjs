@@ -584,7 +584,7 @@ function writeServerCookie(event, name, value, opts = {}) {
   }
 }
 const matcher = /* @__PURE__ */ (() => {
-  const $0 = { prerender: true }, $1 = { redirect: "/sitemap_index.xml" }, $2 = {}, $3 = { payload: false, payload: false }, $4 = { payload: false };
+  const $0 = { prerender: true }, $1 = { redirect: "/sitemap_index.xml" }, $2 = {}, $3 = { redirect: "/magazine/**", prerender: true }, $4 = { redirect: "/linked-data/**", prerender: true }, $5 = { payload: false, payload: false }, $6 = { payload: false };
   return (m, p) => {
     let r = [];
     if (p.charCodeAt(p.length - 1) === 47) p = p.slice(0, -1) || "/";
@@ -631,7 +631,11 @@ const matcher = /* @__PURE__ */ (() => {
     }
     let s = p.split("/"), l = s.length;
     if (l > 1) {
-      if (s[1] === "article") {
+      if (s[1] === "mag") {
+        r.unshift({ data: $3, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "ld") {
+        r.unshift({ data: $4, params: { "_": s.slice(2).join("/") } });
+      } else if (s[1] === "article") {
         r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "perspective") {
         r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
@@ -644,9 +648,9 @@ const matcher = /* @__PURE__ */ (() => {
       } else if (s[1] === "linked-data") {
         r.unshift({ data: $0, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "api") {
-        r.unshift({ data: $3, params: { "_": s.slice(2).join("/") } });
+        r.unshift({ data: $5, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "__nuxt_content") {
-        r.unshift({ data: $4, params: { "_": s.slice(2).join("/") } });
+        r.unshift({ data: $6, params: { "_": s.slice(2).join("/") } });
       } else if (s[1] === "_og") {
         if (l > 2) {
           if (s[2] === "d") {
@@ -1500,6 +1504,106 @@ const _routes = [
     path: "/ar/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
     component: () => import('./_slug_-DxaWLk3v.mjs')
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/fr/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/de/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/es/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/it/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/pt/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/nl/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/zh/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ja/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ar/mag/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/fr/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/de/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/es/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/it/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/pt/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/nl/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/zh/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ja/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
+  },
+  {
+    name: __nuxt_page_meta?.name,
+    path: "/ar/ld/:pathMatch(.*)",
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
