@@ -1,5 +1,7 @@
 /* Tailwind CSS with magazine-style theme */
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Set default background and text color */
 body {
