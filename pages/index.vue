@@ -1,19 +1,50 @@
 <template>
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-    <!-- Featured content -->
-    <section class="mb-16">
-      <h2 class="font-serif text-3xl font-bold mb-8">Latest Essays</h2>
-      <div class="space-y-8">
-        <article v-for="article in (articles || []).slice(0, 3)" :key="article.id" class="mb-12 pb-12 border-b border-accent">
-          <h3 class="font-serif text-2xl font-bold mb-2">{{ article.title }}</h3>
-          <p class="text-muted text-sm mb-4">{{ formatDate(article.date) }} • {{ article.category || 'General' }}</p>
-          <p class="text-body mb-4">{{ article.description }}</p>
-          <NuxtLink :to="`/magazine/article/${article.path?.split('/').pop()}`" class="text-primary font-sans font-bold hover:underline">
-            Read More →
-          </NuxtLink>
-        </article>
+  <main>
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <div class="space-y-4 mb-12">
+        <h1 class="text-5xl sm:text-6xl font-serif text-stone-900">
+          Everything in Perspective
+        </h1>
+        <p class="text-lg sm:text-xl text-stone-600 max-w-2xl leading-relaxed">
+          A curated collection of essays exploring global trends, context, and nuance. Organized by articles, perspectives, people, and languages.
+        </p>
       </div>
+      <!-- Rainbow accent bar -->
+      <div class="h-2 w-32 rounded-full bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet"></div>
     </section>
+
+    <!-- Carousel Sections -->
+    <CarouselRow 
+      v-if="articles.length > 0"
+      title="Latest Articles" 
+      :items="articles.slice(0, 6)"
+      collection-type="articles"
+    />
+
+    <CarouselRow 
+      v-if="perspectives.length > 0"
+      title="Perspectives" 
+      :items="perspectives.slice(0, 6)"
+      collection-type="perspectives"
+    />
+
+    <CarouselRow 
+      v-if="people.length > 0"
+      title="People" 
+      :items="people.slice(0, 6)"
+      collection-type="people"
+    />
+
+    <CarouselRow 
+      v-if="languages.length > 0"
+      title="Languages" 
+      :items="languages.slice(0, 6)"
+      collection-type="languages"
+    />
+
+    <!-- Footer spacer -->
+    <div class="h-8"></div>
   </main>
 </template>
 
@@ -22,19 +53,22 @@ definePageMeta({
   layout: 'default'
 })
 
-// Fetch articles from @nuxt/content (v3: queryCollection)
+// Fetch all collections from @nuxt/content
 const { data: articles } = await useAsyncData('articles', () =>
-  queryCollection('articles').order('date', 'DESC').all()
+  queryCollection('articles').all()
 )
 
-const formatDate = (date: string) => {
-  if (!date) return ''
-  return new Date(date).toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  })
-}
+const { data: perspectives } = await useAsyncData('perspectives', () =>
+  queryCollection('perspectives').all()
+)
+
+const { data: people } = await useAsyncData('people', () =>
+  queryCollection('people').all()
+)
+
+const { data: languages } = await useAsyncData('languages', () =>
+  queryCollection('languages').all()
+)
 
 // SEO
 useSeoMeta({
@@ -66,44 +100,8 @@ useHead({
         sameAs: [],
         inLanguage: 'en-US'
       })
-    },
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'CollectionPage',
-        '@id': 'https://everythinginperspective.github.io/#collection',
-        name: 'Everything in Perspective Essays',
-        description: 'A curated collection of essays exploring global trends with nuance and context',
-        url: 'https://everythinginperspective.github.io',
-        isPartOf: {
-          '@id': 'https://everythinginperspective.github.io/#website'
-        },
-        mainEntity: {
-          '@type': 'ItemList',
-          itemListElement: (articles.value || []).slice(0, 10).map((article, idx) => ({
-            '@type': 'ListItem',
-            position: idx + 1,
-            name: article.title,
-            description: article.description,
-            url: `https://everythinginperspective.github.io/magazine/article/${article.path?.split('/').pop()}`,
-            image: article.image || '/og-default.png'
-          }))
-        }
-      })
     }
   ]
 })
 </script>
 
-<style scoped>
-.border-accent {
-  border-color: #1a1a1a;
-}
-.text-muted {
-  color: #666666;
-}
-.text-body {
-  color: #000000;
-}
-</style>
