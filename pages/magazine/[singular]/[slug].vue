@@ -132,12 +132,12 @@ watch(() => content.value, (newContent) => {
       url: `https://everythinginperspective.github.io/magazine/${singular}/${slug}`,
       inLanguage: 'en-US',
       isAccessibleForFree: true,
-      keywords: newContent.keywords ? newContent.keywords.join(', ') : newContent.tags?.join(', ') || newContent.category || singular
+      keywords: typeof newContent.keywords === 'string' ? newContent.keywords : Array.isArray(newContent.keywords) ? newContent.keywords.join(', ') : newContent.tags?.join(', ') || newContent.category || singular
     }
     
     // Add article-specific fields
     if (singular === 'article' || singular === 'perspective') {
-      schemaObject.articleBody = newContent.body?.replace(/<[^>]*>/g, '') || ''
+      schemaObject.articleBody = typeof newContent.body === 'string' ? newContent.body.replace(/<[^>]*>/g, '') : ''
       schemaObject.articleSection = newContent.category || 'General'
     }
     
