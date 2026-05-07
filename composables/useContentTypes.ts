@@ -6,6 +6,16 @@ export interface ContentType {
   urlPlural: string     // e.g., '/magazine/articles'
 }
 
+// Hardcoded content types - always available during SSR and client-side
+const CONTENT_TYPES: ContentType[] = [
+  { folder: 'articles', singular: 'article', plural: 'articles', urlSingular: '/magazine/article', urlPlural: '/magazine/articles' },
+  { folder: 'pages', singular: 'page', plural: 'pages', urlSingular: '/magazine/page', urlPlural: '/magazine/pages' },
+  { folder: 'perspectives', singular: 'perspective', plural: 'perspectives', urlSingular: '/magazine/perspective', urlPlural: '/magazine/perspectives' },
+  { folder: 'books', singular: 'book', plural: 'books', urlSingular: '/magazine/book', urlPlural: '/magazine/books' },
+  { folder: 'people', singular: 'person', plural: 'people', urlSingular: '/magazine/person', urlPlural: '/magazine/people' },
+  { folder: 'languages', singular: 'language', plural: 'languages', urlSingular: '/magazine/language', urlPlural: '/magazine/languages' }
+]
+
 let cachedContentTypes: ContentType[] | null = null
 
 export const useContentTypes = async () => {
@@ -13,29 +23,9 @@ export const useContentTypes = async () => {
     return cachedContentTypes
   }
 
-  // During SSR/prerender, read from filesystem
-  if (import.meta.server) {
-    try {
-      const { readFileSync } = await import('fs')
-      const { join } = await import('path')
-      const filePath = join(process.cwd(), 'public', 'content-types.json')
-      const content = readFileSync(filePath, 'utf-8')
-      cachedContentTypes = JSON.parse(content)
-      return cachedContentTypes
-    } catch (error) {
-      console.error('Failed to load content types from filesystem:', error)
-      return []
-    }
-  }
-  
-  // Client-side: fetch from public URL
-  try {
-    cachedContentTypes = await $fetch<ContentType[]>('/content-types.json')
-    return cachedContentTypes
-  } catch (error) {
-    console.error('Failed to load content types:', error)
-    return []
-  }
+  // Use hardcoded types (reliable for both SSR and client)
+  cachedContentTypes = CONTENT_TYPES
+  return cachedContentTypes
 }
 
 export const getContentTypeByFolder = async (folder: string): Promise<ContentType | undefined> => {

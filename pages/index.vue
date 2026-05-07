@@ -8,7 +8,7 @@
           <h3 class="font-serif text-2xl font-bold mb-2">{{ article.title }}</h3>
           <p class="text-muted text-sm mb-4">{{ formatDate(article.date) }} • {{ article.category || 'General' }}</p>
           <p class="text-body mb-4">{{ article.description }}</p>
-          <NuxtLink :to="`/article/${article.path?.split('/').pop()}`" class="text-primary font-sans font-bold hover:underline">
+          <NuxtLink :to="`/magazine/article/${article.path?.split('/').pop()}`" class="text-primary font-sans font-bold hover:underline">
             Read More →
           </NuxtLink>
         </article>
@@ -54,13 +54,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        '@id': 'https://einp.surge.sh/#website',
+        '@id': 'https://humanitiesclinic.github.io/#website',
         name: 'Everything in Perspective',
-        url: 'https://einp.surge.sh',
+        url: 'https://humanitiesclinic.github.io',
         description: 'Essays on trends, context & nuance',
         potentialAction: {
           '@type': 'SearchAction',
-          target: 'https://einp.surge.sh/?q={search_term_string}',
+          target: 'https://humanitiesclinic.github.io/?q={search_term_string}',
           'query-input': 'required name=search_term_string'
         },
         sameAs: [],
@@ -72,12 +72,12 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        '@id': 'https://einp.surge.sh/#collection',
+        '@id': 'https://humanitiesclinic.github.io/#collection',
         name: 'Everything in Perspective Essays',
         description: 'A curated collection of essays exploring global trends with nuance and context',
-        url: 'https://einp.surge.sh',
+        url: 'https://humanitiesclinic.github.io',
         isPartOf: {
-          '@id': 'https://einp.surge.sh/#website'
+          '@id': 'https://humanitiesclinic.github.io/#website'
         },
         mainEntity: {
           '@type': 'ItemList',
@@ -86,7 +86,7 @@ useHead({
             position: idx + 1,
             name: article.title,
             description: article.description,
-            url: `https://einp.surge.sh/article/${article.path?.split('/').pop()}`,
+            url: `https://humanitiesclinic.github.io/magazine/article/${article.path?.split('/').pop()}`,
             image: article.image || '/og-default.png'
           }))
         }
