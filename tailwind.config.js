@@ -14,6 +14,31 @@ module.exports = {
         mono: ['Courier New', 'monospace'],
       },
       colors: {
+        // Custom stone palette
+        stone: {
+          50: '#FAFAF9',
+          100: '#F5F5F0',
+          200: '#E7E5E0',
+          300: '#D9D3CA',
+          400: '#A8A09F',
+          500: '#78746F',
+          600: '#5A5652',
+          700: '#3D3935',
+          800: '#2A2824',
+          900: '#1A1814',
+        },
+        // Rainbow accents
+        rainbow: {
+          red: '#E63946',
+          orange: '#F77F00',
+          yellow: '#FCBF49',
+          green: '#06A77D',
+          blue: '#1B7AA1',
+          indigo: '#4B4BA8',
+          violet: '#9D4EDD',
+          pink: '#E91E63',
+        },
+        // Original colors
         primary: '#000000',
         secondary: '#FFFFFF',
         accent: '#1a1a1a',
