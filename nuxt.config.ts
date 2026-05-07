@@ -161,6 +161,9 @@ export default defineNuxtConfig({
   // Generate static site at build time
   routeRules: {
     '/': { prerender: true },
+    // Short URL aliases with 301 redirects
+    '/mag/**': { redirect: { to: '/magazine/**', statusCode: 301 }, prerender: true },
+    '/ld/**': { redirect: { to: '/linked-data/**', statusCode: 301 }, prerender: true },
     // Legacy routes (keeping for backwards compatibility)
     '/article/**': { prerender: true },
     '/perspective/**': { prerender: true },
