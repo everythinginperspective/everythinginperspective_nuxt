@@ -225,7 +225,7 @@
         "../node_modules/nuxt-seo-utils/dist/runtime/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/5a64010c-7b81-487b-8d11-3019a7f3c29c.json"
+        "./manifest/meta/70a3ace9-db2f-4d6f-9880-af12b3f54c3b.json"
       ],
       "#components": [
         "./components"

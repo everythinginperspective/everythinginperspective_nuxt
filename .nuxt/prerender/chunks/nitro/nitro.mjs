@@ -656,7 +656,7 @@ function _expandFromEnv(value) {
 const _inlineRuntimeConfig = {
   "app": {
     "baseURL": "/",
-    "buildId": "5a64010c-7b81-487b-8d11-3019a7f3c29c",
+    "buildId": "70a3ace9-db2f-4d6f-9880-af12b3f54c3b",
     "buildAssetsDir": "/_nuxt/",
     "cdnURL": ""
   },
@@ -739,77 +739,77 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/en.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/fr.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/de.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/es.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/it.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/pt.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/nl.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/zh.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/ja.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/__sitemap__/ar.xml": {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-05-14T17:49:40.721Z"
+          "X-Sitemap-Prerendered": "2026-05-15T22:54:54.465Z"
         }
       },
       "/_og/d/**": {

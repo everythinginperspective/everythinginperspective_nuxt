@@ -1,17 +1,17 @@
 <template>
   <main>
     <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
-      <div class="space-y-4 mb-12">
-        <h1 class="text-5xl sm:text-6xl font-serif text-stone-900">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
           Everything in Perspective
         </h1>
-        <p class="text-lg sm:text-xl text-stone-600 max-w-2xl leading-relaxed">
+        <p>
           A curated collection of essays exploring global trends, context, and nuance. Organized by articles, perspectives, people, and languages.
         </p>
       </div>
       <!-- Rainbow accent bar -->
-      <div class="h-2 w-32 rounded-full bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet"></div>
+      <div class="rainbow-bar"></div>
     </section>
 
     <!-- Carousel Sections -->
@@ -44,7 +44,7 @@
     />
 
     <!-- Footer spacer -->
-    <div class="h-8"></div>
+    <div class="footer-spacer"></div>
   </main>
 </template>
 

@@ -4,14 +4,14 @@
         <loc>https://everythinginperspective.github.io/</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/es" hreflang="es" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/de" hreflang="de" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/fr" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/es" hreflang="es" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/pt" hreflang="pt" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/nl" hreflang="nl" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/it" hreflang="it" />
-        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ja" hreflang="ja" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/nl" hreflang="nl" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/pt" hreflang="pt" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ar" hreflang="ar" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/ja" hreflang="ja" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/zh" hreflang="zh" />
     </url>
     <url>
@@ -111,6 +111,11 @@
         <loc>https://everythinginperspective.github.io/magazine/articles</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/articles" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/articles" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/books</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/books" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/books" hreflang="en" />
     </url>
     <url>
         <loc>https://everythinginperspective.github.io/magazine/languages</loc>
@@ -298,6 +303,36 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/articles/youtube-algoritmo-creadores.es" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/deutsch</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/deutsch" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/deutsch" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/english</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/english" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/english" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/espanol</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/espanol" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/espanol" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/francais</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/francais" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/francais" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/italiano</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/italiano" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/italiano" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/languages/zhongwen</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/zhongwen" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/languages/zhongwen" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/linked-data/pages/about</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/about" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/about" hreflang="en" />
@@ -326,6 +361,26 @@
         <loc>https://everythinginperspective.github.io/linked-data/pages/terms-conditions</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/terms-conditions" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/pages/terms-conditions" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/people/culture-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/culture-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/culture-desk" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/people/economics-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/economics-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/economics-desk" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/people/editorial-staff</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/editorial-staff" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/editorial-staff" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/linked-data/people/technology-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/technology-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/linked-data/people/technology-desk" hreflang="en" />
     </url>
     <url>
         <loc>https://everythinginperspective.github.io/linked-data/perspectives/chatgpt-in-perspective.en</loc>
@@ -468,9 +523,39 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/article/youtube-algoritmo-creadores.es" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/deutsch</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/deutsch" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/deutsch" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/english</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/english" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/english" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/espanol</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/espanol" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/espanol" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/francais</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/francais" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/francais" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/italiano</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/italiano" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/italiano" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/magazine/language/languages</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/languages" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/languages" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/language/zhongwen</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/zhongwen" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/language/zhongwen" hreflang="en" />
     </url>
     <url>
         <loc>https://everythinginperspective.github.io/magazine/page/about</loc>
@@ -508,9 +593,29 @@
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/authors" hreflang="en" />
     </url>
     <url>
+        <loc>https://everythinginperspective.github.io/magazine/person/culture-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/culture-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/culture-desk" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/person/economics-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/economics-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/economics-desk" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/person/editorial-staff</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/editorial-staff" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/editorial-staff" hreflang="en" />
+    </url>
+    <url>
+        <loc>https://everythinginperspective.github.io/magazine/person/technology-desk</loc>
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/technology-desk" hreflang="x-default" />
+        <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/person/technology-desk" hreflang="en" />
+    </url>
+    <url>
         <loc>https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en</loc>
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://everythinginperspective.github.io/magazine/perspective/chatgpt-in-perspective.en" hreflang="en" />
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-07T23:58:41.491Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-05-15T22:57:16.347Z -->

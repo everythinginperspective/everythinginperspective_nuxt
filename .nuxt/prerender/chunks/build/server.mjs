@@ -19,7 +19,7 @@ import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///Vol
 import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
 import { stringify } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
 import { hash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderStyle, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 import { u as useHead$1, h as headSymbol, a as useSeoMeta$1 } from '../_/server.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
 import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
@@ -1099,61 +1099,61 @@ const _routes = [
     name: "index___en",
     path: "/",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___fr",
     path: "/fr",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___de",
     path: "/de",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___es",
     path: "/es",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___it",
     path: "/it",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___pt",
     path: "/pt",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___nl",
     path: "/nl",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___zh",
     path: "/zh",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___ja",
     path: "/ja",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "index___ar",
     path: "/ar",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./index-DVwpO8m5.mjs')
+    component: () => import('./index-CMOrXzrb.mjs')
   },
   {
     name: "page-slug___en",
@@ -9604,107 +9604,91 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       const _component_Breadcrumbs = Breadcrumbs;
       const _component_NuxtLink = __nuxt_component_0$1;
       const _component_SearchBar = __nuxt_component_2;
-      _push(`<header${ssrRenderAttrs(mergeProps({ class: "sticky top-0 z-50" }, _attrs))}><div class="bg-stone-50 py-2">${hilltopadsScript$1}</div>`);
+      _push(`<header${ssrRenderAttrs(_attrs)}><div style="${ssrRenderStyle({ "background-color": "var(--stone-50)", "padding": "0.5rem 1rem" })}">${hilltopadsScript$1}</div>`);
       _push(ssrRenderComponent(_component_Breadcrumbs, null, null, _parent));
-      _push(`<div class="bg-stone-50 border-b border-stone-200"><div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8"><div class="flex justify-between items-start"><div class="flex-1">`);
+      _push(`<div style="${ssrRenderStyle({ "background-color": "var(--stone-50)", "border-bottom": "1px solid var(--stone-200)" })}"><div class="header-content"><div style="${ssrRenderStyle({ "display": "flex", "justify-content": "space-between", "align-items": "flex-start" })}"><div class="header-branding">`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
-        class: "inline-block"
+        style: { "display": "inline-block" }
       }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<h1 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-normal tracking-tight text-stone-900"${_scopeId}> Everything in Perspective </h1>`);
+            _push2(`<h1${_scopeId}>Everything in Perspective</h1>`);
           } else {
             return [
-              createVNode("h1", { class: "text-2xl sm:text-3xl lg:text-4xl font-serif font-normal tracking-tight text-stone-900" }, " Everything in Perspective ")
+              createVNode("h1", null, "Everything in Perspective")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(`<p class="text-stone-600 text-xs sm:text-sm mt-1 sm:mt-2">Essays on trends, context &amp; nuance</p></div><nav class="hidden lg:flex gap-8 text-sm nav-main items-center ml-12">`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/",
-        class: "text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors"
-      }, {
+      _push(`<p class="header-tagline">Essays on trends, context &amp; nuance</p></div><nav class="nav-desktop">`);
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Home `);
+            _push2(`Home`);
           } else {
             return [
-              createTextVNode(" Home ")
+              createTextVNode("Home")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/magazine/articles",
-        class: "text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/magazine/articles" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Articles `);
+            _push2(`Articles`);
           } else {
             return [
-              createTextVNode(" Articles ")
+              createTextVNode("Articles")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/magazine/perspectives",
-        class: "text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/magazine/perspectives" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Perspectives `);
+            _push2(`Perspectives`);
           } else {
             return [
-              createTextVNode(" Perspectives ")
+              createTextVNode("Perspectives")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/faq",
-        class: "text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/faq" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` FAQ `);
+            _push2(`FAQ`);
           } else {
             return [
-              createTextVNode(" FAQ ")
+              createTextVNode("FAQ")
             ];
           }
         }),
         _: 1
       }, _parent));
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/contact-us",
-        class: "text-stone-900 no-underline hover:text-rainbow-blue hover:underline transition-colors"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/contact-us" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(` Contact `);
+            _push2(`Contact`);
           } else {
             return [
-              createTextVNode(" Contact ")
+              createTextVNode("Contact")
             ];
           }
         }),
         _: 1
       }, _parent));
       _push(ssrRenderComponent(_component_SearchBar, null, null, _parent));
-      _push(`</nav><button class="lg:hidden nav-drawer-toggle text-stone-900 text-2xl p-2 hover:text-rainbow-blue transition-colors"${ssrRenderAttr("aria-label", unref(navOpen) ? "Close navigation" : "Open navigation")}${ssrRenderAttr("aria-expanded", unref(navOpen))}>${ssrInterpolate(unref(navOpen) ? "✕" : "☰")}</button></div></div></div>`);
+      _push(`</nav><button class="nav-toggle"${ssrRenderAttr("aria-label", unref(navOpen) ? "Close navigation" : "Open navigation")}${ssrRenderAttr("aria-expanded", unref(navOpen))}>${ssrInterpolate(unref(navOpen) ? "✕" : "☰")}</button></div></div></div>`);
       if (unref(navOpen)) {
-        _push(`<nav class="nav-drawer lg:hidden fixed inset-y-0 left-0 w-xs max-w-xs bg-stone-900 text-stone-50 p-6 overflow-y-auto"><button class="absolute top-6 right-6 text-stone-50 text-2xl p-2 hover:text-rainbow-yellow transition-colors" aria-label="Close navigation"> ✕ </button><div class="space-y-6 mt-12">`);
+        _push(`<nav class="nav-drawer active"><button class="nav-drawer-close" aria-label="Close navigation"> ✕ </button><div class="nav-drawer-content">`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/",
-          class: "block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9720,7 +9704,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/magazine/articles",
-          class: "block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9736,7 +9719,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/magazine/perspectives",
-          class: "block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9752,7 +9734,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/page/faq",
-          class: "block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9768,7 +9749,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/page/contact-us",
-          class: "block text-lg font-serif text-stone-50 hover:text-rainbow-yellow transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9782,10 +9762,9 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           }),
           _: 1
         }, _parent));
-        _push(`<div class="border-t border-stone-700 pt-6 mt-6">`);
+        _push(`<div class="nav-drawer-divider">`);
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/page/privacy-policy",
-          class: "block text-sm text-stone-300 hover:text-stone-50 transition-colors mb-4",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9801,7 +9780,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/page/terms-conditions",
-          class: "block text-sm text-stone-300 hover:text-stone-50 transition-colors mb-4",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9817,7 +9795,6 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
         }, _parent));
         _push(ssrRenderComponent(_component_NuxtLink, {
           to: "/page/cookie-policy",
-          class: "block text-sm text-stone-300 hover:text-stone-50 transition-colors",
           onClick: ($event) => navOpen.value = false
         }, {
           default: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -9852,11 +9829,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   setup(__props) {
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtLink = __nuxt_component_0$1;
-      _push(`<footer${ssrRenderAttrs(mergeProps({ class: "bg-stone-900 text-stone-50 mt-16 sm:mt-24 py-12 sm:py-16 border-t border-stone-700" }, _attrs))}><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12"><div><h4 class="font-serif font-normal text-lg sm:text-xl text-stone-50 mb-4">Magazine</h4><ul class="space-y-3 text-sm"><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(`<footer${ssrRenderAttrs(_attrs)}><div class="footer-content"><div class="footer-grid"><div class="footer-column"><h4>Magazine</h4><ul><li>`);
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Home`);
@@ -9868,11 +9842,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</li><li><a href="/sitemap.xml" class="text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline">Sitemap</a></li></ul></div><div><h4 class="font-serif font-normal text-lg sm:text-xl text-stone-50 mb-4">Brand</h4><ul class="space-y-3 text-sm"><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/about",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(`</li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div><div class="footer-column"><h4>Brand</h4><ul><li>`);
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/about" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`About`);
@@ -9885,10 +9856,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(`</li><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/faq",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/faq" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`FAQ`);
@@ -9901,10 +9869,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(`</li><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/contact-us",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/contact-us" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Contact`);
@@ -9916,11 +9881,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</li></ul></div><div><h4 class="font-serif font-normal text-lg sm:text-xl text-stone-50 mb-4">Legal</h4><ul class="space-y-3 text-sm"><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/privacy-policy",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(`</li></ul></div><div class="footer-column"><h4>Legal</h4><ul><li>`);
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/privacy-policy" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Privacy Policy`);
@@ -9933,10 +9895,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(`</li><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/terms-conditions",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/terms-conditions" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Terms &amp; Conditions`);
@@ -9949,10 +9908,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(`</li><li>`);
-      _push(ssrRenderComponent(_component_NuxtLink, {
-        to: "/page/cookie-policy",
-        class: "text-stone-300 hover:text-stone-50 transition-colors no-underline hover:underline"
-      }, {
+      _push(ssrRenderComponent(_component_NuxtLink, { to: "/page/cookie-policy" }, {
         default: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
             _push2(`Cookie Policy`);
@@ -9964,7 +9920,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</li></ul></div><div><h4 class="font-serif font-normal text-lg sm:text-xl text-stone-50 mb-4">Everything</h4><p class="text-sm text-stone-300 leading-relaxed"> A magazine-style archive of essays, people, languages and perspectives, arranged with context first. </p><div class="mt-4 h-1.5 w-full rounded-full bg-gradient-to-r from-rainbow-red via-rainbow-yellow via-rainbow-green via-rainbow-blue to-rainbow-violet"></div></div></div><div class="border-t border-stone-700 pt-8 sm:pt-10"><div class="py-4 mb-4">${hilltopadsScript}</div><p class="text-xs text-center text-stone-400">© 2026 Everything in Perspective. All rights reserved.</p></div></div></footer>`);
+      _push(`</li></ul></div><div class="footer-column"><h4>Everything</h4><p> A magazine-style archive of essays, people, languages and perspectives, arranged with context first. </p><div class="footer-rainbow"></div></div></div><div class="footer-divider"><div style="${ssrRenderStyle({ "padding": "1rem 0", "margin-bottom": "1rem" })}">${hilltopadsScript}</div><p class="footer-copyright">© 2026 Everything in Perspective. All rights reserved.</p></div></div></footer>`);
     };
   }
 });
