@@ -19,6 +19,9 @@
       "@vue/compiler-sfc": [
         "../node_modules/@vue/compiler-sfc"
       ],
+      "unplugin-vue-router/client": [
+        "../node_modules/unplugin-vue-router/client"
+      ],
       "@nuxt/schema": [
         "../node_modules/@nuxt/schema"
       ],
@@ -125,6 +128,18 @@
       "#shared/*": [
         "../shared/*"
       ],
+      "assets": [
+        "../assets"
+      ],
+      "assets/*": [
+        "../assets/*"
+      ],
+      "public": [
+        "../public"
+      ],
+      "public/*": [
+        "../public/*"
+      ],
       "#server": [
         "../server"
       ],
@@ -156,7 +171,7 @@
         "../node_modules/vue-router"
       ],
       "#unhead/composables": [
-        "../node_modules/nuxt/dist/head/runtime/composables"
+        "../node_modules/nuxt/dist/head/runtime/composables/v3"
       ],
       "#imports": [
         "./imports"
@@ -210,7 +225,7 @@
         "../node_modules/nuxt-seo-utils/dist/runtime/*"
       ],
       "#app-manifest": [
-        "./manifest/meta/dd029171-db41-46f6-be43-0c10e32baae4.json"
+        "./manifest/meta/5a64010c-7b81-487b-8d11-3019a7f3c29c.json"
       ],
       "#components": [
         "./components"
@@ -232,7 +247,7 @@
     "verbatimModuleSyntax": true,
     "allowArbitraryExtensions": true,
     "strict": true,
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitOverride": true,
     "module": "preserve",
@@ -253,62 +268,23 @@
   },
   "include": [
     "../i18n/**/*",
-    "./nuxt.d.ts",
     "../**/*",
-    "../modules/*/runtime/**/*",
-    "../test/nuxt/**/*",
-    "../tests/nuxt/**/*",
-    "../layers/*/app/**/*",
-    "../layers/*/modules/*/runtime/**/*",
-    "../shared/**/*.d.ts",
-    "../modules/*/shared/**/*.d.ts",
-    "../layers/*/shared/**/*.d.ts",
-    "../*.d.ts",
-    "../layers/*/*.d.ts",
-    "./module/nuxt-og-image-components.d.ts",
-    "./nuxt.node.d.ts",
-    "../modules/*.*",
-    "../nuxt.config.*",
     "../.config/nuxt.*",
-    "../layers/*/nuxt.config.*",
-    "../layers/*/.config/nuxt.*",
-    "../layers/*/modules/**/*",
-    "../shared/**/*",
-    "../modules/*/shared/**/*",
-    "../layers/*/shared/**/*",
+    "./nuxt.d.ts",
     "../node_modules/runtime",
     "../node_modules/dist/runtime",
     "../node_modules/nuxt-site-config/dist/runtime",
-    "../node_modules/nuxt-site-config/dist/dist/runtime"
+    "../node_modules/nuxt-site-config/dist/dist/runtime",
+    "..",
+    "./module/nuxt-og-image-components.d.ts"
   ],
   "exclude": [
-    "../node_modules",
-    "../node_modules/nuxt/node_modules",
-    "../node_modules/@nuxt/content/node_modules",
-    "../node_modules/@nuxtjs/seo/node_modules",
-    "../node_modules/@nuxtjs/i18n/node_modules",
-    "../node_modules/@nuxt/telemetry/node_modules",
-    "../node_modules/@nuxtjs/mdc/node_modules",
-    "../node_modules/nuxt-site-config/node_modules",
-    "../node_modules/@nuxtjs/robots/node_modules",
-    "../node_modules/@nuxtjs/sitemap/node_modules",
-    "../node_modules/nuxt-link-checker/node_modules",
-    "../node_modules/nuxt-og-image/node_modules",
-    "../node_modules/nuxt-schema-org/node_modules",
-    "../node_modules/nuxt-seo-utils/node_modules",
     "../dist",
     "../.data",
-    "../modules/*/runtime/server/**/*",
-    "../layers/*/server/**/*",
-    "../layers/*/modules/*/runtime/server/**/*",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
     "../node_modules/nuxt-site-config/dist/runtime/server",
-    "../node_modules/nuxt-site-config/dist/dist/runtime/server"
-  ],
-  "vueCompilerOptions": {
-    "plugins": [
-      "vue-router/volar/sfc-route-blocks"
-    ]
-  }
+    "../node_modules/nuxt-site-config/dist/dist/runtime/server",
+    "../.output"
+  ]
 }

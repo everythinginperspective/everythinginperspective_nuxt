@@ -1,42 +1,43 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { hasInjectionContext, inject, getCurrentInstance as getCurrentInstance$1, defineComponent, shallowRef, h, resolveComponent, computed, unref, createElementBlock, provide, cloneVNode, isRef, toValue, onServerPrefetch, reactive, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, toDisplayString as toDisplayString$1, createVNode, onErrorCaptured, resolveDynamicComponent, effectScope, nextTick, toRef, isReadonly, isShallow, isReactive, toRaw, Text, customRef } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/index.mjs';
-import { $fetch as $fetch$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
-import { I as baseURL } from '../nitro/nitro.mjs';
-import { createHooks } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/hookable/dist/index.mjs';
-import { getContext, executeAsync } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
-import { debounce } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/perfect-debounce/dist/index.mjs';
-import { createDefu, defu } from 'file:///workspace/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
-import { hash, isEqual } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ohash/dist/index.mjs';
-import { isPlainObject as isPlainObject$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/@vue/shared/dist/shared.cjs.prod.js';
-import { klona } from 'file:///workspace/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
-import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
-import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
-import { titleCase, camelCase } from 'file:///workspace/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
-import { setupDevtoolsPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
-import { parse as parse$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
-import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///workspace/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
-import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///workspace/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
-import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///workspace/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
-import { stringify } from 'file:///workspace/everythinginperspective_nuxt/node_modules/devalue/index.js';
-import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from 'file:///workspace/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as Vue from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { hasInjectionContext, inject, getCurrentInstance as getCurrentInstance$1, defineComponent, shallowRef, h, resolveComponent, computed, unref, createElementBlock, provide, cloneVNode, getCurrentScope, onScopeDispose, defineAsyncComponent, ref, Suspense, Fragment, useSSRContext, createApp, shallowReactive, mergeProps, withCtx, createTextVNode, toDisplayString as toDisplayString$1, createVNode, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, reactive, effectScope, toRef, isReadonly, toValue, isRef, isShallow, isReactive, toRaw, Text } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/index.mjs';
+import { $fetch as $fetch$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ofetch/dist/node.mjs';
+import { G as baseURL } from '../nitro/nitro.mjs';
+import { createHooks } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
+import { getContext, executeAsync } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unctx/dist/index.mjs';
+import { createError as createError$1, sanitizeStatusCode, getRequestURL, appendHeader, getRequestHeader, getCookie, setCookie, deleteCookie } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/h3/dist/index.mjs';
+import { createDefu, defu } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/defu/dist/defu.mjs';
+import { klona } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/klona/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-router/vue-router.node.mjs';
+import { hasProtocol, isScriptProtocol, joinURL, parseQuery, withQuery, parseURL, encodePath, decodePath, withTrailingSlash, withoutTrailingSlash, withHttps, stringifyQuery, withLeadingSlash, withBase, withoutBase, parsePath, isEqual as isEqual$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/ufo/dist/index.mjs';
+import { TemplateParamsPlugin, InferSeoMetaPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/plugins.mjs';
+import { titleCase, camelCase } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/scule/dist/index.mjs';
+import { setupDevtoolsPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue-devtools-stub/dist/index.mjs';
+import { parse as parse$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/cookie-es/dist/index.mjs';
+import destr from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
+import { isEqual } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt/node_modules/ohash/dist/index.mjs';
+import { defineWebSite, defineWebPage, SchemaOrgUnheadPlugin } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@unhead/schema-org/dist/vue.mjs';
+import { toRouteMatcher, createRouter as createRouter$1 } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/radix3/dist/index.mjs';
+import { stringify } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/devalue/index.js';
+import { hash } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/node_modules/ohash/dist/index.mjs';
+import { ssrRenderAttrs, ssrRenderList, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrRenderSuspense, ssrRenderVNode } from 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/vue/server-renderer/index.mjs';
 import { u as useHead$1, h as headSymbol, a as useSeoMeta$1 } from '../_/server.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/destr/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/hookable/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/consola/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs.mjs';
 import 'node:crypto';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
-import 'file:///workspace/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxtseo-shared/dist/utils.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/@nuxt/content/node_modules/pathe/dist/index.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/db0/dist/connectors/better-sqlite3.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/server.mjs';
+import 'file:///Volumes/B87P4/everythinginperspective_nuxt/node_modules/unhead/dist/utils.mjs';
 
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch$1.create({
@@ -47,8 +48,7 @@ if (!("global" in globalThis)) {
   globalThis.global = globalThis;
 }
 const nuxtLinkDefaults = { "componentName": "NuxtLink" };
-const asyncDataDefaults = { "deep": false };
-const fetchDefaults = {};
+const asyncDataDefaults = { "value": null, "errorValue": null, "deep": true };
 const appId = "nuxt-app";
 const crawlLinks = true;
 function getNuxtAppCtx(id = appId) {
@@ -63,9 +63,10 @@ function createNuxtApp(options) {
     _id: options.id || appId || "nuxt-app",
     _scope: effectScope(),
     provide: void 0,
+    globalName: "nuxt",
     versions: {
       get nuxt() {
-        return "4.4.4";
+        return "3.21.4";
       },
       get vue() {
         return nuxtApp.vueApp.version;
@@ -109,7 +110,6 @@ function createNuxtApp(options) {
     },
     _asyncDataPromises: {},
     _asyncData: shallowReactive({}),
-    _state: shallowReactive({}),
     _payloadRevivers: {},
     ...options
   };
@@ -133,7 +133,7 @@ function createNuxtApp(options) {
         await nuxtApp.runWithContext(() => hook(...args));
       }
     };
-    nuxtApp.hooks.callHook = (name, ...args) => nuxtApp.hooks.callHookWith(contextCaller, name, args);
+    nuxtApp.hooks.callHook = (name, ...args) => nuxtApp.hooks.callHookWith(contextCaller, name, ...args);
   }
   nuxtApp.callHook = nuxtApp.hooks.callHook;
   nuxtApp.provide = (name, value) => {
@@ -407,24 +407,24 @@ const createError = (error) => {
   return nuxtError;
 };
 function injectHead(nuxtApp) {
-  const nuxt = nuxtApp || useNuxtApp();
-  return nuxt.ssrContext?.head || nuxt.runWithContext(() => {
+  const nuxt = nuxtApp || tryUseNuxtApp();
+  return nuxt?.ssrContext?.head || nuxt?.runWithContext(() => {
     if (hasInjectionContext()) {
-      const head = inject(headSymbol);
-      if (!head) {
-        throw new Error("[nuxt] [unhead] Missing Unhead instance.");
-      }
-      return head;
+      return inject(headSymbol);
     }
   });
 }
 function useHead(input, options = {}) {
-  const head = options.head || injectHead(options.nuxt);
-  return useHead$1(input, { head, ...options });
+  const head = injectHead(options.nuxt);
+  if (head) {
+    return useHead$1(input, { head, ...options });
+  }
 }
 function useSeoMeta(input, options = {}) {
-  const head = options.head || injectHead(options.nuxt);
-  return useSeoMeta$1(input, { head, ...options });
+  const head = injectHead(options.nuxt);
+  if (head) {
+    return useSeoMeta$1(input, { head, ...options });
+  }
 }
 defineComponent({
   name: "ServerPlaceholder",
@@ -485,347 +485,6 @@ defineComponent({
     };
   }
 });
-function defineKeyedFunctionFactory(factory) {
-  const placeholder = function() {
-    throw new Error(`[nuxt] \`${factory.name}\` is a compiler macro and cannot be called at runtime.`);
-  };
-  return Object.defineProperty(placeholder, "__nuxt_factory", {
-    enumerable: false,
-    get: () => factory.factory
-  });
-}
-const createUseAsyncData = defineKeyedFunctionFactory({
-  name: "createUseAsyncData",
-  factory(options = {}) {
-    function useAsyncData2(...args) {
-      const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
-      if (_isAutoKeyNeeded(args[0], args[1])) {
-        args.unshift(autoKey);
-      }
-      let [_key, _handler, opts = {}] = args;
-      const isKeyReactive = isRef(_key) || typeof _key === "function";
-      const key = isKeyReactive ? computed(() => toValue(_key)) : { value: _key };
-      if (!key.value || typeof key.value !== "string") {
-        throw new TypeError("[nuxt] [useAsyncData] key must be a non-empty string.");
-      }
-      if (typeof _handler !== "function") {
-        throw new TypeError("[nuxt] [useAsyncData] handler must be a function.");
-      }
-      const shouldFactoryOptionsOverride = typeof options === "function";
-      const nuxtApp = useNuxtApp();
-      const factoryOptions = shouldFactoryOptionsOverride ? options(opts) : options;
-      if (!shouldFactoryOptionsOverride) {
-        for (const key2 in factoryOptions) {
-          if (factoryOptions[key2] === void 0) {
-            continue;
-          }
-          if (opts[key2] !== void 0) {
-            continue;
-          }
-          opts[key2] = factoryOptions[key2];
-        }
-      }
-      opts.server ??= true;
-      opts.default ??= getDefault;
-      opts.getCachedData ??= getDefaultCachedData;
-      opts.lazy ??= false;
-      opts.immediate ??= true;
-      opts.deep ??= asyncDataDefaults.deep;
-      opts.dedupe ??= "cancel";
-      if (shouldFactoryOptionsOverride) {
-        for (const key2 in factoryOptions) {
-          if (factoryOptions[key2] === void 0) {
-            continue;
-          }
-          opts[key2] = factoryOptions[key2];
-        }
-      }
-      nuxtApp._asyncData[key.value];
-      function createInitialFetch() {
-        const initialFetchOptions = { cause: "initial", dedupe: opts.dedupe };
-        if (!nuxtApp._asyncData[key.value]?._init) {
-          initialFetchOptions.cachedData = opts.getCachedData(key.value, nuxtApp, { cause: "initial" });
-          nuxtApp._asyncData[key.value] = buildAsyncData(nuxtApp, key.value, _handler, opts, initialFetchOptions.cachedData);
-        }
-        return () => nuxtApp._asyncData[key.value].execute(initialFetchOptions);
-      }
-      const initialFetch = createInitialFetch();
-      const asyncData = nuxtApp._asyncData[key.value];
-      asyncData._deps++;
-      const fetchOnServer = opts.server !== false && nuxtApp.payload.serverRendered;
-      if (fetchOnServer && opts.immediate) {
-        const promise = initialFetch();
-        if (getCurrentInstance$1()) {
-          onServerPrefetch(() => promise);
-        } else {
-          nuxtApp.hook("app:created", async () => {
-            await promise;
-          });
-        }
-      }
-      const asyncReturn = {
-        data: writableComputedRef(() => nuxtApp._asyncData[key.value]?.data),
-        pending: writableComputedRef(() => nuxtApp._asyncData[key.value]?.pending),
-        status: writableComputedRef(() => nuxtApp._asyncData[key.value]?.status),
-        error: writableComputedRef(() => nuxtApp._asyncData[key.value]?.error),
-        refresh: (...args2) => {
-          if (!nuxtApp._asyncData[key.value]?._init) {
-            const initialFetch2 = createInitialFetch();
-            return initialFetch2();
-          }
-          return nuxtApp._asyncData[key.value].execute(...args2);
-        },
-        execute: (...args2) => asyncReturn.refresh(...args2),
-        clear: () => {
-          const entry2 = nuxtApp._asyncData[key.value];
-          if (entry2?._abortController) {
-            try {
-              entry2._abortController.abort(new DOMException("AsyncData aborted by user.", "AbortError"));
-            } finally {
-              entry2._abortController = void 0;
-            }
-          }
-          clearNuxtDataByKey(nuxtApp, key.value);
-        }
-      };
-      const asyncDataPromise = Promise.resolve(nuxtApp._asyncDataPromises[key.value]).then(() => asyncReturn);
-      Object.assign(asyncDataPromise, asyncReturn);
-      Object.defineProperties(asyncDataPromise, {
-        then: { enumerable: true, value: asyncDataPromise.then.bind(asyncDataPromise) },
-        catch: { enumerable: true, value: asyncDataPromise.catch.bind(asyncDataPromise) },
-        finally: { enumerable: true, value: asyncDataPromise.finally.bind(asyncDataPromise) }
-      });
-      return asyncDataPromise;
-    }
-    return useAsyncData2;
-  }
-});
-const useAsyncData = createUseAsyncData.__nuxt_factory();
-createUseAsyncData.__nuxt_factory({
-  lazy: true,
-  // @ts-expect-error private property
-  _functionName: "useLazyAsyncData"
-});
-function writableComputedRef(getter) {
-  return computed({
-    get() {
-      return getter()?.value;
-    },
-    set(value) {
-      const ref2 = getter();
-      if (ref2) {
-        ref2.value = value;
-      }
-    }
-  });
-}
-function _isAutoKeyNeeded(keyOrFetcher, fetcher) {
-  if (typeof keyOrFetcher === "string") {
-    return false;
-  }
-  if (typeof keyOrFetcher === "object" && keyOrFetcher !== null) {
-    return false;
-  }
-  if (typeof keyOrFetcher === "function" && typeof fetcher === "function") {
-    return false;
-  }
-  return true;
-}
-function clearNuxtDataByKey(nuxtApp, key) {
-  if (key in nuxtApp.payload.data) {
-    nuxtApp.payload.data[key] = void 0;
-  }
-  if (key in nuxtApp.payload._errors) {
-    nuxtApp.payload._errors[key] = void 0;
-  }
-  if (nuxtApp._asyncData[key]) {
-    nuxtApp._asyncData[key].data.value = unref(nuxtApp._asyncData[key]._default());
-    nuxtApp._asyncData[key].error.value = void 0;
-    nuxtApp._asyncData[key].status.value = "idle";
-  }
-  if (key in nuxtApp._asyncDataPromises) {
-    nuxtApp._asyncDataPromises[key] = void 0;
-  }
-}
-function pick(obj, keys) {
-  const newObj = {};
-  for (const key of keys) {
-    newObj[key] = obj[key];
-  }
-  return newObj;
-}
-function buildAsyncData(nuxtApp, key, _handler, options, initialCachedData) {
-  nuxtApp.payload._errors[key] ??= void 0;
-  const hasCustomGetCachedData = options.getCachedData !== getDefaultCachedData;
-  const handler = !nuxtApp.ssrContext?.["~sharedPrerenderCache"] ? _handler : (nuxtApp2, options2) => {
-    const value = nuxtApp2.ssrContext["~sharedPrerenderCache"].get(key);
-    if (value) {
-      return value;
-    }
-    const promise = Promise.resolve().then(() => nuxtApp2.runWithContext(() => _handler(nuxtApp2, options2)));
-    nuxtApp2.ssrContext["~sharedPrerenderCache"].set(key, promise);
-    return promise;
-  };
-  const _ref = options.deep ? ref : shallowRef;
-  const hasCachedData = initialCachedData !== void 0;
-  const unsubRefreshAsyncData = nuxtApp.hook("app:data:refresh", async (keys) => {
-    if (!keys || keys.includes(key)) {
-      await asyncData.execute({ cause: "refresh:hook" });
-    }
-  });
-  const asyncData = {
-    data: _ref(hasCachedData ? initialCachedData : options.default()),
-    pending: computed(() => asyncData.status.value === "pending"),
-    error: toRef(nuxtApp.payload._errors, key),
-    status: shallowRef("idle"),
-    execute: (...args) => {
-      const [_opts, newValue = void 0] = args;
-      const opts = _opts && newValue === void 0 && typeof _opts === "object" ? _opts : {};
-      if (nuxtApp._asyncDataPromises[key]) {
-        if ((opts.dedupe ?? options.dedupe) === "defer") {
-          return nuxtApp._asyncDataPromises[key];
-        }
-      }
-      {
-        const cachedData = "cachedData" in opts ? opts.cachedData : options.getCachedData(key, nuxtApp, { cause: opts.cause ?? "refresh:manual" });
-        if (cachedData !== void 0) {
-          nuxtApp.payload.data[key] = asyncData.data.value = cachedData;
-          asyncData.error.value = void 0;
-          asyncData.status.value = "success";
-          return Promise.resolve(cachedData);
-        }
-      }
-      if (asyncData._abortController) {
-        asyncData._abortController.abort(new DOMException("AsyncData request cancelled by deduplication", "AbortError"));
-      }
-      asyncData._abortController = new AbortController();
-      asyncData.status.value = "pending";
-      const cleanupController = new AbortController();
-      const promise = new Promise(
-        (resolve, reject) => {
-          try {
-            const timeout = opts.timeout ?? options.timeout;
-            const mergedSignal = mergeAbortSignals([asyncData._abortController?.signal, opts?.signal], cleanupController.signal, timeout);
-            if (mergedSignal.aborted) {
-              const reason = mergedSignal.reason;
-              reject(reason instanceof Error ? reason : new DOMException(String(reason ?? "Aborted"), "AbortError"));
-              return;
-            }
-            mergedSignal.addEventListener("abort", () => {
-              const reason = mergedSignal.reason;
-              reject(reason instanceof Error ? reason : new DOMException(String(reason ?? "Aborted"), "AbortError"));
-            }, { once: true, signal: cleanupController.signal });
-            return Promise.resolve(handler(nuxtApp, { signal: mergedSignal })).then(resolve, reject);
-          } catch (err) {
-            reject(err);
-          }
-        }
-      ).then(async (_result) => {
-        if (nuxtApp._asyncDataPromises[key] !== promise) {
-          return;
-        }
-        let result = _result;
-        if (options.transform) {
-          result = await options.transform(_result);
-        }
-        if (options.pick) {
-          result = pick(result, options.pick);
-        }
-        nuxtApp.payload.data[key] = result;
-        asyncData.data.value = result;
-        asyncData.error.value = void 0;
-        asyncData.status.value = "success";
-      }).catch((error) => {
-        if (nuxtApp._asyncDataPromises[key] !== promise) {
-          return nuxtApp._asyncDataPromises[key];
-        }
-        if (asyncData._abortController?.signal.aborted) {
-          return nuxtApp._asyncDataPromises[key];
-        }
-        if (typeof DOMException !== "undefined" && error instanceof DOMException && error.name === "AbortError") {
-          asyncData.status.value = "idle";
-          return nuxtApp._asyncDataPromises[key];
-        }
-        asyncData.error.value = createError(error);
-        asyncData.data.value = unref(options.default());
-        asyncData.status.value = "error";
-      }).finally(() => {
-        cleanupController.abort();
-        if (nuxtApp._asyncDataPromises[key] === promise) {
-          delete nuxtApp._asyncDataPromises[key];
-        }
-      });
-      nuxtApp._asyncDataPromises[key] = promise;
-      return nuxtApp._asyncDataPromises[key];
-    },
-    _execute: debounce((...args) => asyncData.execute(...args), 0, { leading: true }),
-    _default: options.default,
-    _deps: 0,
-    _init: true,
-    _hash: void 0,
-    _off: () => {
-      unsubRefreshAsyncData();
-      if (nuxtApp._asyncData[key]?._init) {
-        nuxtApp._asyncData[key]._init = false;
-      }
-      if (!hasCustomGetCachedData) {
-        nextTick(() => {
-          if (!nuxtApp._asyncData[key]?._init) {
-            clearNuxtDataByKey(nuxtApp, key);
-            asyncData.execute = () => Promise.resolve();
-          }
-        });
-      }
-    }
-  };
-  return asyncData;
-}
-const getDefault = () => void 0;
-const getDefaultCachedData = (key, nuxtApp, ctx) => {
-  if (nuxtApp.isHydrating) {
-    return nuxtApp.payload.data[key];
-  }
-  if (ctx.cause !== "refresh:manual" && ctx.cause !== "refresh:hook") {
-    return nuxtApp.static.data[key];
-  }
-};
-function mergeAbortSignals(signals, cleanupSignal, timeout) {
-  const list = signals.filter((s) => !!s);
-  if (typeof timeout === "number" && timeout >= 0) {
-    const timeoutSignal = AbortSignal.timeout?.(timeout);
-    if (timeoutSignal) {
-      list.push(timeoutSignal);
-    }
-  }
-  if (AbortSignal.any) {
-    return AbortSignal.any(list);
-  }
-  const controller = new AbortController();
-  for (const sig of list) {
-    if (sig.aborted) {
-      const reason = sig.reason ?? new DOMException("Aborted", "AbortError");
-      try {
-        controller.abort(reason);
-      } catch {
-        controller.abort();
-      }
-      return controller.signal;
-    }
-  }
-  const onAbort = () => {
-    const abortedSignal = list.find((s) => s.aborted);
-    const reason = abortedSignal?.reason ?? new DOMException("Aborted", "AbortError");
-    try {
-      controller.abort(reason);
-    } catch {
-      controller.abort();
-    }
-  };
-  for (const sig of list) {
-    sig.addEventListener?.("abort", onAbort, { once: true, signal: cleanupSignal });
-  }
-  return controller.signal;
-}
 const useStateKeyPrefix = "$s";
 function useState(...args) {
   const autoKey = typeof args[args.length - 1] === "string" ? args.pop() : void 0;
@@ -842,9 +501,6 @@ function useState(...args) {
   const key = useStateKeyPrefix + _key;
   const nuxtApp = useNuxtApp();
   const state = toRef(nuxtApp.payload.state, key);
-  if (init) {
-    nuxtApp._state[key] ??= { _default: init };
-  }
   if (state.value === void 0 && init) {
     const initialValue = init();
     if (isRef(initialValue)) {
@@ -859,153 +515,22 @@ function useRequestEvent(nuxtApp) {
   nuxtApp ||= useNuxtApp();
   return nuxtApp.ssrContext?.event;
 }
-function useRequestFetch() {
-  return useRequestEvent()?.$fetch || globalThis.$fetch;
-}
 function prerenderRoutes(path) {
   const paths = toArray$3(path);
   appendHeader(useRequestEvent(), "x-nitro-prerender", paths.map((p) => encodeURIComponent(p)).join(", "));
 }
-function generateOptionSegments(opts) {
-  const segments = [
-    toValue(opts.method)?.toUpperCase() || "GET",
-    toValue(opts.baseURL)
-  ];
-  for (const _obj of [opts.query || opts.params]) {
-    const obj = toValue(_obj);
-    if (!obj) {
-      continue;
-    }
-    const unwrapped = {};
-    for (const [key, value] of Object.entries(obj)) {
-      unwrapped[toValue(key)] = toValue(value);
-    }
-    segments.push(unwrapped);
-  }
-  if (opts.body) {
-    const value = toValue(opts.body);
-    if (!value) {
-      segments.push(hash(value));
-    } else if (value instanceof ArrayBuffer) {
-      segments.push(hash(Object.fromEntries([...new Uint8Array(value).entries()].map(([k, v]) => [k, v.toString()]))));
-    } else if (value instanceof FormData) {
-      const entries = [];
-      for (const entry2 of value.entries()) {
-        const [key, val] = entry2;
-        entries.push([key, val instanceof File ? `${val.name}:${val.size}:${val.lastModified}` : val]);
-      }
-      segments.push(hash(entries));
-    } else if (isPlainObject$1(value)) {
-      segments.push(hash(reactive(value)));
-    } else {
-      try {
-        segments.push(hash(value));
-      } catch {
-        console.warn("[useFetch] Failed to hash body", value);
-      }
-    }
-  }
-  return segments;
-}
-const createUseFetch = defineKeyedFunctionFactory({
-  name: "createUseFetch",
-  factory(options = {}) {
-    function useFetch2(request, arg1, arg2) {
-      const [opts = {}, autoKey] = typeof arg1 === "string" ? [{}, arg1] : [arg1, arg2];
-      const factoryOptions = typeof options === "function" ? options(opts) : options;
-      const {
-        server,
-        lazy,
-        default: defaultFn,
-        transform: transform2,
-        pick: pick2,
-        watch: watchSources,
-        immediate,
-        getCachedData,
-        deep,
-        dedupe,
-        timeout,
-        ...fetchOptions
-      } = {
-        ...typeof options === "function" ? {} : factoryOptions,
-        ...opts,
-        ...typeof options === "function" ? factoryOptions : {}
-      };
-      const _request = computed(() => toValue(request));
-      const key = computed(() => toValue(fetchOptions.key) || "$f" + hash([autoKey, typeof _request.value === "string" ? _request.value : "", ...generateOptionSegments(fetchOptions)]));
-      if (!fetchOptions.baseURL && typeof _request.value === "string" && (_request.value[0] === "/" && _request.value[1] === "/")) {
-        throw new Error('[nuxt] [useFetch] the request URL must not start with "//".');
-      }
-      const _fetchOptions = reactive({
-        ...fetchDefaults,
-        ...fetchOptions,
-        cache: typeof fetchOptions.cache === "boolean" ? void 0 : fetchOptions.cache
-      });
-      const _asyncDataOptions = {
-        server,
-        lazy,
-        default: defaultFn,
-        transform: transform2,
-        pick: pick2,
-        immediate,
-        getCachedData,
-        deep,
-        dedupe,
-        timeout,
-        watch: watchSources === false ? [] : [...watchSources || [], _fetchOptions]
-      };
-      const asyncData = useAsyncData(watchSources === false ? key.value : key, (_, { signal }) => {
-        let _$fetch = fetchOptions.$fetch || globalThis.$fetch;
-        if (!opts.$fetch) {
-          const isLocalFetch = typeof _request.value === "string" && _request.value[0] === "/" && (!toValue(opts.baseURL) || toValue(opts.baseURL)[0] === "/");
-          if (isLocalFetch) {
-            _$fetch = useRequestFetch();
-          }
-        }
-        return _$fetch(_request.value, { signal, ..._fetchOptions });
-      }, _asyncDataOptions);
-      return asyncData;
-    }
-    return useFetch2;
-  }
-});
-createUseFetch.__nuxt_factory();
-createUseFetch.__nuxt_factory({
-  lazy: true,
-  // @ts-expect-error private property
-  _functionName: "useLazyFetch"
-});
-function parseCookieValue(value) {
-  if (value === "undefined") {
-    return void 0;
-  }
-  try {
-    const parsed = JSON.parse(value);
-    if (typeof parsed === "number" && String(parsed) !== value) {
-      return value;
-    }
-    return parsed;
-  } catch {
-    return value;
-  }
-}
 const CookieDefaults = {
   path: "/",
   watch: true,
-  decode: (val) => val ? parseCookieValue(decodeURIComponent(val)) : val,
-  encode: (val) => {
-    if (typeof val !== "string" || val === "undefined") {
-      return encodeURIComponent(JSON.stringify(val));
+  decode: (val) => {
+    const decoded = decodeURIComponent(val);
+    const parsed = destr(decoded);
+    if (typeof parsed === "number" && (!Number.isFinite(parsed) || String(parsed) !== decoded)) {
+      return decoded;
     }
-    try {
-      if (typeof JSON.parse(val) !== "string") {
-        return encodeURIComponent(JSON.stringify(val));
-      }
-    } catch {
-    }
-    return encodeURIComponent(val);
+    return parsed;
   },
-  refresh: false
+  encode: (val) => encodeURIComponent(typeof val === "string" ? val : JSON.stringify(val))
 };
 function useCookie(name, _opts) {
   const opts = { ...CookieDefaults, ..._opts };
@@ -1019,16 +544,11 @@ function useCookie(name, _opts) {
   }
   const hasExpired = delay !== void 0 && delay <= 0;
   const cookieValue = klona(hasExpired ? void 0 : cookies[name] ?? opts.default?.());
-  const cookie = cookieServerRef(name, cookieValue);
+  const cookie = ref(cookieValue);
   {
     const nuxtApp = useNuxtApp();
     const writeFinalCookieValue = () => {
-      const valueIsSame = isEqual(cookie.value, cookies[name]);
-      if (opts.readonly || valueIsSame && !opts.refresh) {
-        return;
-      }
-      nuxtApp._cookiesChanged ||= {};
-      if (valueIsSame && opts.refresh && !nuxtApp._cookiesChanged[name]) {
+      if (opts.readonly || isEqual(cookie.value, cookies[name])) {
         return;
       }
       nuxtApp._cookies ||= {};
@@ -1038,8 +558,7 @@ function useCookie(name, _opts) {
         }
       }
       nuxtApp._cookies[name] = cookie.value;
-      const encoded = cookie.value === null || cookie.value === void 0 ? void 0 : opts.encode(cookie.value);
-      writeServerCookie(useRequestEvent(nuxtApp), name, encoded, opts);
+      writeServerCookie(useRequestEvent(nuxtApp), name, cookie.value, opts);
     };
     const unhook = nuxtApp.hooks.hookOnce("app:rendered", writeFinalCookieValue);
     nuxtApp.hooks.hookOnce("app:error", () => {
@@ -1054,39 +573,15 @@ function readRawCookies(opts = {}) {
     return parse$1(getRequestHeader(useRequestEvent(), "cookie") || "", opts);
   }
 }
-const identityEncode = (val) => val;
-function toSerializeOptions(opts) {
-  const { encode: _encode, decode: _decode, ...rest } = opts;
-  return { ...rest, encode: identityEncode };
-}
 function writeServerCookie(event, name, value, opts = {}) {
   if (event) {
-    const serializeOpts = toSerializeOptions(opts);
-    if (value !== void 0) {
-      return setCookie(event, name, value, serializeOpts);
+    if (value !== null && value !== void 0) {
+      return setCookie(event, name, value, opts);
     }
     if (getCookie(event, name) !== void 0) {
-      return deleteCookie(event, name, serializeOpts);
+      return deleteCookie(event, name, opts);
     }
   }
-}
-function cookieServerRef(name, value) {
-  const internalRef = ref(value);
-  const nuxtApp = useNuxtApp();
-  return customRef((track, trigger) => {
-    return {
-      get() {
-        track();
-        return internalRef.value;
-      },
-      set(newValue) {
-        nuxtApp._cookiesChanged ||= {};
-        nuxtApp._cookiesChanged[name] = true;
-        internalRef.value = newValue;
-        trigger();
-      }
-    };
-  });
 }
 const matcher = /* @__PURE__ */ (() => {
   const $0 = { prerender: true }, $1 = { redirect: "/sitemap_index.xml" }, $2 = {}, $3 = { redirect: "/magazine/**", prerender: true }, $4 = { redirect: "/linked-data/**", prerender: true }, $5 = { payload: false, payload: false }, $6 = { payload: false };
@@ -1598,567 +1093,567 @@ const __nuxt_page_meta$1 = {
   layout: "default"
 };
 const __nuxt_page_meta = null;
-const component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs = {};
+const component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw = {};
 const _routes = [
   {
-    name: "magazine-singular-slug___en",
-    path: "/magazine/:singular()/:slug()",
+    name: "index___en",
+    path: "/",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___fr",
-    path: "/fr/magazine/:singular()/:slug()",
+    name: "index___fr",
+    path: "/fr",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___de",
-    path: "/de/magazine/:singular()/:slug()",
+    name: "index___de",
+    path: "/de",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___es",
-    path: "/es/magazine/:singular()/:slug()",
+    name: "index___es",
+    path: "/es",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___it",
-    path: "/it/magazine/:singular()/:slug()",
+    name: "index___it",
+    path: "/it",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___pt",
-    path: "/pt/magazine/:singular()/:slug()",
+    name: "index___pt",
+    path: "/pt",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___nl",
-    path: "/nl/magazine/:singular()/:slug()",
+    name: "index___nl",
+    path: "/nl",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___zh",
-    path: "/zh/magazine/:singular()/:slug()",
+    name: "index___zh",
+    path: "/zh",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___ja",
-    path: "/ja/magazine/:singular()/:slug()",
+    name: "index___ja",
+    path: "/ja",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
-    name: "magazine-singular-slug___ar",
-    path: "/ar/magazine/:singular()/:slug()",
+    name: "index___ar",
+    path: "/ar",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./_slug_-ByTAZOvx.mjs')
-  },
-  {
-    name: "article-slug___en",
-    path: "/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___fr",
-    path: "/fr/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___de",
-    path: "/de/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___es",
-    path: "/es/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___it",
-    path: "/it/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___pt",
-    path: "/pt/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___nl",
-    path: "/nl/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___zh",
-    path: "/zh/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___ja",
-    path: "/ja/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "article-slug___ar",
-    path: "/ar/article/:slug()",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./_slug_-CGX-1_A_.mjs')
-  },
-  {
-    name: "linked-data-plural___en",
-    path: "/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___fr",
-    path: "/fr/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___de",
-    path: "/de/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___es",
-    path: "/es/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___it",
-    path: "/it/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___pt",
-    path: "/pt/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___nl",
-    path: "/nl/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___zh",
-    path: "/zh/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___ja",
-    path: "/ja/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "linked-data-plural___ar",
-    path: "/ar/linked-data/:plural()",
-    component: () => import('./_plural_-CnkL1xgP.mjs')
-  },
-  {
-    name: "magazine-plural___en",
-    path: "/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___fr",
-    path: "/fr/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___de",
-    path: "/de/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___es",
-    path: "/es/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___it",
-    path: "/it/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___pt",
-    path: "/pt/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___nl",
-    path: "/nl/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___zh",
-    path: "/zh/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___ja",
-    path: "/ja/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
-  },
-  {
-    name: "magazine-plural___ar",
-    path: "/ar/magazine/:plural()",
-    meta: __nuxt_page_meta$4 || {},
-    component: () => import('./_plural_-CxhOVGlZ.mjs')
+    component: () => import('./index-DVwpO8m5.mjs')
   },
   {
     name: "page-slug___en",
     path: "/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___fr",
     path: "/fr/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___de",
     path: "/de/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___es",
     path: "/es/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___it",
     path: "/it/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___pt",
     path: "/pt/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___nl",
     path: "/nl/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___zh",
     path: "/zh/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___ja",
     path: "/ja/page/:slug()",
-    meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
   },
   {
     name: "page-slug___ar",
     path: "/ar/page/:slug()",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./_slug_-DX3tCo2D.mjs')
+  },
+  {
+    name: "article-slug___en",
+    path: "/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___fr",
+    path: "/fr/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___de",
+    path: "/de/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___es",
+    path: "/es/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___it",
+    path: "/it/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___pt",
+    path: "/pt/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___nl",
+    path: "/nl/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___zh",
+    path: "/zh/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___ja",
+    path: "/ja/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "article-slug___ar",
+    path: "/ar/article/:slug()",
+    meta: __nuxt_page_meta$4 || {},
+    component: () => import('./_slug_-BMhpx98Q.mjs')
+  },
+  {
+    name: "magazine-plural___en",
+    path: "/magazine/:plural()",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./_slug_-DVCTt2f_.mjs')
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___fr",
+    path: "/fr/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___de",
+    path: "/de/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___es",
+    path: "/es/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___it",
+    path: "/it/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___pt",
+    path: "/pt/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___nl",
+    path: "/nl/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___zh",
+    path: "/zh/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___ja",
+    path: "/ja/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "magazine-plural___ar",
+    path: "/ar/magazine/:plural()",
+    meta: __nuxt_page_meta$3 || {},
+    component: () => import('./_plural_-QC-SPw-l.mjs')
+  },
+  {
+    name: "linked-data-plural___en",
+    path: "/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___fr",
+    path: "/fr/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___de",
+    path: "/de/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___es",
+    path: "/es/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___it",
+    path: "/it/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___pt",
+    path: "/pt/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___nl",
+    path: "/nl/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___zh",
+    path: "/zh/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___ja",
+    path: "/ja/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
+  },
+  {
+    name: "linked-data-plural___ar",
+    path: "/ar/linked-data/:plural()",
+    component: () => import('./_plural_-X_s6vpkZ.mjs')
   },
   {
     name: "linked-data-slug___en",
     path: "/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___fr",
     path: "/fr/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___de",
     path: "/de/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___es",
     path: "/es/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___it",
     path: "/it/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___pt",
     path: "/pt/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___nl",
     path: "/nl/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___zh",
     path: "/zh/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___ja",
     path: "/ja/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
     name: "linked-data-slug___ar",
     path: "/ar/linked-data/:slug(.*)*",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./_...slug_-BcovYs4d.mjs')
+    component: () => import('./_...slug_-CLfHfkTl.mjs')
   },
   {
-    name: "index___en",
-    path: "/",
+    name: "magazine-singular-slug___en",
+    path: "/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___fr",
-    path: "/fr",
+    name: "magazine-singular-slug___fr",
+    path: "/fr/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___de",
-    path: "/de",
+    name: "magazine-singular-slug___de",
+    path: "/de/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___es",
-    path: "/es",
+    name: "magazine-singular-slug___es",
+    path: "/es/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___it",
-    path: "/it",
+    name: "magazine-singular-slug___it",
+    path: "/it/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___pt",
-    path: "/pt",
+    name: "magazine-singular-slug___pt",
+    path: "/pt/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___nl",
-    path: "/nl",
+    name: "magazine-singular-slug___nl",
+    path: "/nl/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___zh",
-    path: "/zh",
+    name: "magazine-singular-slug___zh",
+    path: "/zh/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___ja",
-    path: "/ja",
+    name: "magazine-singular-slug___ja",
+    path: "/ja/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
-    name: "index___ar",
-    path: "/ar",
+    name: "magazine-singular-slug___ar",
+    path: "/ar/magazine/:singular()/:slug()",
     meta: __nuxt_page_meta$1 || {},
-    component: () => import('./index-DE5qXpoo.mjs')
+    component: () => import('./_slug_-BphfuaHq.mjs')
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/fr/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/de/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/es/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/it/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/pt/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/nl/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/zh/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ja/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ar/mag/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/fr/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/de/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/es/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/it/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/pt/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/nl/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/zh/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ja/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ar/ld/:pathMatch(.*)",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/fr/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/de/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/es/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/it/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/pt/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/nl/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/zh/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ja/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   },
   {
     name: __nuxt_page_meta?.name,
     path: "/ar/sitemap.xml",
-    component: component_45stubUeOTocggbpYh965a5CbtEJ_7VoYqF_d1MruBP25ZjMs
+    component: component_45stubT7Mb9nfhOInicknCnf_B2l3iFAMXJ72s3md6ITqxSWw
   }
 ];
 const validate = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to, from) => {
@@ -7863,100 +7358,100 @@ const localeCodes = [
 const localeLoaders = {
   en: [
     {
-      key: "locale_en_46json_d133f3be",
+      key: "locale_en_46json_fa76968c",
       load: () => import(
         './en-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_en_46json_d133f3be" */
+        /* webpackChunkName: "locale_en_46json_fa76968c" */
       ),
       cache: true
     }
   ],
   fr: [
     {
-      key: "locale_fr_46json_bb3b9359",
+      key: "locale_fr_46json_637ba10e",
       load: () => import(
         './fr-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_fr_46json_bb3b9359" */
+        /* webpackChunkName: "locale_fr_46json_637ba10e" */
       ),
       cache: true
     }
   ],
   de: [
     {
-      key: "locale_de_46json_be4acf06",
+      key: "locale_de_46json_969e0107",
       load: () => import(
         './de-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_de_46json_be4acf06" */
+        /* webpackChunkName: "locale_de_46json_969e0107" */
       ),
       cache: true
     }
   ],
   es: [
     {
-      key: "locale_es_46json_eb57494a",
+      key: "locale_es_46json_6b345c52",
       load: () => import(
         './es-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_es_46json_eb57494a" */
+        /* webpackChunkName: "locale_es_46json_6b345c52" */
       ),
       cache: true
     }
   ],
   it: [
     {
-      key: "locale_it_46json_0eae8cf8",
+      key: "locale_it_46json_08e8db69",
       load: () => import(
         './it-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_it_46json_0eae8cf8" */
+        /* webpackChunkName: "locale_it_46json_08e8db69" */
       ),
       cache: true
     }
   ],
   pt: [
     {
-      key: "locale_pt_46json_24e19655",
+      key: "locale_pt_46json_37ff6206",
       load: () => import(
         './pt-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_pt_46json_24e19655" */
+        /* webpackChunkName: "locale_pt_46json_37ff6206" */
       ),
       cache: true
     }
   ],
   nl: [
     {
-      key: "locale_nl_46json_73e93dd7",
+      key: "locale_nl_46json_5ca8de1a",
       load: () => import(
         './nl-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_nl_46json_73e93dd7" */
+        /* webpackChunkName: "locale_nl_46json_5ca8de1a" */
       ),
       cache: true
     }
   ],
   zh: [
     {
-      key: "locale_zh_46json_ad5cb51a",
+      key: "locale_zh_46json_1932ad6c",
       load: () => import(
         './zh-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_zh_46json_ad5cb51a" */
+        /* webpackChunkName: "locale_zh_46json_1932ad6c" */
       ),
       cache: true
     }
   ],
   ja: [
     {
-      key: "locale_ja_46json_f4d0978b",
+      key: "locale_ja_46json_7bc62a85",
       load: () => import(
         './ja-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ja_46json_f4d0978b" */
+        /* webpackChunkName: "locale_ja_46json_7bc62a85" */
       ),
       cache: true
     }
   ],
   ar: [
     {
-      key: "locale_ar_46json_b9880180",
+      key: "locale_ar_46json_215c3443",
       load: () => import(
         './ar-CZ7wjjCM.mjs'
-        /* webpackChunkName: "locale_ar_46json_b9880180" */
+        /* webpackChunkName: "locale_ar_46json_215c3443" */
       ),
       cache: true
     }
@@ -8676,7 +8171,7 @@ const defaults_YlXDnzKDrNotL_BrBwgqlwKVZIfmVSvhRtsEp2y7vZ0 = /* @__PURE__ */ def
     maybeAddIdentitySchemaOrg();
   }
 });
-const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/workspace/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
+const componentNames = [{ "hash": "", "pascalName": "BlogPostTakumi", "kebabName": "blog-post-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "BrutalistSatori", "kebabName": "brutalist-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "DocsTakumi", "kebabName": "docs-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "FrameSatori", "kebabName": "frame-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSatori", "kebabName": "nuxt-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoSatori", "kebabName": "nuxt-seo-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "NuxtSeoTakumi", "kebabName": "nuxt-seo-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "PergelSatori", "kebabName": "pergel-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "ProductCardTakumi", "kebabName": "product-card-takumi", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "takumi", "propNames": [] }, { "hash": "", "pascalName": "SaaSSatori", "kebabName": "saa-ssatori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "SimpleBlogSatori", "kebabName": "simple-blog-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "UnJsSatori", "kebabName": "un-js-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }, { "hash": "", "pascalName": "WithEmojiSatori", "kebabName": "with-emoji-satori", "path": "/Volumes/B87P4/everythinginperspective_nuxt/node_modules/nuxt-og-image/dist/runtime/app/components/Templates/Community", "category": "community", "renderer": "satori", "propNames": [] }];
 const MAX_PATH_LENGTH = 200;
 const RE_BASE64_PADDING = /=/g;
 const RE_BASE64_PLUS = /\+/g;
@@ -9257,31 +8752,31 @@ const i18n_84QbCrEJidQfHX79evFy6rRgOFjwLXHugOxbWoIVeIQ = /* @__PURE__ */ defineN
     }
   }
 });
-const LazyProseA = defineAsyncComponent(() => import('./ProseA-DNc3E_T0.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-DruOjGqx.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-D6anV1KW.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-kDpuzfwG.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-CAAhZaYt.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-BT5ihUFm.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-BHkEJyb3.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-D8fH_mKX.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-Bzd0Oo65.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-CO6BA-EP.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-C8EfJlJe.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-Cg0TQAU5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-q0Qi80M_.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CZHdqTEx.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import('./ProseP-CMRLTvMO.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseA = defineAsyncComponent(() => import('./ProseA-CKtUyk1c.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import('./ProseBlockquote-DaLK1usc.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import('./ProseCode-DOZPVh40.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import('./ProseEm-By-tE54Z.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./ProseH1-kRyDlI8t.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./ProseH2-Cy_ERgTF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./ProseH3-BJqHofZo.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./ProseH4-DxegT8cn.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-DQWEe9nF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-DUkaLk3c.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import('./ProseHr-B8T6E_yT.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./ProseImg-BM8Ab-kF.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import('./ProseLi-BpOmf09C.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import('./ProseOl-CKGnb3lN.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import('./ProseP-BVASwYY_.mjs').then((r) => r["default"] || r.default || r));
 const LazyProsePre = defineAsyncComponent(() => import('./ProsePre-ByG-rB1z.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseScript = defineAsyncComponent(() => import('./ProseScript-DacBrTIN.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-C97beWLU.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-CiVNWZiX.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-9L_YxpOl.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-BRJW4VX3.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-CUhdY9wE.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-MCrthdot.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-COUfY-l-.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-DyvL6wMh.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseScript = defineAsyncComponent(() => import('./ProseScript-B3ujpe25.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import('./ProseStrong-CjCgZ-u_.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import('./ProseTable-Ci3K4VXd.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import('./ProseTbody-Bi0zXwfC.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import('./ProseTd-C_BlgbV3.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import('./ProseTh-hybVj8iO.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import('./ProseThead-B6pqxsTa.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import('./ProseTr-CeywT7NJ.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import('./ProseUl-Dk1UYyUY.mjs').then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["ProseA", LazyProseA],
   ["ProseBlockquote", LazyProseBlockquote],
@@ -10055,7 +9550,7 @@ _sfc_main$6.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Breadcrumbs.vue");
   return _sfc_setup$6 ? _sfc_setup$6(props, ctx) : void 0;
 };
-const Breadcrumbs = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$6, [["__scopeId", "data-v-ca664336"]]), { __name: "Breadcrumbs" });
+const Breadcrumbs = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-ca664336"]]);
 const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "SearchBar",
   __ssrInlineRender: true,
@@ -10098,7 +9593,7 @@ _sfc_main$5.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/SearchBar.vue");
   return _sfc_setup$5 ? _sfc_setup$5(props, ctx) : void 0;
 };
-const __nuxt_component_2 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$5, [["__scopeId", "data-v-170cc6af"]]), { __name: "SearchBar" });
+const __nuxt_component_2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-170cc6af"]]);
 const hilltopadsScript$1 = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>';
 const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Header",
@@ -10350,7 +9845,6 @@ _sfc_main$4.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Header.vue");
   return _sfc_setup$4 ? _sfc_setup$4(props, ctx) : void 0;
 };
-const Header = Object.assign(_sfc_main$4, { __name: "Header" });
 const hilltopadsScript = '<script async src="//untimely-hello.com/bWX/V/s.d/Gslj0mYdWIcS/keTma9Mu/Z/Uxl/kkPMT/chw/MyjGA/yKNFTfM/tbNFzBA-yPMpDlId1pN-wT" referrerpolicy="no-referrer-when-downgrade"><\/script>';
 const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "Footer",
@@ -10480,7 +9974,6 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Footer.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const Footer = Object.assign(_sfc_main$3, { __name: "Footer" });
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "app",
   __ssrInlineRender: true,
@@ -10511,10 +10004,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_NuxtPage = __nuxt_component_0;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-stone-50 text-stone-900" }, _attrs))}>`);
-      _push(ssrRenderComponent(Header, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$4, null, null, _parent));
       _push(ssrRenderComponent(Breadcrumbs, null, null, _parent));
       _push(ssrRenderComponent(_component_NuxtPage, null, null, _parent));
-      _push(ssrRenderComponent(Footer, null, null, _parent));
+      _push(ssrRenderComponent(_sfc_main$3, null, null, _parent));
       _push(`</div>`);
     };
   }
@@ -10539,8 +10032,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-C-PYUmtE.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-DaD-6xKX.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-DPIdW6RC.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-BOxv6rm5.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));
@@ -10577,7 +10070,7 @@ const _sfc_main = {
       }
     }
     onErrorCaptured((err, target, info) => {
-      nuxtApp.hooks.callHook("vue:error", err, target, info)?.catch((hookError) => console.error("[nuxt] Error in `vue:error` hook", hookError));
+      nuxtApp.hooks.callHook("vue:error", err, target, info).catch((hookError) => console.error("[nuxt] Error in `vue:error` hook", hookError));
       {
         const p = nuxtApp.runWithContext(() => showError(err));
         onServerPrefetch(() => p);
@@ -10632,5 +10125,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useAsyncData as d, entry_default as default, useRuntimeConfig as e, navigateTo as n, tryUseNuxtApp as t, useHead as u };
+export { _export_sfc as _, __nuxt_component_0$1 as a, useRoute as b, createError as c, useRuntimeConfig as d, entry_default as default, useNuxtApp as e, asyncDataDefaults as f, navigateTo as n, tryUseNuxtApp as t, useHead as u };
 //# sourceMappingURL=server.mjs.map

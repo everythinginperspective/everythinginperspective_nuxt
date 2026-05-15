@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Essays on trends, context & nuance">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Everything in Perspective | Essays on trends, context & nuance</title>
+  <style>
+    :root {
+      --stone-50: #FAFAF9;
+      --stone-100: #F5F5F0;
+      --stone-200: #E7E5E0;
+      --stone-300: #D9D3CA;
+      --stone-400: #A8A09F;
+      --stone-500: #78746F;
+      --stone-600: #5A5652;
+      --stone-700: #3D3935;
+      --stone-800: #2A2824;
+      --stone-900: #1A1814;
+      --rainbow-red: #E63946;
+      --rainbow-orange: #F77F00;
+      --rainbow-yellow: #FCBF49;
+      --rainbow-green: #06A77D;
+      --rainbow-blue: #1B7AA1;
+      --rainbow-indigo: #4B4BA8;
+      --rainbow-violet: #9D4EDD;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--stone-50);
+      color: var(--stone-900);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: Georgia, Garamond, serif;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.875rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--stone-900);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: var(--stone-50);
+      border-bottom: 1px solid var(--stone-200);
+    }
+
+    .header-content {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-branding {
+      flex: 1;
+    }
+
+    .header-branding h1 {
+      font-size: 1.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-tagline {
+      font-size: 0.875rem;
+      color: var(--stone-600);
+      margin-top: 0.5rem;
+    }
+
+    /* Desktop Navigation */
+    nav.nav-desktop {
+      display: none;
+      gap: 2rem;
+      font-size: 0.875rem;
+      margin-left: 3rem;
+      align-items: center;
+    }
+
+    nav.nav-desktop a {
+      color: var(--stone-900);
+      transition: color 0.3s ease;
+    }
+
+    nav.nav-desktop a:hover {
+      color: var(--rainbow-blue);
+      text-decoration: underline;
+    }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--stone-900);
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-toggle:hover {
+      color: var(--rainbow-blue);
+    }
+
+    /* Mobile Navigation Drawer */
+    nav.nav-drawer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 320px;
+      height: 100vh;
+      background-color: var(--stone-900);
+      color: var(--stone-50);
+      padding: 1.5rem;
+      overflow-y: auto;
+      z-index: 40;
+    }
+
+    nav.nav-drawer.active {
+      display: block;
+    }
+
+    .nav-drawer-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--stone-50);
+      cursor: pointer;
+      transition: color 0.3s ease;
+      padding: 0.5rem;
+    }
+
+    .nav-drawer-close:hover {
+      color: var(--rainbow-yellow);
+    }
+
+    .nav-drawer-content {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .nav-drawer a {
+      color: var(--stone-50);
+      font-size: 1.125rem;
+      font-family: Georgia, Garamond, serif;
+      display: block;
+      transition: color 0.3s ease;
+    }
+
+    .nav-drawer a:hover {
+      color: var(--rainbow-yellow);
+    }
+
+    .nav-drawer-divider {
+      border-top: 1px solid var(--stone-700);
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .nav-drawer-divider a {
+      font-size: 0.875rem;
+      color: var(--stone-300);
+      margin-bottom: 1rem;
+    }
+
+    .nav-drawer-divider a:hover {
+      color: var(--stone-50);
+    }
+
+    /* Main content */
+    main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero-text {
+      margin-bottom: 3rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3.75rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.125rem;
+      color: var(--stone-600);
+      max-width: 42rem;
+      line-height: 1.7;
+    }
+
+    .rainbow-bar {
+      height: 0.5rem;
+      width: 8rem;
+      border-radius: 9999px;
+      background: linear-gradient(
+        to right,
+        var(--rainbow-red),
+        var(--rainbow-yellow) 25%,
+        var(--rainbow-green) 50%,
+        var(--rainbow-blue) 75%,
+        var(--rainbow-violet)
+      );
+    }
+
+    /* Carousel Section */
+    .carousel-section {
+      padding: 3rem 1rem;
+      border-bottom: 1px solid var(--stone-200);
+    }
+
+    .carousel-header {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .carousel-header h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .carousel-controls {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .carousel-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      border: 1px solid var(--stone-300);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--stone-600);
+      transition: all 0.3s ease;
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+      border-color: var(--stone-900);
+      color: var(--stone-900);
+    }
+
+    .carousel-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .carousel-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+      height: 0.5rem;
+    }
+
+    .carousel-container::-webkit-scrollbar-track {
+      background: var(--stone-100);
+    }
+
+    .carousel-container::-webkit-scrollbar-thumb {
+      background: var(--stone-300);
+      border-radius: 9999px;
+    }
+
+    .carousel-tracks {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1rem;
+      min-width: min-content;
+    }
+
+    .carousel-item {
+      flex: 0 0 min(288px, 100%);
+      scroll-snap-align: start;
+    }
+
+    .card {
+      background-color: var(--stone-100);
+      border: 1px solid var(--stone-200);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 12rem;
+      background: linear-gradient(
+        135deg,
+        var(--rainbow-red),
+        var(--rainbow-yellow),
+        var(--rainbow-orange)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .card-content {
+      padding: 1.25rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-family: Georgia, Garamond, serif;
+      font-size: 1.125rem;
+      color: var(--stone-900);
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card:hover .card-title {
+      color: var(--rainbow-blue);
+      transition: color 0.3s ease;
+    }
+
+    .card-description {
+      font-size: 0.875rem;
+      color: var(--stone-600);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .card-link {
+      font-size: 0.875rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--rainbow-blue);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .card-link:hover {
+      color: var(--rainbow-indigo);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--stone-900);
+      color: var(--stone-50);
+      margin-top: 4rem;
+      padding: 3rem 1rem;
+      border-top: 1px solid var(--stone-700);
+    }
+
+    .footer-content {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h4 {
+      font-size: 1.125rem;
+      color: var(--stone-50);
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-column a {
+      color: var(--stone-300);
+      font-size: 0.875rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--stone-50);
+    }
+
+    .footer-column p {
+      font-size: 0.875rem;
+      color: var(--stone-300);
+      line-height: 1.7;
+    }
+
+    .footer-rainbow {
+      height: 0.375rem;
+      width: 100%;
+      border-radius: 9999px;
+      background: linear-gradient(
+        to right,
+        var(--rainbow-red),
+        var(--rainbow-yellow) 25%,
+        var(--rainbow-green) 50%,
+        var(--rainbow-blue) 75%,
+        var(--rainbow-violet)
+      );
+      margin-top: 1rem;
+    }
+
+    .footer-divider {
+      border-top: 1px solid var(--stone-700);
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+
+    .footer-copyright {
+      font-size: 0.75rem;
+      text-align: center;
+      color: var(--stone-400);
+    }
+
+    .footer-spacer {
+      height: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1023px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      nav.nav-desktop {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .nav-toggle {
+        display: none;
+      }
+
+      nav.nav-desktop {
+        display: flex;
+      }
+
+      nav.nav-drawer {
+        display: none !important;
+      }
+
+      .header-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .header-branding h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3.75rem;
+      }
+
+      .carousel-item {
+        flex: 0 0 min(288px, 100%);
+      }
+
+      .carousel-section {
+        padding: 4rem 1.5rem;
+      }
+
+      main {
+        padding: 5rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.25rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .carousel-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .carousel-header h2 {
+        margin-bottom: 1rem;
+      }
+
+      .carousel-controls {
+        align-self: flex-end;
+      }
+
+      .card-image {
+        height: 10rem;
+      }
+
+      main {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="header-branding">
+        <a href="/">
+          <h1>Everything in Perspective</h1>
+        </a>
+        <p class="header-tagline">Essays on trends, context & nuance</p>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="/">Home</a>
+        <a href="/magazine/articles">Articles</a>
+        <a href="/magazine/perspectives">Perspectives</a>
+        <a href="/page/faq">FAQ</a>
+        <a href="/page/contact-us">Contact</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav class="nav-drawer" id="navDrawer">
+      <button class="nav-drawer-close" id="navClose" aria-label="Close navigation">✕</button>
+      <div class="nav-drawer-content">
+        <a href="/" onclick="closeNav()">Home</a>
+        <a href="/magazine/articles" onclick="closeNav()">Articles</a>
+        <a href="/magazine/perspectives" onclick="closeNav()">Perspectives</a>
+        <a href="/page/faq" onclick="closeNav()">FAQ</a>
+        <a href="/page/contact-us" onclick="closeNav()">Contact</a>
+        <div class="nav-drawer-divider">
+          <a href="/page/privacy-policy" onclick="closeNav()">Privacy Policy</a>
+          <a href="/page/terms-conditions" onclick="closeNav()">Terms & Conditions</a>
+          <a href="/page/cookie-policy" onclick="closeNav()">Cookie Policy</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Everything in Perspective</h1>
+        <p>A curated collection of essays exploring global trends, context, and nuance. Organized by articles, perspectives, people, and languages.</p>
+      </div>
+      <div class="rainbow-bar"></div>
+    </section>
+
+    <!-- Carousel Section: Latest Articles -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2>Latest Articles</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="articlesLeft" onclick="scrollCarousel('articles', -320)">←</button>
+          <button class="carousel-btn" id="articlesRight" onclick="scrollCarousel('articles', 320)">→</button>
+        </div>
+      </div>
+      <div class="carousel-container" id="articlesCarousel">
+        <div class="carousel-tracks">
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ART</div>
+              <div class="card-content">
+                <h3 class="card-title">The Future of Global Trade</h3>
+                <p class="card-description">An exploration of how international commerce is evolving in response to geopolitical tensions and technological innovation.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ECO</div>
+              <div class="card-content">
+                <h3 class="card-title">Understanding Inflation</h3>
+                <p class="card-description">A comprehensive analysis of inflation drivers, economic cycles, and what it means for global markets and consumers.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">TEC</div>
+              <div class="card-content">
+                <h3 class="card-title">The AI Revolution</h3>
+                <p class="card-description">How artificial intelligence is reshaping industries, economies, and society at large with implications for the future.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">POL</div>
+              <div class="card-content">
+                <h3 class="card-title">Political Polarization</h3>
+                <p class="card-description">Examining the causes and consequences of increasing political division across democracies worldwide.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">CLM</div>
+              <div class="card-content">
+                <h3 class="card-title">Climate Change Solutions</h3>
+                <p class="card-description">Analyzing viable pathways to address climate change and transition to sustainable energy systems globally.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">CUL</div>
+              <div class="card-content">
+                <h3 class="card-title">Cultural Shifts</h3>
+                <p class="card-description">Understanding how cultural movements influence society, values, and the way we communicate with each other.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section: Perspectives -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2>Perspectives</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="perspectivesLeft" onclick="scrollCarousel('perspectives', -320)">←</button>
+          <button class="carousel-btn" id="perspectivesRight" onclick="scrollCarousel('perspectives', 320)">→</button>
+        </div>
+      </div>
+      <div class="carousel-container" id="perspectivesCarousel">
+        <div class="carousel-tracks">
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">GEO</div>
+              <div class="card-content">
+                <h3 class="card-title">Geopolitical Realignment</h3>
+                <p class="card-description">An analysis of shifting power dynamics and their implications for international relations and stability.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">SOC</div>
+              <div class="card-content">
+                <h3 class="card-title">Social Media Impact</h3>
+                <p class="card-description">Examining how digital platforms shape public discourse, democracy, and individual behavior globally.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">EDU</div>
+              <div class="card-content">
+                <h3 class="card-title">Education Transformation</h3>
+                <p class="card-description">The evolving role of education in preparing people for an uncertain future and changing labor markets.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">HEA</div>
+              <div class="card-content">
+                <h3 class="card-title">Public Health Evolution</h3>
+                <p class="card-description">Insights into global health challenges, pandemic preparedness, and equitable healthcare systems.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">URB</div>
+              <div class="card-content">
+                <h3 class="card-title">Urban Futures</h3>
+                <p class="card-description">Exploring sustainable cities, urban planning, and how cities adapt to climate and demographic changes.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">WRK</div>
+              <div class="card-content">
+                <h3 class="card-title">The Future of Work</h3>
+                <p class="card-description">How remote work, automation, and gig economies are reshaping labor and organizational structures.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section: People -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2>People</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="peopleLeft" onclick="scrollCarousel('people', -320)">←</button>
+          <button class="carousel-btn" id="peopleRight" onclick="scrollCarousel('people', 320)">→</button>
+        </div>
+      </div>
+      <div class="carousel-container" id="peopleCarousel">
+        <div class="carousel-tracks">
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">PER</div>
+              <div class="card-content">
+                <h3 class="card-title">Visionary Thinkers</h3>
+                <p class="card-description">Profiles of leaders and innovators shaping discourse on technology, society, and human potential.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">LEA</div>
+              <div class="card-content">
+                <h3 class="card-title">Change Makers</h3>
+                <p class="card-description">Stories of individuals driving change in their communities and creating lasting impact on a global scale.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">EXP</div>
+              <div class="card-content">
+                <h3 class="card-title">Expert Voices</h3>
+                <p class="card-description">Insights from researchers, economists, and specialists across diverse fields and disciplines.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ART</div>
+              <div class="card-content">
+                <h3 class="card-title">Creative Minds</h3>
+                <p class="card-description">Artists, writers, and creators offering unique perspectives on culture, meaning, and artistic expression.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ENT</div>
+              <div class="card-content">
+                <h3 class="card-title">Entrepreneurs</h3>
+                <p class="card-description">Building the future: stories of entrepreneurship, innovation, and business transformation globally.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ACT</div>
+              <div class="card-content">
+                <h3 class="card-title">Activists</h3>
+                <p class="card-description">Profiles of advocates working on social justice, environmental protection, and human rights worldwide.</p>
+                <a href="#" class="card-link">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section: Languages -->
+    <section class="carousel-section">
+      <div class="carousel-header">
+        <h2>Languages</h2>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="languagesLeft" onclick="scrollCarousel('languages', -320)">←</button>
+          <button class="carousel-btn" id="languagesRight" onclick="scrollCarousel('languages', 320)">→</button>
+        </div>
+      </div>
+      <div class="carousel-container" id="languagesCarousel">
+        <div class="carousel-tracks">
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ENG</div>
+              <div class="card-content">
+                <h3 class="card-title">English</h3>
+                <p class="card-description">Essays and content in English, the primary language of this publication with global reach.</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">FRA</div>
+              <div class="card-content">
+                <h3 class="card-title">Français</h3>
+                <p class="card-description">Notre collection d'essais en français, offrant des perspectives sur les tendances mondiales.</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">DEU</div>
+              <div class="card-content">
+                <h3 class="card-title">Deutsch</h3>
+                <p class="card-description">Deutsche Essays und Analysen zu globalen Trends und bedeutenden Themen der Gegenwart.</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ESP</div>
+              <div class="card-content">
+                <h3 class="card-title">Español</h3>
+                <p class="card-description">Ensayos en español explorando contexto global y tendencias contemporáneas importantes.</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ITA</div>
+              <div class="card-content">
+                <h3 class="card-title">Italiano</h3>
+                <p class="card-description">Saggi in italiano che esplorano prospettive globali e analisi contemporanea del mondo.</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card">
+              <div class="card-image">ZHO</div>
+              <div class="card-content">
+                <h3 class="card-title">中文</h3>
+                <p class="card-description">中文版本提供对全球趋势和当代问题的深入分析和独特视角。</p>
+                <a href="#" class="card-link">View Collection →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Spacer -->
+    <div class="footer-spacer"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>Magazine</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Brand</h4>
+          <ul>
+            <li><a href="/page/about">About</a></li>
+            <li><a href="/page/faq">FAQ</a></li>
+            <li><a href="/page/contact-us">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/page/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/page/terms-conditions">Terms & Conditions</a></li>
+            <li><a href="/page/cookie-policy">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Everything</h4>
+          <p>A magazine-style archive of essays, people, languages and perspectives, arranged with context first.</p>
+          <div class="footer-rainbow"></div>
+        </div>
+      </div>
+      <div class="footer-divider">
+        <p class="footer-copyright">&copy; 2026 Everything in Perspective. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('navToggle');
+    const navClose = document.getElementById('navClose');
+    const navDrawer = document.getElementById('navDrawer');
+
+    navToggle.addEventListener('click', () => {
+      navDrawer.classList.add('active');
+      navToggle.setAttribute('aria-expanded', 'true');
+    });
+
+    function closeNav() {
+      navDrawer.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    navClose.addEventListener('click', closeNav);
+    navDrawer.addEventListener('click', (e) => {
+      if (e.target === navDrawer) closeNav();
+    });
+
+    // Carousel navigation
+    function scrollCarousel(carouselId, distance) {
+      const carousel = document.getElementById(carouselId + 'Carousel');
+      carousel.scrollBy({ left: distance, behavior: 'smooth' });
+      setTimeout(() => updateCarouselButtons(carouselId), 300);
+    }
+
+    function updateCarouselButtons(carouselId) {
+      const carousel = document.getElementById(carouselId + 'Carousel');
+      const leftBtn = document.getElementById(carouselId + 'Left');
+      const rightBtn = document.getElementById(carouselId + 'Right');
+
+      leftBtn.disabled = carousel.scrollLeft <= 0;
+      rightBtn.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 10;
+    }
+
+    // Initialize carousel buttons
+    ['articles', 'perspectives', 'people', 'languages'].forEach(id => {
+      const carousel = document.getElementById(id + 'Carousel');
+      carousel.addEventListener('scroll', () => updateCarouselButtons(id));
+      updateCarouselButtons(id);
+    });
+  </script>
+</body>
+</html>

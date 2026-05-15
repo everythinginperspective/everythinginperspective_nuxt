@@ -3,8 +3,8 @@ export const checksums = {
   "perspectives": "v3.5.0--Ga0LZ6jP_x7tVSJNdxs12T51N4M3YAnbEIoSgn_JWjE",
   "pages": "v3.5.0--gHRo8EtQ2kW4kndcKh9Xq31jpqQMRl0VVuHw10VgwsU",
   "books": "v3.5.0--McJY6dSkrRLSKXme3ja4k9YFQTTvGE4Y7zDCCqrv5uw",
-  "people": "v3.5.0--phsyJ7Q_7c_NVoCyPDyrewQd4vZpwLvwndZRa5EmV4k",
-  "languages": "v3.5.0--8cHX95QA6WRUuSwdJqRU-ZO6Fkjbdmco5NbnLE6QH2E"
+  "people": "v3.5.0--sOY593PccxVxhCWXz83cQttbQiWs4WB57wrIQh7KoMM",
+  "languages": "v3.5.0--Yg-4QY6ScsTUIV9gdVpNoQQFBS1eQvCow06GobKozVM"
 }
 export const checksumsStructure = {
   "articles": "4yuYbf0Zmb6hhSCJn1VYsLRosU8HmHCmTHrpRY9HVp0",
