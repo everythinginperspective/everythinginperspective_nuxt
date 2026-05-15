@@ -1,6 +1,35 @@
 /* Tailwind CSS with magazine-style theme */
 @import "tailwindcss";
 
+@theme {
+  /* Stone palette override */
+  --color-stone-50: #FAFAF9;
+  --color-stone-100: #F5F5F0;
+  --color-stone-200: #E7E5E0;
+  --color-stone-300: #D9D3CA;
+  --color-stone-400: #A8A09F;
+  --color-stone-500: #78746F;
+  --color-stone-600: #5A5652;
+  --color-stone-700: #3D3935;
+  --color-stone-800: #2A2824;
+  --color-stone-900: #1A1814;
+
+  /* Rainbow accent palette */
+  --color-rainbow-red: #E63946;
+  --color-rainbow-orange: #F77F00;
+  --color-rainbow-yellow: #FCBF49;
+  --color-rainbow-green: #06A77D;
+  --color-rainbow-blue: #1B7AA1;
+  --color-rainbow-indigo: #4B4BA8;
+  --color-rainbow-violet: #9D4EDD;
+  --color-rainbow-pink: #E91E63;
+
+  /* Font families */
+  --font-family-serif: Georgia, Garamond, serif;
+  --font-family-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: "Courier New", monospace;
+}
+
 /* Set default background and text color */
 body {
   @apply bg-stone-50 text-stone-900;
